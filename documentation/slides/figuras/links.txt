@@ -1,0 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% Aqui estão os links para as figuras usadas na apresentação
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+laptop1.jpg - https://www.publicdomainpictures.net/view-image.php?image=167604&picture=laptop
+drone1.jpg - https://www.publicdomainpictures.net/view-image.php?image=190377&picture=phantom-4-drone
+electric_car1.jpg - https://commons.wikimedia.org/wiki/File%3ATesla_Model_S_P90D_charging.jpg
+smartphone1.jpeg - https://www.pexels.com/photo/gray-smartphone-37864/
