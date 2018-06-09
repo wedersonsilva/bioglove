@@ -25,7 +25,21 @@ void setup() {
 
 void loop() {  
   int dedo1 = analogRead(A1);
-  Serial.print("Mindinho: ");
+  int dedo2 = analogRead(A2);
+  int dedo3 = analogRead(A3);
+  int dedo4 = analogRead(A4);
+  int dedo5 = analogRead(A5);
+  
+  Serial.print("Minimo: ");
   Serial.println(dedo1);
-  delay(1);        
+  Serial.print(" Anelar: ");
+  Serial.println(dedo2);
+  Serial.print(" Meio: ");
+  Serial.println(dedo3);
+  Serial.print(" Indicador: ");
+  Serial.println(dedo4);
+  Serial.print(" Polegar: ");
+  Serial.println(dedo5);
+  
+  delay(100);        
 }
