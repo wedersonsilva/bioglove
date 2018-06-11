@@ -1,45 +1,69 @@
 /*
+  Programa : Módulo RF Transmissor com Arduino Uno
+  Autor : FILIPEFLOP - Arduino e Cia
+ 
   Código obtido no link abaixo:
-  https://pandoralab.com.br/aprenda/modulo-rf-433-mhz/
+  https://www.filipeflop.com/blog/modulo-rf-transmissor-receptor-433mhz-arduino/
 
   Modificado por: Wederson Silva
   
-  v0.1.3
-
+  v0.1.4
 */
 
-#include <VirtualWire.h> //Insere a biblioteca VirtualWire
-#define R_LED 8          //Define o pino 8 para o LED
-char R_C_LED[2];         //Armazena o estado do LED
-int R_BOT = 0;           //Configura o botao como nao acionado
- 
-void setup() {            //Chama a função setup
-  Serial.begin(9600);     //Inicializa a serial
-  pinMode(R_LED, OUTPUT); //Configura o pino 8 como saída
-  vw_set_rx_pin(4);       //Configura o pino 4 como receptor
-  vw_setup(5000);         //Velocidade de trasmissao em bps
-  vw_rx_start();          //Inicializa o receptor
+//Programa : Receptor RF com Arduino Mega e Display Nokia 5110
+//Autor : Arduino e Cia
+
+//#include <Adafruit_GFX.h>      //Carrega a biblioteca do display
+//#include <Adafruit_PCD8544.h>  //Carrega a biblioteca grafica
+#include <VirtualWire.h>
+
+byte message[VW_MAX_MESSAGE_LEN];    // Armazena as mensagens recebidas
+byte msgLength = VW_MAX_MESSAGE_LEN; // Armazena o tamanho das mensagens
+
+// Pinagem do LCD :
+// pin 8 - Serial clock out (SCLK)
+// pin 9 - Serial data out (DIN)
+// pin 10 - Data/Command select (D/C)
+// pin 11 - LCD chip select (CS/CE)
+// pin 12 - LCD reset (RST)
+//Adafruit_PCD8544 display = Adafruit_PCD8544(8, 9, 10, 11, 12); 
+//Inicializa e seta os parametros do display
+
+void setup()   {
+  Serial.begin(9600);
+    vw_set_rx_pin(4); // Define o pino 5 do Arduino como entrada 
+//de dados do receptor
+    vw_setup(2000);             // Bits por segundo
+    vw_rx_start();              // Inicializa o receptor
+
+  //display.begin();
+  //display.setContrast(50); //Ajusta o contraste do display
+  //display.clearDisplay();   //Apaga o buffer e o display
+  //display.setTextSize(1);  //Seta o tamanho do texto
+  //display.setTextColor(BLACK); //Seta a cor do texto
+  //display.setCursor(0,0);  //Seta a posição do cursor
+  //display.print("Aguardando...");
+  //display.display();
+  delay(2000);
+
 }
- 
-void loop() {                          //Chama a função loop
-  uint8_t buf[VW_MAX_MESSAGE_LEN];     //Armazena os dados
-  uint8_t buflen = VW_MAX_MESSAGE_LEN; //Define o tamanho dos dados
-  if(vw_get_message(buf, &buflen)) {   //Verifica se exite dados
-    int a;                             
-    for(a = 0; a < buflen; a++) {        
-      R_C_LED[a] = char(buf[a]);       //Armazena dados
+
+void loop()
+{
+uint8_t message[VW_MAX_MESSAGE_LEN];    
+uint8_t msgLength = VW_MAX_MESSAGE_LEN; 
+  vw_wait_rx();
+  //display.setCursor(0, 0);  //Seta a posição do cursor
+    if (vw_get_message(message, &msgLength)) // Non-blocking
+    {
+        Serial.print("Recebido: ");
+       // display.clearDisplay();   //Apaga o buffer e o display
+        for (int i = 0; i < msgLength; i++)
+       {
+          Serial.write(message[i]);
+        //  display.write(message[i]);
+          //display.display();
+       }
+    Serial.println();
     }
-    R_C_LED[buflen] = '\0';
-    int R_BOT = atoi(R_C_LED);          //Converte os dados de char para int
-    if(R_BOT == 1) {                    //Se o botao for acionado, aciona o LED
-      digitalWrite(R_LED, HIGH);        //Configura o LED como aceso
-      Serial.print("Estado do LED = "); //Imprime no Monitor serial "Estado do LED = "
-      Serial.println(R_C_LED);          //Imprime no Monitor serial o número do estado              
-    }
-    if(R_BOT == 0) {                    //Se o botao nao for acionado, nao aciona o LED
-      digitalWrite(R_LED, LOW);         //Configura o LED como apagado
-      Serial.print("Estado do LED = "); //Imprime no Monitor serial "Estado do LED = "
-      Serial.println(R_C_LED);          //Imprime no Monitor serial o número do estado
-    }
-  }
 }

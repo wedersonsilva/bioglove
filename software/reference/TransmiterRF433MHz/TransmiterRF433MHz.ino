@@ -1,33 +1,50 @@
 /*
+  Programa : Módulo RF Transmissor com Arduino Uno
+  Autor : FILIPEFLOP - Arduino e Cia
+ 
   Código obtido no link abaixo:
-  https://pandoralab.com.br/aprenda/modulo-rf-433-mhz/
+  https://www.filipeflop.com/blog/modulo-rf-transmissor-receptor-433mhz-arduino/
 
   Modificado por: Wederson Silva
   
-  v0.1.3
-
+  v0.1.4
 */
 
-#include <VirtualWire.h> //Insere a biblioteca VirtualWire
-#define T_BOT 5          //Define o pino 5 para o botao
-char T_C_LED[2];         //Armazena o estado do LED
-int T_LED = 0;           //Define o LED como apagado
- 
-void setup() {                 //Chama a função setup
-  Serial.begin(9600);          //Inicializa a serial
-  pinMode(T_BOT,INPUT_PULLUP); //Configura o pino 5 como entrada
-  vw_set_tx_pin(4);            //Configura o pino 2 como transmissor
-  vw_setup(5000);              //Velocidade de trasmissao em bps
+#include <VirtualWire.h>
+
+String mensagem;
+
+void setup()
+{
+  Serial.begin(9600);
+  //Define o pino 8 do Arduino como 
+  //o pino de dados do transmissor
+  vw_set_tx_pin(4);
+  vw_setup(2000);   // Bits per sec
+  Serial.println("Digite o texto e clique em ENVIAR...");
 }
- 
-void loop() {                                     //Chama a função loop
-  if(digitalRead(T_BOT) == LOW) {                 //Configura o botao como acionado
-    T_LED = !T_LED;                               //Inverte o estado do LED
-    itoa(T_LED, T_C_LED, 2);                      //Converte os dados de int para char
-    vw_send((uint8_t *)T_C_LED, strlen(T_C_LED)); //Envia os dados
-    vw_wait_tx();                                 //Aguarda a transmissao de dados
-    delay(100);                                   //Tempo em que o LED permanece aceso
-    Serial.print("Estado do botao = ");           //Imprime no Monitor serial "Estado do botao = "
-    Serial.println(T_C_LED);                      //Imprime no Monitor serial o número do estado
-  }
+
+void loop()
+{
+  char data[40];
+  int numero;
+  if (Serial.available() > 0)
+  {
+    numero = Serial.readBytesUntil (13,data,40);
+    data[numero] = 0;
+    Serial.print("Enviado : ");
+    Serial.print(data);
+    Serial.print(" - Caracteres : ");
+    Serial.println(strlen(data));
+    //Envia a mensagem para a rotina que
+    //transmite os dados via RF
+    send(data);
+  }  
+} 
+
+void send (char *message)
+{
+  vw_send((uint8_t *)message, strlen(message));
+  vw_wait_tx(); // Aguarda o envio de dados
+  Serial.println("Enviado");
 }
