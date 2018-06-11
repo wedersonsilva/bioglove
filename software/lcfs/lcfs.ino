@@ -16,7 +16,7 @@
   Autor: Wederson Silva
   https://github.com/wedersonsilva/lcfs
 
-  v0.1.1 - Teste com apenas um sensor
+  v0.1.2 - Ler cinco potenciomêmtros e enviar ao Serial Monitor
 */
 
 void setup() {  
