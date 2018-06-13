@@ -16,8 +16,14 @@
   Autor: Wederson Silva
   https://github.com/wedersonsilva/lcfs
 
-  v0.1.2 - Ler cinco potenciomêmtros e enviar ao Serial Monitor
+  v0.1.5 Remapeamento de valores lidos de 0-1023 para 1-8
 */
+
+int valor1 = 0;
+int valor2 = 0;
+int valor3 = 0;
+int valor4 = 0;
+int valor5 = 0;
 
 void setup() {  
   Serial.begin(9600);
@@ -30,16 +36,37 @@ void loop() {
   int dedo4 = analogRead(A4);
   int dedo5 = analogRead(A5);
   
-  Serial.print("Minimo: ");
-  Serial.println(dedo1);
-  Serial.print(" Anelar: ");
-  Serial.println(dedo2);
-  Serial.print(" Meio: ");
-  Serial.println(dedo3);
-  Serial.print(" Indicador: ");
-  Serial.println(dedo4);
-  Serial.print(" Polegar: ");
-  Serial.println(dedo5);
+  valor1 = map(dedo1, 0, 1023, 1, 8);
+  valor2 = map(dedo2, 0, 1023, 1, 8);
+  valor3 = map(dedo3, 0, 1023, 1, 8);
+  valor4 = map(dedo4, 0, 1023, 1, 8);
+  valor5 = map(dedo5, 0, 1023, 1, 8);
   
-  delay(100);        
+  
+  Serial.print("| Minimo: ");
+  Serial.print(dedo1); 
+  Serial.print(" REMAP: ");
+  Serial.print(valor1);  
+  
+  Serial.print(" | Anelar: ");
+  Serial.print(dedo2);
+  Serial.print(" REMAP: ");
+  Serial.print(valor2);  
+  
+  Serial.print(" | Meio: ");
+  Serial.print(dedo3);
+  Serial.print(" REMAP: ");
+  Serial.print(valor3);  
+  
+  Serial.print(" | Indicador: ");
+  Serial.print(dedo4);
+  Serial.print(" REMAP: ");
+  Serial.print(valor4);  
+  
+  Serial.print(" | Polegar: ");
+  Serial.print(dedo5);
+  Serial.print(" REMAP: ");
+  Serial.println(valor5);  
+  
+  delay(200);        
 }
