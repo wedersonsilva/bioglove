@@ -7,7 +7,7 @@
 
   Modificado por: Wederson Silva
   
-  v0.1.4
+  v0.1.7 Testa o envio de numeros variaveis
 */
 
 //Programa : Receptor RF com Arduino Mega e Display Nokia 5110

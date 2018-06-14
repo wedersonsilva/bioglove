@@ -7,7 +7,7 @@
 
   Modificado por: Wederson Silva
   
-  v0.1.4
+  v0.1.7 Testa o envio de numeros variaveis
 */
 
 #include <VirtualWire.h>
