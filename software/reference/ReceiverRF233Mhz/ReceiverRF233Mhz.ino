@@ -2,7 +2,7 @@
   Programa : Módulo RF Transmissor com Arduino Uno
   Autor : FILIPEFLOP - Arduino e Cia
  
-  Código obtido no link abaixo:
+  Referência:
   https://www.filipeflop.com/blog/modulo-rf-transmissor-receptor-433mhz-arduino/
 
   Modificado por: Wederson Silva
@@ -31,7 +31,7 @@ byte msgLength = VW_MAX_MESSAGE_LEN; // Armazena o tamanho das mensagens
 
 void setup()   {
   Serial.begin(9600);
-    vw_set_rx_pin(4); // Define o pino 5 do Arduino como entrada 
+    vw_set_rx_pin(4); // Define o pino 4 do Arduino como entrada 
 //de dados do receptor
     vw_setup(2000);             // Bits por segundo
     vw_rx_start();              // Inicializa o receptor
@@ -55,14 +55,20 @@ uint8_t msgLength = VW_MAX_MESSAGE_LEN;
   vw_wait_rx();
   //display.setCursor(0, 0);  //Seta a posição do cursor
     if (vw_get_message(message, &msgLength)) // Non-blocking
-    {
+    {               
         Serial.print("Recebido: ");
+        
+        
+
        // display.clearDisplay();   //Apaga o buffer e o display
         for (int i = 0; i < msgLength; i++)
        {
           Serial.write(message[i]);
         //  display.write(message[i]);
           //display.display();
+          //Serial.write('message');
+
+          
        }
     Serial.println();
     }
