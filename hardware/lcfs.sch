@@ -236,40 +236,6 @@ Wire Wire Line
 	8500 3800 8750 3800
 Text Label 8550 3800 0    60   ~ 0
 GND
-$Comp
-L Conn_01x03 J1
-U 1 1 5B249803
-P 7200 3700
-F 0 "J1" H 7200 3900 50  0000 C CNN
-F 1 "Pin_1x3" H 7100 3450 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 7200 3700 50  0001 C CNN
-F 3 "" H 7200 3700 50  0001 C CNN
-	1    7200 3700
-	-1   0    0    1   
-$EndComp
-$Comp
-L Conn_01x03 J2
-U 1 1 5B249994
-P 7550 3700
-F 0 "J2" H 7550 3900 50  0000 C CNN
-F 1 "Pin_1x3" H 7450 3450 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 7550 3700 50  0001 C CNN
-F 3 "" H 7550 3700 50  0001 C CNN
-	1    7550 3700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7750 3700 7950 3700
-Wire Wire Line
-	7950 3700 7950 3800
-Wire Wire Line
-	7950 3800 8400 3800
-Text Label 8000 3800 0    60   ~ 0
-7.2V
-NoConn ~ 7750 3600
-NoConn ~ 7400 3600
-NoConn ~ 7400 3700
-NoConn ~ 7400 3800
 NoConn ~ 9400 5600
 NoConn ~ 9300 5600
 NoConn ~ 8700 5600
@@ -298,9 +264,9 @@ Wire Wire Line
 Text Label 9100 4100 0    60   ~ 0
 5V
 Wire Wire Line
-	7700 4250 7700 3950
+	8400 3800 7700 3800
 Wire Wire Line
-	7700 3950 7750 3950
-Wire Wire Line
-	7750 3950 7750 3800
+	7700 3800 7700 4250
+Text Label 7950 3800 0    60   ~ 0
+7.2V
 $EndSCHEMATC
