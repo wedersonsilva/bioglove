@@ -1,16 +1,16 @@
 /*  Low Cost Flex Sensor (Sensor Flex de Baixo Custo)
 
-    Esse programa le alteracoes em cinco sensores conectados 
-  a uma luva. Os movimentos de cada um dos dedos de uma mao 
-  sao capturados.
-    As leituras sao exibidas no Serial Monitor. Cada dedo é 
-  representado por um número de 1 a 5, comecando pelo dedo 
-  mindinho (1) ate o polegar (5).  
+    Esse programa lê alterações em cinco sensores conectados 
+  à uma luva. Os movimentos de cada um dos dedos de uma mão 
+  são capturados.
+    As leituras são exibidas no Serial Monitor. Cada dedo é 
+  representado por um número de 1 a 5, começando pelo dedo 
+  mínimo (1) até o polegar (5).  
 
   Autor: Wederson Silva
   https://github.com/wedersonsilva/lcfs
 
-  v0.1.6 Reorganiza e cria funcoes */
+  v0.1.15 Renomeia valores */
 
 /* DECLARACAO DE VARIAVEIS */
 
@@ -21,15 +21,16 @@ int dedo3 = 0;
 int dedo4 = 0;
 int dedo5 = 0;
 
-/* Remapeamento dos valores lidos pelos sensores */
-int remap1 = 0;
-int remap2 = 0;
-int remap3 = 0;
-int remap4 = 0;
-int remap5 = 0;
+/* Posição inicial de cada dedo */
+int posicao1 = 0;
+int posicao2 = 0;
+int posicao3 = 0;
+int posicao4 = 0;
+int posicao5 = 0;
 
+/* Funções do código */
 void LER_SENSORES();
-void REMAPEAR();
+void POSICIONAR();
 void EXIBIR();
 void ENVIAR();
 
@@ -49,48 +50,48 @@ void LER_SENSORES(){
   dedo5 = analogRead(A5);
 }
 
-/* Remapeamento dos valores */
-void REMAPEAR(){
-  remap1 = map(dedo1, 0, 1023, 1, 8);
-  remap2 = map(dedo2, 0, 1023, 1, 8);
-  remap3 = map(dedo3, 0, 1023, 1, 8);
-  remap4 = map(dedo4, 0, 1023, 1, 8);
-  remap5 = map(dedo5, 0, 1023, 1, 8);
+/* Remapeamento dos valores em até 8 posições*/
+void POSICIONAR(){
+  posicao1 = map(dedo1, 0, 1023, 1, 8);
+  posicao2 = map(dedo2, 0, 1023, 1, 8);
+  posicao3 = map(dedo3, 0, 1023, 1, 8);
+  posicao4 = map(dedo4, 0, 1023, 1, 8);
+  posicao5 = map(dedo5, 0, 1023, 1, 8);
 }
 
 /* Exibir valores na tela do Serial Monitor */
 void EXIBIR(){
   Serial.print("| Minimo: ");
   Serial.print(dedo1); 
-  Serial.print(" REMAP: ");
-  Serial.print(remap1);  
+  Serial.print(" POSICAO: ");
+  Serial.print(posicao1);  
   
   Serial.print(" | Anelar: ");
   Serial.print(dedo2);
-  Serial.print(" REMAP: ");
-  Serial.print(remap2);  
+  Serial.print(" POSICAO: ");
+  Serial.print(posicao2);  
   
   Serial.print(" | Meio: ");
   Serial.print(dedo3);
-  Serial.print(" REMAP: ");
-  Serial.print(remap3);   
+  Serial.print(" POSICAO: ");
+  Serial.print(posicao3);   
   
   Serial.print(" | Indicador: ");
   Serial.print(dedo4);
-  Serial.print(" REMAP: ");
-  Serial.print(remap4);  
+  Serial.print(" POSICAO: ");
+  Serial.print(posicao4);  
   
   Serial.print(" | Polegar: ");
   Serial.print(dedo5);
-  Serial.print(" REMAP: ");
-  Serial.println(remap5);  
+  Serial.print(" POSICAO: ");
+  Serial.println(posicao5);  
 }
 
-/* Funcao principal */
+/* FUNCAO PRINCIPAL */
 void loop() {  
   
   LER_SENSORES();
-  REMAPEAR();
+  POSICIONAR();
   EXIBIR();
         
   delay(200);                 // Pequeno intervalo
