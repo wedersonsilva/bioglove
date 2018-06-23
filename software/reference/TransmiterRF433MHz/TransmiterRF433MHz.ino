@@ -3,26 +3,28 @@
   Autor : FILIPEFLOP - Arduino e Cia
  
   Referência:
-  https://www.filipeflop.com/blog/modulo-rf-transmissor-receptor-433mhz-arduino/
+  https://www.arduino.cc/en/Reference.StringToCharArray
 
   Modificado por: Wederson Silva
   
-  v0.1.7 Testa o envio de numeros variaveis
+  v0.1.16 Concatena e envia números variáveis
 */
 
 #include <VirtualWire.h>
 String mensagem;
 
 
-String str;
-int num = 0;
-char cstr[16];
+String str = "";
+int num1 = 0;
+int num2 = 0;
+char cstr[12];
+String code = "";
 
 
 void setup()
 {
   Serial.begin(9600);  
-  vw_set_tx_pin(4);           // Pino de dados do transmissor
+  vw_set_tx_pin(2);           // Pino de dados do transmissor
   vw_setup(2000);             // Bits por segundo
   Serial.println("Digite o texto e clique em ENVIAR...");
 }
@@ -32,12 +34,24 @@ void loop()
     
   // int to char array
   delay(200);
-  num++;
-  str = String(num);
+  num1++;
+  num2++;
+  str = code + num1 + num2;  
+  Serial.print("NUM1: ");
+  Serial.print(num1);
+  Serial.print(" NUM2: ");
+  Serial.print(num2);
+  Serial.print(" STR: ");
+  Serial.print(str);
+  //str = String(num1, num2);
   str.toCharArray(cstr,16);
+  Serial.print(" CSTR: ");
   Serial.println(cstr);      // prints "Hello String"
+  //Serial.print("num 1 and num 2");
+  //Serial.print(num1);
+  //Serial.println(num2);
   
-  vw_send((uint8_t *)cstr, 16);
+  vw_send((uint8_t *)cstr, 12);
   vw_wait_tx();
    
 //  char texto[3] = {'O','l','a'} ;
