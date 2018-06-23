@@ -1,84 +1,51 @@
 /*
-  Programa : Módulo RF Transmissor com Arduino Uno
-  Autor : FILIPEFLOP - Arduino e Cia
+  Programa: Módulo RF 413 Mhz Transmissor 
  
-  Referência:
+  Referências:
   https://www.arduino.cc/en/Reference.StringToCharArray
 
   Modificado por: Wederson Silva
   
-  v0.1.16 Concatena e envia números variáveis
+  v0.1.17 Limpa (organiza) o código
 */
 
-#include <VirtualWire.h>
-String mensagem;
+#include <VirtualWire.h>    // Biblioteca para controlar o módulo RF 413 Mhz
 
-
-String str = "";
-int num1 = 0;
-int num2 = 0;
-char cstr[12];
-String code = "";
-
+String MENSAGEM = "";       // String que será enviada
+String PREFIXO = "";        // Prefixo para concatenar mensagem
+char BUFFER[12];            // Buffer de "MENSAGEM"
+int NUM1 = 0;               // 1o Número variável
+int NUM2 = 0;               // 2o Número variável
 
 void setup()
 {
   Serial.begin(9600);  
   vw_set_tx_pin(2);           // Pino de dados do transmissor
-  vw_setup(2000);             // Bits por segundo
-  Serial.println("Digite o texto e clique em ENVIAR...");
+  vw_setup(2000);             // Bits por segundo  
 }
 
 void loop()
-{ 
-    
-  // int to char array
-  delay(200);
-  num1++;
-  num2++;
-  str = code + num1 + num2;  
-  Serial.print("NUM1: ");
-  Serial.print(num1);
-  Serial.print(" NUM2: ");
-  Serial.print(num2);
-  Serial.print(" STR: ");
-  Serial.print(str);
-  //str = String(num1, num2);
-  str.toCharArray(cstr,16);
-  Serial.print(" CSTR: ");
-  Serial.println(cstr);      // prints "Hello String"
-  //Serial.print("num 1 and num 2");
-  //Serial.print(num1);
-  //Serial.println(num2);
+{       
+  NUM1++;                             // Adicionando 1 unidade
+  NUM2++;                             // Adicionando 1 unidade
   
-  vw_send((uint8_t *)cstr, 12);
-  vw_wait_tx();
-   
-//  char texto[3] = {'O','l','a'} ;
-//  //texto[2] = count;
-//  vw_send((uint8_t *)texto, 3);
-//  vw_wait_tx();
-  
-//  
-//  char data[40];
-//  int numero;
-//  if (Serial.available() > 0)
-//  {
-//    numero = Serial.readBytesUntil (13,data,40);
-//    data[numero] = 0;
-//    Serial.print("Enviado : ");
-//    Serial.print(data);
-//    Serial.print(" - Caracteres : ");
-//    Serial.println(strlen(data));
-//    //Envia a mensagem para a rotina que
-//    //transmite os dados via RF
-//    send(data);
-//  }  
-} 
+  MENSAGEM = PREFIXO + NUM1 + NUM2;  // Concatenando os números  
+  MENSAGEM.toCharArray(BUFFER,16);    // Transformando em vetor de char
 
-void send (char *message)
-{
-  vw_send((uint8_t *)message, strlen(message));
-  vw_wait_tx(); // Aguarda o envio de dados
-  Serial.println("Enviado");
-}
+  /* Imprimindo mensagens de informação */
+  Serial.print("NUM1: ");
+  Serial.print(NUM1);
+  Serial.print(" NUM2: ");
+  Serial.print(NUM2);
+  Serial.print(" MENSAGEM: ");
+  Serial.print(MENSAGEM);    
+  Serial.print(" BUFFER: ");
+  Serial.println(BUFFER);      
+
+  /* Funcão que envia a mensagem */
+  vw_send((uint8_t *)BUFFER, 12);
+  vw_wait_tx();                         // Espera todo o vetor ser enviado
+
+  delay(100);                           // Espera para estabilizar o programa
+   
+} 
