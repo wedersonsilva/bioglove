@@ -25,7 +25,6 @@ void setup()
   delay(2000);
 }
 
-
 void loop()
 {
   uint8_t message[VW_MAX_MESSAGE_LEN];    
