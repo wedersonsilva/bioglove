@@ -20,7 +20,7 @@
 /* Variáveis usadas no transmissor */
 String MENSAGEM = "";       // Mensagem que deve ser enviada
 String PREFIXO = "";        // Prefixo necessário para concatenar valores
-char BUFFER[12];            // Buffer de "MENSAGEM"
+char BUFFER[6];             // Buffer de "MENSAGEM"
 
 /* Valores de cada sensor iniciados em zero */
 int dedo1 = 0;
@@ -62,22 +62,22 @@ void LER_SENSORES(){
 
 /* Remapeamento dos valores em até 9 posições*/
 void POSICIONAR(){
-  posicao1 = map(dedo1, 0, 1023, 9, 1);
-  posicao2 = map(dedo2, 0, 1023, 9, 1);
-  posicao3 = map(dedo3, 0, 1023, 1, 9);
-  posicao4 = map(dedo4, 0, 1023, 1, 9);
-  posicao5 = map(dedo5, 0, 1023, 1, 9);
+  posicao1 = map(dedo1, 0, 1023, 8, 1);
+  posicao2 = map(dedo2, 0, 1023, 8, 1);
+  posicao3 = map(dedo3, 0, 1023, 1, 8);
+  posicao4 = map(dedo4, 0, 1023, 1, 8);
+  posicao5 = map(dedo5, 0, 1023, 1, 8);
 }
 
 /* Concatena, transforma em vetor de char e envia a mensagem */
 void ENVIAR(){
   MENSAGEM = PREFIXO + posicao1 + posicao2 + posicao3 + posicao4 + posicao5;
-  MENSAGEM.toCharArray(BUFFER,16);
+  MENSAGEM.toCharArray(BUFFER,6);
 
-  vw_send((uint8_t *)BUFFER, 12);   // Função que envia o vetor de char
+  vw_send((uint8_t *)BUFFER, 6);    // Função que envia o vetor de char
   vw_wait_tx();                     // Espera todo o vetor ser enviado
 
-  delay(100);                       // Espera para estabilizar o programa
+  delay(200);                       // Espera para estabilizar o programa
 }
 
 /* Exibir valores na tela do Serial Monitor */
@@ -114,7 +114,5 @@ void loop() {
   LER_SENSORES();
   POSICIONAR();
   ENVIAR();
-  EXIBIR();
-        
-  delay(200);                       // Pequeno intervalo
+  EXIBIR();         
 }
