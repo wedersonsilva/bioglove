@@ -11,7 +11,7 @@
   Autor: Wederson Silva
   https://github.com/wedersonsilva/lcfs
 
-  v0.1.19 Coleta e envia valores variáveis para outro Arduino */
+  v0.1.22 Envia e recebe 10 níveis de flexão */
 
 #include <VirtualWire.h>    // Biblioteca do módulo RF 413 Mhz
 
@@ -62,11 +62,11 @@ void LER_SENSORES(){
 
 /* Remapeamento dos valores em até 9 posições*/
 void POSICIONAR(){
-  posicao1 = map(dedo1, 0, 1023, 8, 1);
-  posicao2 = map(dedo2, 0, 1023, 8, 1);
-  posicao3 = map(dedo3, 0, 1023, 1, 8);
-  posicao4 = map(dedo4, 0, 1023, 1, 8);
-  posicao5 = map(dedo5, 0, 1023, 1, 8);
+  posicao1 = map(dedo1, 0, 1023, 0, 9);
+  posicao2 = map(dedo2, 0, 1023, 0, 9);
+  posicao3 = map(dedo3, 0, 1023, 9, 0);
+  posicao4 = map(dedo4, 0, 1023, 9, 0);
+  posicao5 = map(dedo5, 0, 1023, 9, 0);
 }
 
 /* Concatena, transforma em vetor de char e envia a mensagem */
