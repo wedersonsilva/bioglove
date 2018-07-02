@@ -1,9 +1,22 @@
 \babel@toc {brazil}{}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{9}{chapter.1}
-\contentsline {chapter}{\numberline {2}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{10}{chapter.2}
-\contentsline {chapter}{\numberline {3}Descri\IeC {\c c}\IeC {\~a}o do Trabalho Realizado}{11}{chapter.3}
-\contentsline {chapter}{\numberline {4}Resultados}{12}{chapter.4}
+\contentsline {chapter}{\numberline {2}Referencial Te\IeC {\'o}rico}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Sensor Flex}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Potenci\IeC {\^o}metro}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Ardu\IeC {\'\i }no}{10}{section.2.4}
+\contentsline {chapter}{\numberline {3}Trabalho Propriamente Dito}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Medidas e Posicionamento}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Placa de Circuito Impresso}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Movimento mec\IeC {\^a}nico}{11}{section.3.3}
+\contentsline {chapter}{\numberline {4}An\IeC {\'a}lises e Resultados}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{12}{section.4.1}
+\contentsline {section}{\numberline {4.2}Testes}{12}{section.4.2}
+\contentsline {section}{\numberline {4.3}Resultados}{12}{section.4.3}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{13}{chapter.5}
-\contentsline {chapter}{\numberline {A}Algum ap\IeC {\^e}ndice}{14}{appendix.A}
-\contentsline {chapter}{\numberline {B}Outro ap\IeC {\^e}ndice}{15}{appendix.B}
-\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{15}{appendix.B}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~o}es}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{13}{section.5.2}
+\contentsline {chapter}{\numberline {6}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{14}{chapter.6}
+\contentsline {chapter}{\numberline {A}Algum ap\IeC {\^e}ndice}{15}{appendix.A}
+\contentsline {chapter}{\numberline {B}Outro ap\IeC {\^e}ndice}{16}{appendix.B}
+\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{16}{appendix.B}
