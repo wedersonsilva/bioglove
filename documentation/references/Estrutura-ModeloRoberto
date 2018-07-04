@@ -1,0 +1,35 @@
+# Estrutura do documento
+# Baseado nas recomendações de Roberto
+
+1) Introdução:
+
+   - Contextualização
+   - Estado da arte (se tiver)
+   - Motivação 
+   - O que vai fazer
+   - Metodologia
+   - O que terá no resto do documento
+   
+2) Referencial Teórico:
+ 
+   - Sensor Flex
+   - Componentes e circuitos (se houver alguma especialização neles que seja necessário comentar para entender o circuito mais na frente)
+   
+3) Trabalho propriamente dito
+
+    - Descrever o circuito proposto, como ele funciona, derivar equações (se possível)
+    
+4) Resultados e análise:
+
+    - Configurações, resultados e análise
+    - Medição: características (casos de teste, se tiver), resultados e análise
+    
+5) Conclusões e Trabalhos futuros
+   
+     - Síntese dos achados e lista do se pode fazer a mais
+     
+6) Referências
+ 
+ 
+ 
+ 
