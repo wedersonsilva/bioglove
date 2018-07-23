@@ -19,4 +19,4 @@
 \contentsline {chapter}{\numberline {6}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{14}{chapter.6}
 \contentsline {chapter}{\numberline {A}Algum ap\IeC {\^e}ndice}{15}{appendix.A}
 \contentsline {chapter}{\numberline {B}Outro ap\IeC {\^e}ndice}{16}{appendix.B}
-\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{16}{appendix.B}
+\contentsline {chapter}{Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{17}{appendix*.2}
