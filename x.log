@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.20)  1 JUL 2018 11:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.7.25)  7 AUG 2018 00:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**apresentacao-tcc
+**lcfs
 (/usr/share/texmf-dist/tex/latex/tools/x.tex
 ! Interruption.
 <to be read again> 
@@ -12,13 +12,13 @@ l.1
 ? x
  
 Here is how much of TeX's memory you used:
- 7 strings out of 492982
- 242 string characters out of 6138579
- 54251 words of memory out of 5000000
- 3671 multiletter control sequences out of 15000+600000
+ 7 strings out of 492649
+ 230 string characters out of 6135778
+ 56311 words of memory out of 5000000
+ 3988 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 3i,0n,1p,23b,6s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 3i,0n,1p,11b,6s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.
 PDF statistics:
  0 PDF objects out of 1000 (max. 8388607)

@@ -33,6 +33,13 @@ N.~C. Braga, \emph{Curso de Eletrônica: Eletrônica Básica}, 1st~ed.\hskip
   1em plus 0.5em minus 0.4em\relax São Paulo - Brasil: Editora Newton C.
   Braga, 2012, vol.~1.
 
+\bibitem{drricardocirurgiao}
+\BIBentryALTinterwordspacing
+R.~K. de~Oliveira. {Dedo em Gatilho - Dr. Ricardo Kaempf - Cirurgia de Mão e
+  Microcirurgia}. Acessado em: 07/08/2018. [Online]. Available:
+  \url{http://www.ricardokaempf.com.br/services/dedo-em-gatilho/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{atalhoonline}
 \BIBentryALTinterwordspacing
 A.~Online. (ANO, MÊS) Título online. [Online]. Available:
