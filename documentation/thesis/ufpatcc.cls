@@ -19,10 +19,7 @@
 %% Paulo Alexandre Aquino da Costa.
 %% 
 \NeedsTeXFormat{LaTeX2e}[2017/01/01]
-\ProvidesClass{ufpatcc}
-    [2017/02/17 v0.1 Classe LaTeX para
-    trabalhos de conclusão de curso na
-    Universidade Federal do Pará (UFPA)]
+\ProvidesClass{ufpatcc}[]
 \newif\if@times
 \newif\if@arial
 \DeclareOption{times}{\@timestrue}
