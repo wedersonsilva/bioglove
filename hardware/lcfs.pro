@@ -1,4 +1,4 @@
-update=Fri 15 Jun 2018 11:39:21 PM -03
+update=Thu 20 Sep 2018 09:43:34 PM -03
 version=1
 last_client=kicad
 [pcbnew]
@@ -28,38 +28,3 @@ version=1
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=arduino_nano
-LibName2=lcfs-cache
-LibName3=power
-LibName4=device
-LibName5=switches
-LibName6=relays
-LibName7=motors
-LibName8=transistors
-LibName9=conn
-LibName10=linear
-LibName11=regul
-LibName12=74xx
-LibName13=cmos4000
-LibName14=adc-dac
-LibName15=memory
-LibName16=xilinx
-LibName17=microcontrollers
-LibName18=dsp
-LibName19=microchip
-LibName20=analog_switches
-LibName21=motorola
-LibName22=texas
-LibName23=intel
-LibName24=audio
-LibName25=interface
-LibName26=digital-audio
-LibName27=philips
-LibName28=display
-LibName29=cypress
-LibName30=siliconi
-LibName31=opto
-LibName32=atmel
-LibName33=contrib
-LibName34=valves

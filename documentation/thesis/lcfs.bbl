@@ -40,6 +40,25 @@ R.~K. de~Oliveira. {Dedo em Gatilho - Dr. Ricardo Kaempf - Cirurgia de Mão e
   \url{http://www.ricardokaempf.com.br/services/dedo-em-gatilho/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{arduinosite}
+\BIBentryALTinterwordspacing
+C.~C. A.-S.~. License. {Arduino - Introduction}. Acessado em: 12/08/2018.
+  [Online]. Available: \url{https://www.arduino.cc/en/Guide/Introduction}
+\BIBentrySTDinterwordspacing
+
+\bibitem{arduinonanosite}
+\BIBentryALTinterwordspacing
+------. {Arduino Nano}. Acessado em: 18/11/2018. [Online]. Available:
+  \url{https://store.arduino.cc/usa/arduino-nano}
+\BIBentrySTDinterwordspacing
+
+\bibitem{institutodigitalrf}
+\BIBentryALTinterwordspacing
+I.~Digital. {Módulo RF Transmissor + Receptor 433mhz - Instituto Digital}.
+  Acessado em: 12/08/2018. [Online]. Available:
+  \url{http://www.institutodigital.com.br/pd-f7460-modulo-rf-transmissor-receptor-433mhz.html?ct=76b8b&p=4&s=1}
+\BIBentrySTDinterwordspacing
+
 \bibitem{atalhoonline}
 \BIBentryALTinterwordspacing
 A.~Online. (ANO, MÊS) Título online. [Online]. Available:

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name lcfs-rescue)(type Legacy)(uri ${KIPRJMOD}/lcfs-rescue.lib)(options "")(descr ""))
+  (lib (name arduino_nano)(type Legacy)(uri ${KIPRJMOD}/arduino_nano.lib)(options "")(descr ""))
+)
