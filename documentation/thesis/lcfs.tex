@@ -70,7 +70,7 @@
 
 		\section{Movimentação dos dedos}
 		Na mão, os tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias. \cite{drricardocirurgiao}
-
+ 
 		\begin{figure}[h!]
   		\label{fig:hand-move1}
 			\centering
@@ -103,7 +103,20 @@
 		\section{Teoria da coisa}
 			Como foi demonstrado na figura \ref{fig:hand-move1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
 			
-			Nesse sistema, fios foram presos às extremidades dos dedos de uma luva, passando por polias que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Ou seja, para os cinco dedos de cada mão, são utilizados cinco fios e cinco potenciômetros.
+			Inicialmente foi verificado o deslocamento de um fio durante a flexão dos dedos. Para isso, com a mão inicialmente extendida e o dorso voltado para cima, uma das pontas de um fio foi presa na ponta de um dos dedos. O local inicial da outra ponta do fio foi marcada no dorso mão.
+
+			Após a flexão dos dedos o fio se movimentou em uma direção criando um deslocamento (d) do fio em relação ao ponto marcado.
+
+
+		\begin{figure}[h!]
+  		\label{fig:hand-flex1}
+			\centering
+  		\includegraphics[scale=0.7]{../pictures/hand-flex1.png}
+			\caption{Mão em posição inicial (A) e após a flexão dos dedos (B)}
+		\end{figure}
+
+
+			Após examinar esse movimento, foi decidido criar e instalar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Sendo assim, para os cinco dedos de cada mão, são utilizados cinco fios e cinco potenciômetros.
 
 			A variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. O módulo transmissor envia por rádio frequência, mensagens em formato de números inteiros que representam a posição atual de cada dedo.
 
@@ -111,13 +124,19 @@
   		\label{fig:glove-and-transmitter1}
 			\centering
   		\includegraphics[scale=0.7]{../pictures/glove-and-transmitter1.png}
-			\caption{captação e transmissão de sinal}
+			\caption{Captação (A) e transmissão do sinal (B)}
 		\end{figure}
 
 			O módulo receptor de rádio frequência, capta as mensagens e as envia ao microcontrolador conectado. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação.
 
 			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
 	
+		\begin{figure}[h!]
+  		\label{fig:receptor-to-app1}
+			\centering
+  		\includegraphics[scale=0.8]{../pictures/receptor-to-app1.png}
+			\caption{Recepção e processamento do sinal}
+		\end{figure}
 		\section{Medidas e Posicionamento}	
 
 		\section{Placa de Circuito Impresso}
