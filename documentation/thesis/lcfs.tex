@@ -103,9 +103,16 @@
 		\section{Teoria da coisa}
 			Como foi demonstrado na figura \ref{fig:hand-move1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
 			
-			Nesse sistema, fios foram presos às extremidades de cada dedo da luva, passando por polias que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Ou seja, para os cinco dedos de cada mão, são utilizados cinco fios e cinco potenciômetros.
+			Nesse sistema, fios foram presos às extremidades dos dedos de uma luva, passando por polias que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Ou seja, para os cinco dedos de cada mão, são utilizados cinco fios e cinco potenciômetros.
 
 			A variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. O módulo transmissor envia por rádio frequência, mensagens em formato de números inteiros que representam a posição atual de cada dedo.
+
+		\begin{figure}[h!]
+  		\label{fig:glove-and-transmitter1}
+			\centering
+  		\includegraphics[scale=0.7]{../pictures/glove-and-transmitter1.png}
+			\caption{captação e transmissão de sinal}
+		\end{figure}
 
 			O módulo receptor de rádio frequência, capta as mensagens e as envia ao microcontrolador conectado. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação.
 
