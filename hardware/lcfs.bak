@@ -1,39 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:arduino_nano
+EESchema Schematic File Version 4
 LIBS:lcfs-cache
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Conn_01x03_Female J4
+L lcfs-rescue:Conn_01x03_Female J4
 U 1 1 5B22F025
 P 9250 3600
 F 0 "J4" V 9200 3850 50  0000 C CNN
@@ -59,7 +26,7 @@ F 3 "" H 9250 3600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L POT RV1
+L lcfs-rescue:POT RV1
 U 1 1 5B22F5EE
 P 7200 6300
 F 0 "RV1" V 7025 6300 50  0000 C CNN
@@ -74,7 +41,7 @@ GND
 Text Label 7050 6200 1    60   ~ 0
 5V
 $Comp
-L POT RV2
+L lcfs-rescue:POT RV2
 U 1 1 5B22FDF7
 P 7700 6300
 F 0 "RV2" V 7525 6300 50  0000 C CNN
@@ -89,7 +56,7 @@ GND
 Text Label 7550 6200 1    60   ~ 0
 5V
 $Comp
-L POT RV3
+L lcfs-rescue:POT RV3
 U 1 1 5B22FE49
 P 8200 6300
 F 0 "RV3" V 8025 6300 50  0000 C CNN
@@ -104,7 +71,7 @@ GND
 Text Label 8050 6200 1    60   ~ 0
 5V
 $Comp
-L POT RV4
+L lcfs-rescue:POT RV4
 U 1 1 5B22FE92
 P 8700 6300
 F 0 "RV4" V 8525 6300 50  0000 C CNN
@@ -119,7 +86,7 @@ GND
 Text Label 8550 6200 1    60   ~ 0
 5V
 $Comp
-L POT RV5
+L lcfs-rescue:POT RV5
 U 1 1 5B22FEF8
 P 9200 6300
 F 0 "RV5" V 9025 6300 50  0000 C CNN
@@ -134,7 +101,7 @@ GND
 Text Label 9050 6200 1    60   ~ 0
 5V
 $Comp
-L Conn_01x02_Male J3
+L lcfs-rescue:Conn_01x02_Male J3
 U 1 1 5B230263
 P 8500 3600
 F 0 "J3" V 8550 3400 50  0000 C CNN
@@ -145,7 +112,7 @@ F 3 "" H 8500 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Arduino_Nano A1
+L arduino_nano:Arduino_Nano A1
 U 1 1 5B24786A
 P 8350 4900
 F 0 "A1" V 8300 5350 60  0000 C CNN
@@ -222,7 +189,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 5800 7050 5800
 Wire Wire Line
-	9350 3800 9350 4250
+	9350 3800 9350 4200
 Wire Wire Line
 	9250 4250 9250 4200
 Wire Wire Line
@@ -269,4 +236,6 @@ Wire Wire Line
 	7700 3800 7700 4250
 Text Label 7950 3800 0    60   ~ 0
 7.2V
+Wire Wire Line
+	9350 4200 9350 4250
 $EndSCHEMATC

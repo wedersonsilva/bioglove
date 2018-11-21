@@ -137,9 +137,68 @@
   		\includegraphics[scale=0.8]{../pictures/receptor-to-app1.png}
 			\caption{Recepção e processamento do sinal}
 		\end{figure}
+
+
 		\section{Medidas e Posicionamento}	
 
-		\section{Placa de Circuito Impresso}
+			O sistema de captação e transmissão de sinal que seria embarcado na luva, foi projetado para ser de móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso sejam necessárias futuramente.
+
+			\subsection{Componentes}
+
+			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
+
+			O potenciômetro foi o primeiro componente a ser definido para o projeto. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação possível, facilitando assim a percepção pelo microcontrolador.
+
+			O potenciômetro que mais se aproximou das especificações acima foi retirado de um servo motor modelo MG996R da marca TowerPro. Este servo apresentava problemas de controle e não estava mais sendo usado, porém, seu potenciômetro interno estava funcionando perfeitamente. Este potenciômetro possui dimensão aproximada de 13 $mm$ x 13 $mm$, resistência máxima de $5 k\Omega$, giro aproximado de $200^{o}$ e pouca resistência ao girar seu cursor. 
+
+			Um pequeno pedaço de PVC expandido foi conectado ao cursor do potenciômetro para facilitar o giro e para amarrar uma das extremidades de um fio.
+
+			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduíno.
+
+			Para transmitir e receber o sinal, foi escolhido para o projeto o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
+
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria Li-Po que estava disponível no laboratório. Esta possui 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$.
+
+			\subsection{Dimensões e Posicionamento}
+
+			Após medições realizadas no dorso da luva vestida que serviu de modelo para o projeto, foi decidido que as dimêncões máximas da placa de circuito impresso (PCI) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Sendo assim, usando o software QCAD, que é gratuito para o sistema Linux, e organizando os compoenntes dentro de suas dimensões aproximadas, chegou-se ao seguinte layout \ref{fig:size-glove-module-tx1}.
+
+		\begin{figure}[h!]
+  		\label{fig:size-glove-module-tx1}
+			\centering
+  		\includegraphics[scale=0.5]{../pictures/size-glove-module-tx1.png}
+			\caption{Dimensões aproximadas da PCI e seus componentes}
+		\end{figure}
+
+		\section{Placa Embarcada}
+			\subsection{Esquemático}
+
+			Os primeiros experimentos de ligação e testes iniciais entre os componentes foram realizados ainda em protoborad. Um programa simples lia a variação de um resistor e mostrava na tela do computador. Isto foi usado para verificar como deveriam ser as conexões entre resistores, bateria, módulo transmissor e o microcontrolador Arduíno.
+
+			O passo seguinte foi desenhar o esquemático no software gratuito Kicad \ref{fig:schematic-glove-module1}. Esse programa permite a inclusão de componentes e ligações na criação do esquemático do circuito. Posteriormente, possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente  \ref{fig:PCB-glove-module1}.
+
+			Com a placa de circuito finalizada no Kicad, o passo seguinte foi imprimir essa PCI em papel fotográfico e usar o método de transferência térmica para fabricar uma cópia em placa de fenolite. Posteriormente corroendo a placa em uma solução de percloreto de ferro \ref{fig:phenolic-glove-module1}.
+
+		\begin{figure}[h!]
+  		\label{fig:schematic-glove-module1}
+			\centering
+  		\includegraphics[scale=0.5]{../pictures/schematic-glove-module1.png}
+			\caption{Esquemático}
+		\end{figure}
+
+		\begin{figure}[h!]
+  		\label{fig:PCB-glove-module1}
+			\centering
+  		\includegraphics[scale=0.5]{../pictures/PCB-glove-module1.png}
+			\caption{Desenho da PCI}
+		\end{figure}
+
+		\begin{figure}[h!]
+  		\label{fig:phenolic-glove-module1}
+			\centering
+  		\includegraphics[scale=0.3]{../pictures/phenolic-glove-module1.jpg}
+			\caption{Placa após transferência e corrosão}
+		\end{figure}
 		
 		\section{Movimento mecânico}
 
