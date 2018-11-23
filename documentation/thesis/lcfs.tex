@@ -1,40 +1,552 @@
-\documentclass{ufpatcc}
-\usepackage{lipsum}
-\begin{document}
-% FRONT MATTER -------------------------------------------%
-  \capa
-  \folhaderosto
-  \pagenumbering{arabic}
-  \fichacatalografica{Biblioteca Prof. Dr. Clodoaldo Beckmann}
-                     {1. Área 2. Outra área I. Título.}
-                     {21.ed. 001.1}
-  \folhadeaprovacao{17/06/2018}
-  \begin{dedicatoria}
-    \lipsum[13]
-  \end{dedicatoria}
-  \begin{agradecimentos}
-    \lipsum[1-5]
-  \end{agradecimentos}
-  \begin{epigrafe}
-    ``\lipsum*[101]''\par
-      Autor
-  \end{epigrafe}
-  \begin{resumo}
-    \lipsum[1]
-  \end{resumo}
-  \begin{abstract}
-    \lipsum[1]
-  \end{abstract}
-  \tableofcontents
+%% abtex2-modelo-trabalho-academico.tex, v-1.9.6 laurocesar
+%% Copyright 2012-2016 by abnTeX2 group at http://www.abntex.net.br/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro César Araujo. Further information are available on 
+%% http://www.abntex.net.br/
+%%
+%% This work consists of the files abntex2-modelo-trabalho-academico.tex,
+%% abntex2-modelo-include-comandos and abntex2-modelo-references.bib
+%%
 
-	% --------------------- 
-	%	INICIO DOS CAPÍTULOS	
-	% --------------------- 
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
+% mestrado e trabalhos monograficos em geral) em conformidade com 
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	%french,				% idioma adicional para hifenização
+	%spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{listofsymbols}
+
+%\usepackage{reledmac}
+
+
+%pacote da tabela
+\usepackage{multirow}
+% ---
+%	
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+%\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage[alf,abnt-etal-list=0,abnt-etal-cite=3]{abntex2cite}
+ 
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Sistema de Aquisição e Transmissão de Dados Usando Sensor de Flexão Bioinspirado}
+\autor{Wederson Medeiros Silva}
+\local{Belém -- Pará}
+\data{2018}
+\orientador{Prof. Dr. Roberto Menezes Rodriguez}
+\coorientador{Prof. Dr. João Crisóstomo Weyl A. Costa}
+\instituicao{
+  Universidade Federal do Pará -- UFPa
+  \par
+  Instituto de Tecnologia -- ITEC
+  \par
+  Faculdade de Engenharia da Computação e Telecomunicações -- FCT}
+\tipotrabalho{Trabalho de Conclusão de Curso}
+
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Trabalho de Conclusão de Curso apresentado para obtenção do
+título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Faculdade de Engenharia da Computação e Telecomunicações. Universidade Federal do Pará.
+}
+% ---
+
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        		% color of links to bibliography
+    	filecolor=black,      		% color of file links
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\renewcommand{\imprimircapa}{
+\begin{capa}
+
+\center
+\includegraphics[scale=0.4]{figures/ufpa_logo.jpg}
+
+ { \ABNTEXchapterfont 
+ UNIVERSIDADE FEDERAL DO PARÁ\\
+ INSTITUTO DE TECNOLOGIA\\
+ FACULDADE DE ENGENHARIA ELÉTRICA E BIOMÉDICA\\}
+   \vspace*{4.0cm}
+ 
+ { \ABNTEXchapterfont\large
+   \textbf{\imprimirautor}}
+   \vspace*{3.0cm}
+
+ {\ABNTEXchapterfont\LARGE
+ \textbf{\imprimirtitulo}}
+
+ \vspace*{\fill}
+ {\large\imprimirlocal}
+ \par
+ {\large\imprimirdata}
+ \vspace*{1cm}
+\end{capa}
+}
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+%%Folha de Rosto
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+  \begin{center}
+
+    \vspace*{0.08cm}
+    {\ABNTEXchapterfont\Large
+     \imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    {\ABNTEXchapterfont\LARGE
+     \textbf{\imprimirtitulo}}
+     \vspace*{\fill}
+
+    \abntex@ifnotempty{\imprimirpreambulo}{
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+         \imprimirpreambulo\\    
+      \end{minipage}%
+       \vspace*{\fill}
+    }%
+    
+    {\ABNTEXchapterfont\Large
+     \imprimirorientadorRotulo
+     \ABNTEXsectionfont~\imprimirorientador\par}
+    
+    {\ABNTEXchapterfont\Large
+     \imprimircoorientadorRotulo
+     \ABNTEXsectionfont~\imprimircoorientador}%
+
+    \vspace*{\fill}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+  \end{center}
+}
+\makeatother
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+% ---
+% Inserir a ficha bibliografica
+% ---
+
+% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
+% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
+% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
+% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
+% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
+% o conteúdo de implementação deste arquivo pelo comando abaixo:
+%
+% \begin{fichacatalografica}
+%     \includepdf{fig_ficha_catalografica.pdf}
+% \end{fichacatalografica}
+
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+	\small
+	\imprimirautor
+	%Sobrenome, Nome do autor
 	
-	% --------------------- 
-	%	INTRODUÇÃO 	
-	% --------------------- 
-  \chapter{Introdução} % ou \input{arquivoexterno}
+	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+	\imprimirlocal, \imprimirdata-
+	
+	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
+	
+	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+	\hspace{0.5cm} \imprimircoorientadorRotulo~\imprimircoorientador\\
+	
+	\hspace{0.5cm}
+	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+	\imprimirdata.}\\
+	
+	\hspace{0.5cm}
+		1. Modo fantasma de segunda camada.
+		2. Taxa agregada.
+		3. \textit{Vectoring}.
+		4. EVM.
+		I. \imprimirorientador.
+		II. Universidade Federal do Pará.
+		III. Faculdade de Engenharia Elétrica e Biomédica.
+		IV. \imprimirtitulo\\ 		
+	\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+% ---
+% ---
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+        
+   Trabalho aprovado. \imprimirlocal, 24 de dezembro de 2018:
+
+   Conceito: .
+   
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{\imprimircoorientador} \\ Coorientador}
+   \assinatura{\textbf{Prof. Dr. Gilvan Borges} \\ Convidado 1}
+  % \assinatura{\textbf{Prof. Dr. Somebody else} \\ Convidado 2}
+   %\assinatura{\textbf{Professor} \\ Convidado 3}
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+  
+\end{folhadeaprovacao}
+% ---
+
+% ---
+% Dedicatória
+% ---
+\begin{dedicatoria}
+   \vspace*{\fill}
+   \centering
+   \noindent
+   \textit{ Este trabalho é dedicado...} \vspace*{\fill}
+\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+Agradeço ao Professor Dr. ...
+\end{agradecimentos}
+% ---
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``Não vos amoldeis às estruturas deste mundo, ...)}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+%\setlength{\parindent}{1.5cm}
+%\indent
+%\hangindent=3.7cm
+\hspace{1.5cm}O modo \textit{fronthaul} de redes 5G ...
+	
+ \textbf{Palavras-chaves}: Modo fantasma. 
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+\hspace{1.5cm}Phantom mode has...
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: Phantom mode. 
+ \end{otherlanguage*}
+\end{resumo}
+
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+%\imprimirlistadesiglas
+\begin{siglas}
+ \item[AWG]\textit{American Wire Gauge}
+ \item[AXT]\textit{Alien crosstalk} 
+ \item[BBU]\textit{Baseband Unit}
+ \item[CAGR]\textit{Compound Annual Growth Rate}
+ \item[CM]Conversão de modo
+ \item[CST]\textit{Computer Simulation Technology}
+ \item[DMT]\textit{Discrete Multitone}
+ \item[DSL]\textit{Digital Subscriber Line}
+ \item[EVM]\textit{Error Vector Magnitude}
+ \item[FEXT]\textit{Far-End Crosstalk}
+ \item[FT]Função de transferência
+ \item[FTTH]\textit{Fiber-to-the-Home}
+ \item[IoT]\textit{Internet of Things}
+ \item[ITU]\textit{International Telecommunication Union}
+ \item[MD]Modo diferencial
+ \item[MF1]Modo fantasma de 1ª camada 
+ \item[MF2]Modo fantasma de 2ª camada
+ \item[MIMO]\textit{Multiple-Input Multiple-Output}
+ \item[NEXT]\textit{Near-End Crosstalk}
+ \item[RSIR]\textit{Signal-to-Noise Ratio}
+ \item[SP]Modo \textit{split-pair}
+ \item[STP]\textit{Shielded Twisted Pair}
+ \item[UTP]\textit{Unshielded Twisted Pair}
+ \item[VNA]\textit{Vector Network Analyzer}
+ \item[WS]Modo \textit{wire-shield}
+\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+\begin{simbolos}
+  \item[$\alpha$] Contante de atenuação
+  \item[$\beta$] Contante de fase
+  \item[$\gamma$] Contante de propagação
+  \item[$\Gamma_{L}$] Coeficiente de reflexão na carga
+  \item[$\delta$] Constante da restrição de potência transmissão
+  \item[$\Delta_f$ ] Subcanais ou tons em Hz
+  \item[$ \Gamma $]  Gap de $RSIR$
+  \item[$ \Lambda $] Matriz que contém os elementos da diagonal principal de $\mathbf{H}$
+  \item[$\rho$] Máscara espectral utilizada pelo sistema DSL
+  %  \item[
+  \item[${\sigma}^{2}$]  Densidade espectral de potência potência do ruído Gaussiano branco aditivo
+\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+
+
+% ----------------------------------------------------------
+% GUIA DAYNARA
+% ----------------------------------------------------------
+%{\color{green}
+%1- Introdução 
+%
+%Seção 1: Contexto:
+%
+%	-Contexto da tecnologia, contendo um histórico das evoluções ADSL – VDSL – G. Fast 
+%	
+%	-Apontar limitações dos sistemas em relação a transmissão (taxa agregada)
+%	
+%	-Quais as soluções que estão sendo investigadas
+%	
+%	-Uma das soluções é buscar modos de transmissão alternativos
+%	
+%	-Modo fantasma, split-pair e wire-shield 
+%	
+%Seção 2: Trabalhos relacionados (até onde eles abordaram)
+%
+%Seção 3: *Motivação:
+%Por que pesquisar esta área e esse tema de modos alternativos de transmissão, onde poderia ser aplicados (5G, XG.), etc.;
+%
+%Seção 4: *Justificativa:
+%Quais são exatamente as contribuições, o que eu fiz a mais em relação ao que já existe.
+%
+%Seção 6:*Objetivos
+%
+%Seção 5:*Resumo da metodologia
+%
+%Seção :*organização do trabalho
+%}
+%{\color{red}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\chapter{Introdução} % ou \input{arquivoexterno}
 		
 		Contextualização; Estado da arte (se tiver); Motivação; O que vai fazer; Metodologia; O que terá no resto do documento;
 
@@ -42,28 +554,29 @@
 	% --------------------- 
 	%	REFERENCIAL TEÓRICO	
 	% --------------------- 
+	
 	\chapter{Referencial Teórico}
 
 		\section{Sensor Flex}
-		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}
+		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}.
 
-		\begin{figure}[h!]
-  		\label{fig:flex-sensor1}
-			\centering
-  		\includegraphics[scale=0.4]{../pictures/flex-sensor-sparkfun.png}
-  		\caption{Sensor Flex}
-		\end{figure}
-
+	\begin{figure}[!h]
+		\centering
+		\caption{Sensor de Flexão}
+		\includegraphics[width=12cm,keepaspectratio=true]{./figures/flex-sensor-sparkfun.png}
+		\fonte{Site Sparkfun}%
+		\label{Fig:flex-sensor1}
+	\end{figure}
 
 		\section{Potenciômetro}
 		O potenciômetro é um componente eletrônico que permite, através do giro do seu eixo, a variação da resistência entre seus terminais. Eles são constituídos por um elemento de resistência, que pode ser de carbono ou fio de nicromo, sobre o qual corre uma lingüeta, denominada cursor. Dentre as características do potenciômetro estão o valor máximo de sua resistência, seu número de voltas, seu grau máximo de giro (aproximado) e se ele é do tipo linear ou logarítmico \cite{ncb2012eletronicabasica}.
 
 
 		\begin{figure}[h!]
-  		\label{fig:pot1}
 			\centering
-  		\includegraphics[scale=0.7]{../pictures/potentiometer1.png}
+  		\includegraphics[scale=0.7]{./figures/potentiometer1.png}
   		\caption{Funcionamento do potenciômetro linear}
+  		\label{Fig:pot1}
 		\end{figure}
 
 		Segundo a lei de Ohm ($V = R.I$), dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto. Partindo de um ponto extremo com resistência mínima até o outro ponto extremo no qual a resistência deverá ser a máxima característica do componente.
@@ -72,36 +585,34 @@
 		Na mão, os tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias. \cite{drricardocirurgiao}
  
 		\begin{figure}[h!]
-  		\label{fig:hand-move1}
 			\centering
-  		\includegraphics[scale=0.5]{../pictures/hand-flex-movement1.png}
+  		\includegraphics[scale=0.5]{./figures/hand-flex-movement1.png}
   		\caption{Movimento do dedo através do tendão}
+  		\label{Fig:hand-move1}
 		\end{figure}
 
 		\section{Arduino}
 		O Arduino é uma plataforma eletrônica de código aberto (\textit{open-source}) que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. E pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua interface de desenvolvimento (IDE), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
 		
 		\begin{figure}[h!]
-  		\label{fig:arduino-nano1}
 			\centering
-  		\includegraphics[scale=0.7]{../pictures/arduino-nano1.jpg}
+  		\includegraphics[scale=0.7]{./figures/arduino-nano1.jpg}
 			\caption{Placa Arduino modelo Nano \cite{arduinonanosite}}
+  		\label{Fig:arduino-nano1}
 		\end{figure}
 
 		\section{Módulo RF 433 Mhz}
 		O módulo de rádio frequência 433 Mhz é composto por um par que contém um transmissor e um receptor, ele opera com modulação AM e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
-		
-		
-
 
 
 	% ----------------------------
 	%	TRABALHO PROPRIAMENTE DITO	
 	% ----------------------------
+	
 	\chapter{Trabalho Propriamente Dito}
 
 		\section{Teoria da coisa}
-			Como foi demonstrado na figura \ref{fig:hand-move1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
+			Como foi demonstrado na figura \ref{Fig:hand-move1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
 			
 			Inicialmente foi verificado o deslocamento de um fio durante a flexão dos dedos. Para isso, com a mão inicialmente extendida e o dorso voltado para cima, uma das pontas de um fio foi presa na ponta de um dos dedos. O local inicial da outra ponta do fio foi marcada no dorso mão.
 
@@ -109,10 +620,10 @@
 
 
 		\begin{figure}[h!]
-  		\label{fig:hand-flex1}
 			\centering
-  		\includegraphics[scale=0.7]{../pictures/hand-flex1.png}
+  		\includegraphics[scale=0.7]{./figures/hand-flex1.png}
 			\caption{Mão em posição inicial (A) e após a flexão dos dedos (B)}
+  		\label{Fig:hand-flex1}
 		\end{figure}
 
 
@@ -121,9 +632,9 @@
 			A variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. O módulo transmissor envia por rádio frequência, mensagens em formato de números inteiros que representam a posição atual de cada dedo.
 
 		\begin{figure}[h!]
-  		\label{fig:glove-and-transmitter1}
+  		\label{Fig:glove-and-transmitter1}
 			\centering
-  		\includegraphics[scale=0.7]{../pictures/glove-and-transmitter1.png}
+  		\includegraphics[scale=0.7]{./figures/glove-and-transmitter1.png}
 			\caption{Captação (A) e transmissão do sinal (B)}
 		\end{figure}
 
@@ -132,10 +643,10 @@
 			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
 	
 		\begin{figure}[h!]
-  		\label{fig:receptor-to-app1}
 			\centering
-  		\includegraphics[scale=0.8]{../pictures/receptor-to-app1.png}
+  		\includegraphics[scale=0.8]{./figures/receptor-to-app1.png}
 			\caption{Recepção e processamento do sinal}
+  		\label{Fig:receptor-to-app1}
 		\end{figure}
 
 
@@ -161,13 +672,13 @@
 
 			\subsection{Dimensões e Posicionamento}
 
-			Após medições realizadas no dorso da luva vestida que serviu de modelo para o projeto, foi decidido que as dimêncões máximas da placa de circuito impresso (PCI) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Sendo assim, usando o software QCAD, que é gratuito para o sistema Linux, e organizando os compoenntes dentro de suas dimensões aproximadas, chegou-se ao seguinte layout \ref{fig:size-glove-module-tx1}.
+			Após medições realizadas no dorso da luva vestida que serviu de modelo para o projeto, foi decidido que as dimêncões máximas da placa de circuito impresso (PCI) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Sendo assim, usando o software QCAD, que é gratuito para o sistema Linux, e organizando os compoenntes dentro de suas dimensões aproximadas, chegou-se ao seguinte layout \ref{Fig:size-glove-module-tx1}.
 
 		\begin{figure}[h!]
-  		\label{fig:size-glove-module-tx1}
 			\centering
-  		\includegraphics[scale=0.5]{../pictures/size-glove-module-tx1.png}
+  		\includegraphics[scale=0.5]{figures/size-glove-module-tx1.png}
 			\caption{Dimensões aproximadas da PCI e seus componentes}
+  		\label{Fig:size-glove-module-tx1}
 		\end{figure}
 
 		\section{Placa Embarcada}
@@ -175,29 +686,29 @@
 
 			Os primeiros experimentos de ligação e testes iniciais entre os componentes foram realizados ainda em protoborad. Um programa simples lia a variação de um resistor e mostrava na tela do computador. Isto foi usado para verificar como deveriam ser as conexões entre resistores, bateria, módulo transmissor e o microcontrolador Arduíno.
 
-			O passo seguinte foi desenhar o esquemático no software gratuito Kicad \ref{fig:schematic-glove-module1}. Esse programa permite a inclusão de componentes e ligações na criação do esquemático do circuito. Posteriormente, possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente  \ref{fig:PCB-glove-module1}.
+			O passo seguinte foi desenhar o esquemático no software gratuito Kicad \ref{Fig:schematic-glove-module1}. Esse programa permite a inclusão de componentes e ligações na criação do esquemático do circuito. Posteriormente, possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente  \ref{Fig:PCB-glove-module1}.
 
-			Com a placa de circuito finalizada no Kicad, o passo seguinte foi imprimir essa PCI em papel fotográfico e usar o método de transferência térmica para fabricar uma cópia em placa de fenolite. Posteriormente corroendo a placa em uma solução de percloreto de ferro \ref{fig:phenolic-glove-module1}.
+			Com a placa de circuito finalizada no Kicad, o passo seguinte foi imprimir essa PCI em papel fotográfico e usar o método de transferência térmica para fabricar uma cópia em placa de fenolite. Posteriormente corroendo a placa em uma solução de percloreto de ferro \ref{Fig:phenolic-glove-module1}.
 
 		\begin{figure}[h!]
-  		\label{fig:schematic-glove-module1}
 			\centering
-  		\includegraphics[scale=0.5]{../pictures/schematic-glove-module1.png}
+  		\includegraphics[scale=0.5]{./figures/schematic-glove-module1.png}
 			\caption{Esquemático}
+  		\label{Fig:schematic-glove-module1}
 		\end{figure}
 
 		\begin{figure}[h!]
-  		\label{fig:PCB-glove-module1}
 			\centering
-  		\includegraphics[scale=0.5]{../pictures/PCB-glove-module1.png}
+  		\includegraphics[scale=0.5]{./figures/PCB-glove-module1.png}
 			\caption{Desenho da PCI}
+  		\label{Fig:PCB-glove-module1}
 		\end{figure}
 
 		\begin{figure}[h!]
-  		\label{fig:phenolic-glove-module1}
 			\centering
-  		\includegraphics[scale=0.3]{../pictures/phenolic-glove-module1.jpg}
+  		\includegraphics[scale=0.3]{./figures/phenolic-glove-module1.jpg}
 			\caption{Placa após transferência e corrosão}
+  		\label{Fig:phenolic-glove-module1}
 		\end{figure}
 		
 		\section{Movimento mecânico}
@@ -206,6 +717,7 @@
 	% ----------------------------
 	%	RESULTADOS E ANÁLISES	
 	% ----------------------------
+	
 	\chapter{Análises e Resultados}
 
 		\section{Configurações}
@@ -224,19 +736,20 @@
 
 		\section{Trabalhos Futuros}
 
-	% ----------------------------
-	%	REVISÃO BIBLIOGRÁFICA	
-	% ----------------------------
-  \chapter{Revisão Bibliográfica}
-%    \lipsum[1]\cite{atalholivro}
-    \lipsum[2]\cite{atalhoonline}
 
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{referencias}
 
-% BACK MATTER --------------------------------------------%
-  \appendix
-    \chapter{Algum apêndice}
-    \chapter{Outro apêndice}
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
 
-  \bibliographystyle{IEEEtran}
-  \referencias{referencias}
+\printindex
+
 \end{document}
