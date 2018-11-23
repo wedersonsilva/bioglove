@@ -1,3 +1,0 @@
-flex-sensor-sparkfun : https://learn.sparkfun.com/tutorials/flex-sensor-hookup-guide/all
-
-arduino-nano1 : https://store.arduino.cc/usa/arduino-nano
