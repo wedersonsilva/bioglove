@@ -1,0 +1,50 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Braga 2012]{ncb2012eletronicabasica}
+\abntrefinfo{Braga}{BRAGA}{2012}
+{BRAGA, N.~C. \emph{Curso de Eletrônica: Eletrônica Básica}. 1. ed. São
+  Paulo - Brasil: Editora Newton C. Braga, 2012. v.~1. PAGES~p.
+ISBN 8565050092, 9788565050098.}
+
+\bibitem[Digital]{institutodigitalrf}
+\abntrefinfo{Digital}{DIGITAL}{}
+{DIGITAL, I. \emph{{Módulo RF Transmissor + Receptor 433mhz - Instituto
+  Digital}}.
+Acessado em: 12/08/2018.
+Dispon{\'\i}vel em:
+  \url{http://www.institutodigital.com.br/pd-f7460-modulo-rf-transmissor-receptor-433mhz.html?ct=76b8b&p=4&s=1}.}
+
+\bibitem[License]{arduinosite}
+\abntrefinfo{License}{LICENSE}{a}
+{LICENSE, C. C. A.-S.~. \emph{{Arduino - Introduction}}.
+Acessado em: 12/08/2018.
+Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
+
+\bibitem[License]{arduinonanosite}
+\abntrefinfo{License}{LICENSE}{b}
+{LICENSE, C. C. A.-S.~. \emph{{Arduino Nano}}.
+Acessado em: 18/11/2018.
+Dispon{\'\i}vel em: \url{https://store.arduino.cc/usa/arduino-nano}.}
+
+\bibitem[M 2013]{solanki2013sign}
+\abntrefinfo{M}{M}{2013}
+{M, S.~K. Indian sign languages using flex sensor glove.
+\emph{IJETT}, v.~4, p. 2478--2480, 2013.
+ISSN 2231-5381.
+Dispon{\'\i}vel em:
+  \url{http://www.ijettjournal.org/volume-4/issue-6/IJETT-V4I6P149.pdf}.}
+
+\bibitem[Oliveira]{drricardocirurgiao}
+\abntrefinfo{Oliveira}{OLIVEIRA}{}
+{OLIVEIRA, R.~K. de. \emph{{Dedo em Gatilho - Dr. Ricardo Kaempf - Cirurgia de
+  Mão e Microcirurgia}}.
+Acessado em: 07/08/2018.
+Dispon{\'\i}vel em:
+  \url{http://www.ricardokaempf.com.br/services/dedo-em-gatilho/}.}
+
+\end{thebibliography}
