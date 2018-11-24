@@ -563,7 +563,7 @@ Agradeço ao Professor Dr. ...
 	\begin{figure}[!h]
 		\centering
 		\caption{Sensor de Flexão}
-		\includegraphics[width=12cm,keepaspectratio=true]{./figures/flex-sensor-sparkfun.png}
+		\includegraphics[width=12cm,keepaspectratio=true]{./figures/flex-sensor1.png}
 		\fonte{Site Sparkfun}%
 		\label{Fig:flex-sensor1}
 	\end{figure}
@@ -576,7 +576,7 @@ Agradeço ao Professor Dr. ...
 			\centering
   		\includegraphics[scale=0.7]{./figures/potentiometer1.png}
   		\caption{Funcionamento do potenciômetro linear}
-  		\label{Fig:pot1}
+  		\label{Fig:potentiometer1}
 		\end{figure}
 
 		Segundo a lei de Ohm ($V = R.I$), dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto. Partindo de um ponto extremo com resistência mínima até o outro ponto extremo no qual a resistência deverá ser a máxima característica do componente.
@@ -586,10 +586,11 @@ Agradeço ao Professor Dr. ...
  
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.5]{./figures/hand-flex-movement1.png}
+  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
   		\caption{Movimento do dedo através do tendão}
-  		\label{Fig:hand-move1}
+  		\label{Fig:hand-tendon-flex1}
 		\end{figure}
+
 
 		\section{Arduino}
 		O Arduino é uma plataforma eletrônica de código aberto (\textit{open-source}) que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. E pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua interface de desenvolvimento (IDE), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
@@ -612,7 +613,7 @@ Agradeço ao Professor Dr. ...
 	\chapter{Trabalho Propriamente Dito}
 
 		\section{Teoria da coisa}
-			Como foi demonstrado na figura \ref{Fig:hand-move1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
+			Como foi demonstrado na figura \ref{Fig:hand-tendon-flex1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
 			
 			Inicialmente foi verificado o deslocamento de um fio durante a flexão dos dedos. Para isso, com a mão inicialmente extendida e o dorso voltado para cima, uma das pontas de um fio foi presa na ponta de um dos dedos. O local inicial da outra ponta do fio foi marcada no dorso mão.
 
@@ -621,9 +622,9 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.7]{./figures/hand-flex1.png}
+  		\includegraphics[scale=0.7]{./figures/hand-wire-flex1.png}
 			\caption{Mão em posição inicial (A) e após a flexão dos dedos (B)}
-  		\label{Fig:hand-flex1}
+  		\label{Fig:hand-wire-flex1}
 		\end{figure}
 
 
@@ -632,10 +633,10 @@ Agradeço ao Professor Dr. ...
 			A variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. O módulo transmissor envia por rádio frequência, mensagens em formato de números inteiros que representam a posição atual de cada dedo.
 
 		\begin{figure}[h!]
-  		\label{Fig:glove-and-transmitter1}
 			\centering
   		\includegraphics[scale=0.7]{./figures/glove-and-transmitter1.png}
 			\caption{Captação (A) e transmissão do sinal (B)}
+  		\label{Fig:glove-and-transmitter1}
 		\end{figure}
 
 			O módulo receptor de rádio frequência, capta as mensagens e as envia ao microcontrolador conectado. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação.
@@ -644,9 +645,9 @@ Agradeço ao Professor Dr. ...
 	
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.8]{./figures/receptor-to-app1.png}
+  		\includegraphics[scale=0.8]{./figures/receptor1.png}
 			\caption{Recepção e processamento do sinal}
-  		\label{Fig:receptor-to-app1}
+  		\label{Fig:receptor1}
 		\end{figure}
 
 
@@ -672,13 +673,13 @@ Agradeço ao Professor Dr. ...
 
 			\subsection{Dimensões e Posicionamento}
 
-			Após medições realizadas no dorso da luva vestida que serviu de modelo para o projeto, foi decidido que as dimêncões máximas da placa de circuito impresso (PCI) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Sendo assim, usando o software QCAD, que é gratuito para o sistema Linux, e organizando os compoenntes dentro de suas dimensões aproximadas, chegou-se ao seguinte layout \ref{Fig:size-glove-module-tx1}.
+			Após medições realizadas no dorso da luva vestida que serviu de modelo para o projeto, foi decidido que as dimêncões máximas da placa de circuito impresso (PCI) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Sendo assim, usando o software QCAD, que é gratuito para o sistema Linux, e organizando os compoenntes dentro de suas dimensões aproximadas, chegou-se ao seguinte layout \ref{Fig:size-glove-module1}.
 
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.5]{figures/size-glove-module-tx1.png}
+  		\includegraphics[scale=0.5]{figures/size-glove-module1.png}
 			\caption{Dimensões aproximadas da PCI e seus componentes}
-  		\label{Fig:size-glove-module-tx1}
+  		\label{Fig:size-glove-module1}
 		\end{figure}
 
 		\section{Placa Embarcada}
