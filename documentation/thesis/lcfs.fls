@@ -230,6 +230,12 @@ INPUT ./figures/hand-wire-flex1.png
 INPUT ./figures/glove-wire-pot1.png
 INPUT ./figures/glove-wire-pot1.png
 INPUT ./figures/glove-wire-pot1.png
+INPUT ./figures/glove-wire-flex2.png
+INPUT ./figures/glove-wire-flex2.png
+INPUT ./figures/glove-wire-flex2.png
+INPUT ./figures/glove-wire-extend2.png
+INPUT ./figures/glove-wire-extend2.png
+INPUT ./figures/glove-wire-extend2.png
 INPUT ./figures/transmitter-module1.png
 INPUT ./figures/transmitter-module1.png
 INPUT ./figures/transmitter-module1.png
@@ -251,12 +257,6 @@ INPUT ./figures/phenolic-glove-module1.jpg
 INPUT ./figures/glove-module-ready1.jpg
 INPUT ./figures/glove-module-ready1.jpg
 INPUT ./figures/glove-module-ready1.jpg
-INPUT ./figures/glove-wire-flex2.png
-INPUT ./figures/glove-wire-flex2.png
-INPUT ./figures/glove-wire-flex2.png
-INPUT ./figures/glove-wire-extend2.png
-INPUT ./figures/glove-wire-extend2.png
-INPUT ./figures/glove-wire-extend2.png
 INPUT lcfs.bbl
 INPUT lcfs.bbl
 INPUT lcfs.brf

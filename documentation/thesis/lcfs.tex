@@ -558,12 +558,13 @@ Agradeço ao Professor Dr. ...
 	\chapter{Referencial Teórico}
 
 		\section{Sensor Flex}
+
 		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}.
 
 	\begin{figure}[!h]
 		\centering
 		\caption{Sensor de Flexão}
-		\includegraphics[width=12cm,keepaspectratio=true]{./figures/flex-sensor1.png}
+		\includegraphics[width=7cm,keepaspectratio=true]{./figures/flex-sensor1.png}
 		\fonte{Site Sparkfun}%
 		\label{Fig:flex-sensor1}
 	\end{figure}
@@ -594,17 +595,18 @@ Agradeço ao Professor Dr. ...
 
 
 		\section{Arduino}
-		O Arduino é uma plataforma eletrônica de código aberto (\textit{open-source}) que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. E pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua interface de desenvolvimento (IDE), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
+		O Arduino é uma plataforma eletrônica de código aberto (\textit{open-source}) que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. E pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
 		
 		\begin{figure}[h!]
 			\centering
 			\caption{Placa Arduino modelo Nano \cite{arduinonanosite}}
   		\includegraphics[scale=0.7]{./figures/arduino-nano1.jpg}
   		\label{Fig:arduino-nano1}
+			\fonte{Site Arduino}
 		\end{figure}
 
 		\section{Módulo RF 433 Mhz}
-		O módulo de rádio frequência 433 Mhz é composto por um par que contém um transmissor e um receptor, ele opera com modulação AM e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
+		O módulo de RF (Rádio Frequência) 433 Mhz é composto por um par que contém um transmissor e um receptor, ele opera com modulação AM (\textit{Amplitude Modulation}) e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
 
 
 	% ----------------------------
@@ -616,9 +618,9 @@ Agradeço ao Professor Dr. ...
 		\section{Teoria da coisa}
 			Como foi demonstrado na figura \ref{Fig:hand-tendon-flex1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
 			
-			Inicialmente foi verificado o deslocamento de um fio durante a flexão dos dedos. Para isso, com a mão inicialmente extendida e o dorso voltado para cima, uma das pontas de um fio foi presa na ponta de um dos dedos. O local inicial da outra ponta do fio foi marcada no dorso mão.
+			Inicialmente foi verificado se havia deslocamento do fio durante a flexão de um dedo. Para isso, com a mão inicialmente extendida com o dorso voltado para cima, uma das pontas de um fio foi presa na extremidade de um dos dedos. O local da outra ponta do fio foi marcada no dorso mão. Como é demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (a).
 
-			Após a flexão dos dedos o fio se movimentou em uma direção criando um deslocamento (d) do fio em relação ao ponto marcado.
+			Após a flexão dos dedos, o fio se movimentou em uma direção e criou um deslocamento (d) do fio em relação ao ponto marcado, mostrado na figura \ref{Fig:hand-wire-steady-and-flex} (b).
 
 %\begin{figure}[H]
 %	\caption{Cabo de pares trançados.}
@@ -650,11 +652,14 @@ Agradeço ao Professor Dr. ...
    \fonte{Produzido pelo autor}
  \end{figure}
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+		\section{Movimento mecânico}
+		\subsection{Adaptação da Luva}
 
-			Após examinar esse movimento, foi decidido criar e instalar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Sendo assim, para os cinco dedos de cada mão, são utilizados cinco fios e cinco potenciômetros.
+			Após examinar o movimento descrito acima, foi decidido criar e embarcar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Figura \ref{Fig:glove-and-transmitter1}. Sendo assim, ao final, para os cinco dedos da mão, serão necessários cinco fios e cinco potenciômetros.
 
-			A variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. O módulo transmissor envia por rádio frequência, mensagens em formato de números inteiros que representam a posição atual de cada dedo.
 
 		\begin{figure}[h!]
 			\centering
@@ -664,9 +669,43 @@ Agradeço ao Professor Dr. ...
 			\fonte{Produzido pelo autor}
 		\end{figure}
 
-			O módulo receptor de rádio frequência, capta as mensagens e as envia ao microcontrolador conectado. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação.
 
-			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
+		\subsection{Flexão e Extensão dos Dedos}
+
+		Inicialmente, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado, como é mostrado na figura \ref{Fig:glove-flex-and-extend2} (a).
+
+		Após a flexão dos dedos, ao realizar o movimento inverso (extenção), nem o fio de náilon e nem o cursor do potenciômetro retornam à posição inicial. Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico, durante o movimento de flexão o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. 
+		
+		Durante o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso ocorre enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro. Demonstrado na figura \ref{Fig:glove-flex-and-extend2} (b)
+		
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{ Movimentos da luva de (a) flexão e (b) extensão} 
+		 \subfloat[]
+		 {
+			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/glove-wire-flex2.png}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/glove-wire-extend2.png}
+		 }
+		 \label{Fig:glove-flex-and-extend2}
+		 \fonte{Produzido pelo autor}
+	\end{figure}
+
+
+		Nesse sistema, a força do dedo durante a flexão e a força do elástico durante a extensão giram o cursor do potenciômetro através do fio de náilon. Dessa forma, o fio e o cursor acompanham o movimento dos dedos em diferentes graus possibilitando o sensoriamento.
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		\subsection{Transmissão e Recepção de Dados}
+
+			Como foi descrito, durante a movimentação dos dedos, a posição do cursor do potenciômetro é modificado. Sendo assim, para possibilitar o sensoriamento, a variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. Este por sua vez envia mensagens por rádio frequência, em formato de números inteiros que representam a posição atual de cada dedo. Figura \ref{Fig:transmitter-and-receptor} (a).
+
+			O módulo receptor de rádio frequência, capta as mensagens e as envia a outro microcontrolador. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação. Figura \ref{Fig:transmitter-and-receptor} (b).
+
 
 	\begin{figure}[!htb]
   	\centering
@@ -684,6 +723,9 @@ Agradeço ao Professor Dr. ...
  		\end{figure}
 
 
+			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
+
+
 		\section{Medidas e Posicionamento}	
 
 			O sistema de captação e transmissão de sinal que seria embarcado na luva, foi projetado para ser de móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso sejam necessárias futuramente.
@@ -692,37 +734,38 @@ Agradeço ao Professor Dr. ...
 
 			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
 
-			O potenciômetro foi o primeiro componente a ser definido para o projeto. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação possível, facilitando assim a percepção pelo microcontrolador.
+			O potenciômetro foi o primeiro componente a ser definido para o projeto. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
 
-			O potenciômetro que mais se aproximou das especificações acima foi retirado de um servo motor modelo MG996R da marca TowerPro. Este servo apresentava problemas de controle e não estava mais sendo usado, porém, seu potenciômetro interno estava funcionando perfeitamente. Este potenciômetro possui dimensão aproximada de 13 $mm$ x 13 $mm$, resistência máxima de $5 k\Omega$, giro aproximado de $200^{o}$ e pouca resistência ao girar seu cursor. 
+			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. Estes servos apresentavam problemas de controle e seriam descartados, porém, seus potenciômetro funcionavam perfeitamente. Este modelo de potenciômetro possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de $5k\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
 
-			Um pequeno pedaço de PVC expandido foi conectado ao cursor do potenciômetro para facilitar o giro e para amarrar uma das extremidades de um fio.
+			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico.
 
-			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduíno.
+			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
 
 			Para transmitir e receber o sinal, foi escolhido para o projeto o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
 
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria Li-Po que estava disponível no laboratório. Esta possui 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$.
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria Li-Po que estava disponível no laboratório. Esta possui capacidade de 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$.
 
 			\subsection{Dimensões e Posicionamento}
 
-			Após medições realizadas no dorso da luva vestida que serviu de modelo para o projeto, foi decidido que as dimêncões máximas da placa de circuito impresso (PCI) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Sendo assim, usando o software QCAD, que é gratuito para o sistema Linux, e organizando os compoenntes dentro de suas dimensões aproximadas, chegou-se ao seguinte layout \ref{Fig:size-glove-module1}.
+			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que as dimenções máximas da PCI (Placa de Circuito Impresso) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
 
 		\begin{figure}[h!]
 			\centering
 			\caption{Dimensões aproximadas da PCI e seus componentes}
-  		\includegraphics[scale=0.5]{figures/size-glove-module1.png}
+  		\includegraphics[width=7cm]{figures/size-glove-module1.png}
   		\label{Fig:size-glove-module1}
 		\end{figure}
+
 
 		\section{Placa Embarcada}
 			\subsection{Esquemático}
 
-			Os primeiros experimentos de ligação e testes iniciais entre os componentes foram realizados ainda em protoborad. Um programa simples lia a variação de um resistor e mostrava na tela do computador. Isto foi usado para verificar como deveriam ser as conexões entre resistores, bateria, módulo transmissor e o microcontrolador Arduíno.
+			Os primeiros experimentos de ligação e testes entre os componentes foram realizados ainda em protoborad. Inicialmente, um simples programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetos, bateria, módulo transmissor e o microcontrolador Arduíno.
 
-			O passo seguinte foi utilizar o software gratuito Kicad. Esse programa permite a inclusão de componentes e ligações na criação do esquemático do circuito. Posteriormente, possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através dele foram criados os desenhos do esquemático e da PCI do sistema eletrônico embarcado \ref{Fig:schematic-and-PCB}.
+			O passo seguinte foi utilizar o software gratuito Kicad. Esse programa permite a inclusão de componentes e ligações no desenho do esquemático do circuito. Posteriormente, o Kicad possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada, ambos mostrados na figura \ref{Fig:schematic-and-PCB}.
 
-			Com o desenho da placa finalizada no Kicad, esta PCI foi impressa em papel fotográfico e o método de transferência térmica foi utilizado para fabricar uma cópia de PCI em uma placa de fenolite. Posteriormente a placa de fenolite foi corroída em uma solução de percloreto de ferro. Após a corrosão completa, a placa foi lavada e secada para finalmente ter seus pinos e componentes soldados. Chegando assim, ao resultado final \ref{Fig:phenolic-and-ready}
+			Com o desenho da placa finalizada no Kicad, esta PCI foi impressa em papel fotográfico e o método de transferência térmica foi utilizado para fabricar uma cópia dessa PCI em uma placa de fenolite cobreada. Posteriormente a placa de fenolite foi corroída em uma solução de percloreto de ferro. Após a corrosão completa, a placa foi lavada e secada para finalmente ter seus pinos e componentes soldados. Chegando assim, ao resultado final mostrado na figura \ref{Fig:phenolic-and-ready}
 
 	\begin{figure}[!htb]
 		 \centering
@@ -756,41 +799,6 @@ Agradeço ao Professor Dr. ...
 		 \fonte{Produzido pelo autor}
 	\end{figure}
 
-
-		\section{Movimento mecânico}
-
-		\subsection{Flexão dos Dedos}
-
-		Inspirado no movimento de flexão dos dedos da mão que é possibilitado pelos tendões, decidiu-se construir um sistema semelhante, que estaria embarcado em uma luva. O sistema deve mensurar graus de flexão e extensão dos dedos usando fios de náilon atrelados a potenciômetros que variam de acordo com a tensão e sentido do fio.
-
-		Nesse sistema, uma das extremidades do fio de náilon é presa na ponta de um dos dedos da luva. O trajeto da extensão do fio é guiada por polias plásticas. A extremidade oposta do fio é presa ao cursor de um potenciômetro.
-		Dessa forma, mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado.
-	
-		A variação de resistência do potênciometro é capturada pelo microcontrolador, que traduz o movimento recebido em números que representam graus de flexão. Esses número são remapeados e transferidos ao transmissor. Este por sua vez, envia a mensagem via rádio frequência.
-
-
-		\subsection{Extensão dos Dedos}
-
-		Após a flexão dos dedos, ao realizar o movimento inverso (extenção), Nem o fio de náilon e nem o cursor do potenciômetro retornam à posição inicial. Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. 
-
-		Durante a flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força para girar o cursor de volta à sua posição inicial. Durante o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso ocorre enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro.
-		
-		A força do dedo durante a flexão e a força do elástico durante a extensão giram o cursor do potenciômetro através do fio de náilon. Dessa forma, o fio e o cursor acompanham o movimento dos dedos em diferentes graus.
-
-	\begin{figure}[!htb]
-		 \centering
-		 \caption{ Movimentos da luva de (a) flexão e (b) extensão} 
-		 \subfloat[]
-		 {
-			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/glove-wire-flex2.png}
-		 }
-		 \centering
-		 \subfloat[]
-		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/glove-wire-extend2.png}
-		 }
-		 \label{Fig:phenolic-and-ready}
-		 \fonte{Produzido pelo autor}
-	\end{figure}
 
 
 	% ----------------------------
