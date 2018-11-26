@@ -574,8 +574,9 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.7]{./figures/potentiometer1.png}
   		\caption{Funcionamento do potenciômetro linear}
+  		\includegraphics[scale=0.7]{./figures/potentiometer1.png}
+			\fonte{Modificado de~\cite{ncb2012eletronicabasica}.}
   		\label{Fig:potentiometer1}
 		\end{figure}
 
@@ -586,8 +587,8 @@ Agradeço ao Professor Dr. ...
  
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
   		\caption{Movimento do dedo através do tendão}
+  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
   		\label{Fig:hand-tendon-flex1}
 		\end{figure}
 
@@ -597,8 +598,8 @@ Agradeço ao Professor Dr. ...
 		
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.7]{./figures/arduino-nano1.jpg}
 			\caption{Placa Arduino modelo Nano \cite{arduinonanosite}}
+  		\includegraphics[scale=0.7]{./figures/arduino-nano1.jpg}
   		\label{Fig:arduino-nano1}
 		\end{figure}
 
@@ -619,13 +620,36 @@ Agradeço ao Professor Dr. ...
 
 			Após a flexão dos dedos o fio se movimentou em uma direção criando um deslocamento (d) do fio em relação ao ponto marcado.
 
+%\begin{figure}[H]
+%	\caption{Cabo de pares trançados.}
+%	\centering
+%	\subfloat[Sem blindagem]{
+%		\includegraphics[width=7cm,keepaspectratio=true]{./figures/hand-wire-flex1.png}
+%		\label{Fig:UTP}}
+ 
+%	\centering
+%	\subfloat[Com blindagem]{
+%		\includegraphics[width=7cm,keepaspectratio=true]{./figures/hand-wire-flex1.png}
+%		\label{Fig:STP}}
+%	\fonte{.}%
+%	\label{Fig:Par}
+%\end{figure}
 
-		\begin{figure}[h!]
-			\centering
-  		\includegraphics[scale=0.7]{./figures/hand-wire-flex1.png}
-			\caption{Mão em posição inicial (A) e após a flexão dos dedos (B)}
-  		\label{Fig:hand-wire-flex1}
-		\end{figure}
+\begin{figure}[!htb]
+   \centering
+   \caption{ (a) Mão em posição inicial. (b) Mão após flexão.}
+   \subfloat[]
+   {
+     \includegraphics[width=8cm,keepaspectratio=true]{./figures/hand-wire-steady1.png}
+   }
+   \centering
+   \subfloat[]
+   { \includegraphics[width=6cm,keepaspectratio=true]{./figures/hand-wire-flex1.png}
+   }
+   \label{Fig:hand-wire-steady-and-flex}
+   \fonte{Produzido pelo autor}
+ \end{figure}
+
 
 
 			Após examinar esse movimento, foi decidido criar e instalar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Sendo assim, para os cinco dedos de cada mão, são utilizados cinco fios e cinco potenciômetros.
@@ -634,21 +658,30 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.7]{./figures/glove-and-transmitter1.png}
-			\caption{Captação (A) e transmissão do sinal (B)}
+			\caption{Captação do sinal}
+  		\includegraphics[scale=0.7]{./figures/glove-wire-pot1.png}
   		\label{Fig:glove-and-transmitter1}
+			\fonte{Produzido pelo autor}
 		\end{figure}
 
 			O módulo receptor de rádio frequência, capta as mensagens e as envia ao microcontrolador conectado. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação.
 
 			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
-	
-		\begin{figure}[h!]
-			\centering
-  		\includegraphics[scale=0.8]{./figures/receptor1.png}
-			\caption{Recepção e processamento do sinal}
-  		\label{Fig:receptor1}
-		\end{figure}
+
+	\begin{figure}[!htb]
+  	\centering
+   	\caption{ (a) Transmissão do sinal. (b) Recepção do sinal.}
+   	\subfloat[]
+   	{
+     \includegraphics[width=7cm,keepaspectratio=true]{./figures/transmitter-module1.png}
+    }
+   	\centering
+   	\subfloat[]
+   	{ \includegraphics[width=7cm,keepaspectratio=true]{./figures/receptor-module1.png}
+   	}
+   	\label{Fig:transmitter-and-receptor}
+   	\fonte{Produzido pelo autor}
+ 		\end{figure}
 
 
 		\section{Medidas e Posicionamento}	
@@ -677,8 +710,8 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-  		\includegraphics[scale=0.5]{figures/size-glove-module1.png}
 			\caption{Dimensões aproximadas da PCI e seus componentes}
+  		\includegraphics[scale=0.5]{figures/size-glove-module1.png}
   		\label{Fig:size-glove-module1}
 		\end{figure}
 
@@ -687,52 +720,77 @@ Agradeço ao Professor Dr. ...
 
 			Os primeiros experimentos de ligação e testes iniciais entre os componentes foram realizados ainda em protoborad. Um programa simples lia a variação de um resistor e mostrava na tela do computador. Isto foi usado para verificar como deveriam ser as conexões entre resistores, bateria, módulo transmissor e o microcontrolador Arduíno.
 
-			O passo seguinte foi desenhar o esquemático no software gratuito Kicad \ref{Fig:schematic-glove-module1}. Esse programa permite a inclusão de componentes e ligações na criação do esquemático do circuito. Posteriormente, possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente  \ref{Fig:PCB-glove-module1}.
+			O passo seguinte foi utilizar o software gratuito Kicad. Esse programa permite a inclusão de componentes e ligações na criação do esquemático do circuito. Posteriormente, possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através dele foram criados os desenhos do esquemático e da PCI do sistema eletrônico embarcado \ref{Fig:schematic-and-PCB}.
 
-			Com a placa de circuito finalizada no Kicad, o passo seguinte foi imprimir essa PCI em papel fotográfico e usar o método de transferência térmica para fabricar uma cópia em placa de fenolite. Posteriormente a placa foi corroída em uma solução de percloreto de ferro \ref{Fig:phenolic-glove-module1} e finalmente seus pinos e componentes foram soldados, chegando ao resultado final \ref{Fig:glove-module-ready1}
+			Com o desenho da placa finalizada no Kicad, esta PCI foi impressa em papel fotográfico e o método de transferência térmica foi utilizado para fabricar uma cópia de PCI em uma placa de fenolite. Posteriormente a placa de fenolite foi corroída em uma solução de percloreto de ferro. Após a corrosão completa, a placa foi lavada e secada para finalmente ter seus pinos e componentes soldados. Chegando assim, ao resultado final \ref{Fig:phenolic-and-ready}
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{ Desenhos projetados no Kicad do (a) esquemático e (b) PCI. }
+		 \subfloat[]
+		 {
+			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/schematic-glove-module1.png}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/PCB-glove-module1.png}
+		 }
+		 \label{Fig:schematic-and-PCB}
+		 \fonte{Produzido pelo autor}
+	\end{figure}
 
 
 
-		\begin{figure}[h!]
-			\centering
-  		\includegraphics[scale=0.5]{./figures/schematic-glove-module1.png}
-			\caption{Esquemático}
-  		\label{Fig:schematic-glove-module1}
-		\end{figure}
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{ (a) Placa de fenolite após corrosão e (b) resultado final} 
+		 \subfloat[]
+		 {
+			 \includegraphics[width=7cm,keepaspectratio=true]{./figures/phenolic-glove-module1.jpg}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=7cm,keepaspectratio=true]{./figures/glove-module-ready1.jpg}
+		 }
+		 \label{Fig:phenolic-and-ready}
+		 \fonte{Produzido pelo autor}
+	\end{figure}
 
-		\begin{figure}[h!]
-			\centering
-  		\includegraphics[scale=0.5]{./figures/PCB-glove-module1.png}
-			\caption{Desenho da PCI}
-  		\label{Fig:PCB-glove-module1}
-		\end{figure}
 
-		\begin{figure}[h!]
-			\centering
-  		\includegraphics[scale=0.3]{./figures/phenolic-glove-module1.jpg}
-			\caption{Placa após transferência e corrosão}
-  		\label{Fig:phenolic-glove-module1}
-		\end{figure}
-
-		\begin{figure}[h!]
-			\centering
-  		\includegraphics[scale=0.3]{./figures/glove-module-ready1.jpg}
-			\caption{Sistema embarcado pronto}
-  		\label{Fig:glove-module-ready1}
-		\end{figure}
-		
-		
 		\section{Movimento mecânico}
+
+		\subsection{Flexão dos Dedos}
 
 		Inspirado no movimento de flexão dos dedos da mão que é possibilitado pelos tendões, decidiu-se construir um sistema semelhante, que estaria embarcado em uma luva. O sistema deve mensurar graus de flexão e extensão dos dedos usando fios de náilon atrelados a potenciômetros que variam de acordo com a tensão e sentido do fio.
 
 		Nesse sistema, uma das extremidades do fio de náilon é presa na ponta de um dos dedos da luva. O trajeto da extensão do fio é guiada por polias plásticas. A extremidade oposta do fio é presa ao cursor de um potenciômetro.
-		Dessa forma, mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado e com isso o cursor do potênciometro é variado.
+		Dessa forma, mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado.
+	
 		A variação de resistência do potênciometro é capturada pelo microcontrolador, que traduz o movimento recebido em números que representam graus de flexão. Esses número são remapeados e transferidos ao transmissor. Este por sua vez, envia a mensagem via rádio frequência.
+
+
+		\subsection{Extensão dos Dedos}
 
 		Após a flexão dos dedos, ao realizar o movimento inverso (extenção), Nem o fio de náilon e nem o cursor do potenciômetro retornam à posição inicial. Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. 
 
-		Durante a flexão, o elástico se tensiona e busca retornar à sua posição inicial. Ao extender o dedo, o elástico puxa o cursor do potenciômetro de volta à posição inicial, que por sua vez puxa o fio de náilon. Dessa forma, o fio de náilon e o cursor do potenciômetro sempre acompanham o movimento dos dedos.
+		Durante a flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força para girar o cursor de volta à sua posição inicial. Durante o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso ocorre enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro.
+		
+		A força do dedo durante a flexão e a força do elástico durante a extensão giram o cursor do potenciômetro através do fio de náilon. Dessa forma, o fio e o cursor acompanham o movimento dos dedos em diferentes graus.
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{ Movimentos da luva de (a) flexão e (b) extensão} 
+		 \subfloat[]
+		 {
+			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/glove-wire-flex2.png}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/glove-wire-extend2.png}
+		 }
+		 \label{Fig:phenolic-and-ready}
+		 \fonte{Produzido pelo autor}
+	\end{figure}
 
 
 	% ----------------------------
