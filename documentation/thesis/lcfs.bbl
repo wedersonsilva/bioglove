@@ -20,16 +20,10 @@ Dispon{\'\i}vel em:
   \url{http://www.institutodigital.com.br/pd-f7460-modulo-rf-transmissor-receptor-433mhz.html?ct=76b8b&p=4&s=1}.}
 
 \bibitem[License]{arduinosite}
-\abntrefinfo{License}{LICENSE}{a}
+\abntrefinfo{License}{LICENSE}{}
 {LICENSE, C. C. A.-S.~. \emph{{Arduino - Introduction}}.
 Acessado em: 12/08/2018.
 Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
-
-\bibitem[License]{arduinonanosite}
-\abntrefinfo{License}{LICENSE}{b}
-{LICENSE, C. C. A.-S.~. \emph{{Arduino Nano}}.
-Acessado em: 18/11/2018.
-Dispon{\'\i}vel em: \url{https://store.arduino.cc/usa/arduino-nano}.}
 
 \bibitem[M 2013]{solanki2013sign}
 \abntrefinfo{M}{M}{2013}

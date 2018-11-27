@@ -11,9 +11,9 @@
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{14}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Sensor Flex}{15}{section.2.1}
-\contentsline {section}{\numberline {2.2}Potenci\IeC {\^o}metro}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{16}{section.2.3}
+\contentsline {section}{\numberline {2.1}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}Sensor Flex}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Potenci\IeC {\^o}metro}{15}{section.2.3}
 \contentsline {section}{\numberline {2.4}Arduino}{16}{section.2.4}
 \contentsline {section}{\numberline {2.5}M\IeC {\'o}dulo RF 433 Mhz}{17}{section.2.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
@@ -29,6 +29,7 @@
 \contentsline {section}{\numberline {3.5}Placa Embarcada}{22}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Esquem\IeC {\'a}tico}{22}{subsection.3.5.1}
 \contentsline {section}{\numberline {3.6}Montagem}{23}{section.3.6}
+\contentsline {section}{\numberline {3.7}Softwares}{24}{section.3.7}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{25}{section.4.1}
@@ -40,4 +41,4 @@
 \contentsline {section}{\numberline {5.2}Trabalhos Futuros}{26}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{27}{section*.27}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{27}{section*.29}
