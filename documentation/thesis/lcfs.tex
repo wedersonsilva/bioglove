@@ -700,7 +700,7 @@ Agradeço ao Professor Dr. ...
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-		\subsection{Transmissão e Recepção de Dados}
+		\section{Transmissão e Recepção de Dados}
 
 			Como foi descrito, durante a movimentação dos dedos, a posição do cursor do potenciômetro é modificado. Sendo assim, para possibilitar o sensoriamento, a variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. Este por sua vez envia mensagens por rádio frequência, em formato de números inteiros que representam a posição atual de cada dedo. Figura \ref{Fig:transmitter-and-receptor} (a).
 
@@ -755,6 +755,7 @@ Agradeço ao Professor Dr. ...
 			\caption{Dimensões aproximadas da PCI e seus componentes}
   		\includegraphics[width=7cm]{figures/size-glove-module1.png}
   		\label{Fig:size-glove-module1}
+			\fonte{Produzido pelo autor}
 		\end{figure}
 
 
@@ -798,6 +799,24 @@ Agradeço ao Professor Dr. ...
 		 \label{Fig:phenolic-and-ready}
 		 \fonte{Produzido pelo autor}
 	\end{figure}
+
+		\section{Montagem}
+
+		Utilizando uma luva de algodão, em seu dorso foi costurado uma das metades de um pedaço de velcro (gancho) de dimensões semelhantes à PCI contruída anteriormente. Ao longo dos dedos da luva foram costurados pequenos segmentos de plástico que serviriam como guias para os fios.	Na parte inferior da PCI foi costurada a outra metade do velcro (argola) que poderia ser fixada, sempre que fosse preciso, à outra parte do velcro costurada na luva.
+
+		Fios de náilon foram fixados nos segmentos de plástico (guias) localizados nas pontas dos dedos da luva. Os fios passavam por dentro das guias até serem amarrados em pequenos pedaços de PCV expandido que estavam conectados dos cursores dos potenciômetros. Por fim, pequenos pedaços de elástico, levemente esticados, também foram amarrados nos pedaços de PCV expandido.
+
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Luva montada}
+  		\includegraphics[width=9cm]{figures/glove-ready1.jpg}
+  		\label{Fig:glove-ready1}
+			\fonte{Produzido pelo autor}
+		\end{figure}
+
+
+		\section{Software de transmissão}
 
 
 
