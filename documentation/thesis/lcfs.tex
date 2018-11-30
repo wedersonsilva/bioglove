@@ -450,31 +450,22 @@ Agradeço ao Professor Dr. ...
 % ---
 %\imprimirlistadesiglas
 \begin{siglas}
- \item[AWG]\textit{American Wire Gauge}
- \item[AXT]\textit{Alien crosstalk} 
- \item[BBU]\textit{Baseband Unit}
- \item[CAGR]\textit{Compound Annual Growth Rate}
- \item[CM]Conversão de modo
- \item[CST]\textit{Computer Simulation Technology}
- \item[DMT]\textit{Discrete Multitone}
- \item[DSL]\textit{Digital Subscriber Line}
- \item[EVM]\textit{Error Vector Magnitude}
- \item[FEXT]\textit{Far-End Crosstalk}
- \item[FT]Função de transferência
- \item[FTTH]\textit{Fiber-to-the-Home}
- \item[IoT]\textit{Internet of Things}
- \item[ITU]\textit{International Telecommunication Union}
- \item[MD]Modo diferencial
- \item[MF1]Modo fantasma de 1ª camada 
- \item[MF2]Modo fantasma de 2ª camada
- \item[MIMO]\textit{Multiple-Input Multiple-Output}
- \item[NEXT]\textit{Near-End Crosstalk}
- \item[RSIR]\textit{Signal-to-Noise Ratio}
- \item[SP]Modo \textit{split-pair}
- \item[STP]\textit{Shielded Twisted Pair}
- \item[UTP]\textit{Unshielded Twisted Pair}
- \item[VNA]\textit{Vector Network Analyzer}
- \item[WS]Modo \textit{wire-shield}
+
+	\item[AM]\textit{Amplitude Modulation}
+	\item[I]Corrente
+	\item[IDE]\textit{Integrated Development Interface}
+	\item[$k\Omega$]\textit{Kiloohm}
+	\item[LED]\textit{Light-Emitting Diode}
+	\item[LiPo]\textit{Lithium-ion Polymer}
+	\item[$mAh$]\textit{Milliampere Hour}
+	\item[$Mhz$]\textit{Megahertz}
+	\item[mm]\textit{Millimeter}
+	\item[PCI]Placa de Circuito Impresso
+	\item[PVC]\textit{Polyvinyl Chloride}	
+	\item[R]Resistência
+	\item[RF]\textit{Radio Frequence}
+	\item[V]Tensão	
+	
 \end{siglas}
 % ---
 
@@ -562,29 +553,31 @@ Agradeço ao Professor Dr. ...
  
 		\begin{figure}[h!]
 			\centering
-  		\caption{Movimento do dedo através do tendão}
+  		\caption{Movimento do dedo através do tendão.}
   		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
   		\label{Fig:hand-tendon-flex1}
 		\end{figure}
+
+
 		\section{Sensor Flex}
 
 		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}.
 
 	\begin{figure}[!h]
 		\centering
-		\caption{Sensor de Flexão}
+		\caption{Sensor de Flexão.}
 		\includegraphics[width=7cm,keepaspectratio=true]{./figures/flex-sensor1.png}
-		\fonte{Site Sparkfun}%
+		\fonte{Site Sparkfun.}%
 		\label{Fig:flex-sensor1}
 	\end{figure}
 
 		\section{Potenciômetro}
-		O potenciômetro é um componente eletrônico que permite, através do giro do seu eixo, a variação da resistência entre seus terminais. Eles são constituídos por um elemento de resistência, que pode ser de carbono ou fio de nicromo, sobre o qual corre uma lingüeta, denominada cursor. Dentre as características do potenciômetro estão o valor máximo de sua resistência, seu número de voltas, seu grau máximo de giro (aproximado) e se ele é do tipo linear ou logarítmico \cite{ncb2012eletronicabasica}.
+		O potenciômetro é um componente eletrônico que permite, através do giro do seu eixo, a variação da resistência entre seus terminais. Eles são constituídos por um elemento de resistência, que pode ser de carbono ou fio de nicromo, sobre o qual corre uma lingueta, denominada cursor. Dentre as características do potenciômetro estão o valor máximo de sua resistência, seu número de voltas, seu grau máximo de giro (aproximado) e se ele é do tipo linear ou logarítmico \cite{ncb2012eletronicabasica}.
 
 
 		\begin{figure}[h!]
 			\centering
-  		\caption{Funcionamento do potenciômetro linear}
+  		\caption{Funcionamento do potenciômetro linear.}
   		\includegraphics[width=12cm]{./figures/potentiometer1.png}
 			\fonte{Modificado de~\cite{ncb2012eletronicabasica}.}
   		\label{Fig:potentiometer1}
@@ -594,26 +587,26 @@ Agradeço ao Professor Dr. ...
 
 
 		\section{Arduino}
-		O Arduino é uma plataforma eletrônica de código aberto (\textit{open-source}) que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. E pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
+		O Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. Pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
 		
 		\begin{figure}[h!]
 			\centering
-			\caption{Placa Arduino modelo Nano}
+			\caption{Placa Arduino modelo Nano.}
   		\includegraphics[width=12cm]{./figures/arduino-nano1.jpg}
   		\label{Fig:arduino-nano1}
-			\fonte{Produzido pelo autor}
+			\fonte{Produzido pelo autor.}
 		\end{figure}
 
 		\section{Módulo RF 433 Mhz}
-		O módulo de RF (Rádio Frequência) 433 Mhz é composto por um par que contém um transmissor e um receptor, ele opera com modulação AM (\textit{Amplitude Modulation}) e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
+		O módulo de RF (Rádio Frequência) 433 Mhz é composto por um par que contém um transmissor e um receptor, opera com modulação AM (\textit{Amplitude Modulation}) e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
 
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Módulos RF transmissor (esq.) e receptor (dir.)}
+			\caption{Módulos RF transmissor (esq.) e receptor (dir.).}
   		\includegraphics[width=12cm]{./figures/tx-rx1.jpg}
   		\label{Fig:tx-rx1}
-			\fonte{Produzido pelo autor}
+			\fonte{Produzido pelo autor.}
 		\end{figure}
 
 
@@ -647,7 +640,7 @@ Agradeço ao Professor Dr. ...
 
 \begin{figure}[!htb]
    \centering
-   \caption{ (a) Mão em posição inicial. (b) Mão após flexão.}
+   \caption{ (a) Mão em posição inicial e (b) Mão após flexão.}
    \subfloat[]
    {
      \includegraphics[width=8cm,keepaspectratio=true]{./figures/hand-wire-steady1.png}
@@ -657,7 +650,7 @@ Agradeço ao Professor Dr. ...
    { \includegraphics[width=6cm,keepaspectratio=true]{./figures/hand-wire-flex1.png}
    }
    \label{Fig:hand-wire-steady-and-flex}
-   \fonte{Produzido pelo autor}
+   \fonte{Produzido pelo autor.}
  \end{figure}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -671,10 +664,10 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Captação do sinal}
+			\caption{Captação do sinal.}
   		\includegraphics[scale=0.7]{./figures/glove-wire-pot1.png}
   		\label{Fig:glove-and-transmitter1}
-			\fonte{Produzido pelo autor}
+			\fonte{Produzido pelo autor.}
 		\end{figure}
 
 
@@ -689,7 +682,7 @@ Agradeço ao Professor Dr. ...
 
 	\begin{figure}[!htb]
 		 \centering
-		 \caption{ Movimentos da luva de (a) flexão e (b) extensão} 
+		 \caption{ Movimentos da luva de (a) flexão e (b) extensão.} 
 		 \subfloat[]
 		 {
 			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/glove-wire-flex2.png}
@@ -699,7 +692,7 @@ Agradeço ao Professor Dr. ...
 		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/glove-wire-extend2.png}
 		 }
 		 \label{Fig:glove-flex-and-extend2}
-		 \fonte{Produzido pelo autor}
+		 \fonte{Produzido pelo autor.}
 	\end{figure}
 
 
@@ -727,7 +720,7 @@ Agradeço ao Professor Dr. ...
    	{ \includegraphics[width=7cm,keepaspectratio=true]{./figures/receptor-module1.png}
    	}
    	\label{Fig:transmitter-and-receptor}
-   	\fonte{Produzido pelo autor}
+   	\fonte{Produzido pelo autor.}
  		\end{figure}
 
 
@@ -736,23 +729,23 @@ Agradeço ao Professor Dr. ...
 
 		\section{Medidas e Posicionamento}	
 
-			O sistema de captação e transmissão de sinal que seria embarcado na luva, foi projetado para ser de móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso sejam necessárias futuramente.
+			O sistema de captação e transmissão de sinal que seria embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso sejam necessárias futuramente.
 
 			\subsection{Componentes}
 
 			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
 
-			O potenciômetro foi o primeiro componente a ser definido para o projeto. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
+			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
 
-			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. Estes servos apresentavam problemas de controle e seriam descartados, porém, seus potenciômetros funcionavam perfeitamente. O potenciômetro encontrado possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de $5k\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
+			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
 
-			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser visto na figura \ref{Fig:potentiometer-and-battery} (a).
+			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery} (a).
 
 			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
 
-			Para transmitir e receber o sinal, foi escolhido para o projeto o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
+			Para transmitir e receber o sinal, foi escolhido o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
 
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que estava disponível no laboratório. Esta possui capacidade de 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$.Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$.Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
 
 
 	\begin{figure}[!htb]
@@ -767,7 +760,7 @@ Agradeço ao Professor Dr. ...
 		 { \includegraphics[width=8.5cm,keepaspectratio=true]{./figures/battery1.jpg}
 		 }
 		 \label{Fig:potentiometer-and-battery}
-		 \fonte{Produzido pelo autor}
+		 \fonte{Produzido pelo autor.}
 	 \end{figure}
 
 
@@ -777,10 +770,10 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Dimensões aproximadas da PCI e seus componentes}
+			\caption{Dimensões aproximadas da PCI e seus componentes.}
   		\includegraphics[width=7cm]{figures/size-glove-module1.png}
   		\label{Fig:size-glove-module1}
-			\fonte{Produzido pelo autor}
+			\fonte{Produzido pelo autor.}
 		\end{figure}
 
 
@@ -791,7 +784,7 @@ Agradeço ao Professor Dr. ...
 
 			O passo seguinte foi utilizar o software gratuito Kicad. Esse programa permite a inclusão de componentes e ligações no desenho do esquemático do circuito. Posteriormente, o Kicad possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada, ambos mostrados na figura \ref{Fig:schematic-and-PCB}.
 
-			Com o desenho da placa finalizada no Kicad, esta PCI foi impressa em papel fotográfico e o método de transferência térmica foi utilizado para fabricar uma cópia dessa PCI em uma placa de fenolite cobreada. Posteriormente a placa de fenolite foi corroída em uma solução de percloreto de ferro. Após a corrosão completa, a placa foi lavada e secada para finalmente ter seus pinos e componentes soldados. Chegando assim, ao resultado final mostrado na figura \ref{Fig:phenolic-and-ready}
+			Com o desenho da placa finalizada no Kicad, foram efetuados os procedimentos para a confecção da PCI em uma placa de fenolite cobreada e sua posterior soldagem de componentes. Chegando assim, ao resultado final mostrado na figura \ref{Fig:phenolic-and-ready}.
 
 	\begin{figure}[!htb]
 		 \centering
@@ -805,14 +798,14 @@ Agradeço ao Professor Dr. ...
 		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/PCB-glove-module1.png}
 		 }
 		 \label{Fig:schematic-and-PCB}
-		 \fonte{Produzido pelo autor}
+		 \fonte{Produzido pelo autor.}
 	\end{figure}
 
 
 
 	\begin{figure}[!htb]
 		 \centering
-		 \caption{ (a) Placa de fenolite após corrosão e (b) resultado final} 
+		 \caption{(a) Placa de fenolite cobreada e (b) resultado final.} 
 		 \subfloat[]
 		 {
 			 \includegraphics[width=7cm,keepaspectratio=true]{./figures/phenolic-glove-module1.jpg}
@@ -822,7 +815,7 @@ Agradeço ao Professor Dr. ...
 		 { \includegraphics[width=7cm,keepaspectratio=true]{./figures/glove-module-ready1.jpg}
 		 }
 		 \label{Fig:phenolic-and-ready}
-		 \fonte{Produzido pelo autor}
+		 \fonte{Produzido pelo autor.}
 	\end{figure}
 
 		\section{Montagem}
@@ -834,14 +827,56 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Luva montada}
+			\caption{Luva montada.}
   		\includegraphics[width=12cm]{figures/glove-ready1.jpg}
   		\label{Fig:glove-ready1}
-			\fonte{Produzido pelo autor}
+			\fonte{Produzido pelo autor.}
 		\end{figure}
 
 
 		\section{Softwares}
+		
+		
+		\subsection{Calibração}
+
+		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). Também foram definidas duas posições principais para o movimento dos dedos. Posição 1: Quando todos os dedos estiverem estendidos. Posição 2: Quando todos os dedos estiverem flexionados. Essas duas posições foram demonstradas na figura \ref{Fig:glove-flex-and-extend2}. 
+		
+		Todos os potenciômetros possuem uma pequena média valores padrão para ambas as posições da luva. Para ler tais valores e futuramente usá-los como referência de cada posição, um pequeno programa foi criado com o propósito de obter essa informação. A variação média do deslocamento entre as posições também foi calculada ($ \Delta Pos = Pos 2 - Pos 1 $). Os resultados obtidos estão resumidos na tabela \ref{Tab:deltapos}.
+
+	\begin{table}[H]
+  	\centering
+		\caption{Valores para posições 1 e 2 e deslocamento.}
+    \begin{tabular}{cccc}
+      \midrule
+			Número & Pos 1 & Pos 2 & $\Delta$ Pos \\
+      \midrule
+			1 & 175 & 558 & +383 \\
+			2 & 111 & 597 & +486 \\
+			3 & 797 & 394 & -433 \\
+			4 & 756 & 500 & -256 \\
+			5 & 706 & 390 & -316 \\      
+      \midrule
+    \end{tabular}
+    \label{Tab:deltapos}
+    \fonte{Produzido pelo autor}
+	\end{table}
+
+		Na tabela, pode ser observado que o deslocamento para cada dedo é diferente. Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
+
+		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
+
+
+		\subsection{VirtualWire}
+
+		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
+
+	O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
+
+
+		
+		\subsection{Protocolo de comunicação}
+
+%		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
 
 
 

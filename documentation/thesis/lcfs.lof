@@ -1,15 +1,15 @@
 \babel@toc {brazil}{}
 \babel@toc {brazil}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Movimento do dedo atrav\IeC {\'e}s do tend\IeC {\~a}o\relax }}{15}{figure.caption.13}
-\contentsline {figure}{\numberline {2}{\ignorespaces Sensor de Flex\IeC {\~a}o\relax }}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {3}{\ignorespaces Funcionamento do potenci\IeC {\^o}metro linear\relax }}{16}{figure.caption.15}
-\contentsline {figure}{\numberline {4}{\ignorespaces Placa Arduino modelo Nano\relax }}{17}{figure.caption.16}
-\contentsline {figure}{\numberline {5}{\ignorespaces M\IeC {\'o}dulos RF transmissor (esq.) e receptor (dir.)\relax }}{17}{figure.caption.17}
-\contentsline {figure}{\numberline {6}{\ignorespaces (a) M\IeC {\~a}o em posi\IeC {\c c}\IeC {\~a}o inicial. (b) M\IeC {\~a}o ap\IeC {\'o}s flex\IeC {\~a}o.\relax }}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {1}{\ignorespaces Movimento do dedo atrav\IeC {\'e}s do tend\IeC {\~a}o.\relax }}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {2}{\ignorespaces Sensor de Flex\IeC {\~a}o.\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {3}{\ignorespaces Funcionamento do potenci\IeC {\^o}metro linear.\relax }}{16}{figure.caption.15}
+\contentsline {figure}{\numberline {4}{\ignorespaces Placa Arduino modelo Nano.\relax }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {5}{\ignorespaces M\IeC {\'o}dulos RF transmissor (esq.) e receptor (dir.).\relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {6}{\ignorespaces (a) M\IeC {\~a}o em posi\IeC {\c c}\IeC {\~a}o inicial e (b) M\IeC {\~a}o ap\IeC {\'o}s flex\IeC {\~a}o.\relax }}{18}{figure.caption.18}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{subfigure.6.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{subfigure.6.2}
-\contentsline {figure}{\numberline {7}{\ignorespaces Capta\IeC {\c c}\IeC {\~a}o do sinal\relax }}{19}{figure.caption.19}
-\contentsline {figure}{\numberline {8}{\ignorespaces Movimentos da luva de (a) flex\IeC {\~a}o e (b) extens\IeC {\~a}o\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {7}{\ignorespaces Capta\IeC {\c c}\IeC {\~a}o do sinal.\relax }}{19}{figure.caption.19}
+\contentsline {figure}{\numberline {8}{\ignorespaces Movimentos da luva de (a) flex\IeC {\~a}o e (b) extens\IeC {\~a}o.\relax }}{19}{figure.caption.20}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{subfigure.8.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{subfigure.8.2}
 \contentsline {figure}{\numberline {9}{\ignorespaces (a) Transmiss\IeC {\~a}o do sinal. (b) Recep\IeC {\c c}\IeC {\~a}o do sinal.\relax }}{20}{figure.caption.21}
@@ -18,11 +18,11 @@
 \contentsline {figure}{\numberline {10}{\ignorespaces (a) Potenci\IeC {\^o}metro adaptado e (b) bateria.\relax }}{22}{figure.caption.22}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{22}{subfigure.10.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{22}{subfigure.10.2}
-\contentsline {figure}{\numberline {11}{\ignorespaces Dimens\IeC {\~o}es aproximadas da PCI e seus componentes\relax }}{22}{figure.caption.23}
+\contentsline {figure}{\numberline {11}{\ignorespaces Dimens\IeC {\~o}es aproximadas da PCI e seus componentes.\relax }}{22}{figure.caption.23}
 \contentsline {figure}{\numberline {12}{\ignorespaces Desenhos projetados no Kicad do (a) esquem\IeC {\'a}tico e (b) PCI. \relax }}{23}{figure.caption.24}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.12.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.12.2}
-\contentsline {figure}{\numberline {13}{\ignorespaces (a) Placa de fenolite ap\IeC {\'o}s corros\IeC {\~a}o e (b) resultado final\relax }}{24}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{subfigure.13.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{subfigure.13.2}
-\contentsline {figure}{\numberline {14}{\ignorespaces Luva montada\relax }}{24}{figure.caption.26}
+\contentsline {figure}{\numberline {13}{\ignorespaces (a) Placa de fenolite cobreada e (b) resultado final.\relax }}{23}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.13.2}
+\contentsline {figure}{\numberline {14}{\ignorespaces Luva montada.\relax }}{24}{figure.caption.26}

@@ -30,15 +30,18 @@
 \contentsline {subsection}{\numberline {3.5.1}Esquem\IeC {\'a}tico}{22}{subsection.3.5.1}
 \contentsline {section}{\numberline {3.6}Montagem}{23}{section.3.6}
 \contentsline {section}{\numberline {3.7}Softwares}{24}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Calibra\IeC {\c c}\IeC {\~a}o}{24}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}VirtualWire}{25}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.7.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{25}{section.4.1}
-\contentsline {section}{\numberline {4.2}Testes}{25}{section.4.2}
-\contentsline {section}{\numberline {4.3}Resultados}{25}{section.4.3}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{26}{section.4.1}
+\contentsline {section}{\numberline {4.2}Testes}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Resultados}{26}{section.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{26}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~o}es}{26}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{26}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~o}es}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{27}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{27}{section*.29}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{28}{section*.30}

@@ -13,12 +13,14 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: referencias.bib
+Warning--entry type for "virtualwirepjrc" isn't style-file defined
+--line 45 of file referencias.bib
 Warning--entry type for "drricardocirurgiao" isn't style-file defined
---line 25 of file referencias.bib
+--line 59 of file referencias.bib
 Warning--entry type for "institutodigitalrf" isn't style-file defined
---line 53 of file referencias.bib
+--line 87 of file referencias.bib
 Warning--entry type for "arduinosite" isn't style-file defined
---line 67 of file referencias.bib
+--line 101 of file referencias.bib
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -26,50 +28,51 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 Warning--campo year vazio ou faltando em institutodigitalrf
 Warning--campo year vazio ou faltando em arduinosite
 Warning--campo year vazio ou faltando em drricardocirurgiao
+Warning--campo year vazio ou faltando em virtualwirepjrc
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 8 entries,
+You've used 10 entries,
             6714 wiz_defined-function locations,
-            1229 strings with 10227 characters,
-and the built_in function-call counts, 9782 in all, are:
-= -- 1268
-> -- 81
-< -- 280
-+ -- 344
-- -- 28
-* -- 514
-:= -- 1214
-add.period$ -- 24
-call.type$ -- 9
-change.case$ -- 44
-chr.to.int$ -- 27
-cite$ -- 8
-duplicate$ -- 993
-empty$ -- 430
-format.name$ -- 115
-if$ -- 1965
+            1241 strings with 10565 characters,
+and the built_in function-call counts, 12960 in all, are:
+= -- 1678
+> -- 111
+< -- 388
++ -- 462
+- -- 38
+* -- 690
+:= -- 1603
+add.period$ -- 33
+call.type$ -- 11
+change.case$ -- 58
+chr.to.int$ -- 29
+cite$ -- 11
+duplicate$ -- 1368
+empty$ -- 532
+format.name$ -- 161
+if$ -- 2562
 int.to.chr$ -- 2
 int.to.str$ -- 3
-missing$ -- 116
-newline$ -- 38
-num.names$ -- 25
-pop$ -- 143
+missing$ -- 147
+newline$ -- 49
+num.names$ -- 35
+pop$ -- 182
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 30
 quote$ -- 0
-skip$ -- 1174
+skip$ -- 1556
 stack$ -- 1
-substring$ -- 429
-swap$ -- 350
-text.length$ -- 7
+substring$ -- 564
+swap$ -- 477
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 36
+warning$ -- 4
+while$ -- 49
 width$ -- 0
-write$ -- 86
-(There were 6 warnings)
+write$ -- 116
+(There were 8 warnings)
