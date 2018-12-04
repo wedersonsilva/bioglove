@@ -11,17 +11,17 @@
   Paulo - Brasil: Editora Newton C. Braga, 2012. v.~1. PAGES~p.
 ISBN 8565050092, 9788565050098.}
 
-\bibitem[Digital]{institutodigitalrf}
-\abntrefinfo{Digital}{DIGITAL}{}
+\bibitem[Digital 2018]{institutodigitalrf}
+\abntrefinfo{Digital}{DIGITAL}{2018}
 {DIGITAL, I. \emph{{Módulo RF Transmissor + Receptor 433mhz - Instituto
-  Digital}}.
+  Digital}}. 2018.
 Acessado em: 12/08/2018.
 Dispon{\'\i}vel em:
   \url{http://www.institutodigital.com.br/pd-f7460-modulo-rf-transmissor-receptor-433mhz.html?ct=76b8b&p=4&s=1}.}
 
-\bibitem[License]{arduinosite}
-\abntrefinfo{License}{LICENSE}{}
-{LICENSE, C. C. A.-S.~. \emph{{Arduino - Introduction}}.
+\bibitem[License 2018]{arduinosite}
+\abntrefinfo{License}{LICENSE}{2018}
+{LICENSE, C. C. A.-S.~. \emph{{Arduino - Introduction}}. 2018.
 Acessado em: 12/08/2018.
 Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
 
@@ -40,17 +40,26 @@ Dispon{\'\i}vel em:
 [S.l.], 2013. V. 1.27. Dispon{\'\i}vel em:
   \url{http://www.airspayce.com/mikem/arduino/VirtualWire.pdf}.}
 
-\bibitem[Oliveira]{drricardocirurgiao}
-\abntrefinfo{Oliveira}{OLIVEIRA}{}
+\bibitem[Moore, Dalley e Agur 2013]{moore2013clinically}
+\abntrefinfo{Moore, Dalley e Agur}{MOORE; DALLEY; AGUR}{2013}
+{MOORE, K.; DALLEY, A.; AGUR, A. \emph{Clinically Oriented Anatomy}. Wolters
+  Kluwer Health/Lippincott Williams \& Wilkins, 2013.  (Clinically Oriented
+  Anatomy).
+ISBN 9781451119459. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=-Le5bc5F0sYC}.}
+
+\bibitem[Oliveira 2018]{drricardocirurgiao}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2018}
 {OLIVEIRA, R.~K. de. \emph{{Dedo em Gatilho - Dr. Ricardo Kaempf - Cirurgia de
-  Mão e Microcirurgia}}.
+  Mão e Microcirurgia}}. 2018.
 Acessado em: 07/08/2018.
 Dispon{\'\i}vel em:
   \url{http://www.ricardokaempf.com.br/services/dedo-em-gatilho/}.}
 
-\bibitem[Paul]{virtualwirepjrc}
-\abntrefinfo{Paul}{PAUL}{}
+\bibitem[Paul 2018]{virtualwirepjrc}
+\abntrefinfo{Paul}{PAUL}{2018}
 {PAUL. \emph{{VirtualWire Library, for very cheap wireless communication}}.
+  2018.
 Acessado em: 27/11/2018.
 Dispon{\'\i}vel em:
   \url{https://www.pjrc.com/teensy/td\_libs\_VirtualWire.html}.}

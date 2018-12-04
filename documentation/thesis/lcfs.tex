@@ -61,6 +61,8 @@
 \usepackage{float}
 \usepackage{listofsymbols}
 
+\usepackage{amsmath}
+
 %\usepackage{reledmac}
 
 
@@ -610,16 +612,42 @@ Agradeço ao Professor Dr. ...
 		\end{figure}
 
 
-	% ----------------------------
-	%	TRABALHO PROPRIAMENTE DITO	
-	% ----------------------------
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%
+%			TRABALHO PROPRIAMENTE DITO	
+%
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	
 	\chapter{Trabalho Propriamente Dito}
 
-		\section{Teoria da coisa}
-			Como foi demonstrado na figura \ref{Fig:hand-tendon-flex1}, através dos tendões, passando por polias, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica de movimento, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um sensor de flexão de dedos, atrelado a um transmissor de dados.
-			
-			Inicialmente foi verificado se havia deslocamento do fio durante a flexão de um dedo. Para isso, com a mão inicialmente extendida com o dorso voltado para cima, uma das pontas de um fio foi presa na extremidade de um dos dedos. O local da outra ponta do fio foi marcada no dorso mão. Como é demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (a).
+		\section{Introdução}
+		
+		O capítulo a seguir está organizado em 5 seções. Na primeira delas explica-se a movimentação mecânica do sistema e como as posições de flexão e extensão dos dedos são obtidas pelo microcontrolador. A segunda aborda a programação do microcontrolador, mais precisamente o tratamento dos dados recebidos a partir dos potenciômetros. A terceira seção explica os ajustes realizados em software. A quarta explica o protocolo criado para controlar um carrinho via rádio frequência. A quinta e última seção explica como o sistema foi montado.
+
+
+
+		\section{Mecânica Bioinspirada}
+		Como foi demonstrado no movimento de flexão da figura \ref{Fig:hand-tendon-flex1}, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um transdutor de flexão de dedos atrelado a um microcontrolador. 
+
+		No sistema biomecânico, resumidamente, uma das extremidades do tendão está presa nas falanges do dedo enquanto sua extensão desliza por dentro de polias até o músculo. No sistema desenvolvido, cada transdutor é composto por uma linha de náilon presa ao dedo da luva, guiada através de pequenos segmentos plásticos até o cursor de um potenciômetro. A figura \ref{Fig:bio-and-system} demonstra um pouco dos dois sistemas.
+
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{(a) Sistema biomecânico e (b) sistema desenvolvido.} 
+		 \subfloat[]
+		 {
+			 \includegraphics[width=5cm,keepaspectratio=true]{./figures/moore-biomechanic.png}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=4cm,keepaspectratio=true]{./figures/glove-wire-pot2.png}
+		 }
+		 \label{Fig:bio-and-system}
+		 \fonte{(a) Adaptado de \cite{moore2013clinically} e (b) produzido pelo autor.}
+	\end{figure}
+
+		Para verificar se no sistema criado haveria deslocamento do fio durante a flexão dos dedos, com a mão inicialmente extendida com o dorso voltado para cima, uma das pontas de um fio foi presa na extremidade de um dos dedos. O local da outra ponta do fio foi marcada no dorso mão. Como é demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (a).
 
 			Após a flexão dos dedos, o fio se movimentou em uma direção e criou um deslocamento (d) do fio em relação ao ponto marcado, mostrado na figura \ref{Fig:hand-wire-steady-and-flex} (b).
 
@@ -653,31 +681,28 @@ Agradeço ao Professor Dr. ...
    \fonte{Produzido pelo autor.}
  \end{figure}
 
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-		\section{Movimento mecânico}
 		\subsection{Adaptação da Luva}
 
-			Após examinar o movimento descrito acima, foi decidido criar e embarcar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Figura \ref{Fig:glove-and-transmitter1}. Sendo assim, ao final, para os cinco dedos da mão, serão necessários cinco fios e cinco potenciômetros.
+%			Após examinar o movimento descrito acima, foi decidido embarcar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Figura \ref{Fig:glove-and-transmitter1}. Sendo assim, ao final, para os cinco dedos da mão, serão necessários cinco fios e cinco potenciômetros.
 
 
-		\begin{figure}[h!]
-			\centering
-			\caption{Captação do sinal.}
-  		\includegraphics[scale=0.7]{./figures/glove-wire-pot1.png}
-  		\label{Fig:glove-and-transmitter1}
-			\fonte{Produzido pelo autor.}
-		\end{figure}
+%		\begin{figure}[h!]
+%			\centering
+%			\caption{Captação do sinal.}
+%  		\includegraphics[scale=0.7]{./figures/glove-wire-pot1.png}
+%  		\label{Fig:glove-and-transmitter1}
+%			\fonte{Produzido pelo autor.}
+%		\end{figure}
 
 
-		\subsection{Flexão e Extensão dos Dedos}
+%		\subsection{Flexão e Extensão dos Dedos}
 
-		Inicialmente, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado, como é mostrado na figura \ref{Fig:glove-flex-and-extend2} (a).
-
-		Após a flexão dos dedos, ao realizar o movimento inverso (extenção), nem o fio de náilon e nem o cursor do potenciômetro retornam à posição inicial. Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico, durante o movimento de flexão o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. 
+		Após o o sistema mecânico ser embarcado na luva, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado. Porém, após a flexionar os dedos, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais.
 		
-		Durante o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso ocorre enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro. Demonstrado na figura \ref{Fig:glove-flex-and-extend2} (b)
+		Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico durante o movimento de flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. Figura \ref{Fig:glove-flex-and-extend2} (a).
+		
+		Quando há o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso acontece enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro. Demonstrado na figura \ref{Fig:glove-flex-and-extend2} (b)
 		
 
 	\begin{figure}[!htb]
@@ -696,11 +721,74 @@ Agradeço ao Professor Dr. ...
 	\end{figure}
 
 
+	
+		\section{Programação do microcontrolador}
+
+		Na luva, além do transdutor, há um microcontrolador que capta os movimentos do potenciômetro. O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores entre 0 e 1023. 
+
+		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). 
+	 Também foram definidas duas posições principais para o movimento dos dedos. Posição 1: Quando todos os dedos estiverem estendidos. Posição 2: Quando todos os dedos estiverem flexionados. Posições demonstradas na figura \ref{Fig:glove-flex-and-extend2}.
+
+	 Cada potenciômetro apresenta uma média de valores para cada posição. Por exemplo, quando o dedo mínimo (1) está extendido (posição 1), apresenta valores em torno 157. Quando esse dedo é totalemnte flexionado (posição 2) o valor fica em torno de 558. Então para calcular o deslocamente temos:
+
+	\begin{equation}
+		\begin{split}
+			\Delta Pos 	& = Pos 2 	- 	Pos 1 	\\
+									& = 558 		- 	157			\\
+						 			& = +383
+		\label{Eq:Desloca1}
+		\end{split}
+	\end{equation}
+
+
+
+		\section{Ajustes}
+
+		
+		Todos os potenciômetros possuem uma pequena média valores padrão para ambas as posições da luva. Para ler tais valores e futuramente usá-los como referência de cada posição, um pequeno programa foi criado com o propósito de obter essa informação. A variação média do deslocamento entre as posições também foi calculada ($ \Delta Pos = Pos 2 - Pos 1 $). Os resultados obtidos estão resumidos na tabela \ref{Tab:deltapos}.
+
+	\begin{table}[H]
+  	\centering
+		\caption{Valores para posições 1 e 2 e deslocamento.}
+    \begin{tabular}{cccc}
+      \midrule
+			Número & Pos 1 & Pos 2 & $\Delta$ Pos \\
+      \midrule
+			1 & 175 & 558 & +383 \\
+			2 & 111 & 597 & +486 \\
+			3 & 797 & 394 & -433 \\
+			4 & 756 & 500 & -256 \\
+			5 & 706 & 390 & -316 \\      
+      \midrule
+    \end{tabular}
+    \label{Tab:deltapos}
+    \fonte{Produzido pelo autor}
+	\end{table}
+
+		Na tabela, pode ser observado que o deslocamento para cada dedo é diferente. Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
+
+		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
+
+
+		\subsection{VirtualWire}
+
+		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
+
+	O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
+
+
+		
+		\subsection{Protocolo de comunicação}
+
+%		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
+
+
+
+
+
 		Nesse sistema, a força do dedo durante a flexão e a força do elástico durante a extensão giram o cursor do potenciômetro através do fio de náilon. Dessa forma, o fio e o cursor acompanham o movimento dos dedos em diferentes graus possibilitando o sensoriamento.
 
 
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		\section{Transmissão e Recepção de Dados}
 
 			Como foi descrito, durante a movimentação dos dedos, a posição do cursor do potenciômetro é modificado. Sendo assim, para possibilitar o sensoriamento, a variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. Este por sua vez envia mensagens por rádio frequência, em formato de números inteiros que representam a posição atual de cada dedo. Figura \ref{Fig:transmitter-and-receptor} (a).
@@ -834,51 +922,8 @@ Agradeço ao Professor Dr. ...
 		\end{figure}
 
 
-		\section{Softwares}
 		
 		
-		\subsection{Calibração}
-
-		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). Também foram definidas duas posições principais para o movimento dos dedos. Posição 1: Quando todos os dedos estiverem estendidos. Posição 2: Quando todos os dedos estiverem flexionados. Essas duas posições foram demonstradas na figura \ref{Fig:glove-flex-and-extend2}. 
-		
-		Todos os potenciômetros possuem uma pequena média valores padrão para ambas as posições da luva. Para ler tais valores e futuramente usá-los como referência de cada posição, um pequeno programa foi criado com o propósito de obter essa informação. A variação média do deslocamento entre as posições também foi calculada ($ \Delta Pos = Pos 2 - Pos 1 $). Os resultados obtidos estão resumidos na tabela \ref{Tab:deltapos}.
-
-	\begin{table}[H]
-  	\centering
-		\caption{Valores para posições 1 e 2 e deslocamento.}
-    \begin{tabular}{cccc}
-      \midrule
-			Número & Pos 1 & Pos 2 & $\Delta$ Pos \\
-      \midrule
-			1 & 175 & 558 & +383 \\
-			2 & 111 & 597 & +486 \\
-			3 & 797 & 394 & -433 \\
-			4 & 756 & 500 & -256 \\
-			5 & 706 & 390 & -316 \\      
-      \midrule
-    \end{tabular}
-    \label{Tab:deltapos}
-    \fonte{Produzido pelo autor}
-	\end{table}
-
-		Na tabela, pode ser observado que o deslocamento para cada dedo é diferente. Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
-
-		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
-
-
-		\subsection{VirtualWire}
-
-		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
-
-	O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
-
-
-		
-		\subsection{Protocolo de comunicação}
-
-%		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
-
-
 
 	% ----------------------------
 	%	RESULTADOS E ANÁLISES	
