@@ -62,6 +62,7 @@
 \usepackage{listofsymbols}
 
 \usepackage{amsmath}
+\usepackage{listings}
 
 %\usepackage{reledmac}
 
@@ -682,7 +683,7 @@ Agradeço ao Professor Dr. ...
  \end{figure}
 
 
-		\subsection{Adaptação da Luva}
+		\subsection{Transdutor na Luva}
 
 %			Após examinar o movimento descrito acima, foi decidido embarcar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Figura \ref{Fig:glove-and-transmitter1}. Sendo assim, ao final, para os cinco dedos da mão, serão necessários cinco fios e cinco potenciômetros.
 
@@ -724,21 +725,80 @@ Agradeço ao Professor Dr. ...
 	
 		\section{Programação do microcontrolador}
 
-		Na luva, além do transdutor, há um microcontrolador que capta os movimentos do potenciômetro. O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores entre 0 e 1023. 
+		\subsection{Digitalização do sinal}
+
+		Na luva, além do transdutor, há um microcontrolador que capta os movimentos do potenciômetro e os digitaliza. O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores inteiros entre 0 e 1023. 
 
 		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). 
-	 Também foram definidas duas posições principais para o movimento dos dedos. Posição 1: Quando todos os dedos estiverem estendidos. Posição 2: Quando todos os dedos estiverem flexionados. Posições demonstradas na figura \ref{Fig:glove-flex-and-extend2}.
+	 Também foram definidas duas posições principais para o movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Posições demonstradas na figura \ref{Fig:glove-flex-and-extend2}.
 
-	 Cada potenciômetro apresenta uma média de valores para cada posição. Por exemplo, quando o dedo mínimo (1) está extendido (posição 1), apresenta valores em torno 157. Quando esse dedo é totalemnte flexionado (posição 2) o valor fica em torno de 558. Então para calcular o deslocamente temos:
+	 	Para cada posição, o potenciômetro apresenta uma média de valores. Por exemplo, quando o dedo mínimo (1) está extendido (posição A), seu respectivo potenciômetro apresenta valores em torno 157. Quando esse dedo é totalmente flexionado (posição B) os valores ficam em torno de 558. %Então para calcular o deslocamente temos:
 
-	\begin{equation}
-		\begin{split}
-			\Delta Pos 	& = Pos 2 	- 	Pos 1 	\\
-									& = 558 		- 	157			\\
-						 			& = +383
-		\label{Eq:Desloca1}
-		\end{split}
-	\end{equation}
+%	\begin{equation}
+%		\begin{split}
+%			\Delta Pos 	& = Pos 2 	- 	Pos 1 	\\
+%									& = 558 		- 	157			\\
+%						 			& = +383
+%		\label{Eq:Desloca1}
+%		\end{split}
+%	\end{equation}
+
+		O valor digital apresentado pelo potenciômetro é remapeado para uma faixa de valores inteiros que representam posições entre 0 e 9. Quando os valores de todos os potenciômetros são remapeados, eles são concatenados em um único número de 5 digitos, no qual cada dígito representa cada um dos cinco dedos da esquerda para a direita. 
+		
+		Por exemplo, em uma mensagem "69071" significa que o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar).
+		
+		
+		\subsection{VirtualWire}
+
+		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
+
+		O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
+
+		No código embarcado no microcontrolador da luva, foram definidos segundo os parâmetros da biblioteca o pino do transmissor RF, a taxa de transmissão e o tamanho da mensagem a ser enviada. Porém, antes de efetivamente enviar a mensagem é preciso convertê-la em um vetor de char, que é o formato aceito pela função de envio.
+
+		Uma das formas de converter valores inteiros em string é concatenar o valor inteiro a uma string \cite{arduinostringadd}. Por isso, no código desenvolvido, uma string vazia é somada aos valores inteiros remapeados dos potenciômetros. Com isso, os valores serão concatenados e transformados em uma string ao mesmo tempo. Essa string então é transformada em um vetor de char usando a função "toCharArray" antes de ser enviada. Este processo está descrito resumidamente no pseudocódigo abaixo.		
+
+\lstset{language=C++,
+                basicstyle=\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{green}\ttfamily,
+                commentstyle=\color{red}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#}
+}
+\begin{lstlisting}
+	// Inicia variaveis
+	String vazia = ""
+	String mensagem = ""
+	
+	// Recebe as posicoes de cada dedo
+	int dedo1 = Posicao_dedo1;
+	int dedo2 = Posicao_dedo2;
+	int dedo3 = Posicao_dedo3;
+	int dedo4 = Posicao_dedo4;
+	int dedo5 = Posicao_dedo5;
+
+	// Concatena os inteiros e os transforma em string
+	mensagem = vazia + dedo1 + dedo2 + dedo3 + dedo4 + dedo5;
+
+	// Converte a string em um vetor de char
+	mensagem = mensagem.toCharArray;
+
+	// Envia o vetor de char
+	vw_send(mensagem);
+
+\end{lstlisting}
+
+				
+		Um resumo do processo de digitalização e envio é demonstrado na figura \ref{Fig:get-and-send}.
+
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Digitalização e envio do sinal}
+  		\includegraphics[width=12cm]{./figures/get-and-send.png}
+  		\label{Fig:get-and-send}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
 
 
 
@@ -768,13 +828,6 @@ Agradeço ao Professor Dr. ...
 		Na tabela, pode ser observado que o deslocamento para cada dedo é diferente. Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
 
 		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
-
-
-		\subsection{VirtualWire}
-
-		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
-
-	O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
 
 
 		

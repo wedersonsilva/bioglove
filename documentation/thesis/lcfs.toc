@@ -20,27 +20,28 @@
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{18}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{18}{section.3.1}
 \contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{18}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Adapta\IeC {\c c}\IeC {\~a}o da Luva}{18}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Transdutor na Luva}{18}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}Ajustes}{20}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}VirtualWire}{21}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{21}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{22}{section.3.5}
-\contentsline {section}{\numberline {3.6}Medidas e Posicionamento}{22}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Componentes}{22}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{20}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{20}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Ajustes}{22}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{23}{section.3.5}
+\contentsline {section}{\numberline {3.6}Medidas e Posicionamento}{23}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Componentes}{24}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}Dimens\IeC {\~o}es e Posicionamento}{24}{subsection.3.6.2}
-\contentsline {section}{\numberline {3.7}Placa Embarcada}{24}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Esquem\IeC {\'a}tico}{24}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Montagem}{25}{section.3.8}
+\contentsline {section}{\numberline {3.7}Placa Embarcada}{25}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Esquem\IeC {\'a}tico}{25}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.8}Montagem}{27}{section.3.8}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{27}{section.4.1}
-\contentsline {section}{\numberline {4.2}Testes}{27}{section.4.2}
-\contentsline {section}{\numberline {4.3}Resultados}{27}{section.4.3}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{28}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{28}{section.4.1}
+\contentsline {section}{\numberline {4.2}Testes}{28}{section.4.2}
+\contentsline {section}{\numberline {4.3}Resultados}{28}{section.4.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{28}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~o}es}{28}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{28}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclus\IeC {\~o}es}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{29}{section.5.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{29}{section*.30}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{30}{section*.31}

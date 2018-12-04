@@ -64,4 +64,11 @@ Acessado em: 27/11/2018.
 Dispon{\'\i}vel em:
   \url{https://www.pjrc.com/teensy/td\_libs\_VirtualWire.html}.}
 
+\bibitem[SM 2018]{arduinostringadd}
+\abntrefinfo{SM}{SM}{2018}
+{SM. \emph{{Arduino - String Addition Operator}}. 2018.
+Acessado em: 04/12/2018.
+Dispon{\'\i}vel em:
+  \url{https://www.arduino.cc/en/Tutorial/StringAdditionOperator}.}
+
 \end{thebibliography}

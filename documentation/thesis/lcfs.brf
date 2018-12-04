@@ -5,5 +5,6 @@
 \backcite {arduinosite}{{16}{2.4}{section.2.4}}
 \backcite {institutodigitalrf}{{17}{2.5}{section.2.5}}
 \backcite {moore2013clinically}{{19}{6}{subfigure.6.2}}
-\backcite {virtualwiremanual}{{21}{3.4.1}{subsection.3.4.1}}
-\backcite {virtualwirepjrc}{{21}{3.4.1}{subsection.3.4.1}}
+\backcite {virtualwiremanual}{{21}{3.3.2}{subsection.3.3.2}}
+\backcite {virtualwirepjrc}{{21}{3.3.2}{subsection.3.3.2}}
+\backcite {arduinostringadd}{{21}{3.3.2}{subsection.3.3.2}}
