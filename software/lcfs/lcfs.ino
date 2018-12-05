@@ -82,30 +82,30 @@ void ENVIAR(){
 
 /* Exibir valores na tela do Serial Monitor */
 void EXIBIR(){
-  Serial.print("| Minimo: ");
+  Serial.print("| Min: ");
   Serial.print(dedo1); 
-  //Serial.print(" POSICAO: ");
-  //Serial.print(posicao1);  
+  Serial.print(" POS: ");
+  Serial.print(posicao1);  
   
-  Serial.print(" | Anelar: ");
+  Serial.print(" | Ane: ");
   Serial.print(dedo2);
-  //Serial.print(" POSICAO: ");
-  //Serial.print(posicao2);  
+  Serial.print(" POS: ");
+  Serial.print(posicao2);  
   
-  Serial.print(" | Meio: ");
+  Serial.print(" | Mei: ");
   Serial.print(dedo3);
-  //Serial.print(" POSICAO: ");
-  //Serial.print(posicao3);   
+  Serial.print(" POS: ");
+  Serial.print(posicao3);   
   
-  Serial.print(" | Indicador: ");
+  Serial.print(" | Ind: ");
   Serial.print(dedo4);
-  //Serial.print(" POSICAO: ");
-  //Serial.print(posicao4);  
+  Serial.print(" POS: ");
+  Serial.print(posicao4);  
   
-  Serial.print(" | Polegar: ");
-  Serial.printlnll(dedo5);
-  //Serial.print(" POSICAO: ");
-  //Serial.println(posicao5);  
+  Serial.print(" | Pol: ");
+  Serial.print(dedo5);
+  Serial.print(" POS: ");
+  Serial.println(posicao5);  
 }
 
 /* FUNCAO PRINCIPAL */

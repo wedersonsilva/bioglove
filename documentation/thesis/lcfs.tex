@@ -63,6 +63,7 @@
 
 \usepackage{amsmath}
 \usepackage{listings}
+%\usepackage{xcolor}
 
 %\usepackage{reledmac}
 
@@ -628,6 +629,9 @@ Agradeço ao Professor Dr. ...
 
 
 		\section{Mecânica Bioinspirada}
+
+			\subsection{Transdutor de Flexão}
+
 		Como foi demonstrado no movimento de flexão da figura \ref{Fig:hand-tendon-flex1}, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um transdutor de flexão de dedos atrelado a um microcontrolador. 
 
 		No sistema biomecânico, resumidamente, uma das extremidades do tendão está presa nas falanges do dedo enquanto sua extensão desliza por dentro de polias até o músculo. No sistema desenvolvido, cada transdutor é composto por uma linha de náilon presa ao dedo da luva, guiada através de pequenos segmentos plásticos até o cursor de um potenciômetro. A figura \ref{Fig:bio-and-system} demonstra um pouco dos dois sistemas.
@@ -683,7 +687,7 @@ Agradeço ao Professor Dr. ...
  \end{figure}
 
 
-		\subsection{Transdutor na Luva}
+		\subsection{Adaptação na Luva}
 
 %			Após examinar o movimento descrito acima, foi decidido embarcar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Figura \ref{Fig:glove-and-transmitter1}. Sendo assim, ao final, para os cinco dedos da mão, serão necessários cinco fios e cinco potenciômetros.
 
@@ -730,9 +734,9 @@ Agradeço ao Professor Dr. ...
 		Na luva, além do transdutor, há um microcontrolador que capta os movimentos do potenciômetro e os digitaliza. O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores inteiros entre 0 e 1023. 
 
 		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). 
-	 Também foram definidas duas posições principais para o movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Posições demonstradas na figura \ref{Fig:glove-flex-and-extend2}.
+	 Também foram definidas duas posições principais para analisar o movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Algo semelhante à figura \ref{Fig:glove-flex-and-extend2}.
 
-	 	Para cada posição, o potenciômetro apresenta uma média de valores. Por exemplo, quando o dedo mínimo (1) está extendido (posição A), seu respectivo potenciômetro apresenta valores em torno 157. Quando esse dedo é totalmente flexionado (posição B) os valores ficam em torno de 558. %Então para calcular o deslocamente temos:
+	 	Para cada posição, o potenciômetro apresenta uma média de valores digitais. Por exemplo, quando o dedo mínimo (1) está extendido (posição A), seu respectivo potenciômetro apresenta valores em torno 191. Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616. %Então para calcular o deslocamente temos:
 
 %	\begin{equation}
 %		\begin{split}
@@ -743,9 +747,9 @@ Agradeço ao Professor Dr. ...
 %		\end{split}
 %	\end{equation}
 
-		O valor digital apresentado pelo potenciômetro é remapeado para uma faixa de valores inteiros que representam posições entre 0 e 9. Quando os valores de todos os potenciômetros são remapeados, eles são concatenados em um único número de 5 digitos, no qual cada dígito representa cada um dos cinco dedos da esquerda para a direita. 
+		Porteriormente, para diminuir o tamanho da mensagem a ser enviada, o valor digital apresentado pelo potenciômetro é remapeado para uma faixa de valores inteiros que representam posições inteiras entre 0 e 9. Quando os valores de todos os potenciômetros são remapeados, eles são concatenados em um único número de 5 dígitos, no qual cada dígito representa cada um dos cinco dedos da esquerda para a direita. 
 		
-		Por exemplo, em uma mensagem "69071" significa que o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar).
+		Por exemplo, em uma mensagem "69071" o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar) que está na posição 1.
 		
 		
 		\subsection{VirtualWire}
@@ -754,28 +758,29 @@ Agradeço ao Professor Dr. ...
 
 		O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
 
-		No código embarcado no microcontrolador da luva, foram definidos segundo os parâmetros da biblioteca o pino do transmissor RF, a taxa de transmissão e o tamanho da mensagem a ser enviada. Porém, antes de efetivamente enviar a mensagem é preciso convertê-la em um vetor de char, que é o formato aceito pela função de envio.
+		No código embarcado no microcontrolador da luva foram definidos, segundo os parâmetros da biblioteca, o pino do transmissor RF, a taxa de transmissão e o tamanho da mensagem a ser enviada. Porém, antes de efetivamente enviar a mensagem é preciso convertê-la em uma string que logo em seguida será transformada em um vetor de char, que é o formato de dado aceito pela função de envio.
 
-		Uma das formas de converter valores inteiros em string é concatenar o valor inteiro a uma string \cite{arduinostringadd}. Por isso, no código desenvolvido, uma string vazia é somada aos valores inteiros remapeados dos potenciômetros. Com isso, os valores serão concatenados e transformados em uma string ao mesmo tempo. Essa string então é transformada em um vetor de char usando a função "toCharArray" antes de ser enviada. Este processo está descrito resumidamente no pseudocódigo abaixo.		
+		Uma das formas de converter valores inteiros em string é concatenar o valor inteiro com uma string \cite{arduinostringadd}. Por isso, no código desenvolvido, uma string vazia é somada aos valores inteiros remapeados dos potenciômetros. Com isso, os valores serão concatenados e transformados em uma string ao mesmo tempo. Essa string então é transformada em um vetor de char usando a função "toCharArray" antes de ser enviada. Este processo está descrito resumidamente no pseudocódigo abaixo.		
 
 \lstset{language=C++,
-                basicstyle=\ttfamily,
+%                basicstyle=\ttfamily,
                 keywordstyle=\color{blue}\ttfamily,
                 stringstyle=\color{green}\ttfamily,
                 commentstyle=\color{red}\ttfamily,
+								basicstyle=\footnotesize,
                 morecomment=[l][\color{magenta}]{\#}
 }
 \begin{lstlisting}
 	// Inicia variaveis
-	String vazia = ""
-	String mensagem = ""
+	string vazia = ""
+	string mensagem = ""
 	
 	// Recebe as posicoes de cada dedo
-	int dedo1 = Posicao_dedo1;
-	int dedo2 = Posicao_dedo2;
-	int dedo3 = Posicao_dedo3;
-	int dedo4 = Posicao_dedo4;
-	int dedo5 = Posicao_dedo5;
+	int dedo1 = posicao_dedo1;
+	int dedo2 = posicao_dedo2;
+	int dedo3 = posicao_dedo3;
+	int dedo4 = posicao_dedo4;
+	int dedo5 = posicao_dedo5;
 
 	// Concatena os inteiros e os transforma em string
 	mensagem = vazia + dedo1 + dedo2 + dedo3 + dedo4 + dedo5;
@@ -789,57 +794,140 @@ Agradeço ao Professor Dr. ...
 \end{lstlisting}
 
 				
-		Um resumo do processo de digitalização e envio é demonstrado na figura \ref{Fig:get-and-send}.
+%		Um resumo do processo de digitalização e envio é demonstrado na figura \ref{Fig:get-and-send}.
 
 
-		\begin{figure}[h!]
-			\centering
-			\caption{Digitalização e envio do sinal}
-  		\includegraphics[width=12cm]{./figures/get-and-send.png}
-  		\label{Fig:get-and-send}
-			\fonte{Produzido pelo autor.}
-		\end{figure}
+%		\begin{figure}[h!]
+%			\centering
+%			\caption{Digitalização e envio do sinal}
+%  		\includegraphics[width=12cm]{./figures/get-and-send.png}
+% 		\label{Fig:get-and-send}
+%			\fonte{Produzido pelo autor.}
+%		\end{figure}
 
 
 
 		\section{Ajustes}
-
 		
-		Todos os potenciômetros possuem uma pequena média valores padrão para ambas as posições da luva. Para ler tais valores e futuramente usá-los como referência de cada posição, um pequeno programa foi criado com o propósito de obter essa informação. A variação média do deslocamento entre as posições também foi calculada ($ \Delta Pos = Pos 2 - Pos 1 $). Os resultados obtidos estão resumidos na tabela \ref{Tab:deltapos}.
+		\subsection{Introdução}
+
+		Quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Quando a luva está em posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 192, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141.	
+		
+		Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou negativos para um mesmo movimento. 
+	
+		\subsection{Deslocamento e número de posições}
+
+		Para descobrir os valores de deslocamento, cada potenciômetro teve seu valor digital anotado para as posições A e B, que posteriormente foram usados na equação \ref{Eq:Desloca1}:
+
+	\begin{equation}
+			\Delta Pos 	= Pos B 	- 	Pos A
+		\label{Eq:Desloca1}
+	\end{equation}
+
+		Usando o módulo de $\Delta Pos$ é possível calcular o número de posições detectáveis partindo da Posição A até a Posição B, através da equação \ref{Eq:NPos1}:
+
+	\begin{equation}
+			NPos = |\Delta Pos| + 1
+		\label{Eq:NPos1}
+	\end{equation}
+
+		A tabela \ref{Tab:deltapos} mostra os valores obtidos e calculados para cada um dos cinco potenciômetro no deslocamento da posição A para a posição B.
+
 
 	\begin{table}[H]
   	\centering
-		\caption{Valores para posições 1 e 2 e deslocamento.}
-    \begin{tabular}{cccc}
+		\caption{Valores de A para B}
+    \begin{tabular}{c|cccc}
       \midrule
-			Número & Pos 1 & Pos 2 & $\Delta$ Pos \\
+			Dedo	& PosA	& PosB	& $\Delta$Pos	& NPos	\\
       \midrule
-			1 & 175 & 558 & +383 \\
-			2 & 111 & 597 & +486 \\
-			3 & 797 & 394 & -433 \\
-			4 & 756 & 500 & -256 \\
-			5 & 706 & 390 & -316 \\      
+			1 		& 191 	& 616 	& 		+425 		&	426		\\
+			2 		& 140 	& 609 	& 		+469 		&	470		\\
+			3 		& 774 	& 360 	& 		-414 		&	415		\\
+			4 		& 728 	& 475 	& 		-253 		&	254		\\
+			5 		& 670 	& 367 	& 		-303 		&	304		\\      
       \midrule
     \end{tabular}
     \label{Tab:deltapos}
     \fonte{Produzido pelo autor}
 	\end{table}
+		
+		Quanto maior for o valor de NPos na tabela \ref{Tab:deltapos}, mais preciso será o sensoriamento do dedo. Sendo assim, o anelar (2) é o dedo com maior potencial de sensoriamento, enquanto que o indicador (4) possui menor potencial.
 
-		Na tabela, pode ser observado que o deslocamento para cada dedo é diferente. Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
+	\subsection{Remapeamento}
 
-		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
+	 Com o intuito de diminur o tamanho da mensagem a ser enviada pelo transmissor de rádio frequência, foi definido que cada potenciômetro teria apenas 10 níveis de deslocamento representados durante a transmissão. Dessa forma, em uma mensagem numérica, bastaria 1 dígito para representar a posição atual do dedo.
 
+	 Junto a isso, para diminuir a complexidade do protocolo de comando, foi decidido que não haveriam deslocamentos negativos. Algo que acontece nos dedos 3, 4 e 5 durante o deslocamente de A para B.
+
+	 Para se adequar aos requisitos descritos, no código embarcado foi usada a função "map", que permite remapear uma faixa de valores em outra menor. Usando tal função, a faixa de entrada que inicialmente poderia variar entre 0 e 1023, foi remapeada para variar entre 0 e 9 valores inteiros. 
+	 
+	 Além do mais, a função map também permite inverter a saída, de uma forma que os valores de entrada que variam de 1023 a 0 (decrescente) passarão a variar de 0 a 9 (crescente). Este último requisito, permite eliminar os deslocamentos negativos.
+
+	 Usando as equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, os valores digitais remapeados (R) foram adicionados à tabela \ref{Tab:deltapos}, criando a tabela \ref{Tab:deltaremap}:
+
+
+	\begin{table}[H]
+  	\centering
+		\caption{Valores de A para B e remapeados (R).}
+    \begin{tabular}{c|cc|cc|cc|cc}
+      \midrule
+			Dedo	&\multicolumn{2}{c}{PosA	(RA)} 	&\multicolumn{2}{c}{PosB (RB)}	&\multicolumn{2}{c}{$\Delta$Pos	($\Delta$R)}	&\multicolumn{2}{c}{NPos	(NR)}	\\
+      \midrule
+			1 		& 191 & (1)		& 616 & (5)		& 		+425 & (+4)		&			425	& (5)		\\
+			2 		& 140 & (1)		& 609 & (5)		& 		+469 & (+4)		&			469 &	(5)		\\
+			3 		& 774 & (3)		& 360 & (6)		& 		-414 & (+3)		&			414	& (4)		\\
+			4 		& 728 & (3)		& 475 & (5)		& 		-253 & (+2)		&			253	& (3)		\\
+			5 		& 670 & (4)		& 367 & (6)		& 		-303 & (+2)		&			303 &	(3)		\\      
+      \midrule
+    \end{tabular}
+    \label{Tab:deltaremap}
+    \fonte{Produzido pelo autor}
+	\end{table}
+	
 
 		
-		\subsection{Protocolo de comunicação}
+		\section{Protocolo de comunicação}
+
+		\subsection{Introdução}
+
+		Através de um transmissor de rádio frequência, a o sistema embarcado na luva envia constantemente mensagens de 5 dígitos que indicam a posição de cada um dos cinco dedos. Para receber esse sinal, é preciso usar um módulo receptor de rádio frequência compatível com o transmissor. 
+		
+		Um sistema receptor foi embarcado em um carrinho usando um segundo microcontrolador Arduino modelo Nano e um módulo receptor RF. Esse carrinho funciona com motores DC (\textit{Direct Current}) e todo o sistema é alimentado por uma bateria LiPo. 
+
+		Para possibilitar o controle, conjuntos de posições dos dedos pré definidas indicam movimentos a serem seguidos pelo carrinho.
+		
+		\subsection{Posições e movimentos}
+
+		Como foi explicado anteriormente, a mensagem transmitida pela luva consiste em conjunto de 5 dígitos no qual cada um deles indica posições de cada dedo. Usando o lado esquerdo como referência, o primeiro dígito indica a posição do dedo 1, que é o dedo mínimo. O segundo dígito indica a posição do dedo 2, ou seja, o dedo anelar. Essa lógica segue até o quinto dígito que representa a posição do dedo polegar.
+
+		5 comandos foram definidos para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar. Com o intuito de controlar o carrinho através de combinações de flexões e extensões de dedos, 5 conjuntos de posições foram definidas, flexionar os dedos 2 e 3 simultanemanete, flexionar somente o dedo 4, flexionar somente o dedo 5, flexionar o dedo 1 e não flexionar nenhum dedo.
+
+		A figura \ref{Fig:glove-control-positions1} mostra a correspondência entre cada combinação de flexão dos dedos e seu respectivo comando para o carrinho. Apenas os dedos indicados em vermelho devem ser flexionados para validar o comando. Qualquer outra combinação faz o carrinho parar.
+
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Combinação de flexões e extensões para controle do carrinho}
+  		\includegraphics[width=14cm]{./figures/glove-control-positions1.png}
+  		\label{Fig:glove-control-positions1}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
+
+		
+		\subsection{\textit{Software} de recepção}
 
 %		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
 
 
+		\section{Assembling}
 
 
+		Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
 
-		Nesse sistema, a força do dedo durante a flexão e a força do elástico durante a extensão giram o cursor do potenciômetro através do fio de náilon. Dessa forma, o fio e o cursor acompanham o movimento dos dedos em diferentes graus possibilitando o sensoriamento.
+		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
+
+
 
 
 		\section{Transmissão e Recepção de Dados}

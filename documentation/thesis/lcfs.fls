@@ -223,6 +223,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT lcfs.toc
 INPUT lcfs.toc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmsso12.tfm
 INPUT ./figures/hand-tendon-flex1.png
 INPUT ./figures/hand-tendon-flex1.png
 INPUT ./figures/hand-tendon-flex1.png
@@ -265,10 +266,11 @@ INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
-INPUT ./figures/get-and-send.png
-INPUT ./figures/get-and-send.png
-INPUT ./figures/get-and-send.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
+INPUT ./figures/glove-control-positions1.png
+INPUT ./figures/glove-control-positions1.png
+INPUT ./figures/glove-control-positions1.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmsso12.tfm
 INPUT ./figures/transmitter-module1.png
 INPUT ./figures/transmitter-module1.png
 INPUT ./figures/transmitter-module1.png
@@ -333,5 +335,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
