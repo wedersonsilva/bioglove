@@ -652,9 +652,11 @@ Agradeço ao Professor Dr. ...
 		 \fonte{(a) Adaptado de \cite{moore2013clinically} e (b) produzido pelo autor.}
 	\end{figure}
 
-		Para verificar se no sistema criado haveria deslocamento do fio durante a flexão dos dedos, com a mão inicialmente extendida com o dorso voltado para cima, uma das pontas de um fio foi presa na extremidade de um dos dedos. O local da outra ponta do fio foi marcada no dorso mão. Como é demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (a).
+		Logo no inicio do trabalho, foi formulada a hipótese de que poderia haver a movimentação de um fio durante a flexão de um dedo. Portanto foi realizado um experimento para verificar tal hipótese. 
+		
+		Sendo assim, o primeiro passo foi, com a mão inicialmente extendida com o dorso voltado para cima, uma das pontas de um fio foi presa na extremidade de um dos dedos. O local da outra ponta do fio foi marcada no dorso mão. Como é demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (a).
 
-			Após a flexão dos dedos, o fio se movimentou em uma direção e criou um deslocamento (d) do fio em relação ao ponto marcado, mostrado na figura \ref{Fig:hand-wire-steady-and-flex} (b).
+			Após a flexão dos dedos, verificou-se que o fio se movimentou em uma direção e criou um deslocamento (d) do fio em relação ao ponto marcado, mostrado na figura \ref{Fig:hand-wire-steady-and-flex} (b). Esse experimento validou a hipótese formulada previamente. 
 
 %\begin{figure}[H]
 %	\caption{Cabo de pares trançados.}
@@ -703,7 +705,7 @@ Agradeço ao Professor Dr. ...
 
 %		\subsection{Flexão e Extensão dos Dedos}
 
-		Após o o sistema mecânico ser embarcado na luva, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado. Porém, após a flexionar os dedos, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais.
+		Após as polias e o fio de náilon serem devidamente embarcados na luva juntamente ao potenciõmetro, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado. Porém, após a flexão do dedo, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais.
 		
 		Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico durante o movimento de flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. Figura \ref{Fig:glove-flex-and-extend2} (a).
 		
@@ -895,13 +897,13 @@ Agradeço ao Professor Dr. ...
 		
 		Um sistema receptor foi embarcado em um carrinho usando um segundo microcontrolador Arduino modelo Nano e um módulo receptor RF. Esse carrinho funciona com motores DC (\textit{Direct Current}) e todo o sistema é alimentado por uma bateria LiPo. 
 
-		Para possibilitar o controle, conjuntos de posições dos dedos pré definidas indicam movimentos a serem seguidos pelo carrinho.
+		Para possibilitar o controle, conjuntos pré-definidos das posições dos dedos correspondem a movimentos que devem ser executados pelo carrinho.
 		
 		\subsection{Posições e movimentos}
 
-		Como foi explicado anteriormente, a mensagem transmitida pela luva consiste em conjunto de 5 dígitos no qual cada um deles indica posições de cada dedo. Na mensagem, o primeiro dígito da esquerda indica a posição do dedo 1, que é o dedo mínimo. O segundo dígito indica a posição do dedo 2, ou seja, o dedo anelar. Essa lógica segue até o quinto dígito que representa a posição do dedo polegar.
+		Como foi explicitado anteriormente, a mensagem transmitida pela luva consiste em um conjunto de 5 dígitos no qual cada dígito indica a posição de um respectivo dedo. Na mensagem, o primeiro dígito da esquerda indica a posição do dedo 1, que é o dedo mínimo. O segundo dígito indica a posição do dedo 2, ou seja, o dedo anelar. Essa lógica segue até o quinto dígito que representa a posição do dedo polegar.
 
-		5 comandos foram definidos para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar. Com o intuito de controlar o carrinho através de combinações de flexões e extensões de dedos, 5 conjuntos de posições foram definidas, flexionar os dedos 2 e 3 simultanemanete, flexionar somente o dedo 4, flexionar somente o dedo 5, flexionar o dedo 1 e não flexionar nenhum dedo.
+		Cinco comandos foram definidos para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar. Com o intuito de controlar o carrinho através de combinações de flexões e extensões de dedos, 5 conjuntos de posições também foram definidas. São eles: flexionar os dedos 2 e 3 simultanemanete, flexionar somente o dedo 4, flexionar somente o dedo 5, flexionar apenas o dedo 1 e não flexionar nenhum dedo.
 
 		A figura \ref{Fig:glove-control-positions1} mostra a correspondência entre cada combinação de flexão dos dedos e seu respectivo comando para o carrinho. Apenas os dedos indicados em vermelho devem ser flexionados para validar o comando. Qualquer outra combinação faz o carrinho parar.
 
@@ -917,9 +919,9 @@ Agradeço ao Professor Dr. ...
 		
 		\subsection{\textit{Software} de recepção}
 
-		A biblioteca VirtualWire também deve estar presente no código do microcontrolador embarcado no carrinho. Para receber a mensagem adequadamente, é necessário definir o pino do receptor RF e taxa de transmissão do transmissor RF, também deve-se criar variáveis para guardar a mensagem recebida e o seu tamanho. As mensagens são recebidas \textit{byte} a \textit{byte}.
+		A biblioteca VirtualWire também deve estar presente no código do microcontrolador embarcado no carrinho. Para receber as mensagens adequadamente, é necessário definir o pino do receptor RF e indicar a taxa de transmissão do transmissor RF. Também deve-se criar variáveis para guardar a mensagem recebida e o seu tamanho, pois as mensagens são recebidas \textit{byte} a \textit{byte}.
 
-		Uma função da biblioteca verifica se chegou alguma mensagem, ela indica \textit{true} quando isso acontece. Então para ler a mensagem recebida, é necessário criar um \textit{for} que recebe como parâmetro o tamanho da mensagem recebida. Dentro da função será lida \textit{byte} a \textit{byte} a mensagem enquanto a função \textit{for} for verdadeira.
+		Uma função nativa da biblioteca verifica se chegou alguma mensagem e indica \textit{true} quando isso acontece. Então, ao receber uma mensagem, para lê-la, é necessário criar um \textit{for} que recebe como parâmetro o tamanho da mensagem recebida. Dentro da função a mensagem será lida \textit{byte} a \textit{byte} enquanto a função \textit{for} for verdadeira.
 
 		O pseudocódigo abaixo demonstra o fluxo descrito:
 
@@ -943,9 +945,9 @@ Agradeço ao Professor Dr. ...
 	}
 \end{lstlisting}
 
-		Usando o pseudocódigo apresentado e sabendo que na mensagem recebida o primeiro dígito indica a posição atual do dedo 1, então a função for irá rodar pelo menos 5 vezes, armazenando em cada posição do vetor \texttt{byte\_recebido[]} as informações de cada dedo. Dessa maneira, a posição recebida do dedo 1 estará em \texttt{byte\_recebido[0]}, enquanto que a do dedo 2 está em \texttt{byte\_recebido[1]}. Sendo assim até o dedo 5 que estará em \texttt{byte\_recebido[4]}.
+		Usando o pseudocódigo apresentado e sabendo que na mensagem recebida o primeiro dígito indica a posição atual do dedo 1, percebe-se que a função \textit{for} irá rodar pelo menos 5 vezes, armazenando em cada posição do vetor \texttt{byte\_recebido[]} as informações de cada dedo. Dessa maneira, a posição recebida do dedo 1 estará em \texttt{byte\_recebido[0]}, enquanto que a do dedo 2 está em \texttt{byte\_recebido[1]}. Continuando assim até o dedo 5 que estará em \texttt{byte\_recebido[4]}.
 		
-		Cinco funções foram criadas para comandar a ponte H e dessa forma movimentar os motores do carrinho, FRENTE( ), TRAS( ), ESQUERDA( ), DIREITA( ) e PARA( ). Ao chamar qualquer uma dessas funções, o carrinho passa a se movimentar na direção e sentido definidas.
+		Após o armazenamento das posições dos dedos, cinco funções foram criadas para comandar a ponte H e dessa forma movimentar os motores do carrinho. São elas: FRENTE( ), TRAS( ), ESQUERDA( ), DIREITA( ) e PARA( ). Ao chamar qualquer uma dessas funções, o carrinho passa a se movimentar na direção e sentido definidas.
 		Para chamar a função correta baseada na mensagem recebida, foram criadas cadeias de \textit{Ifs} e \textit{Elses} nas quais, quando satisfeitas certas condições, a respectiva função é chamada. 
 		
 		A tabela \ref{Tab:dedos-e-comandos1} mostra quais são os conjuntos de valores esperados para todos os dedos simultaneamente em cada comando. Ou seja, para saber qual a combinação de valores para movimentar o carrinho para frente, é só observar a coluna "Frente" da tabela. Qualquer outra combinação além das especificadas na tabela, fará o carrinho ficar parado. Os dedos flexionados estão destacados em vermelho.
@@ -983,7 +985,7 @@ Agradeço ao Professor Dr. ...
 
 		O material da linha que movimenta os cursores dos potenciômetro é náilon. Isso porque, nos testes, ela apresentou boa resistência e durabilidade, além de aparentar ter pouca ou nenhuma elasticidade para a aplicação.
 
-		Utilizando a luva escolhida com o dorso voltado para cima, as polias plásticas foram costuradas ao longo dos dedos. Uma das extremidades de cada fio de náilon foi presa na ponta de cada um dos dedos, enquanto que o restante do fio passava por dentro das polias plásticas. A outra extremidade do fio de náilon seria amarrada ao cursor do potenciômetro quando a PCB fosse incluída na luva. A figura \ref{Fig:glove-wire-pot1} demostra o resultado para um dos dedos da luva.
+		Utilizando a luva escolhida com o dorso voltado para cima, as polias plásticas foram costuradas ao longo dos dedos. Uma das extremidades de cada fio de náilon foi presa na ponta de cada um dos dedos, enquanto que o restante do fio passava por dentro das polias plásticas. A outra extremidade do fio de náilon seria amarrada ao cursor do potenciômetro quando a PCB fosse incluída na luva. A figura \ref{Fig:glove-wire-pot1} demostra o resultado esperado para um dos dedos da luva.
 
 
 		\begin{figure}[h!]
@@ -997,11 +999,11 @@ Agradeço ao Professor Dr. ...
 			
 			\subsection{Escolha de componentes}	
 
-			O sistema processamento e transmissão de sinal embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
+			O sistema de processamento e transmissão de sinal embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
 
 			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
 
-			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
+			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente  em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
 
 			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
 
@@ -1032,7 +1034,7 @@ Agradeço ao Professor Dr. ...
 
 			\subsection{Posicionamento de componentes}
 
-			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que as dimensões máximas da PCI (Placa de Circuito Impresso) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
+			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) deveria ser de aproximadamente 72$mm$ x 58$mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
 
 		\begin{figure}[h!]
 			\centering
@@ -1064,7 +1066,7 @@ Agradeço ao Professor Dr. ...
 		 \fonte{Produzido pelo autor.}
 	\end{figure}
 
-			Após a conclusão do desenho da placa, foram efetuados os procedimentos para a confecção desta PCI em uma placa de fenolite cobreada, além de sua posterior soldagem de pinos e componentes. A figura \ref{Fig:phenolic-and-ready} mostra os resultados após o procedimento descrito. Já a figura \ref{Fig:glove-ready1} mostra o resultado final após juntar a luva de algodão e a placa de circuito impresso recém concluída.
+			Após a conclusão do desenho da placa, foram efetuados os procedimentos necessários para a confecção desta PCI em uma placa de fenolite cobreada, além da posterior soldagem de pinos e componentes. A figura \ref{Fig:phenolic-and-ready} mostra os resultados após o procedimento descrito. Já a figura \ref{Fig:glove-ready1} mostra o resultado final após juntar a luva de algodão e a placa de circuito impresso recém concluída.
 
 	\begin{figure}[!htb]
 		 \centering

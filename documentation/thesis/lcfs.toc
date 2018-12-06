@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.3.1}
 \contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{19}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Transdutor de Flex\IeC {\~a}o}{19}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{20}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{21}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{21}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}VirtualWire}{22}{subsection.3.3.2}
@@ -29,13 +29,13 @@
 \contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{23}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Remapeamento}{24}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{24}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{24}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{25}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{25}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{26}{subsection.3.5.3}
 \contentsline {section}{\numberline {3.6}Assembling}{27}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{27}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{27}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{28}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{29}{subsection.3.6.3}
 \contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{30}{subsection.3.6.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
