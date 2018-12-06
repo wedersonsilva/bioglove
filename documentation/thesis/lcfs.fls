@@ -271,12 +271,10 @@ INPUT ./figures/glove-control-positions1.png
 INPUT ./figures/glove-control-positions1.png
 INPUT ./figures/glove-control-positions1.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmsso12.tfm
-INPUT ./figures/transmitter-module1.png
-INPUT ./figures/transmitter-module1.png
-INPUT ./figures/transmitter-module1.png
-INPUT ./figures/receptor-module1.png
-INPUT ./figures/receptor-module1.png
-INPUT ./figures/receptor-module1.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT ./figures/glove-wire-pot1.png
+INPUT ./figures/glove-wire-pot1.png
+INPUT ./figures/glove-wire-pot1.png
 INPUT ./figures/potentiometer3.jpg
 INPUT ./figures/potentiometer3.jpg
 INPUT ./figures/potentiometer3.jpg
@@ -301,6 +299,12 @@ INPUT ./figures/glove-module-ready1.jpg
 INPUT figures/glove-ready1.jpg
 INPUT ./figures/glove-ready1.jpg
 INPUT ./figures/glove-ready1.jpg
+INPUT ./figures/transmitter-module1.png
+INPUT ./figures/transmitter-module1.png
+INPUT ./figures/transmitter-module1.png
+INPUT ./figures/receptor-module1.png
+INPUT ./figures/receptor-module1.png
+INPUT ./figures/receptor-module1.png
 INPUT lcfs.bbl
 INPUT lcfs.bbl
 INPUT lcfs.brf
@@ -318,8 +322,8 @@ OUTPUT lcfs.toc
 INPUT lcfs.aux
 INPUT ./lcfs.brf
 INPUT ./lcfs.brf
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
@@ -338,3 +342,4 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

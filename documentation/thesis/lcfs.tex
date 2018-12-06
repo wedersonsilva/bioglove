@@ -632,7 +632,7 @@ Agradeço ao Professor Dr. ...
 
 			\subsection{Transdutor de Flexão}
 
-		Como foi demonstrado no movimento de flexão da figura \ref{Fig:hand-tendon-flex1}, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um transdutor de flexão de dedos atrelado a um microcontrolador. 
+		Como foi explicitado previamente, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um transdutor de flexão de dedos atrelado a um microcontrolador. 
 
 		No sistema biomecânico, resumidamente, uma das extremidades do tendão está presa nas falanges do dedo enquanto sua extensão desliza por dentro de polias até o músculo. No sistema desenvolvido, cada transdutor é composto por uma linha de náilon presa ao dedo da luva, guiada através de pequenos segmentos plásticos até o cursor de um potenciômetro. A figura \ref{Fig:bio-and-system} demonstra um pouco dos dois sistemas.
 
@@ -899,7 +899,7 @@ Agradeço ao Professor Dr. ...
 		
 		\subsection{Posições e movimentos}
 
-		Como foi explicado anteriormente, a mensagem transmitida pela luva consiste em conjunto de 5 dígitos no qual cada um deles indica posições de cada dedo. Usando o lado esquerdo como referência, o primeiro dígito indica a posição do dedo 1, que é o dedo mínimo. O segundo dígito indica a posição do dedo 2, ou seja, o dedo anelar. Essa lógica segue até o quinto dígito que representa a posição do dedo polegar.
+		Como foi explicado anteriormente, a mensagem transmitida pela luva consiste em conjunto de 5 dígitos no qual cada um deles indica posições de cada dedo. Na mensagem, o primeiro dígito da esquerda indica a posição do dedo 1, que é o dedo mínimo. O segundo dígito indica a posição do dedo 2, ou seja, o dedo anelar. Essa lógica segue até o quinto dígito que representa a posição do dedo polegar.
 
 		5 comandos foram definidos para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar. Com o intuito de controlar o carrinho através de combinações de flexões e extensões de dedos, 5 conjuntos de posições foram definidas, flexionar os dedos 2 e 3 simultanemanete, flexionar somente o dedo 4, flexionar somente o dedo 5, flexionar o dedo 1 e não flexionar nenhum dedo.
 
@@ -908,7 +908,7 @@ Agradeço ao Professor Dr. ...
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Combinação de flexões e extensões para controle do carrinho}
+			\caption{Comandos a partir de flexões e extensões para controle do carrinho}
   		\includegraphics[width=14cm]{./figures/glove-control-positions1.png}
   		\label{Fig:glove-control-positions1}
 			\fonte{Produzido pelo autor.}
@@ -917,12 +917,189 @@ Agradeço ao Professor Dr. ...
 		
 		\subsection{\textit{Software} de recepção}
 
+		A biblioteca VirtualWire também deve estar presente no código do microcontrolador embarcado no carrinho. Para receber a mensagem adequadamente, é necessário definir o pino do receptor RF e taxa de transmissão do transmissor RF, também deve-se criar variáveis para guardar a mensagem recebida e o seu tamanho. As mensagens são recebidas \textit{byte} a \textit{byte}.
+
+		Uma função da biblioteca verifica se chegou alguma mensagem, ela indica \textit{true} quando isso acontece. Então para ler a mensagem recebida, é necessário criar um \textit{for} que recebe como parâmetro o tamanho da mensagem recebida. Dentro da função será lida \textit{byte} a \textit{byte} a mensagem enquanto a função \textit{for} for verdadeira.
+
+		O pseudocódigo abaixo demonstra o fluxo descrito:
+
+
+\begin{lstlisting}
+	// Define as variaveis
+	int pino_receptor = 8;
+	int taxa_transmissao = 2000;
+	
+	// Recebe a mensagem e o seu tamanho
+	byte msg = get_mensagem;
+	byte tamanho_msg = get_tamanho_msg;
+	
+	// Aguarda receber alguma mensagem
+	chegou_mensagem = vw_wait_rx();
+
+	// Verifica se ha mensagem, inicia o for para ler cada byte
+	if(chegou_mensagem){
+		for (int i = 0; enquanto i < tamanho_msg; i++)
+			byte_recebido[i] = msg[i];		
+	}
+\end{lstlisting}
+
+		Usando o pseudocódigo apresentado e sabendo que na mensagem recebida o primeiro dígito indica a posição atual do dedo 1, então a função for irá rodar pelo menos 5 vezes, armazenando em cada posição do vetor \texttt{byte\_recebido[]} as informações de cada dedo. Dessa maneira, a posição recebida do dedo 1 estará em \texttt{byte\_recebido[0]}, enquanto que a do dedo 2 está em \texttt{byte\_recebido[1]}. Sendo assim até o dedo 5 que estará em \texttt{byte\_recebido[4]}.
+		
+		Cinco funções foram criadas para comandar a ponte H e dessa forma movimentar os motores do carrinho, FRENTE( ), TRAS( ), ESQUERDA( ), DIREITA( ) e PARA( ). Ao chamar qualquer uma dessas funções, o carrinho passa a se movimentar na direção e sentido definidas.
+		Para chamar a função correta baseada na mensagem recebida, foram criadas cadeias de \textit{Ifs} e \textit{Elses} nas quais, quando satisfeitas certas condições, a respectiva função é chamada. 
+		
+		A tabela \ref{Tab:dedos-e-comandos1} mostra quais são os conjuntos de valores esperados para todos os dedos simultaneamente em cada comando. Ou seja, para saber qual a combinação de valores para movimentar o carrinho para frente, é só observar a coluna "Frente" da tabela. Qualquer outra combinação além das especificadas na tabela, fará o carrinho ficar parado. Os dedos flexionados estão destacados em vermelho.
+
+		\begin{table}[H]
+     \centering
+     \caption{Valores recebidos dos dedos e comandos de movimento}
+     \begin{tabular}{c|ccccc}
+			 \midrule
+			 Dedo &       Frente			 & 				Tras				& 		Esquerda			 & 		Direita					& Para	\\
+			 \midrule
+			 1    & < 2   						 & < 2   							& < 2    						 &\textcolor{red}{> 1}&	-			\\
+			 2    &\textcolor{red}{> 1}& < 2   							& < 2  	 						 & < 2   							&	-			\\
+			 3    &\textcolor{red}{> 3}& < 4   							& < 4   						 & < 4   							&	-			\\
+			 4    & < 4   						 &\textcolor{red}{> 3}& < 4 							 & < 4   							&	-			\\
+			 5    & < 5   						 & < 5   							&\textcolor{red}{> 4}& < 5   							&	-			\\
+			 \midrule
+     \end{tabular}
+     \label{Tab:dedos-e-comandos1}
+     \fonte{Produzido pelo autor}
+   \end{table}
+
+
+
 %		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
 
 
 		\section{Assembling}
 
+		\subsection{Transdutor de Flexão}
 
+		A escolha de materiais foi baseada no menor custo e maior disponibilidade local. Prevendo a possibilidade de costuras no projeto, um par de luvas de algodão foi escolhida. O sistema foi embarcado na luva direita, enquanto que a esquerda poderia ser usada em caso de dano da primeira.
+		
+		As polias plásticas são feitas a partir de pequenos pedaços de hastes flexíveis com algodão nas pontas. Sendo que apenas a parte plástica foi aproveitada enquanto que o algodão foi descartado.
+
+		O material da linha que movimenta os cursores dos potenciômetro é náilon. Isso porque, nos testes, ela apresentou boa resistência e durabilidade, além de aparentar ter pouca ou nenhuma elasticidade para a aplicação.
+
+		Utilizando a luva escolhida com o dorso voltado para cima, as polias plásticas foram costuradas ao longo dos dedos. Uma das extremidades de cada fio de náilon foi presa na ponta de cada um dos dedos, enquanto que o restante do fio passava por dentro das polias plásticas. A outra extremidade do fio de náilon seria amarrada ao cursor do potenciômetro quando a PCB fosse incluída na luva. A figura \ref{Fig:glove-wire-pot1} demostra o resultado para um dos dedos da luva.
+
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Costura do transdutor em um dedo.}
+  		\includegraphics[width=7cm]{./figures/glove-wire-pot1.png}
+  		\label{Fig:glove-wire-pot1}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
+
+			
+			\subsection{Escolha de componentes}	
+
+			O sistema processamento e transmissão de sinal embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
+
+			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
+
+			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
+
+			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
+
+			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery} (a).
+
+			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
+
+			Para transmitir e receber o sinal, foi escolhido o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
+
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
+
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{ (a) Potenciômetro adaptado e (b) bateria.}
+		 \subfloat[]
+		 {
+			 \includegraphics[width=5.5cm,keepaspectratio=true]{./figures/potentiometer3.jpg}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=8.5cm,keepaspectratio=true]{./figures/battery1.jpg}
+		 }
+		 \label{Fig:potentiometer-and-battery}
+		 \fonte{Produzido pelo autor.}
+	 \end{figure}
+
+
+			\subsection{Posicionamento de componentes}
+
+			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que as dimensões máximas da PCI (Placa de Circuito Impresso) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Dimensões aproximadas da PCI e seus componentes.}
+  		\includegraphics[width=7cm]{figures/size-glove-module1.png}
+  		\label{Fig:size-glove-module1}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
+
+
+			\subsection{Placa Embarcada}
+
+			Os primeiros experimentos de ligação e testes entre os componentes foram realizados ainda em protoborad. Inicialmente, um simples programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
+
+			O passo seguinte foi utilizar o software gratuito Kicad para desenhar o esquemático da placa. Posteriormente, o Kicad ainda possibilita projetar uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada mostrados na figura \ref{Fig:schematic-and-PCB}.
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{ Desenhos projetados no Kicad do (a) esquemático e (b) PCI. }
+		 \subfloat[]
+		 {
+			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/schematic-glove-module1.png}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/PCB-glove-module1.png}
+		 }
+		 \label{Fig:schematic-and-PCB}
+		 \fonte{Produzido pelo autor.}
+	\end{figure}
+
+			Após a conclusão do desenho da placa, foram efetuados os procedimentos para a confecção desta PCI em uma placa de fenolite cobreada, além de sua posterior soldagem de pinos e componentes. A figura \ref{Fig:phenolic-and-ready} mostra os resultados após o procedimento descrito. Já a figura \ref{Fig:glove-ready1} mostra o resultado final após juntar a luva de algodão e a placa de circuito impresso recém concluída.
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{(a) Placa de fenolite cobreada e (b) com os componentes soldados.} 
+		 \subfloat[]
+		 {
+			 \includegraphics[width=7cm,keepaspectratio=true]{./figures/phenolic-glove-module1.jpg}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=7cm,keepaspectratio=true]{./figures/glove-module-ready1.jpg}
+		 }
+		 \label{Fig:phenolic-and-ready}
+		 \fonte{Produzido pelo autor.}
+	\end{figure}
+
+%		\section{Montagem}
+
+%		Utilizando uma luva de algodão, em seu dorso foi costurado uma das metades de um pedaço de velcro (gancho) de dimensões semelhantes à PCI contruída anteriormente. Ao longo dos dedos da luva foram costurados pequenos segmentos de plástico que serviriam como guias para os fios.	Na parte inferior da PCI foi costurada a outra metade do velcro (argola) que poderia ser fixada, sempre que fosse preciso, à outra parte do velcro costurada na luva.
+
+%		Fios de náilon foram fixados nos segmentos de plástico (guias) localizados nas pontas dos dedos da luva. Os fios passavam por dentro das guias até serem amarrados em pequenos pedaços de PCV expandido que estavam conectados dos cursores dos potenciômetros. Por fim, pequenos pedaços de elástico, levemente esticados, também foram amarrados nos pedaços de PCV expandido.
+		
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Luva montada.}
+  		\includegraphics[width=14cm,keepaspectratio=true]{figures/glove-ready1.jpg}
+  		\label{Fig:glove-ready1}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
+
+
+		
+
+		\chapter{BUFFER}
 		Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
 
 		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
@@ -956,113 +1133,7 @@ Agradeço ao Professor Dr. ...
 			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
 
 
-		\section{Medidas e Posicionamento}	
-
-			O sistema de captação e transmissão de sinal que seria embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso sejam necessárias futuramente.
-
-			\subsection{Componentes}
-
-			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
-
-			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente que estaria em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
-
-			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
-
-			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery} (a).
-
-			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
-
-			Para transmitir e receber o sinal, foi escolhido o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
-
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$.Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
-
-
-	\begin{figure}[!htb]
-		 \centering
-		 \caption{ (a) Potenciômetro adaptado e (b) bateria.}
-		 \subfloat[]
-		 {
-			 \includegraphics[width=5.5cm,keepaspectratio=true]{./figures/potentiometer3.jpg}
-		 }
-		 \centering
-		 \subfloat[]
-		 { \includegraphics[width=8.5cm,keepaspectratio=true]{./figures/battery1.jpg}
-		 }
-		 \label{Fig:potentiometer-and-battery}
-		 \fonte{Produzido pelo autor.}
-	 \end{figure}
-
-
-			\subsection{Dimensões e Posicionamento}
-
-			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que as dimenções máximas da PCI (Placa de Circuito Impresso) deveriam ser de aproximadamente 72$mm$ x 58$mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
-
-		\begin{figure}[h!]
-			\centering
-			\caption{Dimensões aproximadas da PCI e seus componentes.}
-  		\includegraphics[width=7cm]{figures/size-glove-module1.png}
-  		\label{Fig:size-glove-module1}
-			\fonte{Produzido pelo autor.}
-		\end{figure}
-
-
-		\section{Placa Embarcada}
-			\subsection{Esquemático}
-
-			Os primeiros experimentos de ligação e testes entre os componentes foram realizados ainda em protoborad. Inicialmente, um simples programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
-
-			O passo seguinte foi utilizar o software gratuito Kicad. Esse programa permite a inclusão de componentes e ligações no desenho do esquemático do circuito. Posteriormente, o Kicad possibilita a criação de uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada, ambos mostrados na figura \ref{Fig:schematic-and-PCB}.
-
-			Com o desenho da placa finalizada no Kicad, foram efetuados os procedimentos para a confecção da PCI em uma placa de fenolite cobreada e sua posterior soldagem de componentes. Chegando assim, ao resultado final mostrado na figura \ref{Fig:phenolic-and-ready}.
-
-	\begin{figure}[!htb]
-		 \centering
-		 \caption{ Desenhos projetados no Kicad do (a) esquemático e (b) PCI. }
-		 \subfloat[]
-		 {
-			 \includegraphics[width=6.5cm,keepaspectratio=true]{./figures/schematic-glove-module1.png}
-		 }
-		 \centering
-		 \subfloat[]
-		 { \includegraphics[width=7.5cm,keepaspectratio=true]{./figures/PCB-glove-module1.png}
-		 }
-		 \label{Fig:schematic-and-PCB}
-		 \fonte{Produzido pelo autor.}
-	\end{figure}
-
-
-
-	\begin{figure}[!htb]
-		 \centering
-		 \caption{(a) Placa de fenolite cobreada e (b) resultado final.} 
-		 \subfloat[]
-		 {
-			 \includegraphics[width=7cm,keepaspectratio=true]{./figures/phenolic-glove-module1.jpg}
-		 }
-		 \centering
-		 \subfloat[]
-		 { \includegraphics[width=7cm,keepaspectratio=true]{./figures/glove-module-ready1.jpg}
-		 }
-		 \label{Fig:phenolic-and-ready}
-		 \fonte{Produzido pelo autor.}
-	\end{figure}
-
-		\section{Montagem}
-
-		Utilizando uma luva de algodão, em seu dorso foi costurado uma das metades de um pedaço de velcro (gancho) de dimensões semelhantes à PCI contruída anteriormente. Ao longo dos dedos da luva foram costurados pequenos segmentos de plástico que serviriam como guias para os fios.	Na parte inferior da PCI foi costurada a outra metade do velcro (argola) que poderia ser fixada, sempre que fosse preciso, à outra parte do velcro costurada na luva.
-
-		Fios de náilon foram fixados nos segmentos de plástico (guias) localizados nas pontas dos dedos da luva. Os fios passavam por dentro das guias até serem amarrados em pequenos pedaços de PCV expandido que estavam conectados dos cursores dos potenciômetros. Por fim, pequenos pedaços de elástico, levemente esticados, também foram amarrados nos pedaços de PCV expandido.
-
-
-		\begin{figure}[h!]
-			\centering
-			\caption{Luva montada.}
-  		\includegraphics[width=12cm]{figures/glove-ready1.jpg}
-  		\label{Fig:glove-ready1}
-			\fonte{Produzido pelo autor.}
-		\end{figure}
-
-
+	
 		
 		
 

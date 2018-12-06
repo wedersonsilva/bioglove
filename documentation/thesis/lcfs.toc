@@ -33,23 +33,23 @@
 \contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{24}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{25}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Assembling}{25}{section.3.6}
-\contentsline {section}{\numberline {3.7}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{26}{section.3.7}
-\contentsline {section}{\numberline {3.8}Medidas e Posicionamento}{26}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Componentes}{27}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Dimens\IeC {\~o}es e Posicionamento}{27}{subsection.3.8.2}
-\contentsline {section}{\numberline {3.9}Placa Embarcada}{28}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Esquem\IeC {\'a}tico}{28}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Montagem}{30}{section.3.10}
+\contentsline {section}{\numberline {3.6}Assembling}{27}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{27}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{27}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{29}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{30}{subsection.3.6.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Configura\IeC {\c c}\IeC {\~o}es}{31}{section.4.1}
-\contentsline {section}{\numberline {4.2}Testes}{31}{section.4.2}
-\contentsline {section}{\numberline {4.3}Resultados}{31}{section.4.3}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {BUFFER}}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{32}{section.4.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{32}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclus\IeC {\~o}es}{32}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{32}{section.5.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{34}{chapter.5}
+\contentsline {section}{\numberline {5.1}Configura\IeC {\c c}\IeC {\~o}es}{34}{section.5.1}
+\contentsline {section}{\numberline {5.2}Testes}{34}{section.5.2}
+\contentsline {section}{\numberline {5.3}Resultados}{34}{section.5.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o}}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabalhos Futuros}{35}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{33}{section*.32}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{36}{section*.34}
