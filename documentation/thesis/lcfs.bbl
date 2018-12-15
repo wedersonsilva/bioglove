@@ -5,6 +5,16 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Borghetti, Sardini e Serpelloni 2013]{michela2013rehab}
+\abntrefinfo{Borghetti, Sardini e Serpelloni}{BORGHETTI; SARDINI;
+  SERPELLONI}{2013}
+{BORGHETTI, M.; SARDINI, E.; SERPELLONI, M. Sensorized glove for measuring hand
+  finger flexion for rehabilitation purposes.
+\emph{IEEE Transacions on Instrumentation and Measurement}, v.~62, n.~12, p.
+  3308--3314, Dec 2013.
+ISSN 1557-9662.
+Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/6566034}.}
+
 \bibitem[Braga 2012]{ncb2012eletronicabasica}
 \abntrefinfo{Braga}{BRAGA}{2012}
 {BRAGA, N.~C. \emph{Curso de Eletrônica: Eletrônica Básica}. 1. ed. São
@@ -19,6 +29,31 @@ Acessado em: 12/08/2018.
 Dispon{\'\i}vel em:
   \url{http://www.institutodigital.com.br/pd-f7460-modulo-rf-transmissor-receptor-433mhz.html?ct=76b8b&p=4&s=1}.}
 
+\bibitem[Gardner 1989]{dana1989powerglove}
+\abntrefinfo{Gardner}{GARDNER}{1989}
+{GARDNER, D.~L. The power glove. In:  \emph{Design News: News for Design
+  Engineers}. [s.n.], 1989. v.~45, n.~23, p. 63--68. Dispon{\'\i}vel em:
+  \url{https://www.microsoft.com/buxtoncollection/a/pdf/PowerGlove Design News
+  Article.pdf}.}
+
+\bibitem[In et al. 2015]{hyunki2015exoglove}
+\abntrefinfo{In et al.}{IN et al.}{2015}
+{IN, H.; KANG, B.~B.; SIN, M.; CHO, K.-J. Exo-glove: A wearable robot for the
+  hand with a soft tendon routing system.
+\emph{IEEE Robotics \& Automation Magazine}, v.~22, p. 97--105, Mar 2015.
+ISSN 1558-223X.
+Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/7059367}.}
+
+\bibitem[Kumar, Verma e Prasad 2012]{kumar2012hci}
+\abntrefinfo{Kumar, Verma e Prasad}{KUMAR; VERMA; PRASAD}{2012}
+{KUMAR, P.; VERMA, J.; PRASAD, S. Hand data glove: A wearable real-time device
+  for human-computer interaction.
+\emph{International Journal of Advanced Science and Technology}, v.~43, p.
+  15--26, Jun 2012.
+ISSN 2005-4238.
+Dispon{\'\i}vel em:
+  \url{https://pdfs.semanticscholar.org/f1ae/8066b654e5ccd2ae21c1e0bf32308c0361e9.pdf}.}
+
 \bibitem[License 2018]{arduinosite}
 \abntrefinfo{License}{LICENSE}{2018}
 {LICENSE, C. C. A.-S.~. \emph{{Arduino - Introduction}}. 2018.
@@ -28,7 +63,8 @@ Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
 \bibitem[M 2013]{solanki2013sign}
 \abntrefinfo{M}{M}{2013}
 {M, S.~K. Indian sign languages using flex sensor glove.
-\emph{IJETT}, v.~4, p. 2478--2480, 2013.
+\emph{International Journal of Engineering Trends and Technology}, v.~4, p.
+  2478--2480, 2013.
 ISSN 2231-5381.
 Dispon{\'\i}vel em:
   \url{http://www.ijettjournal.org/volume-4/issue-6/IJETT-V4I6P149.pdf}.}
@@ -64,11 +100,37 @@ Acessado em: 27/11/2018.
 Dispon{\'\i}vel em:
   \url{https://www.pjrc.com/teensy/td\_libs\_VirtualWire.html}.}
 
+\bibitem[Pruzansky e Pruzansky 2018]{drmarksurgery}
+\abntrefinfo{Pruzansky e Pruzansky}{PRUZANSKY; PRUZANSKY}{2018}
+{PRUZANSKY, M.~E.; PRUZANSKY, J.~S. \emph{{Flexor Tendon Pulley System Injury -
+  HandSport Surgery Institute}}. 2018.
+Acessado em: 07/08/2018.
+Dispon{\'\i}vel em:
+  \url{https://handsport.us/patient-education/flexor-tendon-pulley-system-injury/}.}
+
+\bibitem[Rajamohan, R. e M. 2013]{anbarasi2013deafmute}
+\abntrefinfo{Rajamohan, R. e M.}{RAJAMOHAN; R.; M.}{2013}
+{RAJAMOHAN, A.; R., H.; M., D. Deaf-mute communication interpreter.
+\emph{International Journal of Scientific Engineering and Technology}, v.~2, p.
+  336--341, May 2013.
+ISSN 2277-1581.
+Dispon{\'\i}vel em: \url{https://www.ijset.com/publication/v2/057.pdf}.}
+
 \bibitem[SM 2018]{arduinostringadd}
 \abntrefinfo{SM}{SM}{2018}
 {SM. \emph{{Arduino - String Addition Operator}}. 2018.
 Acessado em: 04/12/2018.
 Dispon{\'\i}vel em:
   \url{https://www.arduino.cc/en/Tutorial/StringAdditionOperator}.}
+
+\bibitem[Syed et al. 2012]{syed2012armcontroller}
+\abntrefinfo{Syed et al.}{SYED et al.}{2012}
+{SYED, A.; AGASBAL, Z. T.~H.; MELLIGERI, T.; GUDUR, B. Flex sensor based
+  robotic arm controller using micro controller.
+\emph{Journal of Software Engineering and Applications}, v.~5, n.~5, p.
+  364--366, May 2012.
+ISSN 1945-3124.
+Dispon{\'\i}vel em:
+  \url{https://file.scirp.org/pdf/JSEA20120500005\_49971710.pdf}.}
 
 \end{thebibliography}

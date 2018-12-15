@@ -552,15 +552,72 @@ Agradeço ao Professor Dr. ...
 	
 	\chapter{Referencial Teórico}
 
-		\section{Movimentação dos dedos}
-		Na mão, os tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias. \cite{drricardocirurgiao}
- 
+		\section{Introdução}
+
+		Ao longo dos últimos anos, diversos trabalhos estão sendo realizados para mensurar os movimentos da mão. Estes possuem as mais variadas motivações. Trabalhos como \cite{solanki2013sign} e \cite{anbarasi2013deafmute} buscam traduzir os gestos das mãos em palavras, buscando assim facilitar a comunicação de surdos e/ou mudos com outras pessoas.O \cite{kumar2012hci} busca uma interação humano-computado através de uma luva, nesse trabalho o autor demonstra que é possível realizar ações no computador, como desenhar ou manipular objetos tridimencionais, através de comandos pré-determinados.
+
+		Dentre os produtos famosos que usavam movimentos das mãos, estão as luvas \textit{Data Glove} e a \textit{Power Glove}. Ambas criadas nos anos 80. A primeira, foi desenvolvida por volta de 1986 e era usada para o controle de um supercomputador e também era utilizada pela \textit{NASA (National Aeronautics and Space Administration)}. Por volta de 1987 foi comprada uma licença para desenvolvimento de uma luva para uso recreativo. Finalmente em 1989 foi lançada a \textit{Power Glove} que controlava videogames em uma parceria das empresas Mattel, Nintendo e AGE \cite{dana1989powerglove}.
+
+		Sistemas como \cite{syed2012armcontroller} e \cite{michela2013rehab}, dos quais utilizam luvas para capturar os movimentos dos dedos e transmiti-los até a sua aplicação, costumam ter um bloco de funcionamento semelhante ao da figura \ref{Fig:flowchart1}. 
+
+
 		\begin{figure}[h!]
 			\centering
-  		\caption{Movimento do dedo através do tendão.}
-  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
-  		\label{Fig:hand-tendon-flex1}
+			\caption{Funcionamento de sistemas baseados em luvas}
+  		\includegraphics[width=10cm]{./figures/flowchart1.png}
+  		\label{Fig:flowchart1}
+			\fonte{Produzido pelo autor.}
 		\end{figure}
+
+
+		\section{Movimentação dos dedos} \label{movimentacaodosdedos}
+
+
+		Na mão, os tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias \cite{drricardocirurgiao}. Semelhante ao esquema demonstrado na figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (a).
+
+
+
+	\begin{figure}[!htb]
+		 \centering
+		 \caption{(a) Movimento através do tendão e (b) \textit{Exo-Glove} instalada.} 
+		 \subfloat[]
+		 {
+			 \includegraphics[width=8cm,keepaspectratio=true]{./figures/hand-tendon-flex1.png}
+		 }
+		 \centering
+		 \subfloat[]
+		 { \includegraphics[width=6cm,keepaspectratio=true]{./figures/exo-glove-installed1.png}
+		 }
+		 \label{Fig:hand-tendon-flex1-and-exo-glove1}
+		 \fonte{(a) Adaptado de \cite{drmarksurgery} e (b) adaptado de \cite{hyunki2015exoglove}.}
+	\end{figure}
+
+%		\begin{figure}[h!]
+%			\centering
+%  		\caption{Movimento do dedo através do tendão.}
+%  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
+%			\fonte{Adaptado de \cite{drmarksurgery}.}
+%  		\label{Fig:hand-tendon-flex1}
+%		\end{figure}
+
+		Existem pesquisas inspiradas nessa biomecânica. \cite{hyunki2015exoglove}, por exemplo, mostra o funcionamento  da \textit{Exo-Glove}, que é uma luva que auxilia alguns movimentos dos dedos da mão para quem teve algum tipo de paralisia na região. O sistema rotea tendões artificiais (cabos de aço) vindos de um módulo atuador, passando por um suporte próximo ao pulso e  por tiras de tecido e chegando então até os dedos. Usando esse aparato, os movimentos de flexão e extensão dos dedos são auxiliados pelos cabos, tornando estes movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
+
+%		\begin{figure}[h!]
+%			\centering
+%			\caption{\textit{Exo-Glove} instalada em um cadeirante}
+%  		\includegraphics[scale=0.5]{./figures/exo-glove-installed1.png}
+%			\fonte{Adaptado de \cite{hyunki2015exoglove}.}
+%  		\label{Fig:exo-glove-installed1}
+%		\end{figure}
+		
+		\section{Captura de movimentos}
+
+		Geralmente, as aplicações procuram mensurar movimentos de flexão e expansão dos dedos e os direcionamentos dos movimentos da mão. \cite{anbarasi2013deafmute} traduz gestos definidos na linguagem americana de sinais em texto e áudio compreenssíveis à outras pessoas que não são familiarizadas com esta linguagem. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão, enquanto que os gestos da mão são captados por um acelerômetro. Um microcontrolador reconhece os gestos, gera palavras e as converte em aúdio através de um módulo. 
+
+		A \textit{Data Glove} usava fibra óptica e fotoresistores para saber as posições de cada dedo. De acordo com a flexão do sensor, o nível de luz que chegava ao fotoresistor variava indicando a posição atual. Já a \textit{Power Glove}, buscou reduzir custos e preferiu trocar essa tecnologia. Passou a usar placas com tintas que variavam suas propriedades condutivas quando torcidas \cite{dana1989powerglove}.
+
+		No trabalho proposto busca-se criar um sistema que consegue mensurar movimentos usando um transdutor mecânico com funcionamento semelhante ao que foi descrito em \ref{movimentacaodosdedos}
+
 
 
 		\section{Sensor Flex}

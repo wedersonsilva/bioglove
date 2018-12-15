@@ -11,45 +11,47 @@
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{15}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{16}{chapter.2}
-\contentsline {section}{\numberline {2.1}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{16}{section.2.1}
-\contentsline {section}{\numberline {2.2}Sensor Flex}{16}{section.2.2}
-\contentsline {section}{\numberline {2.3}Potenci\IeC {\^o}metro}{16}{section.2.3}
-\contentsline {section}{\numberline {2.4}Arduino}{17}{section.2.4}
-\contentsline {section}{\numberline {2.5}M\IeC {\'o}dulo RF 433 Mhz}{18}{section.2.5}
+\contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{16}{section.2.1}
+\contentsline {section}{\numberline {2.2}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{17}{section.2.2}
+\contentsline {section}{\numberline {2.3}Captura de movimentos}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}Sensor Flex}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}Potenci\IeC {\^o}metro}{18}{section.2.5}
+\contentsline {section}{\numberline {2.6}Arduino}{19}{section.2.6}
+\contentsline {section}{\numberline {2.7}M\IeC {\'o}dulo RF 433 Mhz}{20}{section.2.7}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Transdutor de Flex\IeC {\~a}o}{19}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{20}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{21}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{21}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{22}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Ajustes}{23}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{23}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Remapeamento}{24}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{25}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{25}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{26}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Assembling}{27}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{27}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{28}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{29}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{30}{subsection.3.6.4}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Transdutor de Flex\IeC {\~a}o}{21}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{22}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{23}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{23}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{24}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Ajustes}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{25}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{25}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Remapeamento}{26}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{27}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{27}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{27}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{28}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Assembling}{29}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{29}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{30}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{31}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{32}{subsection.3.6.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {BUFFER}}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{32}{section.4.1}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {BUFFER}}{34}{chapter.4}
+\contentsline {section}{\numberline {4.1}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{34}{section.4.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Configura\IeC {\c c}\IeC {\~o}es}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Testes}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}Resultados}{34}{section.5.3}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {An\IeC {\'a}lises e Resultados}}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}Configura\IeC {\c c}\IeC {\~o}es}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Testes}{36}{section.5.2}
+\contentsline {section}{\numberline {5.3}Resultados}{36}{section.5.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o}}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{35}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabalhos Futuros}{35}{section.6.2}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o}}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{37}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabalhos Futuros}{37}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{36}{section*.34}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{38}{section*.35}
