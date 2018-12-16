@@ -234,9 +234,6 @@ INPUT ./figures/exo-glove-installed1.png
 INPUT ./figures/exo-glove-installed1.png
 INPUT ./figures/exo-glove-installed1.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
-INPUT ./figures/flex-sensor1.png
-INPUT ./figures/flex-sensor1.png
-INPUT ./figures/flex-sensor1.png
 INPUT ./figures/potentiometer1.png
 INPUT ./figures/potentiometer1.png
 INPUT ./figures/potentiometer1.png

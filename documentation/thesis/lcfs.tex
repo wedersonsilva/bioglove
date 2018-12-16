@@ -600,7 +600,7 @@ Agradeço ao Professor Dr. ...
 %  		\label{Fig:hand-tendon-flex1}
 %		\end{figure}
 
-		Existem pesquisas inspiradas nessa biomecânica. \cite{hyunki2015exoglove}, por exemplo, mostra o funcionamento  da \textit{Exo-Glove}, que é uma luva que auxilia alguns movimentos dos dedos da mão para quem teve algum tipo de paralisia na região. O sistema rotea tendões artificiais (cabos de aço) vindos de um módulo atuador, passando por um suporte próximo ao pulso e  por tiras de tecido e chegando então até os dedos. Usando esse aparato, os movimentos de flexão e extensão dos dedos são auxiliados pelos cabos, tornando estes movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
+		Existem pesquisas inspiradas nessa biomecânica. \cite{hyunki2015exoglove}, por exemplo, mostra o funcionamento  da \textit{Exo-Glove}, que é uma luva que auxilia o movimento dos dedos da mão de pessoas que sofreram alguma paralisia na região. O sistema rotea tendões artificiais (cabos de aço) vindos de um módulo atuador, passando por um suporte próximo ao pulso, por correias de tecido e chegando até os dedos. Usando esse aparato, os movimentos de flexão e extensão dos dedos são auxiliados pelos cabos, tornando estes movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
 
 %		\begin{figure}[h!]
 %			\centering
@@ -612,25 +612,25 @@ Agradeço ao Professor Dr. ...
 		
 		\section{Captura de movimentos}
 
-		Geralmente, as aplicações procuram mensurar movimentos de flexão e expansão dos dedos e os direcionamentos dos movimentos da mão. \cite{anbarasi2013deafmute} traduz gestos definidos na linguagem americana de sinais em texto e áudio compreenssíveis à outras pessoas que não são familiarizadas com esta linguagem. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão, enquanto que os gestos da mão são captados por um acelerômetro. Um microcontrolador reconhece os gestos, gera palavras e as converte em aúdio através de um módulo. 
+		Muitas pesquisas que buscam mensurar os movimentos de flexão e expansão dos dedos, usam sensores de flexão comerciais semelhantes a \cite{flexsensor}. O trabalho de \cite{anbarasi2013deafmute} traduz gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, há uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão, enquanto que as direções, durante os gestos da mão, são captados por um acelerômetro. Um microcontrolador reconhece os movimentos, gera palavras e as converte em aúdio através de um módulo. 
 
 		A \textit{Data Glove} usava fibra óptica e fotoresistores para saber as posições de cada dedo. De acordo com a flexão do sensor, o nível de luz que chegava ao fotoresistor variava indicando a posição atual. Já a \textit{Power Glove}, buscou reduzir custos e preferiu trocar essa tecnologia. Passou a usar placas com tintas que variavam suas propriedades condutivas quando torcidas \cite{dana1989powerglove}.
 
-		No trabalho proposto busca-se criar um sistema que consegue mensurar movimentos usando um transdutor mecânico com funcionamento semelhante ao que foi descrito em \ref{movimentacaodosdedos}
+		Neste trabalho, propo\~e-se criar um sistema inspirado na biomecâmica dos dedos. Esse sistema deve mensurar movimentos de flexão e extensão dos dedos usando um transdutor mecânico com funcionamento semelhante ao sistema de tendões que ocorre nas mãos. 
 
 
 
-		\section{Sensor Flex}
-
-		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}.
-
-	\begin{figure}[!h]
-		\centering
-		\caption{Sensor de Flexão.}
-		\includegraphics[width=7cm,keepaspectratio=true]{./figures/flex-sensor1.png}
-		\fonte{Site Sparkfun.}%
-		\label{Fig:flex-sensor1}
-	\end{figure}
+%		\section{Sensor Flex}
+%
+%		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}.
+%
+%	\begin{figure}[!h]
+%		\centering
+%		\caption{Sensor de Flexão.}
+%		\includegraphics[width=7cm,keepaspectratio=true]{./figures/flex-sensor1.png}
+%		\fonte{Site Sparkfun.}%
+%		\label{Fig:flex-sensor1}
+%	\end{figure}
 
 		\section{Potenciômetro}
 		O potenciômetro é um componente eletrônico que permite, através do giro do seu eixo, a variação da resistência entre seus terminais. Eles são constituídos por um elemento de resistência, que pode ser de carbono ou fio de nicromo, sobre o qual corre uma lingueta, denominada cursor. Dentre as características do potenciômetro estão o valor máximo de sua resistência, seu número de voltas, seu grau máximo de giro (aproximado) e se ele é do tipo linear ou logarítmico \cite{ncb2012eletronicabasica}.
@@ -644,11 +644,18 @@ Agradeço ao Professor Dr. ...
   		\label{Fig:potentiometer1}
 		\end{figure}
 
-		Segundo a lei de Ohm ($V = R.I$), dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto. Partindo de um ponto extremo com resistência mínima até o outro ponto extremo no qual a resistência deverá ser a máxima característica do componente.
+		A figura \ref{Fig:potentiometer1} demonstra resumidamente o funcionamento do potenciômetro linear, a saída dos terminais é variada de acordo com o giro do cursor. Segundo a lei de Ohm ($V = R.I$), dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto. Partindo de um ponto extremo com resistência mínima até o outro no qual a resistência deverá ser a máxima característica do componente.
 
 
-		\section{Arduino}
-		O Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor, o pressionamento de um botão, ou uma mensagem do Twitter. Pode transformar essas entradas em saídas como a ativação de um motor, o acendimento de um LED ou até a publicação de algo online. O comportamento dessa placa pode ser programado usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite}
+		\section{Microcontroladores}
+
+		Por volta da década de 80 surgiram os primeiros microcontroladores, dispositivos com memória RAM (\textit{Ramdon Access Memory}), ROM (\textit{Read Only Memory}), clock interno, E/S (Entrada e Saída), entre outros. Por conta dessas características, os microcontroladores permitiram que projetos de dispositivos inteligentes se tornassem mais simples. Eles eram chamados por muitas vezes de computadores em um único chip \cite{pereiramicrocontroladores}. 
+
+		No trabalho de \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, foi utilizado para diminuir a complexidade de transmissão, além de consumir pouca energia. Já em \cite{anbarasi2013deafmute}, a saída de texto do microcontrolador ATmega 328 é convertida em voz pelo chip TTS256.
+
+		O Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor ou pressionamento de um botão. Pode transformar essas entradas em saídas como a ativação de um motor ou a publicação de algo online. Essa placa pode ser programada usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite} 
+
+		No trabalho proposto, a placa Arduino modelo Nano com o microcontrolador ATmega328, é utilizada para receber os sinais dos transdutores, converter sinais analógicos em digitais, codificar os sinais e enviá-los. A figura \ref{Fig:arduino-nano1} mostra a placa utilizada no projeto.
 		
 		\begin{figure}[h!]
 			\centering
@@ -658,7 +665,11 @@ Agradeço ao Professor Dr. ...
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 
-		\section{Módulo RF 433 Mhz}
+
+		\section{Transmissão de Sinal}
+		
+		O modo de transmissão do sinal adquirido e processado pelo microcontrolador que deve chegar até a aplicação é de escolha do pesquisador. Em \cite{solanki2013sign}, usando fios, a saída de texto do microcontrolador é mostrada em uma pequena tela de LCD. No trabalho de \cite{syed2012armcontroller} os fios conectam o microcontrolador diretamente à servomotores que controlam um braço robótico.
+
 		O módulo de RF (Rádio Frequência) 433 Mhz é composto por um par que contém um transmissor e um receptor, opera com modulação AM (\textit{Amplitude Modulation}) e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
 
 

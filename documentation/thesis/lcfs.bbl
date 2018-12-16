@@ -21,6 +21,13 @@ Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/6566034}.}
   Paulo - Brasil: Editora Newton C. Braga, 2012. v.~1. PAGES~p.
 ISBN 8565050092, 9788565050098.}
 
+\bibitem[Corp 2014]{flexsensor}
+\abntrefinfo{Corp}{CORP}{2014}
+{CORP, S.~S. \emph{DataSheet Flex Sensor Resistive}. 2014.
+Acessado em: 15/12/2018.
+Dispon{\'\i}vel em:
+  \url{http://www.spectrasymbol.com/wp-content/uploads/2016/12/FLEX-SENSOR-DATA-SHEET-v2014-Rev-A.pdf}.}
+
 \bibitem[Digital 2018]{institutodigitalrf}
 \abntrefinfo{Digital}{DIGITAL}{2018}
 {DIGITAL, I. \emph{{Módulo RF Transmissor + Receptor 433mhz - Instituto
@@ -99,6 +106,13 @@ Dispon{\'\i}vel em:
 Acessado em: 27/11/2018.
 Dispon{\'\i}vel em:
   \url{https://www.pjrc.com/teensy/td\_libs\_VirtualWire.html}.}
+
+\bibitem[PEREIRA 2002]{pereiramicrocontroladores}
+\abntrefinfo{PEREIRA}{PEREIRA}{2002}
+{PEREIRA, F. \emph{MICROCONTROLADORES PIC - TECNICAS AVAN{\c{C}}ADAS}. ERICA,
+  2002.
+ISBN 9788571947276. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=hqBUPgAACAAJ}.}
 
 \bibitem[Pruzansky e Pruzansky 2018]{drmarksurgery}
 \abntrefinfo{Pruzansky e Pruzansky}{PRUZANSKY; PRUZANSKY}{2018}

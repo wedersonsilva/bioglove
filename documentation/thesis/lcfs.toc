@@ -14,10 +14,9 @@
 \contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{16}{section.2.1}
 \contentsline {section}{\numberline {2.2}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{17}{section.2.2}
 \contentsline {section}{\numberline {2.3}Captura de movimentos}{17}{section.2.3}
-\contentsline {section}{\numberline {2.4}Sensor Flex}{18}{section.2.4}
-\contentsline {section}{\numberline {2.5}Potenci\IeC {\^o}metro}{18}{section.2.5}
-\contentsline {section}{\numberline {2.6}Arduino}{19}{section.2.6}
-\contentsline {section}{\numberline {2.7}M\IeC {\'o}dulo RF 433 Mhz}{20}{section.2.7}
+\contentsline {section}{\numberline {2.4}Potenci\IeC {\^o}metro}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}Microcontroladores}{19}{section.2.5}
+\contentsline {section}{\numberline {2.6}Transmiss\IeC {\~a}o de Sinal}{19}{section.2.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{21}{section.3.1}
@@ -54,4 +53,4 @@
 \contentsline {section}{\numberline {6.2}Trabalhos Futuros}{37}{section.6.2}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{38}{section*.35}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{38}{section*.34}
