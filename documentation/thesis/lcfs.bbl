@@ -3,7 +3,7 @@
 \setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{v-1.9.6 }
+\abntbstabout{v-1.9.7 }
 
 \bibitem[Borghetti, Sardini e Serpelloni 2013]{michela2013rehab}
 \abntrefinfo{Borghetti, Sardini e Serpelloni}{BORGHETTI; SARDINI;
@@ -20,6 +20,13 @@ Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/6566034}.}
 {BRAGA, N.~C. \emph{Curso de Eletrônica: Eletrônica Básica}. 1. ed. São
   Paulo - Brasil: Editora Newton C. Braga, 2012. v.~1. PAGES~p.
 ISBN 8565050092, 9788565050098.}
+
+\bibitem[Bullock 2017]{scott2017transceiver}
+\abntrefinfo{Bullock}{BULLOCK}{2017}
+{BULLOCK, S. \emph{Transceiver and System Design for Digital Communications}.
+  Noble Publishing Corporation, 2017.
+ISBN 9781884932144. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=woWnJvaROXQC}.}
 
 \bibitem[Corp 2014]{flexsensor}
 \abntrefinfo{Corp}{CORP}{2014}
@@ -60,6 +67,15 @@ Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/7059367}.}
 ISSN 2005-4238.
 Dispon{\'\i}vel em:
   \url{https://pdfs.semanticscholar.org/f1ae/8066b654e5ccd2ae21c1e0bf32308c0361e9.pdf}.}
+
+\bibitem[Lee e Park 2009]{daeholee2009vision}
+\abntrefinfo{Lee e Park}{LEE; PARK}{2009}
+{LEE, D.; PARK, Y. Vision-based remote control system by motion detection and
+  open finger counting.
+\emph{IEEE Transactions on Consumer Electronics}, v.~55, n.~4, p. 2308--2313,
+  Nov 2009.
+ISSN 1558-4127.
+Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/5373803}.}
 
 \bibitem[License 2018]{arduinosite}
 \abntrefinfo{License}{LICENSE}{2018}

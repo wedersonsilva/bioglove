@@ -1,34 +1,34 @@
 \babel@toc {brazil}{}
 \babel@toc {brazil}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Funcionamento de sistemas baseados em luvas\relax }}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {1}{\ignorespaces Funcionamento de sistemas baseados em luvas\relax }}{17}{figure.caption.13}
 \contentsline {figure}{\numberline {2}{\ignorespaces (a) Movimento atrav\IeC {\'e}s do tend\IeC {\~a}o e (b) \textit {Exo-Glove} instalada.\relax }}{17}{figure.caption.14}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{subfigure.2.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{subfigure.2.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Funcionamento do potenci\IeC {\^o}metro linear.\relax }}{18}{figure.caption.15}
-\contentsline {figure}{\numberline {4}{\ignorespaces Placa Arduino modelo Nano.\relax }}{19}{figure.caption.16}
-\contentsline {figure}{\numberline {5}{\ignorespaces M\IeC {\'o}dulos RF transmissor (esq.) e receptor (dir.).\relax }}{20}{figure.caption.17}
-\contentsline {figure}{\numberline {6}{\ignorespaces (a) Sistema biomec\IeC {\^a}nico e (b) sistema desenvolvido.\relax }}{22}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{22}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{22}{subfigure.6.2}
-\contentsline {figure}{\numberline {7}{\ignorespaces (a) M\IeC {\~a}o em posi\IeC {\c c}\IeC {\~a}o inicial e (b) M\IeC {\~a}o ap\IeC {\'o}s flex\IeC {\~a}o.\relax }}{22}{figure.caption.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{22}{subfigure.7.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{22}{subfigure.7.2}
-\contentsline {figure}{\numberline {8}{\ignorespaces Movimentos da luva de (a) flex\IeC {\~a}o e (b) extens\IeC {\~a}o.\relax }}{23}{figure.caption.20}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.8.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.8.2}
-\contentsline {figure}{\numberline {9}{\ignorespaces Comandos a partir de flex\IeC {\~o}es e extens\IeC {\~o}es para controle do carrinho\relax }}{28}{figure.caption.23}
-\contentsline {figure}{\numberline {10}{\ignorespaces Costura do transdutor em um dedo.\relax }}{30}{figure.caption.25}
-\contentsline {figure}{\numberline {11}{\ignorespaces (a) Potenci\IeC {\^o}metro adaptado e (b) bateria.\relax }}{31}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{31}{subfigure.11.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{31}{subfigure.11.2}
-\contentsline {figure}{\numberline {12}{\ignorespaces Dimens\IeC {\~o}es aproximadas da PCI e seus componentes.\relax }}{32}{figure.caption.27}
-\contentsline {figure}{\numberline {13}{\ignorespaces Desenhos projetados no Kicad do (a) esquem\IeC {\'a}tico e (b) PCI. \relax }}{32}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.13.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.13.2}
-\contentsline {figure}{\numberline {14}{\ignorespaces (a) Placa de fenolite cobreada e (b) com os componentes soldados.\relax }}{33}{figure.caption.29}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.14.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.14.2}
-\contentsline {figure}{\numberline {15}{\ignorespaces Luva montada.\relax }}{33}{figure.caption.30}
-\contentsline {figure}{\numberline {16}{\ignorespaces (a) Transmiss\IeC {\~a}o do sinal. (b) Recep\IeC {\c c}\IeC {\~a}o do sinal.\relax }}{34}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{34}{subfigure.16.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{34}{subfigure.16.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Funcionamento do potenci\IeC {\^o}metro linear.\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {4}{\ignorespaces Placa Arduino modelo Nano.\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {5}{\ignorespaces M\IeC {\'o}dulos RF transmissor (esq.) e receptor (dir.).\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {6}{\ignorespaces (a) Sistema biomec\IeC {\^a}nico e (b) sistema desenvolvido.\relax }}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.6.2}
+\contentsline {figure}{\numberline {7}{\ignorespaces (a) M\IeC {\~a}o em posi\IeC {\c c}\IeC {\~a}o inicial e (b) M\IeC {\~a}o ap\IeC {\'o}s flex\IeC {\~a}o.\relax }}{23}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{subfigure.7.2}
+\contentsline {figure}{\numberline {8}{\ignorespaces Movimentos da luva de (a) flex\IeC {\~a}o e (b) extens\IeC {\~a}o.\relax }}{24}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{subfigure.8.2}
+\contentsline {figure}{\numberline {9}{\ignorespaces Comandos a partir de flex\IeC {\~o}es e extens\IeC {\~o}es para controle do carrinho\relax }}{29}{figure.caption.23}
+\contentsline {figure}{\numberline {10}{\ignorespaces Costura do transdutor em um dedo.\relax }}{31}{figure.caption.25}
+\contentsline {figure}{\numberline {11}{\ignorespaces (a) Potenci\IeC {\^o}metro adaptado e (b) bateria.\relax }}{32}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.11.2}
+\contentsline {figure}{\numberline {12}{\ignorespaces Dimens\IeC {\~o}es aproximadas da PCI e seus componentes.\relax }}{33}{figure.caption.27}
+\contentsline {figure}{\numberline {13}{\ignorespaces Desenhos projetados no Kicad do (a) esquem\IeC {\'a}tico e (b) PCI. \relax }}{33}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.13.2}
+\contentsline {figure}{\numberline {14}{\ignorespaces (a) Placa de fenolite cobreada e (b) com os componentes soldados.\relax }}{34}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{34}{subfigure.14.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{34}{subfigure.14.2}
+\contentsline {figure}{\numberline {15}{\ignorespaces Luva montada.\relax }}{34}{figure.caption.30}
+\contentsline {figure}{\numberline {16}{\ignorespaces (a) Transmiss\IeC {\~a}o do sinal. (b) Recep\IeC {\c c}\IeC {\~a}o do sinal.\relax }}{35}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{35}{subfigure.16.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{35}{subfigure.16.2}

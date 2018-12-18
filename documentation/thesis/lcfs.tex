@@ -554,11 +554,11 @@ Agradeço ao Professor Dr. ...
 
 		\section{Introdução}
 
-		Ao longo dos últimos anos, diversos trabalhos estão sendo realizados para mensurar os movimentos da mão. Estes possuem as mais variadas motivações. Trabalhos como \cite{solanki2013sign} e \cite{anbarasi2013deafmute} buscam traduzir os gestos das mãos em palavras, buscando assim facilitar a comunicação de surdos e/ou mudos com outras pessoas.O \cite{kumar2012hci} busca uma interação humano-computado através de uma luva, nesse trabalho o autor demonstra que é possível realizar ações no computador, como desenhar ou manipular objetos tridimencionais, através de comandos pré-determinados.
+		Ao longo dos últimos anos, diversos trabalhos estão sendo realizados para mensurar os movimentos da mão e estes possuem as mais variadas motivações. A pesquisa de \cite{daeholee2009vision}, por exemplo, criou um controle remoto baseado na abertura dos dedos. O sistema processa imagens de uma câmera em busca de comandos pré-configurados que respondem a abertura de dedos mão. Ou seja, em sua pesquisa é possível usar a mão como controle remoto. Além disso, existem trabalhos como o de \cite{solanki2013sign} e de \cite{anbarasi2013deafmute} que buscam traduzir gestos das mãos em palavras, buscando assim facilitar a comunicação de surdos e/ou mudos com outras pessoas. Já \cite{kumar2012hci} busca uma interação humano-computador através do uso de uma luva, nesse trabalho o autor demonstra que é possível realizar ações no computador, como desenhar ou manipular objetos tridimencionais, através de movimentos da mão pré-determinados.
 
-		Dentre os produtos famosos que usavam movimentos das mãos, estão as luvas \textit{Data Glove} e a \textit{Power Glove}. Ambas criadas nos anos 80. A primeira, foi desenvolvida por volta de 1986 e era usada para o controle de um supercomputador e também era utilizada pela \textit{NASA (National Aeronautics and Space Administration)}. Por volta de 1987 foi comprada uma licença para desenvolvimento de uma luva para uso recreativo. Finalmente em 1989 foi lançada a \textit{Power Glove} que controlava videogames em uma parceria das empresas Mattel, Nintendo e AGE \cite{dana1989powerglove}.
+		Dentre os produtos que ficaram famosos usando o movimentos das mãos para controle, estão as luvas \textit{Data Glove} e a \textit{Power Glove}, ambas criadas nos anos 80. A primeira, foi desenvolvida por volta de 1986 e era usada para controlar um supercomputador, mas também foi utilizada pela \textit{NASA (National Aeronautics and Space Administration)} para controlar robôs. Logo depois, por volta de 1987, uma licença foi comprada para desenvolver uma outra versão da luva, só que seria para uso do público em geral. Então, finalmente em 1989, através de uma parceria entre as empresas Mattel, Nintendo e AGE, foi lançada a \textit{Power Glove} que serviria para controlar jogos de videogames. \cite{dana1989powerglove}.
 
-		Sistemas como \cite{syed2012armcontroller} e \cite{michela2013rehab}, dos quais utilizam luvas para capturar os movimentos dos dedos e transmiti-los até a sua aplicação, costumam ter um bloco de funcionamento semelhante ao da figura \ref{Fig:flowchart1}. 
+		Entre os demais sistemas que buscam mensurar flexão e extensão dos dedos estão o de \cite{syed2012armcontroller} e o de \cite{michela2013rehab}. Estes e outros trabalhos, incluindo o trabalho proposto, nos quais utilizam luvas para auxiliar a captura dos movimentos dos dedos, costumam ter um bloco de funcionamento parecido ao da figura \ref{Fig:flowchart1}.
 
 
 		\begin{figure}[h!]
@@ -612,6 +612,11 @@ Agradeço ao Professor Dr. ...
 		
 		\section{Captura de movimentos}
 
+
+
+		Os circuitos eletrônicos trabalham com sinais elétricos, ou seja, com correntes elétricas e tensões. Sendo assim, para medir grandezas físicas que não envolvam eletricidade, será preciso converter tais grandezas em eletricidade. `` Os dispositivos que convertem uma forma de energia em outra são denominados “transdutores”. Como eles são usados para sensoriar determinadas grandezas, eles também são chamados sensores. '' \cite{ncb2012eletronicabasica}
+
+
 		Muitas pesquisas que buscam mensurar os movimentos de flexão e expansão dos dedos, usam sensores de flexão comerciais semelhantes a \cite{flexsensor}. O trabalho de \cite{anbarasi2013deafmute} traduz gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, há uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão, enquanto que as direções, durante os gestos da mão, são captados por um acelerômetro. Um microcontrolador reconhece os movimentos, gera palavras e as converte em aúdio através de um módulo. 
 
 		A \textit{Data Glove} usava fibra óptica e fotoresistores para saber as posições de cada dedo. De acordo com a flexão do sensor, o nível de luz que chegava ao fotoresistor variava indicando a posição atual. Já a \textit{Power Glove}, buscou reduzir custos e preferiu trocar essa tecnologia. Passou a usar placas com tintas que variavam suas propriedades condutivas quando torcidas \cite{dana1989powerglove}.
@@ -651,11 +656,11 @@ Agradeço ao Professor Dr. ...
 
 		Por volta da década de 80 surgiram os primeiros microcontroladores, dispositivos com memória RAM (\textit{Ramdon Access Memory}), ROM (\textit{Read Only Memory}), clock interno, E/S (Entrada e Saída), entre outros. Por conta dessas características, os microcontroladores permitiram que projetos de dispositivos inteligentes se tornassem mais simples. Eles eram chamados por muitas vezes de computadores em um único chip \cite{pereiramicrocontroladores}. 
 
-		No trabalho de \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, foi utilizado para diminuir a complexidade de transmissão, além de consumir pouca energia. Já em \cite{anbarasi2013deafmute}, a saída de texto do microcontrolador ATmega 328 é convertida em voz pelo chip TTS256.
+		No trabalho de \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, consegue trabalhar na faixa de tensão requerida pelo projeto, consume pouca energia e juntamente ao transceptor MAX 1412 é capaz de diminuir a complexidade de transmissão, além de outras características. Já em \cite{anbarasi2013deafmute}, o microcontrolador ATmega 328 é utilizado para mostrar uma saída de texto em uma pequena tela LCD e juntamente ao chip TTS256 converter esse texto em som.
 
-		O Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor ou pressionamento de um botão. Pode transformar essas entradas em saídas como a ativação de um motor ou a publicação de algo online. Essa placa pode ser programada usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite} 
+		Existem ainda, soluções que buscam facilitar o uso do microcontrolador. o Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor ou pressionamento de um botão. Pode transformar essas entradas em saídas como a ativação de um motor ou a publicação de algo online. Essa placa pode ser programada usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite} 
 
-		No trabalho proposto, a placa Arduino modelo Nano com o microcontrolador ATmega328, é utilizada para receber os sinais dos transdutores, converter sinais analógicos em digitais, codificar os sinais e enviá-los. A figura \ref{Fig:arduino-nano1} mostra a placa utilizada no projeto.
+		No trabalho proposto, a placa Arduino modelo Nano com o microcontrolador ATmega328 embarcado, é utilizada para receber os sinais dos transdutores, converter os sinais analógicos em digitais, codificar estes sinais e enviá-los. A figura \ref{Fig:arduino-nano1} mostra a placa utilizada no projeto.
 		
 		\begin{figure}[h!]
 			\centering
@@ -668,9 +673,13 @@ Agradeço ao Professor Dr. ...
 
 		\section{Transmissão de Sinal}
 		
-		O modo de transmissão do sinal adquirido e processado pelo microcontrolador que deve chegar até a aplicação é de escolha do pesquisador. Em \cite{solanki2013sign}, usando fios, a saída de texto do microcontrolador é mostrada em uma pequena tela de LCD. No trabalho de \cite{syed2012armcontroller} os fios conectam o microcontrolador diretamente à servomotores que controlam um braço robótico.
+		Existem várias formas de transmissão de sinal em projetos com luvas. Em \cite{solanki2013sign}, através de fios, a saída de texto do microcontrolador é transmitida e mostrada em uma pequena tela de LCD. No trabalho de \cite{syed2012armcontroller} os fios conectam o microcontrolador diretamente à servomotores que controlam um braço robótico.
 
-		O módulo de RF (Rádio Frequência) 433 Mhz é composto por um par que contém um transmissor e um receptor, opera com modulação AM (\textit{Amplitude Modulation}) e é uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada.\cite{institutodigitalrf}
+		Para transmissões sem fio existem diversas opções. Na Power Glove \cite{dana1989powerglove} o sistema utilizado foi o ultrassom. Sendo que, na luva dois emissores de som ultrassonico enviam as informações necessárias para dois microfones localizados próximos à TV. Já o trabalho de \cite{kumar2012hci} utiliza a DG5 VHand 2.0 em sua pesquisa. Essa é uma luva comercial equipada com sensores detectores de flexão e movimentos, que usa Bluetooth para se comunicar com o computador.
+		
+		Em \cite{michela2013rehab}, a transmissão de sinal é realizada via rádio frequência, com o auxílio de um transceptor. Um transceptor é um sistema no qual estão presentes tanto o transmissor quanto o receptor de sinal em um mesmo módulo \cite{scott2017transceiver}.
+
+		Outra opção para usar transmissão em rádio frequência é usar o receptor e o transmissor separadamente. No trabalho proposto usa-se o módulo RF (Rádio Frequência) 433 Mhz, composto por um par que contém um transmissor (modelo XY-FST) e um receptor (modelo XY-MK-5V), ambos mostrados na figura \ref{Fig:tx-rx1}. O par opera com modulação AM (\textit{Amplitude Modulation}) e é considerado uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou entre outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada \cite{institutodigitalrf}.
 
 
 		\begin{figure}[h!]
