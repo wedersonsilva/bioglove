@@ -353,7 +353,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 24 de dezembro de 2018:
+   Trabalho aprovado. \imprimirlocal, 11 de janeiro de 2018:
 
    Conceito: .
    
@@ -400,7 +400,7 @@ Agradeço ao Professor Dr. ...
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, ...)}
+		\textit{``Talvez não tenha conseguido fazer o melhor, mas lutei para que o melhor fosse feito. \\ Não sou o que deveria ser, mas Graças a Deus, não sou o que era antes''. \\ (Martin Luther King)}
 	\end{flushright}
 \end{epigrafe}
 % ---
@@ -546,6 +546,8 @@ Agradeço ao Professor Dr. ...
 		Contextualização; Estado da arte (se tiver); Motivação; O que vai fazer; Metodologia; O que terá no resto do documento;
 
 
+
+
 	% --------------------- 
 	%	REFERENCIAL TEÓRICO	
 	% --------------------- 
@@ -625,17 +627,6 @@ Agradeço ao Professor Dr. ...
 
 
 
-%		\section{Sensor Flex}
-%
-%		Sensores de flexão, mais conhecidos como sensores flex, são resistores analógicos que trabalham como divisores de tensão analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Mais carbono significa menos resistência. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. \cite{solanki2013sign}.
-%
-%	\begin{figure}[!h]
-%		\centering
-%		\caption{Sensor de Flexão.}
-%		\includegraphics[width=7cm,keepaspectratio=true]{./figures/flex-sensor1.png}
-%		\fonte{Site Sparkfun.}%
-%		\label{Fig:flex-sensor1}
-%	\end{figure}
 
 		\section{Potenciômetro}
 		O potenciômetro é um componente eletrônico que permite, através do giro do seu eixo, a variação da resistência entre seus terminais. Eles são constituídos por um elemento de resistência, que pode ser de carbono ou fio de nicromo, sobre o qual corre uma lingueta, denominada cursor. Dentre as características do potenciômetro estão o valor máximo de sua resistência, seu número de voltas, seu grau máximo de giro (aproximado) e se ele é do tipo linear ou logarítmico \cite{ncb2012eletronicabasica}.
@@ -1176,7 +1167,84 @@ Agradeço ao Professor Dr. ...
 		\end{figure}
 
 
+		\chapter{Resultados e análises}
+
+		\section{Introdução}
+
+		O capítulo a seguir analisa diferentes testes realizados com o sistema bioinspirado desenvolvido e o compara com outros trabalhos semelhantes. As três frentes a serem analizadas são a sensibilidade do sensor de flexão, a duração do sistema alimentado por bateria e o alcance de transmissão do sinal.
 		
+
+		\section{Sensibilidade}
+
+		O primeiro teste a ser realizado foi o teste de sensibilidade do sistema. Sendo este um sensor de flexão, faz-se necessário mensurar a quantidade máxima de posições capturadas em um movimento. Diversos trabalhos utilizam sensores flex comerciais para realizar a captura de movimentos. O desempenho de um desses trabalhos foi utilizado como referência.
+%		\section{Sensor Flex}
+
+		Sensores de flexão comerciais, mais conhecidos como sensores flex, são resistores analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor. \cite{solanki2013sign}. A figura \ref{Fig:flex-sensor1} mostra um sensor flex da fabricante Spectra Symbol.
+
+	\begin{figure}[!h]
+		\centering
+		\caption{Sensor de Flexão.}
+		\includegraphics[width=7cm,keepaspectratio=true]{./figures/flex-sensor1.png}
+		\fonte{\cite{flexsensor}.}
+		\label{Fig:flex-sensor1}
+	\end{figure}
+
+
+		A figura \ref{Fig:hand-flexsensor-degrees1} demonstra uso do sensor flex comercial em um dos pontos de flexão do dedo, a figura também mostra o que seriam os graus de torção do sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
+
+
+	\begin{figure}[!h]
+		\centering
+		\caption{Sensor flex comercial na mão durante a flexão.}
+		\includegraphics[width=13cm,keepaspectratio=true]{./figures/hand-flexsensor-degrees1.png}
+		\fonte{Produzido pelo autor.}
+		\label{Fig:hand-flexsensor-degrees1}
+	\end{figure}
+
+	
+		O trabalho de \cite{anbarasi2013deafmute}, que será utilizado como referência, utiliza sensores flex comerciais de 2,5 e 4,5 polegadas instalados em uma luva, com o propósito de criar um interpretador da linguagem americana de sinais. Os gestos traduzidos são transformados em palavras que são exibidas em uma pequena tela de LCD.
+
+		O autor cita que durante os testes, os sensores flex de 2,5 polegadas foram instalados nos dedos mínimo e polegar, enquanto que os sensores de 4,5 polegadas foram instalados nos dedos indicador, médio e anelar. Ele apresenta uma tabela de valores obtidos por cada sensor nas posições de flexão de 0 graus e 90 graus.
+
+%		No sensor de flexão bioinspirado desenvolvido, para comparar com o trabalho de \cite{anbarasi2013deafmute}, com a luva vestida, foram obtidos os valores digitais captados nas duas posições da mão demostradas na figura \ref{Fig:hand-flexsensor-degrees1}.
+		
+		Os valores digitais obtidos nas posições de flexão de 0 grau e 90 graus, de ambos os trabalhos, foram utilizados para calcular, de acordo com as equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, o número de posições possíveis captadas entre 0 e 90 graus. Sendo que, para este cálculo, PosB recebe o valor digital em 90 graus e PosA recebe o valor digital recebido em 0 grau.
+
+		A tabela \ref{Tab:NPos0-90} mostra os valores obtidos em 0 grau (Pos0), 90 graus (Pos90) e o número de posições possíveis (NPos) calculados. As duas colunas da esquerda são referentes ao sensor flex comercial e as demais são referentes aos dedos do sensor bioinspirado. O dedo polegar não está presente na tabela porque ele não é flexionado durante o movimento realizado neste teste.
+		
+		\begin{table}[H]
+  	\centering
+		\caption{Valores obtidos e número de posições entre 0 e 90 graus.}
+    \begin{tabular}{l|ccccccc}
+      \midrule
+			Posições&\textcolor{red}{2,5''}	&\textcolor{red}{4,5''}	& Minimo	& Anelar	& Médio	&	Indicador	\\
+      \midrule
+			Pos0 		& 748 									& 350 									& 206 		&	142			&	771		&	746				\\
+			Pos90 	& 875 									& 568 									& 309 		&	396			&	527		&	607				\\
+			NPos 		& 128 									& 219 									& 104 		&	255			&	245		&	140				\\
+      \midrule
+    \end{tabular}
+		\label{Tab:NPos0-90}
+    \fonte{Adaptado de \cite{anbarasi2013deafmute} e produzido pelo autor.}
+		\end{table}
+
+		Através da tabela \ref{Tab:NPos0-90} é possível notar que o maior número de posições detectáveis neste teste é do dedo anelar do sensor bioinspirado, já o menor é do dedo mínimo. O sensor flex comercial de 4,5 polegadas apresenta desempenho superior aos dedos indicador e mínimo do sensor bioinspirado, já o modelo comercial de 2,5 polegadas, apresenta baixo desempenho, sendo superior apenas ao dedo mínimo.
+
+		No desempenho geral, vemos que usando o sensor bioinspirado produzido, conseguimos captar um número superior de posições de flexão nos dedos anelar e médio, em comparação ao sensor flex de 4,5 polegadas. Em comparação com modelo de 2,5 polegadas, o sensor bioinspirado se sai melhor em 3 dos 4 dedos.
+
+		Dessa forma é possível afirmar que, neste teste, o sensor bioinspirado conseguiu desempenho equiparado a um sensor comercial. Sendo que um sensor flex comercial possui um custo relativamente superior. Portanto, em projetos de baixo custo, respeitando suas limitações e requisitos do projeto, seria viável usar o sistema bioinspirado desenvolvido.
+
+
+
+
+
+
+
+
+
+
+
+
 
 		\chapter{BUFFER}
 		Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.

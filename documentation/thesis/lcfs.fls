@@ -323,6 +323,12 @@ INPUT ./figures/glove-module-ready1.jpg
 INPUT figures/glove-ready1.jpg
 INPUT ./figures/glove-ready1.jpg
 INPUT ./figures/glove-ready1.jpg
+INPUT ./figures/flex-sensor1.png
+INPUT ./figures/flex-sensor1.png
+INPUT ./figures/flex-sensor1.png
+INPUT ./figures/hand-flexsensor-degrees1.png
+INPUT ./figures/hand-flexsensor-degrees1.png
+INPUT ./figures/hand-flexsensor-degrees1.png
 INPUT ./figures/transmitter-module1.png
 INPUT ./figures/transmitter-module1.png
 INPUT ./figures/transmitter-module1.png
