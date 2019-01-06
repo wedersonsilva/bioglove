@@ -20,7 +20,7 @@ int brilho5 = 0;
 void setup()
 {
   Serial.begin(9600);
-  vw_set_rx_pin(4);                 // Pino de dados do receptor
+  vw_set_rx_pin(12);                 // Pino de dados do receptor
   vw_setup(2000);                   // Bits por segundo
   vw_rx_start();                    // Inicializa o receptor
 

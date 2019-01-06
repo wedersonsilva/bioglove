@@ -21,6 +21,13 @@ Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/6566034}.}
   Paulo - Brasil: Editora Newton C. Braga, 2012. v.~1. PAGES~p.
 ISBN 8565050092, 9788565050098.}
 
+\bibitem[Buchmann 2016]{buchmann2016batteries}
+\abntrefinfo{Buchmann}{BUCHMANN}{2016}
+{BUCHMANN, I. \emph{Batteries in a Portable World: A Handbook on Rechargeable
+  Batteries for Non-Engineers}. Fourth. [S.l.]: Cadex Electronics Incorporated,
+  2016. 10--12~p.
+ISBN 9780968211847.}
+
 \bibitem[Bullock 2017]{scott2017transceiver}
 \abntrefinfo{Bullock}{BULLOCK}{2017}
 {BULLOCK, S. \emph{Transceiver and System Design for Digital Communications}.
@@ -58,6 +65,13 @@ Dispon{\'\i}vel em:
 ISSN 1558-223X.
 Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/7059367}.}
 
+\bibitem[Inc. 2004]{5DT-ultra}
+\abntrefinfo{Inc.}{INC.}{2004}
+{INC., D. \emph{5DT Data Glove Ultra Datasheet}. 2004.
+Acessado em: 05/01/2019.
+Dispon{\'\i}vel em:
+  \url{http://www.5dt.com/downloads/dataglove/ultra/5DTDataGloveUltraDatasheet.pdf}.}
+
 \bibitem[Kumar, Verma e Prasad 2012]{kumar2012hci}
 \abntrefinfo{Kumar, Verma e Prasad}{KUMAR; VERMA; PRASAD}{2012}
 {KUMAR, P.; VERMA, J.; PRASAD, S. Hand data glove: A wearable real-time device
@@ -82,6 +96,12 @@ Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/5373803}.}
 {LICENSE, C. C. A.-S.~. \emph{{Arduino - Introduction}}. 2018.
 Acessado em: 12/08/2018.
 Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
+
+\bibitem[License 2019]{arduinopowerrange}
+\abntrefinfo{License}{LICENSE}{2019}
+{LICENSE, C. C. A.-S.~. \emph{{Arduino Nano - Tech Specs}}. 2019.
+Acessado em: 06/01/2019.
+Dispon{\'\i}vel em: \url{https://store.arduino.cc/usa/arduino-nano}.}
 
 \bibitem[M 2013]{solanki2013sign}
 \abntrefinfo{M}{M}{2013}
@@ -145,6 +165,15 @@ Dispon{\'\i}vel em:
   336--341, May 2013.
 ISSN 2277-1581.
 Dispon{\'\i}vel em: \url{https://www.ijset.com/publication/v2/057.pdf}.}
+
+\bibitem[Simone et al. 2007]{simone2007lowcost}
+\abntrefinfo{Simone et al.}{SIMONE et al.}{2007}
+{SIMONE, L.~K.; SUNDARRAJAN, N.; LUO, X.; JIA, Y.; KAMPER, D.~G. A low cost
+  instrumented glove for extended monitoring and functional hand assessment.
+\emph{Journal of Neuroscience Methods}, v.~160, p. 335--348, Mar 2007.
+ISSN 0165-0270.
+Dispon{\'\i}vel em:
+  \url{https://www.sciencedirect.com/science/article/pii/S0165027006004754}.}
 
 \bibitem[SM 2018]{arduinostringadd}
 \abntrefinfo{SM}{SM}{2018}
