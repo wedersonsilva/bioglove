@@ -109,7 +109,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Sistema de Aquisição e Transmissão de Dados Usando Sensor de Flexão Bioinspirado}
+\titulo{BioGlove: Protótipo de um transdutor de flexão bioinspirado}
 \autor{Wederson Medeiros Silva}
 \local{Belém -- Pará}
 \data{2018}
@@ -1167,11 +1167,20 @@ Agradeço ao Professor Dr. ...
 		\end{figure}
 
 
-		\chapter{Resultados e análises}
+
+
+	% --------------------------------------------------
+	%				RESULTADOS E ANÁLISES	
+	% --------------------------------------------------
+
+
+
+
+\chapter{Resultados e análises}
 
 		\section{Introdução}
 
-		O capítulo a seguir analisa diferentes testes realizados com o sistema bioinspirado desenvolvido e o compara com outros trabalhos semelhantes. As três frentes a serem analizadas são a sensibilidade do sensor de flexão, a duração do sistema alimentado por bateria e o alcance de transmissão do sinal.
+		O capítulo a seguir realiza diferentes testes com o sistema bioinspirado desenvolvido e os compara com outros trabalhos semelhantes. As três frentes a serem analisadas são: a sensibilidade do sensor de flexão, a duração do sistema alimentado por bateria e o alcance de transmissão do sinal.
 		
 
 		\section{Sensibilidade}
@@ -1239,11 +1248,11 @@ Agradeço ao Professor Dr. ...
 
 			A mobilidade é um dos requisitos do projeto desenvolvido. Por conta desse fato, a alimentação é da luva é feita por uma pequena bateria LiPo. Outros projetos de luvas móveis também usam baterias ou até mesmo pilhas. O desempenho de cada projeto varia de acordo com o hardware implementado e a capacidade da fonte de alimentação. Nessa seção, o desempenho da bateria da luva produzida será comparado ao de outros projetos.
 
-			A luva comercial Data Glove 5 Ultra da fabricante 5DT Inc. possui sensores de flexão baseados em fibra óptica. Esse produto pode ser utilizado para modelagem 3D e animação em programas de computador. Utiliza tecnologia de comunição sem fio Bluetooth e seu datasheet afirma um desempenho da bateria aproximado de 8 horas \cite{5DT-ultra}. Por ser um produto fechado, as características de sua bateria não são conhecidas.
+			A luva comercial Data Glove 5 Ultra da fabricante 5DT Inc. possui sensores de flexão baseados em fibra óptica. Esse produto pode ser utilizado para modelagem 3D e animação em programas de computador. Utiliza tecnologia de comunição sem fio Bluetooth e seu datasheet afirma um desempenho da bateria recarregável aproximado de 8 horas \cite{5DT-ultra}. Por ser um produto fechado, as características de sua bateria não são conhecidas.
 
-			O trabalho de \cite{michela2013rehab} busca, através de uma luva, mensurar a flexão dos dedos para estudos de reabilitação. A luva é embarcada sensores flex comerciais, um microcontrolador e um transmissor de rádio frequência. Toda a eletrônica é alimentada por uma bateria com tensão nominal de 3V e capacidade de 1000mAh. Obteve desempenho aproximado de uma semana.
+			O trabalho de \cite{michela2013rehab} busca, através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. A luva é embarcada sensores flex comerciais, um microcontrolador e um transmissor de rádio frequência. Toda a eletrônica é alimentada por uma bateria em formato de botão com tensão nominal de 3V e capacidade de 1000mAh. Obteve desempenho aproximado de uma semana.
 			
-			Uma luva de baixo custo foi desenvolvida por \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. A unidade possui sensores de flexão e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4 e duas pilhas AA alcalinas. Usando pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas.
+			Uma luva de baixo custo foi desenvolvida por \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. A unidade possui sensores de flexão e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4 e pilhas AA alcalinas. A capacidade dessas pilhas não foi definida no trabalho, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870 mAh cada. Usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas.
 
 			A luva bioinspirada desse trabalho está equipada com cinco potenciômetros, um microcontrolador Arduino, um transmissor de rádio frequência 433 Mhz e uma bateria LiPo com tensão nominal de 7,4V e capacidade de 300 mAh. Essa bateria, apesar de possuir tensão nominal de 7,4V, consegue alcançar uma tensão de até 8,4V quando está totalmente carregada \cite{buchmann2016batteries}.
 
@@ -1251,13 +1260,47 @@ Agradeço ao Professor Dr. ...
 
 			Para realizar o teste de desempenho da bateria, um módulo receptor junto a um Arduino foram conectados a um computador. Uma bateria recém carregada completamente, foi conectada à luva e o momento inicial foi marcado. O sistema transmissor da luva ficou ligado enviando sinais continuamente. Durante o teste, a tensão da bateria foi monitorada em intervalos regulares. Após um período de aproximadamente 10 horas a tensão da bateria chegou ao limite definido de 7V e o teste foi encerrado.
 
+			A tabela \ref{Tab:battery-range} resume o desempenho dos dispositivos explicitados nesta seção.
+
+%Característica de uso			
+                          
+%Modelagem 3D e animação 	
+%Estudos de reabilitação 	
+%Monitorar flexão dos dedos
+%Controle de um carrinho		
+
+		\begin{table}[H]
+  	\centering
+		\caption{Desempenho de alimentação das luvas}
+    \begin{tabular}{c|c|c|c}
+      \midrule
+			Luva 								& Alimentação			&	Capacidade	& Duração	\\
+      \midrule                                            					
+			Data Glove 5				& Não definida		& Não definida& 8 horas \\
+			Luva sensorizada 		& 1 bateria-botão	& 1000 mAh		& 1 semana\\
+			Luva de baixo custo & 2 pilhas AA			& 5740 mAh		& 60 horas\\
+			BioGlove						& 1 LiPo 7,4V			& 300 mAh			&	10 horas\\	
+      \midrule
+    \end{tabular}
+		\label{Tab:battery-range}
+    \fonte{Produzido pelo autor.}
+		\end{table}
+
+		Analisando a tabela \ref{Tab:battery-range} percebe-se que a luva sensorizada possui o melhor desempenho, isso pode ser atribuído ao hardware de baixo consumo de energia e ao número reduzido de componentes do projeto \cite{michela2013rehab}. A luva de baixo custo desenvolvida em \cite{simone2007lowcost} também apresenta um desempenho excepcional, isto pode ser atribuído pela alta capacidade fornecida através de suas 2 pilhas alcalinas.
+
+		A luva Data Glove 5, apesar de ser um produto comercial, possui o pior desempenho dentre todos os analisados, o hardware fechado dificulta a análise para além da duração de sua bateria. Porém, deve-se notar que esta luva apresenta diversos recursos de uso como calibração, compatibilidade com diversos sistemas operacionais e softwares \cite{5DT-ultra}. Portanto, seu consumo de energia elevado pode ser caracterizado pela provável complexidade do hardware deste produto.
+
+		O segundo pior desempenho foi obtido pela BioGlove. Sua alimentação de baixa capacidade, o uso de uma placa comercial recheada de componentes e o envio constante de mensagens através de seu módulo transmissor podem ser as principais causas desse curto período de duração apresentado. Entretanto, pelo fato de a placa embarcada usar um Arduíno, este pode ser alimentado via cabo USB. Para aplicações que exigam um maior período de funcionamento ininterrupto, o uso do cabo USB poderia ser uma opção viável.
 
 			\section{Alcance}
 
-			Em um projeto móvel o alcance do transmissor é limitado pela tecnologia empregada nessa comunicação. Existem projetos que utilizam transmissão via bluetooth, que permite interação com computadores, smartphones ou qualquer outro dispositivo compatível que esteja próximo. Além do mais, existem projetos usam a tecnologia de rede Wi-Fi, com isso são capazes de enviar comandos através da internet e podendo interagir com qualquer dispositivo conectado. 
-			Na seção a seguir, o desempenho de projetos que utilizam essas duas tecnologias serão comparados ao método de transmissão via rádio frequência utilizado na luva bioinspirada produzida.
+			Em um projeto móvel, o alcance do transmissor em relação ao receptor é limitado pela tecnologia empregada nesses equipamentos. Hardwares com maior potência alcançam maiores distâncias, entretanto tem custo mais elevado. Existem tecnologias de transmissão de baixo custo, como a que foi empregada nesse projeto, porém com alcance menor. 
+			
+			Dentre as diversas opções, há projetos que utilizam transmissão via bluetooth, que permite interação com computadores, smartphones ou qualquer outro dispositivo compatível que esteja próximo. Outros projetos chegam a usar a tecnologia de rede Wi-Fi e com isso são capazes de enviar comandos através da internet, podendo interagir com qualquer dispositivo conectado à grande rede mundial. 
 
+			Na seção a seguir, o alcance de projetos de luvas que utilizam tecnologias sem fio serão comparados ao método de transmissão via rádio frequência utilizado na luva bioinspirada produzida.
 
+			
 
 
 
@@ -1302,18 +1345,7 @@ Agradeço ao Professor Dr. ...
 		
 		
 
-	% ----------------------------
-	%	RESULTADOS E ANÁLISES	
-	% ----------------------------
 	
-	\chapter{Análises e Resultados}
-
-		\section{Configurações}
-
-		\section{Testes}
-
-		\section{Resultados}
-		
 
 	% ----------
 	%	CONCLUSÃO	
