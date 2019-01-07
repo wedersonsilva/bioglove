@@ -67,7 +67,7 @@ Dispon{\'\i}vel em: \url{https://ieeexplore.ieee.org/document/7059367}.}
 
 \bibitem[Inc. 2004]{5DT-ultra}
 \abntrefinfo{Inc.}{INC.}{2004}
-{INC., D. \emph{5DT Data Glove Ultra Datasheet}. 2004.
+{INC., F. D.~T. \emph{5DT Data Glove Ultra Datasheet}. 2004.
 Acessado em: 05/01/2019.
 Dispon{\'\i}vel em:
   \url{http://www.5dt.com/downloads/dataglove/ultra/5DTDataGloveUltraDatasheet.pdf}.}
@@ -102,6 +102,13 @@ Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
 {LICENSE, C. C. A.-S.~. \emph{{Arduino Nano - Tech Specs}}. 2019.
 Acessado em: 06/01/2019.
 Dispon{\'\i}vel em: \url{https://store.arduino.cc/usa/arduino-nano}.}
+
+\bibitem[Ltda. 2019]{multilogicaflexsensor}
+\abntrefinfo{Ltda.}{LTDA.}{2019}
+{LTDA., M.~C. de~Materiais Elétricos~e S. \emph{{Sensor Flex 11,4 cm |
+  Multilógica-Shop}}. 2019.
+Acessado em: 07/01/2019.
+Dispon{\'\i}vel em: \url{https://multilogica-shop.com/sensor-flex-114cm}.}
 
 \bibitem[M 2013]{solanki2013sign}
 \abntrefinfo{M}{M}{2013}
@@ -150,6 +157,14 @@ Dispon{\'\i}vel em:
 ISBN 9788571947276. Dispon{\'\i}vel em:
   \url{https://books.google.com.br/books?id=hqBUPgAACAAJ}.}
 
+\bibitem[Pfeifer, Lungarella e lida 2007]{pfeifer2007biorobot}
+\abntrefinfo{Pfeifer, Lungarella e lida}{PFEIFER; LUNGARELLA; LIDA}{2007}
+{PFEIFER, R.; LUNGARELLA, M.; LIDA, F. Self-organization, embodiment, and
+  biologically inspired robotics. In:  \emph{Science}. [s.n.], 2007. v.~318, p.
+  1088--1093.
+ISSN 10.1126/science.1145803. Dispon{\'\i}vel em:
+  \url{http://science.sciencemag.org/content/318/5853/1088}.}
+
 \bibitem[Pruzansky e Pruzansky 2018]{drmarksurgery}
 \abntrefinfo{Pruzansky e Pruzansky}{PRUZANSKY; PRUZANSKY}{2018}
 {PRUZANSKY, M.~E.; PRUZANSKY, J.~S. \emph{{Flexor Tendon Pulley System Injury -
@@ -165,6 +180,25 @@ Dispon{\'\i}vel em:
   336--341, May 2013.
 ISSN 2277-1581.
 Dispon{\'\i}vel em: \url{https://www.ijset.com/publication/v2/057.pdf}.}
+
+\bibitem[Rodriguez et al. 2007]{rodriguez2007goniometric}
+\abntrefinfo{Rodriguez et al.}{RODRIGUEZ et al.}{2007}
+{RODRIGUEZ, O.~P.; AVIZZANO, C.~A.; SOTGIU, E.; PABON, S.; FRISOLI, A.; ORTIZ,
+  J.; BERGAMASCO, M. A wireless bluetooth dataglove based on a novel
+  goniometric sensors. In:  \emph{RO-MAN 2007 - The 16th IEEE International
+  Symposium on Robot and Human Interactive Communication}. [s.n.], 2007. p.
+  1185--1190.
+ISSN 1944-9437. Dispon{\'\i}vel em:
+  \url{https://ieeexplore.ieee.org/document/4415259}.}
+
+\bibitem[Simone et al. 2004]{simone2004lowcost}
+\abntrefinfo{Simone et al.}{SIMONE et al.}{2004}
+{SIMONE, L.~K.; ELOVIC, E.; KALAMBUR, U.; KAMPER, D. A low cost method to
+  measure finger flexion in individuals with reduced hand and finger range of
+  motion. In:  \emph{The 26th Annual International Conference of the IEEE
+  Engineering in Medicine and Biology Society}. [s.n.], 2004. p. 4791--4794.
+ISSN 0-7803-8439-3. Dispon{\'\i}vel em:
+  \url{https://ieeexplore.ieee.org/document/1404326}.}
 
 \bibitem[Simone et al. 2007]{simone2007lowcost}
 \abntrefinfo{Simone et al.}{SIMONE et al.}{2007}

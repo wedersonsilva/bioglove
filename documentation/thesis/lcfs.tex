@@ -476,19 +476,23 @@ Agradeço ao Professor Dr. ...
 % ---
 % inserir lista de símbolos
 % ---
-\begin{simbolos}
-  \item[$\alpha$] Contante de atenuação
-  \item[$\beta$] Contante de fase
-  \item[$\gamma$] Contante de propagação
-  \item[$\Gamma_{L}$] Coeficiente de reflexão na carga
-  \item[$\delta$] Constante da restrição de potência transmissão
-  \item[$\Delta_f$ ] Subcanais ou tons em Hz
-  \item[$ \Gamma $]  Gap de $RSIR$
-  \item[$ \Lambda $] Matriz que contém os elementos da diagonal principal de $\mathbf{H}$
-  \item[$\rho$] Máscara espectral utilizada pelo sistema DSL
+
+
+%\begin{simbolos}
+%  \item[$\alpha$] Contante de atenuação
+%  \item[$\beta$] Contante de fase
+%  \item[$\gamma$] Contante de propagação
+%  \item[$\Gamma_{L}$] Coeficiente de reflexão na carga
+%  \item[$\delta$] Constante da restrição de potência transmissão
+%  \item[$\Delta_f$ ] Subcanais ou tons em Hz
+%  \item[$ \Gamma $]  Gap de $RSIR$
+%  \item[$ \Lambda $] Matriz que contém os elementos da diagonal principal de $\mathbf{H}$
+%  \item[$\rho$] Máscara espectral utilizada pelo sistema DSL
   %  \item[
-  \item[${\sigma}^{2}$]  Densidade espectral de potência potência do ruído Gaussiano branco aditivo
-\end{simbolos}
+%  \item[${\sigma}^{2}$]  Densidade espectral de potência potência do ruído Gaussiano branco aditivo
+%\end{simbolos}
+
+
 % ---
 
 % ---
@@ -543,7 +547,43 @@ Agradeço ao Professor Dr. ...
 
 \chapter{Introdução} % ou \input{arquivoexterno}
 		
-		Contextualização; Estado da arte (se tiver); Motivação; O que vai fazer; Metodologia; O que terá no resto do documento;
+		\section{Contextualização}
+
+		A biologia inspira diversos projetos de engenharia. Na área da robótica, por exemplo, existe um robô em formato de salamandra que é capaz de se movimentar bem entre a água e a terra, há um pequeno robô inspirado em moscas que, devido ao seu formato, possui excelente decolagem vertical na hora do vôo. Existe ainda um robô que consegue escalar paredes através de um material adesivo que foi inspirado pela lagartixa \cite{pfeifer2007biorobot}. 
+
+		Dentre os materiais bioinspirados mais famosos está a tecnologia do Velcro$^{\textregistered}$  que foi inspirada por uma planta chamada Arctium. Essa planta possui uma série de pequenos ganchos que grudam em alguns tecidos. Com isso foi criado o Velcro que é composto de duas partes, os ganchos e as voltas.
+
+		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o musculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}. Inspirado por essa biomecânica, foi desenvolvido um prótipo de um sensor de flexão embarcado em uma luva de algodão.
+
+		\section{Estado da arte}
+
+		Existem diversos sistemas que utilizam luvas embarcadas com sensores que conseguem mensurar e processar movimentos através de microcontroladores. Existem produtos comerciais \cite{5DT-ultra}, projetos de baixo custo \cite{simone2004lowcost}, usados em pesquisas médicas \cite{michela2013rehab} , entre outros. 
+
+		As funções atribuídas à essas luvas são variadas. Podem ser usadas para controle de um braço robótico \cite{syed2012armcontroller}, movimentar desenhos tridimencionais em computador \cite{5DT-ultra}, mensurar atividades de pessoas com limitações dos movimentos nos dedos \cite{simone2004lowcost} e até mesmo transcrever gestos em palavras baseado na linguagem americana de sinais \cite{anbarasi2013deafmute}.
+
+		\section{Motivação}
+
+		Apesar da gama de possibilidades com o uso de luvas sensorizadas, seu custo de montagem ou a obtenção de produtos comerciais possui custo elevado. Muitos projetos utilizam pelo menos 1 sensor flex em cada dedo, a compra de cada unidade desse sensor pode custar em lojas online especializadas em torno de 130 Reais, somado ao custo do frete \cite{multilogicaflexsensor}. Além disso, produtos comerciais costumam ter um hardware imutável e de difícil manutenção, pois somente equipes especializadas possuem o conhecimento técnico para efetuar reparos.
+
+		O trabalho proposto busca criar um protótipo de uma luva embarcada com sensor de flexão, microcontrolador e transmissor de dados. O sistema deve possuir um conjunto de software e hardware que seja mais flexível em relação à outros produtos. Permitindo que o usuário tenha liberdade de realizar modificações que se adaptem às suas necessidades. 
+
+		Um dos componentes em maior número e de maior custo em projetos de luvas como essa, são os sensores de flexão. Portanto esse trabalho também propõe avaliar a viabilidade de um sistema transdutor de flexão inspirado no movimento dos músculos e tendões da mão. Esse sensor deverá ser composto de materiais de baixo custo e de fácil acesso.
+
+		
+		\section{Organização do trabalho}
+
+		Este trabalho está organizado da seguinte forma:
+
+		O capítulo 2 falará sobre a mecânica que inspirou a construção do sensor, sobre como funciona a aquisição dos movimentos, explica o funcionamento do potenciômetro que é a peça chave do sensor, e também menciona as características do microcontrolador e transmissor utilizados.
+		
+		O capítulo 3 explica mais detalhadamente sobre o funcionamento do sensor, adaptação do sensor na luva, também explica o algoritmo de programação do software que trata o sinal recebido e os ajustes que foram necessários, além de falar também sobre o protocolo de comunicação criado. E por último explica como todo o sistema foi construído e montado.
+
+		O capítulo 4 apresentará os resultados e análises dos testes realizados na BioGlove em comparação à outras luvas desenvolvidas.
+
+		Por fim, o capítulo 5 mostrará a conclusão do trabalho.
+		
+
+%Contextualização; Estado da arte (se tiver); Motivação; O que vai fazer; Metodologia; O que terá no resto do documento;
 
 
 
@@ -1298,65 +1338,120 @@ Agradeço ao Professor Dr. ...
 			
 			Dentre as diversas opções, há projetos que utilizam transmissão via bluetooth, que permite interação com computadores, smartphones ou qualquer outro dispositivo compatível que esteja próximo. Outros projetos chegam a usar a tecnologia de rede Wi-Fi e com isso são capazes de enviar comandos através da internet, podendo interagir com qualquer dispositivo conectado à grande rede mundial. 
 
-			Na seção a seguir, o alcance de projetos de luvas que utilizam tecnologias sem fio serão comparados ao método de transmissão via rádio frequência utilizado na luva bioinspirada produzida.
+			Na seção a seguir, o alcance de projetos de luvas que utilizam a tecnologia Bluetooth serão comparados ao método de transmissão via rádio frequência utilizado na luva bioinspirada produzida.
 
-			
+			O datasheet da luva comercial Data Glove 5 Utra ofecere também informações sobre sua tecnologia de transmissão. Nele está especificado que atrelado à luva há um kit de transmissão sem fio, no qual suporta até duas luvas simultaneamente. A tecnologia de transmissão Bluetooth utilizada, trabalha na faixa de 2,4 GHz e consegue um alcance de até 20 metros \cite{5DT-ultra}.
 
+			PERCRO Dataglove é uma luva baseada no funcionamento de goniômetros, que são instrumentos responsáveis por medir o deslocamento angular relativo. Desenvolvida no trabalho de \cite{rodriguez2007goniometric}, possui dois sensores em cada dedo, um microcontrolador embarcado e um módulo Bluetooth 2,4 GHz que chega a alcançar uma comunicação satisfatória de até 10 metros.
 
+			A BioGlove está equipada com um par de módulos de transmissão e recepção de rádio frequência que trabalham na faixa de 433 Mhz. De acordo com o manual da biblioteca que auxilia o uso desse equipamento, usando uma antena de 17 cm em ambos os módulos, o alcance pode ser de até 150 metros em campo aberto \cite{virtualwiremanual}. Entretanto, por conta da fragilidade dos módulos, foi possível soldar apenas uma antena no transmissor.
 
+			Durante os testes de alcance de transmissão, o módulo receptor foi conectado a um computador que ficou fixo em um local. O transmissor embarcado na luva foi sendo distanciado aos poucos enquanto que a resposta do receptor era constantemente verificada. Por volta de 7,5 metros a resposta do transmissor começou a falhar e o teste foi encerrado nesta marca. A tabela \ref{Tab:wifi-range} resume o desempenho de alcance apresentado pelas três luvas.
 
-
-
-		\chapter{BUFFER}
-		Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
-
-		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
-
-
-
-
-		\section{Transmissão e Recepção de Dados}
-
-			Como foi descrito, durante a movimentação dos dedos, a posição do cursor do potenciômetro é modificado. Sendo assim, para possibilitar o sensoriamento, a variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. Este por sua vez envia mensagens por rádio frequência, em formato de números inteiros que representam a posição atual de cada dedo. Figura \ref{Fig:transmitter-and-receptor} (a).
-
-			O módulo receptor de rádio frequência, capta as mensagens e as envia a outro microcontrolador. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação. Figura \ref{Fig:transmitter-and-receptor} (b).
-
-
-	\begin{figure}[!htb]
+		\begin{table}[H]
   	\centering
-   	\caption{ (a) Transmissão do sinal. (b) Recepção do sinal.}
-   	\subfloat[]
-   	{
-     \includegraphics[width=7cm,keepaspectratio=true]{./figures/transmitter-module1.png}
-    }
-   	\centering
-   	\subfloat[]
-   	{ \includegraphics[width=7cm,keepaspectratio=true]{./figures/receptor-module1.png}
-   	}
-   	\label{Fig:transmitter-and-receptor}
-   	\fonte{Produzido pelo autor.}
- 		\end{figure}
+		\caption{Desempenho de alcance das luvas}
+    \begin{tabular}{c|c|c|c}
+      \midrule
+			Luva 						& Tecnologia			&	Faixa		& Alcance		\\
+      \midrule                                            					
+			Data Glove 5		& Bluetooth				& 2,4 Ghz	& 20 metros	\\
+			PERCRO Dataglove& Bluetooth				& 2,4 Ghz	& 10 metros	\\
+			BioGlove				& Rádio Frequência& 433 Mhz	&	7,5 metros\\	
+      \midrule
+    \end{tabular}
+		\label{Tab:wifi-range}
+    \fonte{Produzido pelo autor.}
+		\end{table}
+
+			Observa-se pela tabela \ref{Tab:wifi-range} que apesar de duas luvas usarem a mesma tecnologia, apresentam resultados diferentes. Isso pode ser atribuído à diferentes versões dos módulos ou à potência empregada neles. A luva comercial mostrou possuir o melhor desempenho chegando a ter o dobro do alcance útil em relação à segunda colocada.
+
+			O pior desepenho ficou por conta da BioGlove, esta que emprega uma tecnologia de comunicação mais barata, apresentando desempenho muito inferior ao indicado no manual. Apesar disso, conseguiu um alcance relativamente próximo ao da PERCRO Dataglove. Além disso, deve ser lembrado que o módulo receptor da BioGlove não recebeu uma antena, o que poderia potencializar o alcance de comunicação do par.
 
 
-			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
 
+
+	% ----------------------------------------
+	%							CONCLUSÃO	
+	% ----------------------------------------
+
+
+
+		\chapter{Conclusão}
+
+		Este trabalho se mostrou viável em comparação à outras soluções semelhantes, mesmo frente à um produto comercial. Em 2 dos 3 aspectos pesquisados, a BioGlove conseguiu se equiparar à outros projetos. O principal ponto de pesquisa da luva, o sensoriamento de flexão, em alguns momentos chegou até mesmo a ser superior ao sensor flex comercial amplamente utilizado em diversos projetos.
+
+		Sua bateria de baixa capacidade apresentou um desempenho relativamente curto durante o uso ininterrupto, porém, quando comparado à um produto comercial completo, conseguiu durar ligeiramente por mais tempo. O alcance de transmissão da BioGlove foi o aspecto com pior desempenho, frente à tecnologia Bluetooth utilizada em outras luvas. 
+
+		Após a análise dos resultados que se apresentaram menos animadores, é possível perceber que pequenas mudanças podem influenciar na melhoria do desempenho em futuros testes. A vida útil da luva pode ser melhorado pelo uso de uma bateria mais potente e pelo aperfeiçoamento da frequência da transmissão de mensagens, enviar apenas quando for necessário, e não a todo momento como acontece atualmente. A inclusão de antenas melhores em ambos os módulos de rádio frequencia ou a troca da tecnologia de transmissão, por Bluetooth por exemplo, pode garantir uma melhoria no alcance de transmissão.
+
+		Os maiores desafios se apresentaram durante a escolha de componentes e montagem da luva. Não havendo muitas referências de trabalhos com mecânica semelhante, durante a montagem, os problemas inesperados foram sendo resolvidos com uso de componentes e ferramentas disponíveis no momento, mesmo que esses não fossem os ideais. Portanto, a troca de componentes por outros mais precisos, menores e que consumam menos energia, podem garantir maior estabilidade à luva.
+
+		O protocolo de comunicação criado, mesmo sendo simples, conseguiu chegar satisfatoriamente ao seu objetivo inicial de controlar os movimentos do carrinho, tendo a possibilidade até mesmo ser aproveitado para outras aplicações de controle. Entretanto, para aplicações que exijam uma demanda maior transmissão de dados, e não apenas 5 \textit{bytes} por mensagem, será necessária uma melhoria no protocolo ou até mesmo a substituição do mesmo.
+
+		Este protótipo foi desenvolvido, usado e testado por apenas uma pessoa, o uso da luva por outras pessoas pode apresentar resultados diferentes e necessitar de ajustes. Cada pessoa possui características diferentes em suas mãos, dedos maiores ou menores, mão mais larga ou mais fina, diferentes graus de flexão dos dedos, entre outros. Portanto, a inclusão de uma função de calibração no software é necessária e pode diminuir tais contratempos quando a BioGlove for utilizada por outros indivíduos.
+
+		Apesar de no geral o projeto desenvolvido se mostrar viável para ser uma luva de aferição de movimentos e transmissão de dados, este possui natureza diferente de outros produtos semelhantes. Enquanto que o uso de sensores flex pode trazer uma mecânica relativamente estável durante os movimentos, a BioGlove é dependente de uma rede de fios e polias que não apresentou muita estabilidade mecânica em uma luva de algodão. A troca do material da luva por um  mais rígido, poderia favorecer a estabilidade durante os movimentos.
+
+		Com tudo, a BioGlove, mesmo apresentando limitações, se mostra capaz de fomentar projetos de baixo custo que necessitem desse tipo de equipamento. O uso de componentes de baixo custo, como potenciômetros e o par RF, além da amplamente conhecida e documentada placa Arduíno, permite com os devidos ajustes, que diversos módulos compatíveis sejam adicionados ao projeto. Com isso há a possibilidade de desenvolver soluções mais complexas, como a tradução da Linguagem Brasileira de Sinais (LIBRAS) de gestos para palavras ou até mesmo a interação com softwares de realidade virtual.
+
+			\section{Trabalhos futuros}		
+
+		Dentre os possíveis trabalhos futuros relacionados à esse projeto estão:
+
+		\begin{itemize}
+			\item Investigar o uso de uma luva composta de material mais resistente do que o algodão.
+			\item Usar um número maior de polias para guiar o fio utilizado.
+			\item Instalar antenas melhores em ambos os módulos de rádio frequência.
+			\item Investigar o uso de módulos com outras tecnologias de transmissão de dados.
+			\item Trocar a bateria por outra de maior capacidade.
+			\item Usar potênciometros de menor tamanho e menor resistência elétrica.
+			\item Substituir a placa Arduíno pelo uso apenas do microcontrolador ATmega.
+			\item Criar uma função de calibração para uso da luva.
+			\item Aumentar o número de \textit{bytes} na mensagem transmitida.
+			\item Modificar o software para enviar dados apenas quando for necessário.
+			\item Diminuir o tamanho da PCI embarcada na luva.
+		\end{itemize}
+
+
+
+
+
+
+
+
+
+%		\chapter{BUFFER}
+%		Também é possível notar que alguns deslocamentos são positivos enquanto outros são negativos. Isso se dá porque os potênciometros 1 e 2 foram instalados com seus cursores em sentido oposto aos potenciômetros 3 e 4. Com o intuito de minimizar o espaço entre eles na placa. Isso pode ser observado na figura \ref{Fig:glove-ready1}.
+%
+%		Por conta desse fato, durante o movimento de flexão, os potenciômetros 1 e 2 giram em sentido anti-horário e possuem deslocamento positivo, enquanto os demais giram em sentido horário com deslocamento negativo. No caso do potenciômetro 5, apesar de girar em sentido anti-horário, ele possui um deslocamento negativo. Isso porque foi soldado em posição reversa aos demais, com o propósito de maximar sua aderência na placa.
+%
+%		\section{Transmissão e Recepção de Dados}
+%
+%			Como foi descrito, durante a movimentação dos dedos, a posição do cursor do potenciômetro é modificado. Sendo assim, para possibilitar o sensoriamento, a variação de cada potenciômetro é captada por um microcontrolador que processa esse sinal antes de despachá-lo para o transmissor. Este por sua vez envia mensagens por rádio frequência, em formato de números inteiros que representam a posição atual de cada dedo. Figura \ref{Fig:transmitter-and-receptor} (a).
+%
+%			O módulo receptor de rádio frequência, capta as mensagens e as envia a outro microcontrolador. Este por sua vez, processa a mensagem e transmite aos respectivos componentes e atuadores daquela aplicação. Figura \ref{Fig:transmitter-and-receptor} (b).
+%
+%	\begin{figure}[!htb]
+%  	\centering
+%   	\caption{ (a) Transmissão do sinal. (b) Recepção do sinal.}
+%   	\subfloat[]
+%  	{
+%     \includegraphics[width=7cm,keepaspectratio=true]{./figures/transmitter-module1.png}
+%    }
+%   	\centering
+%   	\subfloat[]
+%   	{ \includegraphics[width=7cm,keepaspectratio=true]{./figures/receptor-module1.png}
+%   	}
+%  	\label{Fig:transmitter-and-receptor}
+%   	\fonte{Produzido pelo autor.}
+% 		\end{figure}
+%
+%			Para este trabalho, um pequeno carrinho, foi o sistema escolhido para ser controlado pela luva. Para isso, um protocolo de transmissão foi desenvolvido para traduzir os movimentos dos dedos da luva em direções para o carrinho.
+%
 
 	
 		
-		
-
-	
-
-	% ----------
-	%	CONCLUSÃO	
-	% ----------
-  \chapter{Conclusão}
-
-		\section{Conclusões}
-
-		\section{Trabalhos Futuros}
-
-
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------

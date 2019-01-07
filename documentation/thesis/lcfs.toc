@@ -6,9 +6,12 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{15}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{14}{chapter.1}
+\contentsline {section}{\numberline {1.1}Contextualiza\IeC {\c c}\IeC {\~a}o}{14}{section.1.1}
+\contentsline {section}{\numberline {1.2}Estado da arte}{14}{section.1.2}
+\contentsline {section}{\numberline {1.3}Motiva\IeC {\c c}\IeC {\~a}o}{14}{section.1.3}
+\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{15}{section.1.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{16}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{16}{section.2.1}
@@ -46,12 +49,8 @@
 \contentsline {section}{\numberline {4.3}Bateria}{37}{section.4.3}
 \contentsline {section}{\numberline {4.4}Alcance}{39}{section.4.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {BUFFER}}{40}{chapter.5}
-\contentsline {section}{\numberline {5.1}Transmiss\IeC {\~a}o e Recep\IeC {\c c}\IeC {\~a}o de Dados}{40}{section.5.1}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclus\IeC {\~a}o}}{42}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{42}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabalhos Futuros}{42}{section.6.2}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabalhos futuros}{42}{section.5.1}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{43}{section*.38}
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{43}{section*.36}
