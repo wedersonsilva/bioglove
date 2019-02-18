@@ -415,20 +415,24 @@ Agradeço ao Professor Dr. ...
 %\setlength{\parindent}{1.5cm}
 %\indent
 %\hangindent=3.7cm
-\hspace{1.5cm}O modo \textit{fronthaul} de redes 5G ...
-	
- \textbf{Palavras-chaves}: Modo fantasma. 
+	\hspace{1.5cm}Luvas embarcadas com sensores, também conhecidas como \textit{data gloves}, permitem diversas interações com realidade virtual, robótica, controle, internet das coisas, dentre outras. Dentro da luva, para que seja possível medir a flexão dos dedos, existem soluções baseadas em fibra óptica, tinta condutiva, potenciômetros e os mais conhecidos sensores flex. Entretanto, em muitos projetos, o custo da luva se torna elevado por conta da tecnologia escolhida para mensurar os graus de flexão em cada um dos dedos. Com o propósito de diminuir custos de projetos que necessitam de uma \textit{data glove}, foi desenvolvida a BioGlove, que é uma luva embarcada com sensores de flexão de baixo custo, placa microcontroladora que possui larga documentação e disponibilidade, além de um protocolo de comunicação simplificado. Além do mais, dentro do trabalho é proposto a avaliação de um sensor de flexão bioinspirado na mecânica dos dedos.
+
+
+ \textbf{Palavras-chaves}: Data glove. BioGlove. sensor de flexão. bioinspirado. baixo custo.
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
-\hspace{1.5cm}Phantom mode has...
+\hspace{1.5cm}Gloves embedded with sensors, also known as data gloves, allow various interactions with virtual reality, robotics, control, internet of things, and so on. Inside the glove, to be possible to measure finger flexion, there are solutions based on fiber optics, conductive ink, potentiometers and the well known flex sensors. However,
+in many projects, the glove's cost become high because of technology chosen to measure fingers' degrees flexion. With the purpose of decrease costs of projects that need a data glove, was developed the BioGlove, that is a glove embedded with low cost flex sensors, microcontroller board with extensive documentation and availability, as well as a simplified communication protocol. Furthermore, in the work is proposed the avaliation of a flex sensor bioinspired by finger mechanics.
+
+
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Keywords}: Phantom mode. 
+   \textbf{Keywords}: Data glove. BioGlove. flex sensor. bioinspired. low cost.
  \end{otherlanguage*}
 \end{resumo}
 
@@ -549,18 +553,24 @@ Agradeço ao Professor Dr. ...
 		
 		\section{Contextualização}
 
-		A biologia inspira diversos projetos de engenharia. Na área da robótica, por exemplo, existe um robô em formato de salamandra que é capaz de se movimentar bem entre a água e a terra, há um pequeno robô inspirado em moscas que, devido ao seu formato, possui excelente decolagem vertical na hora do vôo. Existe ainda um robô que consegue escalar paredes através de um material adesivo que foi inspirado pela lagartixa \cite{pfeifer2007biorobot}. 
+%		A biologia inspira diversos projetos de engenharia. Na área da robótica, por exemplo, existe um robô em formato de salamandra que é capaz de se movimentar bem entre a água e a terra, há um pequeno robô inspirado em moscas que, devido ao seu formato, possui excelente decolagem vertical na hora do vôo. Existe ainda um robô que consegue escalar paredes através de um material adesivo que foi inspirado pela lagartixa \cite{pfeifer2007biorobot}. 
 
-		Dentre os materiais bioinspirados mais famosos está a tecnologia do Velcro$^{\textregistered}$  que foi inspirada por uma planta chamada Arctium. Essa planta possui uma série de pequenos ganchos que grudam em alguns tecidos. Com isso foi criado o Velcro que é composto de duas partes, os ganchos e as voltas.
+		A mão exerce uma importante função na interação do ser humano com a tecnologia. Muitos periféricos necessitam da mão para controlá-los, é o caso do mouse e teclado de computador, do controle remoto da televisão e do videogame e também dos famosos tablets e smartphones.	Entretando, para aplicações de realidade virtual a imersão se torna ainda melhor, quando são usados movimentos naturais de controle. E para isso o uso de uma luva de controle pode deixar a interação ainda mais real para o usuário. 
+	
+		Luvas embarcadas com sensores são utilizadas não só em aplicações de realidade virtual, podem ser usadas para controle de um braço robótico \cite{syed2012armcontroller}, movimentar desenhos tridimencionais em computador \cite{5DT-ultra}, mensurar atividades de pessoas com limitações dos movimentos nos dedos \cite{simone2004lowcost} e até mesmo transcrever gestos em palavras baseado na linguagem americana de sinais \cite{anbarasi2013deafmute}. Existem produtos comerciais \cite{5DT-ultra}, projetos de baixo custo \cite{simone2004lowcost}, usados em pesquisas médicas \cite{michela2013rehab}, entre outros. 
 
-		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o musculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}. Inspirado por essa biomecânica, foi desenvolvido um prótipo de um sensor de flexão embarcado em uma luva de algodão.
+		Dentre os materiais bioinspirados mais famosos está a tecnologia do Velcro$^{\textregistered}$ que foi inspirada por uma planta chamada Arctium. Essa planta possui uma série de pequenos ganchos que grudam em alguns tecidos. Por conta desse comportamento, o Velcro é composto de duas partes, os ganchos e as voltas.
+
+		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o músculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}. Inspirado por essa biomecânica, foi desenvolvido um prótipo de um sensor de flexão embarcado em uma luva de algodão.
 
 		\section{Estado da arte}
+		
 
-		Existem diversos sistemas que utilizam luvas embarcadas com sensores que conseguem mensurar e processar movimentos através de microcontroladores. Existem produtos comerciais \cite{5DT-ultra}, projetos de baixo custo \cite{simone2004lowcost}, usados em pesquisas médicas \cite{michela2013rehab} , entre outros. 
 
-		As funções atribuídas à essas luvas são variadas. Podem ser usadas para controle de um braço robótico \cite{syed2012armcontroller}, movimentar desenhos tridimencionais em computador \cite{5DT-ultra}, mensurar atividades de pessoas com limitações dos movimentos nos dedos \cite{simone2004lowcost} e até mesmo transcrever gestos em palavras baseado na linguagem americana de sinais \cite{anbarasi2013deafmute}.
 
+		As funções atribuídas à essas luvas são variadas.		
+		
+		
 		\section{Motivação}
 
 		Apesar da gama de possibilidades com o uso de luvas sensorizadas, seu custo de montagem ou a obtenção de produtos comerciais possui custo elevado. Muitos projetos utilizam pelo menos 1 sensor flex em cada dedo, a compra de cada unidade desse sensor pode custar em lojas online especializadas em torno de 130 Reais, somado ao custo do frete \cite{multilogicaflexsensor}. Além disso, produtos comerciais costumam ter um hardware imutável e de difícil manutenção, pois somente equipes especializadas possuem o conhecimento técnico para efetuar reparos.
