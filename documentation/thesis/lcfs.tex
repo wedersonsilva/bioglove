@@ -112,8 +112,8 @@
 \titulo{BioGlove: Protótipo de um transdutor de flexão bioinspirado}
 \autor{Wederson Medeiros Silva}
 \local{Belém -- Pará}
-\data{2018}
-\orientador{Prof. Dr. Roberto Menezes Rodriguez}
+\data{2019}
+\orientador{Prof. Dr. Roberto Menezes Rodrigues}
 \coorientador{Prof. Dr. João Crisóstomo Weyl A. Costa}
 \instituicao{
   Universidade Federal do Pará -- UFPa
@@ -353,13 +353,13 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 11 de janeiro de 2018:
+   Trabalho aprovado. \imprimirlocal, 18 de março de 2019:
 
    Conceito: .
    
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
    \assinatura{\textbf{\imprimircoorientador} \\ Coorientador}
-   \assinatura{\textbf{Prof. Dr. Gilvan Borges} \\ Convidado 1}
+   \assinatura{\textbf{Prof. Dra. Josiane do Couto Rodrigues} \\ Convidado 1}
   % \assinatura{\textbf{Prof. Dr. Somebody else} \\ Convidado 2}
    %\assinatura{\textbf{Professor} \\ Convidado 3}
       
@@ -465,13 +465,13 @@ in many projects, the glove's cost become high because of technology chosen to m
 	\item[$k\Omega$]\textit{Kiloohm}
 	\item[LED]\textit{Light-Emitting Diode}
 	\item[LiPo]\textit{Lithium-ion Polymer}
-	\item[$mAh$]\textit{Milliampere Hour}
-	\item[$Mhz$]\textit{Megahertz}
-	\item[mm]\textit{Millimeter}
+	\item[$mAh$]Mili ampere hora
+	\item[$Mhz$]Megahertz
+	\item[mm]Milímetro
 	\item[PCI]Placa de Circuito Impresso
 	\item[PVC]\textit{Polyvinyl Chloride}	
 	\item[R]Resistência
-	\item[RF]\textit{Radio Frequence}
+	\item[RF]Radio frequência
 	\item[V]Tensão	
 	
 \end{siglas}
@@ -561,7 +561,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Dentre os materiais bioinspirados mais famosos está a tecnologia do Velcro$^{\textregistered}$ que foi inspirada por uma planta chamada Arctium. Essa planta possui uma série de pequenos ganchos que grudam em alguns tecidos. Por conta desse comportamento, o Velcro é composto de duas partes, os ganchos e as voltas.
 
-		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o músculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}. Inspirado por essa biomecânica, foi desenvolvido um prótipo de um sensor de flexão embarcado em uma luva de algodão.
+		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o músculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}.
 
 		\section{Estado da arte}
 		
@@ -573,9 +573,9 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		\section{Motivação}
 
-		Apesar da gama de possibilidades com o uso de luvas sensorizadas, seu custo de montagem ou a obtenção de produtos comerciais possui custo elevado. Muitos projetos utilizam pelo menos 1 sensor flex em cada dedo, a compra de cada unidade desse sensor pode custar em lojas online especializadas em torno de 130 Reais, somado ao custo do frete \cite{multilogicaflexsensor}. Além disso, produtos comerciais costumam ter um hardware imutável e de difícil manutenção, pois somente equipes especializadas possuem o conhecimento técnico para efetuar reparos.
+		Apesar da gama de possibilidades com o uso de luvas sensorizadas, seu custo de montagem ou a obtenção de produtos comerciais possui custo elevado. Muitos projetos utilizam pelo menos 1 sensor flex em cada dedo, a compra de cada unidade desse sensor pode custar em lojas online especializadas em torno de 130 Reais \cite{multilogicaflexsensor}. Além disso, produtos comerciais costumam ter um hardware imutável e de difícil manutenção, pois somente equipes especializadas possuem o conhecimento técnico para efetuar reparos.
 
-		O trabalho proposto busca criar um protótipo de uma luva embarcada com sensor de flexão, microcontrolador e transmissor de dados. O sistema deve possuir um conjunto de software e hardware que seja mais flexível em relação à outros produtos. Permitindo que o usuário tenha liberdade de realizar modificações que se adaptem às suas necessidades. 
+		O trabalho proposto busca criar um protótipo de uma luva embarcada com sensor de flexão, microcontrolador e transmissor de dados. O sistema deve possuir um conjunto de software e hardware que seja mais flexível em relação à outros produtos, permitindo que o usuário tenha liberdade de realizar modificações que se adaptem às suas necessidades. 
 
 		Um dos componentes em maior número e de maior custo em projetos de luvas como essa, são os sensores de flexão. Portanto esse trabalho também propõe avaliar a viabilidade de um sistema transdutor de flexão inspirado no movimento dos músculos e tendões da mão. Esse sensor deverá ser composto de materiais de baixo custo e de fácil acesso.
 
@@ -606,11 +606,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		\section{Introdução}
 
-		Ao longo dos últimos anos, diversos trabalhos estão sendo realizados para mensurar os movimentos da mão e estes possuem as mais variadas motivações. A pesquisa de \cite{daeholee2009vision}, por exemplo, criou um controle remoto baseado na abertura dos dedos. O sistema processa imagens de uma câmera em busca de comandos pré-configurados que respondem a abertura de dedos mão. Ou seja, em sua pesquisa é possível usar a mão como controle remoto. Além disso, existem trabalhos como o de \cite{solanki2013sign} e de \cite{anbarasi2013deafmute} que buscam traduzir gestos das mãos em palavras, buscando assim facilitar a comunicação de surdos e/ou mudos com outras pessoas. Já \cite{kumar2012hci} busca uma interação humano-computador através do uso de uma luva, nesse trabalho o autor demonstra que é possível realizar ações no computador, como desenhar ou manipular objetos tridimencionais, através de movimentos da mão pré-determinados.
+		Ao longo dos últimos anos, diversos trabalhos estão sendo realizados para mensurar os movimentos da mão e estes possuem as mais variadas motivações. A pesquisa de \cite{daeholee2009vision}, por exemplo, criou um controle remoto baseado na abertura dos dedos. O sistema processa imagens de uma câmera em busca de comandos pré-configurados que respondem a abertura de dedos da mão. Ou seja, mostrou-se a possibilidade de usar os movimentos da mão como um meio para controle remoto. Além disso, existem trabalhos como \cite{solanki2013sign} e \cite{anbarasi2013deafmute} que buscam traduzir gestos das mãos em palavras, buscando assim facilitar a comunicação de surdos e/ou mudos com outras pessoas. Já \cite{kumar2012hci} buscam uma interação humano-computador através do uso de uma luva. Nesse trabalho o autor demonstra que é possível realizar ações no computador, como desenhar ou manipular objetos tridimencionais, através de movimentos da mão pré-determinados.
 
-		Dentre os produtos que ficaram famosos usando o movimentos das mãos para controle, estão as luvas \textit{Data Glove} e a \textit{Power Glove}, ambas criadas nos anos 80. A primeira, foi desenvolvida por volta de 1986 e era usada para controlar um supercomputador, mas também foi utilizada pela \textit{NASA (National Aeronautics and Space Administration)} para controlar robôs. Logo depois, por volta de 1987, uma licença foi comprada para desenvolver uma outra versão da luva, só que seria para uso do público em geral. Então, finalmente em 1989, através de uma parceria entre as empresas Mattel, Nintendo e AGE, foi lançada a \textit{Power Glove} que serviria para controlar jogos de videogames. \cite{dana1989powerglove}.
+		Dentre os produtos que ficaram famosos usando o movimentos das mãos para controle, estão as luvas \textit{Data Glove} e a \textit{Power Glove}, ambas criadas nos anos 80. A primeira, foi desenvolvida por volta de 1986 e era usada para controlar um supercomputador, mas também foi utilizada pela \textit{NASA (National Aeronautics and Space Administration)} para controlar robôs. Logo depois, por volta de 1987, uma licença foi comprada para desenvolver uma outra versão da luva, só que seria para uso do público em geral. Então, finalmente em 1989, através de uma parceria entre as empresas Mattel, Nintendo e AGE, foi lançada a \textit{Power Glove} que serviria para controlar jogos de videogames \cite{dana1989powerglove}.
 
-		Entre os demais sistemas que buscam mensurar flexão e extensão dos dedos estão o de \cite{syed2012armcontroller} e o de \cite{michela2013rehab}. Estes e outros trabalhos, incluindo o trabalho proposto, nos quais utilizam luvas para auxiliar a captura dos movimentos dos dedos, costumam ter um bloco de funcionamento parecido ao da figura \ref{Fig:flowchart1}.
+		Entre os demais sistemas que buscam mensurar flexão e extensão dos dedos estão \cite{syed2012armcontroller} e \cite{michela2013rehab}. Estes e outros trabalhos, incluindo o trabalho proposto, nos quais utilizam luvas para auxiliar a captura dos movimentos dos dedos, costumam ter um bloco de funcionamento parecido ao da figura \ref{Fig:flowchart1}.
 
 
 		\begin{figure}[h!]
@@ -652,7 +652,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 %  		\label{Fig:hand-tendon-flex1}
 %		\end{figure}
 
-		Existem pesquisas inspiradas nessa biomecânica. \cite{hyunki2015exoglove}, por exemplo, mostra o funcionamento  da \textit{Exo-Glove}, que é uma luva que auxilia o movimento dos dedos da mão de pessoas que sofreram alguma paralisia na região. O sistema rotea tendões artificiais (cabos de aço) vindos de um módulo atuador, passando por um suporte próximo ao pulso, por correias de tecido e chegando até os dedos. Usando esse aparato, os movimentos de flexão e extensão dos dedos são auxiliados pelos cabos, tornando estes movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
+		Existem pesquisas inspiradas nessa biomecânica. Em \cite{hyunki2015exoglove}, por exemplo, mostra-se o funcionamento  da \textit{Exo-Glove}, que é uma luva que auxilia o movimento dos dedos da mão de pessoas que sofreram alguma paralisia na região. O sistema rotea tendões artificiais (cabos de aço) vindos de um módulo atuador, passando por um suporte próximo ao pulso, por correias de tecido e chegando até os dedos. Usando esse aparato, os movimentos de flexão e extensão dos dedos são auxiliados pelos cabos, tornando estes movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
 
 %		\begin{figure}[h!]
 %			\centering
@@ -697,7 +697,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Por volta da década de 80 surgiram os primeiros microcontroladores, dispositivos com memória RAM (\textit{Ramdon Access Memory}), ROM (\textit{Read Only Memory}), clock interno, E/S (Entrada e Saída), entre outros. Por conta dessas características, os microcontroladores permitiram que projetos de dispositivos inteligentes se tornassem mais simples. Eles eram chamados por muitas vezes de computadores em um único chip \cite{pereiramicrocontroladores}. 
 
-		No trabalho de \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, consegue trabalhar na faixa de tensão requerida pelo projeto, consume pouca energia e juntamente ao transceptor MAX 1412 é capaz de diminuir a complexidade de transmissão, além de outras características. Já em \cite{anbarasi2013deafmute}, o microcontrolador ATmega 328 é utilizado para mostrar uma saída de texto em uma pequena tela LCD e juntamente ao chip TTS256 converter esse texto em som.
+		Em \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, consegue trabalhar na faixa de tensão requerida pelo projeto, consume pouca energia e juntamente ao transceptor MAX 1412 é capaz de diminuir a complexidade de transmissão, além de outras características. Já em \cite{anbarasi2013deafmute}, o microcontrolador ATmega 328 é utilizado para mostrar uma saída de texto em uma pequena tela LCD e juntamente ao chip TTS256 converter esse texto em som.
 
 		Existem ainda, soluções que buscam facilitar o uso do microcontrolador. o Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor ou pressionamento de um botão. Pode transformar essas entradas em saídas como a ativação de um motor ou a publicação de algo online. Essa placa pode ser programada usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite} 
 
@@ -823,10 +823,8 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 %		\subsection{Flexão e Extensão dos Dedos}
 
-		Após as polias e o fio de náilon serem devidamente embarcados na luva juntamente ao potenciõmetro, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado. Porém, após a flexão do dedo, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais.
-		
-		Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico durante o movimento de flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. Figura \ref{Fig:glove-flex-and-extend2} (a).
-		
+		Após as polias e o fio de náilon serem devidamente embarcados na luva juntamente ao potenciômetro, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado. Porém, após a flexão do dedo, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais.
+		Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico durante o movimento de flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. Figura \ref{Fig:glove-flex-and-extend2} (a).		
 		Quando há o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso acontece enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro. Demonstrado na figura \ref{Fig:glove-flex-and-extend2} (b)
 		
 
@@ -1093,7 +1091,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 %		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
 
 
-		\section{Assembling}
+		\section{Montagem do protótipo}
 
 		\subsection{Transdutor de Flexão}
 
@@ -1101,7 +1099,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		As polias plásticas são feitas a partir de pequenos pedaços de hastes flexíveis com algodão nas pontas. Sendo que apenas a parte plástica foi aproveitada enquanto que o algodão foi descartado.
 
-		O material da linha que movimenta os cursores dos potenciômetro é náilon. Isso porque, nos testes, ela apresentou boa resistência e durabilidade, além de aparentar ter pouca ou nenhuma elasticidade para a aplicação.
+		O material da linha que movimenta os cursores dos potenciômetro é náilon por sua boa resistência e durabilidade, além de aparentar ter pouca ou nenhuma elasticidade para a aplicação.
 
 		Utilizando a luva escolhida com o dorso voltado para cima, as polias plásticas foram costuradas ao longo dos dedos. Uma das extremidades de cada fio de náilon foi presa na ponta de cada um dos dedos, enquanto que o restante do fio passava por dentro das polias plásticas. A outra extremidade do fio de náilon seria amarrada ao cursor do potenciômetro quando a PCB fosse incluída na luva. A figura \ref{Fig:glove-wire-pot1} demostra o resultado esperado para um dos dedos da luva.
 
@@ -1123,7 +1121,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente  em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
 
-			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
+			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$\,mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
 
 			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery} (a).
 
