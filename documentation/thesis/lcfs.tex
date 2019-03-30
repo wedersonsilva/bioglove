@@ -466,7 +466,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 	\item[LED]\textit{Light-Emitting Diode}
 	\item[LiPo]\textit{Lithium-ion Polymer}
 	\item[$mAh$]Mili ampere hora
-	\item[$Mhz$]Megahertz
+	\item[$MHz$]Megahertz
 	\item[mm]Milímetro
 	\item[PCI]Placa de Circuito Impresso
 	\item[PVC]\textit{Polyvinyl Chloride}	
@@ -720,7 +720,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		Em \cite{michela2013rehab}, a transmissão de sinal é realizada via rádio frequência, com o auxílio de um transceptor. Um transceptor é um sistema no qual estão presentes tanto o transmissor quanto o receptor de sinal em um mesmo módulo \cite{scott2017transceiver}.
 
-		Outra opção para usar transmissão em rádio frequência é usar o receptor e o transmissor separadamente. No trabalho proposto usa-se o módulo RF (Rádio Frequência) 433 Mhz, composto por um par que contém um transmissor (modelo XY-FST) e um receptor (modelo XY-MK-5V), ambos mostrados na figura \ref{Fig:tx-rx1}. O par opera com modulação AM (\textit{Amplitude Modulation}) e é considerado uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou entre outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada \cite{institutodigitalrf}.
+		Outra opção para usar transmissão em rádio frequência é usar o receptor e o transmissor separadamente. No trabalho proposto usa-se o módulo RF (Rádio Frequência) 433 MHz, composto por um par que contém um transmissor (modelo XY-FST) e um receptor (modelo XY-MK-5V), ambos mostrados na figura \ref{Fig:tx-rx1}. O par opera com modulação AM (\textit{Amplitude Modulation}) e é considerado uma alternativa para projetos de baixo custo que queiram usar comunicação sem fio entre microcontroladores Arduino ou entre outros. O par de módulos pode alcançar até 200 metros sem obstáculos, usando antenas e dependendo da tensão aplicada \cite{institutodigitalrf}.
 
 
 		\begin{figure}[h!]
@@ -1115,21 +1115,21 @@ in many projects, the glove's cost become high because of technology chosen to m
 			
 			\subsection{Escolha de componentes}	
 
-			O sistema de processamento e transmissão de sinal embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema dever ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
+			O sistema de processamento e transmissão de sinal embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema deve ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
 
 			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
 
 			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente  em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
 
-			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$\,mm$ x 13$mm$, resistência máxima de 5k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
+			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$\,mm$ x 13$\,mm$, resistência máxima de 5$\,$k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
 
 			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery} (a).
 
-			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$mm$ x 17$mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
+			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$\,mm$ x 17$\,mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
 
-			Para transmitir e receber o sinal, foi escolhido o par de RF 433$Mhz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
+			Para transmitir e receber o sinal, foi escolhido o par de RF 433$\,MHz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
 
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$mAh$, 7.4$V$ de tensão nominal e ocupa um espaço de 45$mm$ x 12.5$mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7.4$\,V$ de tensão nominal e ocupa um espaço de 45$\,mm$ x 12.5$\,mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
 
 
 	\begin{figure}[!htb]
@@ -1150,7 +1150,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			\subsection{Posicionamento de componentes}
 
-			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) deveria ser de aproximadamente 72$mm$ x 58$mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
+			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) deveria ser de aproximadamente 72$\,mm$ x 58$\,mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
 
 		\begin{figure}[h!]
 			\centering
@@ -1163,7 +1163,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			\subsection{Placa Embarcada}
 
-			Os primeiros experimentos de ligação e testes entre os componentes foram realizados ainda em protoborad. Inicialmente, um simples programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
+			Os primeiros experimentos de ligação e testes entre os componentes foram realizados ainda em protoboard. Inicialmente, um programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
 
 			O passo seguinte foi utilizar o software gratuito Kicad para desenhar o esquemático da placa. Posteriormente, o Kicad ainda possibilita projetar uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada mostrados na figura \ref{Fig:schematic-and-PCB}.
 
@@ -1236,7 +1236,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		O primeiro teste a ser realizado foi o teste de sensibilidade do sistema. Sendo este um sensor de flexão, faz-se necessário mensurar a quantidade máxima de posições capturadas em um movimento. Diversos trabalhos utilizam sensores flex comerciais para realizar a captura de movimentos. O desempenho de um desses trabalhos foi utilizado como referência.
 %		\section{Sensor Flex}
 
-		Os sensores de flexão comerciais, mais conhecidos como sensores flex, são resistores analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor. \cite{solanki2013sign}. A figura \ref{Fig:flex-sensor1} mostra um sensor flex da fabricante Spectra Symbol.
+		Os sensores de flexão comerciais, mais conhecidos como sensores flex, são resistores analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor \cite{solanki2013sign}. A figura \ref{Fig:flex-sensor1} mostra um sensor flex da fabricante Spectra Symbol.
 
 	\begin{figure}[!h]
 		\centering
@@ -1247,7 +1247,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 	\end{figure}
 
 
-		A figura \ref{Fig:hand-flexsensor-degrees1} demonstra uso do sensor flex comercial em um dos pontos de flexão do dedo, a figura também mostra o que seriam os graus de torção do sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
+		A figura \ref{Fig:hand-flexsensor-degrees1} demonstra uso do sensor flex comercial em um dos pontos de flexão do dedo. A figura também mostra o que seriam os graus de torção do sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
 
 
 	\begin{figure}[!h]
@@ -1289,24 +1289,26 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		No desempenho geral, vemos que usando o sensor bioinspirado produzido, conseguimos captar um número superior de posições de flexão nos dedos anelar e médio, em comparação ao sensor flex de 4,5 polegadas. Em comparação com modelo de 2,5 polegadas, o sensor bioinspirado se sai melhor em 3 dos 4 dedos.
 
-		Dessa forma é possível afirmar que, neste teste, o sensor bioinspirado conseguiu desempenho equiparado a um sensor comercial. Sendo que um sensor flex comercial possui um custo relativamente superior. Portanto, em projetos de baixo custo, respeitando suas limitações e requisitos do projeto, seria viável usar o sistema bioinspirado desenvolvido.
+		Dessa forma é possível afirmar que, neste teste, o sensor bioinspirado conseguiu desempenho equiparado a um sensor comercial. Sendo que um sensor flex comercial possui um custo relativamente superior.
+
+
 
 
 			\section{Bateria}
 
-			A mobilidade é um dos requisitos do projeto desenvolvido. Por conta desse fato, a alimentação é da luva é feita por uma pequena bateria LiPo. Outros projetos de luvas móveis também usam baterias ou até mesmo pilhas. O desempenho de cada projeto varia de acordo com o hardware implementado e a capacidade da fonte de alimentação. Nessa seção, o desempenho da bateria da luva produzida será comparado ao de outros projetos.
+			A mobilidade é um dos requisitos do projeto desenvolvido. Por conta desse fato, a alimentação da luva é feita por uma pequena bateria LiPo. Outros projetos de luvas móveis também usam baterias ou até mesmo pilhas. O desempenho de cada projeto varia de acordo com o hardware implementado e a capacidade da fonte de alimentação. Nessa seção, o desempenho da bateria da luva produzida será comparado ao de outros projetos.
 
 			A luva comercial Data Glove 5 Ultra da fabricante 5DT Inc. possui sensores de flexão baseados em fibra óptica. Esse produto pode ser utilizado para modelagem 3D e animação em programas de computador. Utiliza tecnologia de comunição sem fio Bluetooth e seu datasheet afirma um desempenho da bateria recarregável aproximado de 8 horas \cite{5DT-ultra}. Por ser um produto fechado, as características de sua bateria não são conhecidas.
 
-			O trabalho de \cite{michela2013rehab} busca, através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. A luva é embarcada sensores flex comerciais, um microcontrolador e um transmissor de rádio frequência. Toda a eletrônica é alimentada por uma bateria em formato de botão com tensão nominal de 3V e capacidade de 1000mAh. Obteve desempenho aproximado de uma semana.
+			O trabalho de \cite{michela2013rehab} busca, através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. A luva é embarcada com sensores flex comerciais, um microcontrolador e um transmissor de rádio frequência. Toda a eletrônica é alimentada por uma bateria em formato de botão com tensão nominal de 3$\,$V e capacidade de 1000$\,$mAh. Obteve desempenho aproximado de uma semana.
 			
-			Uma luva de baixo custo foi desenvolvida por \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. A unidade possui sensores de flexão e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4 e pilhas AA alcalinas. A capacidade dessas pilhas não foi definida no trabalho, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870 mAh cada. Usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas.
+			Uma luva de baixo custo foi desenvolvida por \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. A unidade possui sensores de flexão e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4 e pilhas AA alcalinas. A capacidade dessas pilhas não foi definida no trabalho, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870$\,$mAh cada. Usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas.
 
-			A luva bioinspirada desse trabalho está equipada com cinco potenciômetros, um microcontrolador Arduino, um transmissor de rádio frequência 433 Mhz e uma bateria LiPo com tensão nominal de 7,4V e capacidade de 300 mAh. Essa bateria, apesar de possuir tensão nominal de 7,4V, consegue alcançar uma tensão de até 8,4V quando está totalmente carregada \cite{buchmann2016batteries}.
+			A luva bioinspirada desse trabalho está equipada com cinco potenciômetros, um microcontrolador Arduino, um transmissor de rádio frequência 433$\,$MHz e uma bateria LiPo com tensão nominal de 7,4$\,$V e capacidade de 300$\,$mAh. Essa bateria, apesar de possuir tensão nominal de 7,4$\,$V, consegue alcançar uma tensão de até 8,4$\,$V quando está totalmente carregada \cite{buchmann2016batteries}.
 
-			É recomendado alimentar o Arduíno Nano com tensões entre 7V e 12V \cite{arduinopowerrange}, portanto, a luva funciona como esperado até o momento em que a tensão da bateria descarrega no limite de 7V. Em caso de uso contínuo a partir desse valor, o microcontrolador passa a reiniciar constantemente impossibilitando seu uso até que a bateria seja recarregada ou substituída.
+			É recomendado alimentar o Arduíno Nano com tensões entre 7$\,$V e 12$\,$V \cite{arduinopowerrange}, portanto, a luva funciona como esperado até o momento em que a tensão da bateria descarrega no limite de 7$\,$V. Em caso de uso contínuo a partir desse valor, o microcontrolador passa a reiniciar constantemente impossibilitando seu uso até que a bateria seja recarregada ou substituída.
 
-			Para realizar o teste de desempenho da bateria, um módulo receptor junto a um Arduino foram conectados a um computador. Uma bateria recém carregada completamente, foi conectada à luva e o momento inicial foi marcado. O sistema transmissor da luva ficou ligado enviando sinais continuamente. Durante o teste, a tensão da bateria foi monitorada em intervalos regulares. Após um período de aproximadamente 10 horas a tensão da bateria chegou ao limite definido de 7V e o teste foi encerrado.
+			Para realizar o teste de desempenho da bateria, um módulo receptor junto a um Arduino foram conectados a um computador. Uma bateria recém carregada completamente, foi conectada à luva e o momento inicial foi marcado. O sistema transmissor da luva ficou ligado enviando sinais continuamente. Durante o teste, a tensão da bateria foi monitorada em intervalos regulares. Após um período de aproximadamente 10 horas a tensão da bateria chegou ao limite definido de 7$\,$V e o teste foi encerrado.
 
 			A tabela \ref{Tab:battery-range} resume o desempenho dos dispositivos explicitados nesta seção.
 
@@ -1325,9 +1327,9 @@ in many projects, the glove's cost become high because of technology chosen to m
 			Luva 								& Alimentação			&	Capacidade	& Duração	\\
       \midrule                                            					
 			Data Glove 5				& Não definida		& Não definida& 8 horas \\
-			Luva sensorizada 		& 1 bateria-botão	& 1000 mAh		& 1 semana\\
-			Luva de baixo custo & 2 pilhas AA			& 5740 mAh		& 60 horas\\
-			BioGlove						& 1 LiPo 7,4V			& 300 mAh			&	10 horas\\	
+			Luva sensorizada 		& 1 bateria-botão	& 1000$\,$mAh		& 1 semana\\
+			Luva de baixo custo & 2 pilhas AA			& 5740$\,$mAh		& 60 horas\\
+			BioGlove						& 1 LiPo 7,4$\,$V			& 300$\,$mAh			&	10 horas\\	
       \midrule
     \end{tabular}
 		\label{Tab:battery-range}
@@ -1348,11 +1350,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			Na seção a seguir, o alcance de projetos de luvas que utilizam a tecnologia Bluetooth serão comparados ao método de transmissão via rádio frequência utilizado na luva bioinspirada produzida.
 
-			O datasheet da luva comercial Data Glove 5 Utra ofecere também informações sobre sua tecnologia de transmissão. Nele está especificado que atrelado à luva há um kit de transmissão sem fio, no qual suporta até duas luvas simultaneamente. A tecnologia de transmissão Bluetooth utilizada, trabalha na faixa de 2,4 GHz e consegue um alcance de até 20 metros \cite{5DT-ultra}.
+			O datasheet da luva comercial Data Glove 5 Utra ofecere também informações sobre sua tecnologia de transmissão. Nele está especificado que atrelado à luva há um kit de transmissão sem fio, no qual suporta até duas luvas simultaneamente. A tecnologia de transmissão Bluetooth utilizada, trabalha na faixa de 2,4$\,$GHz e consegue um alcance de até 20 metros \cite{5DT-ultra}.
 
-			PERCRO Dataglove é uma luva baseada no funcionamento de goniômetros, que são instrumentos responsáveis por medir o deslocamento angular relativo. Desenvolvida no trabalho de \cite{rodriguez2007goniometric}, possui dois sensores em cada dedo, um microcontrolador embarcado e um módulo Bluetooth 2,4 GHz que chega a alcançar uma comunicação satisfatória de até 10 metros.
+			PERCRO Dataglove é uma luva baseada no funcionamento de goniômetros, que são instrumentos responsáveis por medir o deslocamento angular relativo. Desenvolvida no trabalho de \cite{rodriguez2007goniometric}, possui dois sensores em cada dedo, um microcontrolador embarcado e um módulo Bluetooth 2,4$\,$GHz que chega a alcançar uma comunicação satisfatória de até 10 metros.
 
-			A BioGlove está equipada com um par de módulos de transmissão e recepção de rádio frequência que trabalham na faixa de 433 Mhz. De acordo com o manual da biblioteca que auxilia o uso desse equipamento, usando uma antena de 17 cm em ambos os módulos, o alcance pode ser de até 150 metros em campo aberto \cite{virtualwiremanual}. Entretanto, por conta da fragilidade dos módulos, foi possível soldar apenas uma antena no transmissor.
+			A BioGlove está equipada com um par de módulos de transmissão e recepção de rádio frequência que trabalham na faixa de 433$\,$MHz. De acordo com o manual da biblioteca que auxilia o uso desse equipamento, usando uma antena de 17$\,$cm em ambos os módulos, o alcance pode ser de até 150 metros em campo aberto \cite{virtualwiremanual}. Entretanto, por conta da fragilidade dos módulos, foi possível soldar apenas uma antena no transmissor.
 
 			Durante os testes de alcance de transmissão, o módulo receptor foi conectado a um computador que ficou fixo em um local. O transmissor embarcado na luva foi sendo distanciado aos poucos enquanto que a resposta do receptor era constantemente verificada. Por volta de 7,5 metros a resposta do transmissor começou a falhar e o teste foi encerrado nesta marca. A tabela \ref{Tab:wifi-range} resume o desempenho de alcance apresentado pelas três luvas.
 
@@ -1363,9 +1365,9 @@ in many projects, the glove's cost become high because of technology chosen to m
       \midrule
 			Luva 						& Tecnologia			&	Faixa		& Alcance		\\
       \midrule                                            					
-			Data Glove 5		& Bluetooth				& 2,4 Ghz	& 20 metros	\\
-			PERCRO Dataglove& Bluetooth				& 2,4 Ghz	& 10 metros	\\
-			BioGlove				& Rádio Frequência& 433 Mhz	&	7,5 metros\\	
+			Data Glove 5		& Bluetooth				& 2,4$\,$GHz	& 20 metros	\\
+			PERCRO Dataglove& Bluetooth				& 2,4$\,$GHz	& 10 metros	\\
+			BioGlove				& Rádio Frequência& 433$\,$MHz	&	7,5 metros\\	
       \midrule
     \end{tabular}
 		\label{Tab:wifi-range}
@@ -1410,7 +1412,6 @@ in many projects, the glove's cost become high because of technology chosen to m
 		\begin{itemize}
 			\item Investigar o uso de uma luva composta de material mais resistente do que o algodão.
 			\item Usar um número maior de polias para guiar o fio utilizado.
-			\item Instalar antenas melhores em ambos os módulos de rádio frequência.
 			\item Investigar o uso de módulos com outras tecnologias de transmissão de dados.
 			\item Trocar a bateria por outra de maior capacidade.
 			\item Usar potênciometros de menor tamanho e menor resistência elétrica.

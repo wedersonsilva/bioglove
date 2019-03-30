@@ -1,17 +1,17 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.17)  18 FEB 2019 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.7)  30 MAR 2019 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **lcfs.tex
 (./lcfs.tex
-LaTeX2e <2018-04-01> patch level 5
+LaTeX2e <2018-12-01>
 (/usr/share/texmf-dist/tex/latex/abntex2/abntex2.cls
 Document Class: abntex2 2018/11/24 v-1.9.7 abnTeX2
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/memoir/memoir.cls
-Document Class: memoir 2018/04/04 v3.7g configurable book, report, article docu
+Document Class: memoir 2018/12/12 v3.7h configurable book, report, article docu
 ment class
 \onelineskip=\skip41
 \lxvchars=\skip42
@@ -127,11 +127,25 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \beforePoemTitleskip=\skip108
 \midPoemTitleskip=\skip109
 \afterPoemTitleskip=\skip110
+
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen107
+\ar@mcellbox=\box27
 \extrarowheight=\dimen108
 \NC@list=\toks15
 \extratabsurround=\skip111
 \backup@length=\skip112
+\ar@cellbox=\box28
+)
+(/usr/share/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/tools/delarray.sty
+Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 \TX@col@width=\dimen109
 \TX@old@table=\dimen110
 \TX@old@col=\dimen111
@@ -139,6 +153,7 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \TX@delta=\dimen113
 \TX@cols=\count100
 \TX@ftn=\toks16
+)
 \heavyrulewidth=\dimen114
 \lightrulewidth=\dimen115
 \cmidrulewidth=\dimen116
@@ -165,7 +180,7 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \crtok=\toks17
 \@mincolumnwidth=\dimen127
 \c@newflo@tctr=\count109
-\mem@margin@floatbox=\box26
+\mem@margin@floatbox=\box29
 \@contcwidth=\skip115
 \@contindw=\skip116
 \abovecaptionskip=\skip117
@@ -177,8 +192,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \subfloatlabelskip=\skip123
 \subfloatcapmargin=\dimen128
 \c@@contsubnum=\count110
-\m@mscap@capbox=\box27
-\m@mscap@fbox=\box28
+\m@mscap@capbox=\box30
+\m@mscap@fbox=\box31
 \sidecapsep=\dimen129
 \sidecapwidth=\dimen130
 \m@m@tempdima=\dimen131
@@ -190,8 +205,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \afterepigraphskip=\skip125
 \epigraphwidth=\skip126
 \epigraphrule=\skip127
-LaTeX Info: Redefining \em on input line 7578.
-LaTeX Info: Redefining \emph on input line 7586.
+LaTeX Info: Redefining \em on input line 7592.
+LaTeX Info: Redefining \emph on input line 7600.
 \tocentryskip=\skip128
 \tocbaseline=\skip129
 \cftparskip=\skip130
@@ -274,8 +289,8 @@ LaTeX Info: Redefining \emph on input line 7586.
 \FrameRule=\dimen145
 \FrameSep=\dimen146
 \c@cp@cntr=\count119
-LaTeX Info: Redefining \: on input line 12100.
-LaTeX Info: Redefining \! on input line 12102.
+LaTeX Info: Redefining \: on input line 12114.
+LaTeX Info: Redefining \! on input line 12116.
 \c@ism@mctr=\count120
 \c@xsm@mctr=\count121
 \c@csm@mctr=\count122
@@ -302,15 +317,12 @@ LaTeX Info: Redefining \! on input line 12102.
 \cfttablenumwidth=\skip184
 Package abstract [2008/07/23] emulated by memoir.
 Package appendix [2008/07/23] emulated by memoir.
-Package array [2016/10/06] emulated by memoir.
 Package booktabs [2016/05/16] emulated by memoir.
 Package ccaption [2008/07/23] emulated by memoir.
 Package changepage [2008/07/23] emulated by memoir.
 Package chngcntr [2008/07/23] emulated by memoir.
 Package chngpage [2008/07/23] emulated by memoir.
 Package crop emulated by memoir.
-Package dcolumn [2008/07/23] emulated by memoir.
-Package delarray [2014/10/28] emulated by memoir.
 Package enumerate [2008/07/23] emulated by memoir.
 Package epigraph [2008/07/23] emulated by memoir.
 Package ifmtarg [2008/07/23] emulated by memoir.
@@ -327,7 +339,6 @@ Package patchcmd [2008/07/23] emulated by memoir.
 Package setspace [2008/07/23] emulated by memoir.
 Package shortvrb [2008/07/23] emulated by memoir.
 Package showidx [2008/07/23] emulated by memoir.
-Package tabularx [2016/02/03] emulated by memoir.
 Package titleref [2008/07/23] emulated by memoir.
 Package titling [2008/07/23] emulated by memoir.
 Package tocbibind [2008/07/23] emulated by memoir.
@@ -342,7 +353,7 @@ LaTeX Info: Redefining \MakeTextUppercase on input line 47.
 LaTeX Info: Redefining \MakeTextLowercase on input line 50.
 )
 (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -402,7 +413,7 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count139
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -411,33 +422,33 @@ Now handling font encoding PD1 ...
 (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4535.
-Package hyperref Info: Link nesting OFF on input line 4540.
-Package hyperref Info: Hyper index ON on input line 4543.
-Package hyperref Info: Plain pages OFF on input line 4550.
-Package hyperref Info: Backreferencing OFF on input line 4555.
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4788.
+Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count141
 
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5141.
+LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen148
 \Fld@menulength=\count142
 \Field@Width=\dimen149
 \Fld@charsize=\dimen150
-Package hyperref Info: Hyper figures OFF on input line 6396.
-Package hyperref Info: Link nesting OFF on input line 6401.
-Package hyperref Info: Hyper index ON on input line 6404.
-Package hyperref Info: backreferencing OFF on input line 6411.
-Package hyperref Info: Link coloring OFF on input line 6416.
-Package hyperref Info: Link coloring with OCG OFF on input line 6421.
-Package hyperref Info: PDF/A mode OFF on input line 6426.
-LaTeX Info: Redefining \ref on input line 6466.
-LaTeX Info: Redefining \pageref on input line 6470.
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
 \Hy@abspage=\count143
 \c@Item=\count144
 \c@Hfootnote=\count145
@@ -451,7 +462,7 @@ ass
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count148
 \c@bookmark@seq@number=\count149
 
@@ -496,24 +507,25 @@ Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 Package babel Info: Making " an active character on input line 145.
 ))
 (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2018/11/30 v3.6 Customized lists
+Package: enumitem 2019/02/04 v3.8 Customized lists
 \labelindent=\skip186
 \enit@outerparindent=\dimen152
 \enit@toks=\toks23
-\enit@inbox=\box29
-\enitdp@description=\count153
+\enit@inbox=\box32
+\enit@count@id=\count153
+\enitdp@description=\count154
 )
 (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count154
-\calc@Bcount=\count155
+\calc@Acount=\count155
+\calc@Bcount=\count156
 \calc@Adimen=\dimen153
 \calc@Bdimen=\dimen154
 \calc@Askip=\skip187
 \calc@Bskip=\skip188
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count156
+\calc@Ccount=\count157
 \calc@Cskip=\skip189
 )
 
@@ -536,17 +548,17 @@ Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
-\c@abntex@bookmarkcounter=\count157
+\c@abntex@bookmarkcounter=\count158
 \cftlastnumwidth=\skip190
 \chapternamenumlength=\skip191
 \ABNTEXcitacaorecuo=\skip192
-\c@alineasi=\count158
-\c@alineasii=\count159
-\enitdp@alineas=\count160
-\c@subalineasi=\count161
-\enitdp@subalineas=\count162
-\c@incisosi=\count163
-\enitdp@incisos=\count164
+\c@alineasi=\count159
+\c@alineasii=\count160
+\enitdp@alineas=\count161
+\c@subalineasi=\count162
+\enitdp@subalineas=\count163
+\c@incisosi=\count164
+\enitdp@incisos=\count165
 \ABNTEXsignwidth=\skip193
 \ABNTEXsignthickness=\skip194
 \ABNTEXsignskip=\skip256
@@ -586,14 +598,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 (/usr/share/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
 )
@@ -634,11 +646,11 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks26
-\MT@count=\count165
+\MT@count=\count166
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen157
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count166
+\MT@listname@count=\count167
 
 (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
@@ -676,29 +688,29 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen163
 \caption@hangindent=\dimen164
 )
-\c@caption@flags=\count167
-\c@ContinuedFloat=\count168
+\c@caption@flags=\count168
+\c@ContinuedFloat=\count169
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count169
+\c@KVtest=\count170
 \sf@farskip=\skip258
 \sf@captopadj=\dimen165
 \sf@capskip=\skip259
 \sf@nearskip=\skip260
-\c@subfigure=\count170
-\c@subfigure@save=\count171
-\c@subtable=\count172
-\c@subtable@save=\count173
+\c@subfigure=\count171
+\c@subfigure@save=\count172
+\c@subtable=\count173
+\c@subtable@save=\count174
 \sf@top=\skip261
 \sf@bottom=\skip262
 )
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count174
+\c@float@type=\count175
 \float@exts=\toks27
-\float@box=\box30
+\float@box=\box33
 \@float@everytoks=\toks28
-\@floatcapt=\box31
+\@floatcapt=\box34
 )
 (/usr/share/texmf-dist/tex/latex/listofsymbols/listofsymbols.sty
 Package: listofsymbols 
@@ -713,7 +725,7 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \old@parindent=\skip267
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip268
 
 For additional information on amsmath, use the `?' option.
@@ -732,30 +744,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count175
-LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count176
-\leftroot@=\count177
-LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count178
-\DOTSCASE@=\count179
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box32
-\strutbox@=\box33
+\inf@bad=\count176
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count177
+\leftroot@=\count178
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count179
+\DOTSCASE@=\count180
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box35
+\strutbox@=\box36
 \big@size=\dimen168
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count180
-\c@MaxMatrixCols=\count181
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
 \dotsspace@=\muskip11
-\c@parentequation=\count182
-\dspbrk@lvl=\count183
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
 \tag@help=\toks30
-\row@=\count184
-\column@=\count185
-\maxfields@=\count186
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
 \andhelp@=\toks31
 \eqnshift@=\dimen169
 \alignsep@=\dimen170
@@ -767,28 +779,28 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip269
 \multlinetaggap=\skip270
 \mathdisplay@stack=\toks33
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count187
-\lst@gtempboxa=\box34
+\lst@mode=\count188
+\lst@gtempboxa=\box37
 \lst@token=\toks34
-\lst@length=\count188
+\lst@length=\count189
 \lst@currlwidth=\dimen175
-\lst@column=\count189
-\lst@pos=\count190
+\lst@column=\count190
+\lst@pos=\count191
 \lst@lostspace=\dimen176
 \lst@width=\dimen177
-\lst@newlines=\count191
-\lst@lineno=\count192
+\lst@newlines=\count192
+\lst@lineno=\count193
 \lst@maxwidth=\dimen178
 
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count193
-\lst@skipnumbers=\count194
-\lst@framebox=\box35
+\c@lstnumber=\count194
+\lst@skipnumbers=\count266
+\lst@framebox=\box38
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -796,29 +808,29 @@ File: listings.cfg 2018/09/02 1.7 listings configuration
 Package: listings 2018/09/02 1.7 (Carsten Heinz)
 
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@colwidth=\skip271
-\multirow@cntb=\count266
+\multirow@cntb=\count267
 \multirow@dima=\skip272
 \bigstrutjot=\dimen179
 )
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018-11-19 L3 programming layer (loader) 
+Package: expl3 2019-02-15 L3 programming layer (loader) 
 
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018-11-19 L3 programming layer (code)
-\c_max_int=\count267
-\l_tmpa_int=\count268
-\l_tmpb_int=\count269
-\g_tmpa_int=\count270
-\g_tmpb_int=\count271
-\g__kernel_prg_map_int=\count272
-\c_log_iow=\count273
-\l_iow_line_count_int=\count274
-\l__iow_line_target_int=\count275
-\l__iow_one_indent_int=\count276
-\l__iow_indent_int=\count277
+Package: expl3 2019-02-15 L3 programming layer (code)
+\c_max_int=\count268
+\l_tmpa_int=\count269
+\l_tmpb_int=\count270
+\g_tmpa_int=\count271
+\g_tmpb_int=\count272
+\g__kernel_prg_map_int=\count273
+\c_log_iow=\count274
+\l_iow_line_count_int=\count275
+\l__iow_line_target_int=\count276
+\l__iow_one_indent_int=\count277
+\l__iow_indent_int=\count278
 \c_zero_dim=\dimen180
 \c_max_dim=\dimen181
 \l_tmpa_dim=\dimen182
@@ -837,83 +849,83 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count278
-\l__intarray_loop_int=\count279
+\l_keys_choice_int=\count279
+\l__intarray_loop_int=\count280
 \c__intarray_sp_dim=\dimen186
-\g__intarray_font_int=\count280
-\c__fp_leading_shift_int=\count281
-\c__fp_middle_shift_int=\count282
-\c__fp_trailing_shift_int=\count283
-\c__fp_big_leading_shift_int=\count284
-\c__fp_big_middle_shift_int=\count285
-\c__fp_big_trailing_shift_int=\count286
-\c__fp_Bigg_leading_shift_int=\count287
-\c__fp_Bigg_middle_shift_int=\count288
-\c__fp_Bigg_trailing_shift_int=\count289
-\c__kernel_randint_max_int=\count290
-\g__fp_array_int=\count291
-\l__fp_array_loop_int=\count292
-\l__sort_length_int=\count293
-\l__sort_min_int=\count294
-\l__sort_top_int=\count295
-\l__sort_max_int=\count296
-\l__sort_true_max_int=\count297
-\l__sort_block_int=\count298
-\l__sort_begin_int=\count299
-\l__sort_end_int=\count300
-\l__sort_A_int=\count301
-\l__sort_B_int=\count302
-\l__sort_C_int=\count303
-\l__tl_analysis_normal_int=\count304
-\l__tl_analysis_index_int=\count305
-\l__tl_analysis_nesting_int=\count306
-\l__tl_analysis_type_int=\count307
-\l__regex_internal_a_int=\count308
-\l__regex_internal_b_int=\count309
-\l__regex_internal_c_int=\count310
-\l__regex_balance_int=\count311
-\l__regex_group_level_int=\count312
-\l__regex_mode_int=\count313
-\c__regex_cs_in_class_mode_int=\count314
-\c__regex_cs_mode_int=\count315
-\l__regex_catcodes_int=\count316
-\l__regex_default_catcodes_int=\count317
-\c__regex_catcode_D_int=\count318
-\c__regex_catcode_S_int=\count319
-\c__regex_catcode_L_int=\count320
-\c__regex_catcode_O_int=\count321
-\c__regex_catcode_A_int=\count322
-\c__regex_all_catcodes_int=\count323
-\l__regex_show_lines_int=\count324
-\l__regex_min_state_int=\count325
-\l__regex_max_state_int=\count326
-\l__regex_left_state_int=\count327
-\l__regex_right_state_int=\count328
-\l__regex_capturing_group_int=\count329
-\l__regex_min_pos_int=\count330
-\l__regex_max_pos_int=\count331
-\l__regex_curr_pos_int=\count332
-\l__regex_start_pos_int=\count333
-\l__regex_success_pos_int=\count334
-\l__regex_curr_char_int=\count335
-\l__regex_curr_catcode_int=\count336
-\l__regex_last_char_int=\count337
-\l__regex_case_changed_char_int=\count338
-\l__regex_curr_state_int=\count339
-\l__regex_step_int=\count340
-\l__regex_min_active_int=\count341
-\l__regex_max_active_int=\count342
-\l__regex_replacement_csnames_int=\count343
-\l__regex_match_count_int=\count344
-\l__regex_min_submatch_int=\count345
-\l__regex_submatch_int=\count346
-\l__regex_zeroth_submatch_int=\count347
-\g__regex_trace_regex_int=\count348
-\c_empty_box=\box36
-\l_tmpa_box=\box37
-\l_tmpb_box=\box38
-\g_tmpa_box=\box39
-\g_tmpb_box=\box40
+\g__intarray_font_int=\count281
+\c__fp_leading_shift_int=\count282
+\c__fp_middle_shift_int=\count283
+\c__fp_trailing_shift_int=\count284
+\c__fp_big_leading_shift_int=\count285
+\c__fp_big_middle_shift_int=\count286
+\c__fp_big_trailing_shift_int=\count287
+\c__fp_Bigg_leading_shift_int=\count288
+\c__fp_Bigg_middle_shift_int=\count289
+\c__fp_Bigg_trailing_shift_int=\count290
+\c__kernel_randint_max_int=\count291
+\g__fp_array_int=\count292
+\l__fp_array_loop_int=\count293
+\l__sort_length_int=\count294
+\l__sort_min_int=\count295
+\l__sort_top_int=\count296
+\l__sort_max_int=\count297
+\l__sort_true_max_int=\count298
+\l__sort_block_int=\count299
+\l__sort_begin_int=\count300
+\l__sort_end_int=\count301
+\l__sort_A_int=\count302
+\l__sort_B_int=\count303
+\l__sort_C_int=\count304
+\l__tl_analysis_normal_int=\count305
+\l__tl_analysis_index_int=\count306
+\l__tl_analysis_nesting_int=\count307
+\l__tl_analysis_type_int=\count308
+\l__regex_internal_a_int=\count309
+\l__regex_internal_b_int=\count310
+\l__regex_internal_c_int=\count311
+\l__regex_balance_int=\count312
+\l__regex_group_level_int=\count313
+\l__regex_mode_int=\count314
+\c__regex_cs_in_class_mode_int=\count315
+\c__regex_cs_mode_int=\count316
+\l__regex_catcodes_int=\count317
+\l__regex_default_catcodes_int=\count318
+\c__regex_catcode_D_int=\count319
+\c__regex_catcode_S_int=\count320
+\c__regex_catcode_L_int=\count321
+\c__regex_catcode_O_int=\count322
+\c__regex_catcode_A_int=\count323
+\c__regex_all_catcodes_int=\count324
+\l__regex_show_lines_int=\count325
+\l__regex_min_state_int=\count326
+\l__regex_max_state_int=\count327
+\l__regex_left_state_int=\count328
+\l__regex_right_state_int=\count329
+\l__regex_capturing_group_int=\count330
+\l__regex_min_pos_int=\count331
+\l__regex_max_pos_int=\count332
+\l__regex_curr_pos_int=\count333
+\l__regex_start_pos_int=\count334
+\l__regex_success_pos_int=\count335
+\l__regex_curr_char_int=\count336
+\l__regex_curr_catcode_int=\count337
+\l__regex_last_char_int=\count338
+\l__regex_case_changed_char_int=\count339
+\l__regex_curr_state_int=\count340
+\l__regex_step_int=\count341
+\l__regex_min_active_int=\count342
+\l__regex_max_active_int=\count343
+\l__regex_replacement_csnames_int=\count344
+\l__regex_match_count_int=\count345
+\l__regex_min_submatch_int=\count346
+\l__regex_submatch_int=\count347
+\l__regex_zeroth_submatch_int=\count348
+\g__regex_trace_regex_int=\count349
+\c_empty_box=\box39
+\l_tmpa_box=\box40
+\l_tmpb_box=\box41
+\g_tmpa_box=\box42
+\g_tmpb_box=\box43
 \l__box_top_dim=\dimen187
 \l__box_bottom_dim=\dimen188
 \l__box_left_dim=\dimen189
@@ -922,8 +934,8 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__box_bottom_new_dim=\dimen192
 \l__box_left_new_dim=\dimen193
 \l__box_right_new_dim=\dimen194
-\l__box_internal_box=\box41
-\l__coffin_internal_box=\box42
+\l__box_internal_box=\box44
+\l__coffin_internal_box=\box45
 \l__coffin_internal_dim=\dimen256
 \l__coffin_offset_x_dim=\dimen257
 \l__coffin_offset_y_dim=\dimen258
@@ -931,14 +943,17 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__coffin_y_dim=\dimen260
 \l__coffin_x_prime_dim=\dimen261
 \l__coffin_y_prime_dim=\dimen262
-\c_empty_coffin=\box43
-\l__coffin_aligned_coffin=\box44
-\l__coffin_aligned_internal_coffin=\box45
-\l_tmpa_coffin=\box46
-\l_tmpb_coffin=\box47
-\l__coffin_display_coffin=\box48
-\l__coffin_display_coord_coffin=\box49
-\l__coffin_display_pole_coffin=\box50
+\c_empty_coffin=\box46
+\l__coffin_aligned_coffin=\box47
+\l__coffin_aligned_internal_coffin=\box48
+\l_tmpa_coffin=\box49
+\l_tmpb_coffin=\box50
+\g_tmpa_coffin=\box51
+\g_tmpb_coffin=\box52
+\c__coffin_empty_coffin=\box53
+\l__coffin_display_coffin=\box54
+\l__coffin_display_coord_coffin=\box55
+\l__coffin_display_pole_coffin=\box56
 \l__coffin_display_offset_dim=\dimen263
 \l__coffin_display_x_dim=\dimen264
 \l__coffin_display_y_dim=\dimen265
@@ -950,23 +965,26 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen270
 \l__coffin_scaled_total_height_dim=\dimen271
 \l__coffin_scaled_width_dim=\dimen272
-\l__seq_internal_a_int=\count349
-\l__seq_internal_b_int=\count350
+\l__seq_internal_a_int=\count350
+\l__seq_internal_b_int=\count351
 )
 (/usr/share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2018-11-19 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count351
+File: l3pdfmode.def 2019-02-15 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count352
 ))
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2018-10-17 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count352
-\g__xparse_grabber_int=\count353
-\l__xparse_m_args_int=\count354
-\l__xparse_mandatory_args_int=\count355
-\l__xparse_v_nesting_int=\count356
+\l__xparse_current_arg_int=\count353
+\g__xparse_grabber_int=\count354
+\l__xparse_m_args_int=\count355
+\l__xparse_mandatory_args_int=\count356
+\l__xparse_v_nesting_int=\count357
 )
-Package: lipsum 2018/11/24 v2.1a 150 paragraphs of Lorem Ipsum dummy text
-)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
 (/usr/share/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2016/05/21 v1.39 Bibliographical back referencing
 )
@@ -976,8 +994,8 @@ Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
 (/usr/share/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip279
 \ABCIauxlen=\skip280
-\c@ABCIaux=\count357
-\c@ABCImax=\count358
+\c@ABCIaux=\count358
+\c@ABCImax=\count359
 
 (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -1015,7 +1033,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 178.
  (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box51
+\AtBeginShipoutBox=\box57
 Package hyperref Info: Link coloring ON on input line 178.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1024,7 +1042,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count359
+\c@section@level=\count360
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1032,23 +1050,23 @@ LaTeX Info: Redefining \nameref on input line 178.
 LaTeX Info: Redefining \ref on input line 178.
 LaTeX Info: Redefining \pageref on input line 178.
 LaTeX Info: Redefining \nameref on input line 178.
-\myptabbox=\box52
+\myptabbox=\box58
 \myptabboxwidth=\skip282
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 178.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count360
+\scratchcounter=\count361
 \scratchdimen=\dimen273
-\scratchbox=\box53
-\nofMPsegments=\count361
-\nofMParguments=\count362
+\scratchbox=\box59
+\nofMPsegments=\count362
+\nofMParguments=\count363
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count363
+\MPscratchCnt=\count364
 \MPscratchDim=\dimen274
-\MPnumerator=\count364
-\makeMPintoPDFobject=\count365
+\MPnumerator=\count365
+\makeMPintoPDFobject=\count366
 \everyMPtoPDFconversion=\toks37
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1087,7 +1105,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count366
+\c@lstlisting=\count367
 <figures/ufpa_logo.jpg, id=4, 136.1085pt x 172.0026pt>
 File: figures/ufpa_logo.jpg Graphic file (type jpg)
 <use figures/ufpa_logo.jpg>
@@ -1374,19 +1392,18 @@ Package pdftex.def Info: ./figures/glove-wire-pot1.png  used on input line 1110
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30]
-<./figures/potentiometer3.jpg, id=520, 1010.77625pt x 950.55125pt>
+[30] [31 <./figures/glove-wire-pot1.png>]
+<./figures/potentiometer3.jpg, id=527, 1010.77625pt x 950.55125pt>
 File: ./figures/potentiometer3.jpg Graphic file (type jpg)
 <use ./figures/potentiometer3.jpg>
 Package pdftex.def Info: ./figures/potentiometer3.jpg  used on input line 1141.
 
 (pdftex.def)             Requested size: 156.49014pt x 147.15987pt.
-<./figures/battery1.jpg, id=521, 2494.31876pt x 1429.34pt>
+<./figures/battery1.jpg, id=528, 2494.31876pt x 1429.34pt>
 File: ./figures/battery1.jpg Graphic file (type jpg)
 <use ./figures/battery1.jpg>
 Package pdftex.def Info: ./figures/battery1.jpg  used on input line 1145.
 (pdftex.def)             Requested size: 241.84842pt x 138.58038pt.
- [31 <./figures/glove-wire-pot1.png>]
 <figures/size-glove-module1.png, id=530, 603.25375pt x 515.9275pt>
 File: figures/size-glove-module1.png Graphic file (type png)
 <use figures/size-glove-module1.png>
@@ -1473,22 +1490,22 @@ AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `lcfs.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1478.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1478.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1479.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1479.
  (./lcfs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1478.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1478.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1479.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1479.
 
 Package rerunfilecheck Info: File `lcfs.brf' has not changed.
-(rerunfilecheck)             Checksum: AA7F6C554B9ECAA399FD89418906CFA8;3134.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1478.
+(rerunfilecheck)             Checksum: 7A626D9B5C103D64B8E480766BFC4473;3134.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1479.
  ) 
 Here is how much of TeX's memory you used:
- 26429 strings out of 492639
- 442522 string characters out of 6135496
- 860518 words of memory out of 5000000
- 29638 multiletter control sequences out of 15000+600000
- 627181 words of font info for 151 fonts, out of 8000000 for 9000
+ 26728 strings out of 492616
+ 448722 string characters out of 6135178
+ 864860 words of memory out of 5000000
+ 29943 multiletter control sequences out of 15000+600000
+ 627310 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1029b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1506,10 +1523,10 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (46 pages, 4980480 bytes).
+Output written on lcfs.pdf (46 pages, 4980799 bytes).
 PDF statistics:
- 1006 PDF objects out of 1200 (max. 8388607)
- 882 compressed objects within 9 object streams
+ 1007 PDF objects out of 1200 (max. 8388607)
+ 883 compressed objects within 9 object streams
  213 named destinations out of 1000 (max. 500000)
  36894 words of extra memory for PDF output out of 42996 (max. 10000000)
 
