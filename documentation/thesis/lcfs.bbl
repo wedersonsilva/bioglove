@@ -35,6 +35,12 @@ ISBN 9780968211847.}
 ISBN 9781884932144. Dispon{\'\i}vel em:
   \url{https://books.google.com.br/books?id=woWnJvaROXQC}.}
 
+\bibitem[Companies 2019]{velcro2019about}
+\abntrefinfo{Companies}{COMPANIES}{2019}
+{COMPANIES, V. \emph{About the VELCRO brand}. 2019.
+Acessado em: 05/04/2018.
+Dispon{\'\i}vel em: \url{https://www.velcro.com/about-us/our-brand/}.}
+
 \bibitem[Corp 2014]{flexsensor}
 \abntrefinfo{Corp}{CORP}{2014}
 {CORP, S.~S. \emph{DataSheet Flex Sensor Resistive}. 2014.
@@ -103,6 +109,12 @@ Dispon{\'\i}vel em: \url{https://www.arduino.cc/en/Guide/Introduction}.}
 Acessado em: 06/01/2019.
 Dispon{\'\i}vel em: \url{https://store.arduino.cc/usa/arduino-nano}.}
 
+\bibitem[Livingstone 2014]{livingstone2014greece}
+\abntrefinfo{Livingstone}{LIVINGSTONE}{2014}
+{LIVINGSTONE, R. \emph{The legacy of Greece}. Lulu.com, 2014.
+ISBN 9781291708516. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=YU9TBgAAQBAJ}.}
+
 \bibitem[Ltda. 2019]{multilogicaflexsensor}
 \abntrefinfo{Ltda.}{LTDA.}{2019}
 {LTDA., M.~C. de~Materiais Elétricos~e S. \emph{{Sensor Flex 11,4 cm |
@@ -157,6 +169,14 @@ Dispon{\'\i}vel em:
 ISBN 9788571947276. Dispon{\'\i}vel em:
   \url{https://books.google.com.br/books?id=hqBUPgAACAAJ}.}
 
+\bibitem[Pfeifer, Lungarella e lida 2007]{pfeifer2007biorobot}
+\abntrefinfo{Pfeifer, Lungarella e lida}{PFEIFER; LUNGARELLA; LIDA}{2007}
+{PFEIFER, R.; LUNGARELLA, M.; LIDA, F. Self-organization, embodiment, and
+  biologically inspired robotics. In:  \emph{Science}. [s.n.], 2007. v.~318, p.
+  1088--1093.
+ISSN 10.1126/science.1145803. Dispon{\'\i}vel em:
+  \url{http://science.sciencemag.org/content/318/5853/1088}.}
+
 \bibitem[Pruzansky e Pruzansky 2018]{drmarksurgery}
 \abntrefinfo{Pruzansky e Pruzansky}{PRUZANSKY; PRUZANSKY}{2018}
 {PRUZANSKY, M.~E.; PRUZANSKY, J.~S. \emph{{Flexor Tendon Pulley System Injury -
@@ -182,6 +202,12 @@ Dispon{\'\i}vel em: \url{https://www.ijset.com/publication/v2/057.pdf}.}
   1185--1190.
 ISSN 1944-9437. Dispon{\'\i}vel em:
   \url{https://ieeexplore.ieee.org/document/4415259}.}
+
+\bibitem[Rosheim 2006]{rosheim2006leonardo}
+\abntrefinfo{Rosheim}{ROSHEIM}{2006}
+{ROSHEIM, M. \emph{Leonardo's Lost Robots}. Springer Berlin Heidelberg, 2006.
+ISBN 9783540284406. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=64Ax\\_hfiXDIC}.}
 
 \bibitem[Simone et al. 2004]{simone2004lowcost}
 \abntrefinfo{Simone et al.}{SIMONE et al.}{2004}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.7)  30 MAR 2019 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.7)  5 APR 2019 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,127 +1231,136 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 
 ]) [13]
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 562.
+LaTeX Warning: Command \textregistered invalid in math mode on input line 564.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 562.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 564.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 562.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 564.
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 562.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 564.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 562.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 564.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 564.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 564.
+
+
+LaTeX Warning: Command \textcircled invalid in math mode on input line 564.
 
 [14
 
 
-] [15]
-<./figures/flowchart1.png, id=280, 581.92406pt x 356.0803pt>
+] [15] [16]
+<./figures/flowchart1.png, id=298, 581.92406pt x 356.0803pt>
 File: ./figures/flowchart1.png Graphic file (type png)
 <use ./figures/flowchart1.png>
-Package pdftex.def Info: ./figures/flowchart1.png  used on input line 619.
+Package pdftex.def Info: ./figures/flowchart1.png  used on input line 631.
 (pdftex.def)             Requested size: 284.52756pt x 174.10597pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16
+[17
 
 ]
-<./figures/hand-tendon-flex1.png, id=294, 556.32843pt x 323.70938pt>
+<./figures/hand-tendon-flex1.png, id=312, 556.32843pt x 323.70938pt>
 File: ./figures/hand-tendon-flex1.png Graphic file (type png)
 <use ./figures/hand-tendon-flex1.png>
-Package pdftex.def Info: ./figures/hand-tendon-flex1.png  used on input line 63
-8.
+Package pdftex.def Info: ./figures/hand-tendon-flex1.png  used on input line 65
+0.
 (pdftex.def)             Requested size: 227.62204pt x 132.4451pt.
-<./figures/exo-glove-installed1.png, id=295, 554.82281pt x 522.45187pt>
+<./figures/exo-glove-installed1.png, id=313, 554.82281pt x 522.45187pt>
 File: ./figures/exo-glove-installed1.png Graphic file (type png)
 <use ./figures/exo-glove-installed1.png>
 Package pdftex.def Info: ./figures/exo-glove-installed1.png  used on input line
- 642.
+ 654.
 (pdftex.def)             Requested size: 170.71652pt x 160.75464pt.
- [17 <./figures/flowchart1.png> <./figures/hand-tendon-flex1.png> <./figures/ex
+ [18 <./figures/flowchart1.png> <./figures/hand-tendon-flex1.png> <./figures/ex
 o-glove-installed1.png>]
-<./figures/potentiometer1.png, id=328, 569.87906pt x 216.81pt>
+<./figures/potentiometer1.png, id=348, 569.87906pt x 216.81pt>
 File: ./figures/potentiometer1.png Graphic file (type png)
 <use ./figures/potentiometer1.png>
-Package pdftex.def Info: ./figures/potentiometer1.png  used on input line 688.
+Package pdftex.def Info: ./figures/potentiometer1.png  used on input line 700.
 (pdftex.def)             Requested size: 341.43306pt x 129.89842pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18]
-Overfull \hbox (11.10225pt too wide) in paragraph at lines 700--701
+[19]
+Overfull \hbox (11.10225pt too wide) in paragraph at lines 712--713
 []\T1/lmr/m/n/12 (-20) Em ([][]BORGHETTI; SAR-DINI; SER-PEL-LONI[][], [][]2013[
 ][][]) o mi-cro-con-tro-la-dor HC9S08QB8,
  []
 
-<./figures/arduino-nano1.jpg, id=351, 2568.59625pt x 1099.10625pt>
+<./figures/arduino-nano1.jpg, id=369, 2568.59625pt x 1099.10625pt>
 File: ./figures/arduino-nano1.jpg Graphic file (type jpg)
 <use ./figures/arduino-nano1.jpg>
-Package pdftex.def Info: ./figures/arduino-nano1.jpg  used on input line 709.
+Package pdftex.def Info: ./figures/arduino-nano1.jpg  used on input line 721.
 (pdftex.def)             Requested size: 341.43306pt x 146.09209pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19 <./figures/potentiometer1.png>]
-<./figures/tx-rx1.jpg, id=375, 2568.59625pt x 1186.4325pt>
+[20 <./figures/potentiometer1.png>]
+<./figures/tx-rx1.jpg, id=393, 2568.59625pt x 1186.4325pt>
 File: ./figures/tx-rx1.jpg Graphic file (type jpg)
 <use ./figures/tx-rx1.jpg>
-Package pdftex.def Info: ./figures/tx-rx1.jpg  used on input line 729.
+Package pdftex.def Info: ./figures/tx-rx1.jpg  used on input line 741.
 (pdftex.def)             Requested size: 341.43306pt x 157.6994pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20 <./figures/arduino-nano1.jpg>] [21 <./figures/tx-rx1.jpg>]
-<./figures/moore-biomechanic.png, id=387, 171.64125pt x 240.9pt>
+[21 <./figures/arduino-nano1.jpg>] [22 <./figures/tx-rx1.jpg>]
+<./figures/moore-biomechanic.png, id=405, 171.64125pt x 240.9pt>
 File: ./figures/moore-biomechanic.png Graphic file (type png)
 <use ./figures/moore-biomechanic.png>
-Package pdftex.def Info: ./figures/moore-biomechanic.png  used on input line 76
-4.
+Package pdftex.def Info: ./figures/moore-biomechanic.png  used on input line 77
+6.
 (pdftex.def)             Requested size: 142.26378pt x 199.66757pt.
-<./figures/glove-wire-pot2.png, id=388, 423.08063pt x 657.2053pt>
+<./figures/glove-wire-pot2.png, id=406, 423.08063pt x 657.2053pt>
 File: ./figures/glove-wire-pot2.png Graphic file (type png)
 <use ./figures/glove-wire-pot2.png>
-Package pdftex.def Info: ./figures/glove-wire-pot2.png  used on input line 768.
+Package pdftex.def Info: ./figures/glove-wire-pot2.png  used on input line 780.
 
 (pdftex.def)             Requested size: 113.81102pt x 176.78593pt.
-<./figures/hand-wire-steady1.png, id=395, 286.06876pt x 141.52875pt>
+<./figures/hand-wire-steady1.png, id=413, 286.06876pt x 141.52875pt>
 File: ./figures/hand-wire-steady1.png Graphic file (type png)
 <use ./figures/hand-wire-steady1.png>
-Package pdftex.def Info: ./figures/hand-wire-steady1.png  used on input line 80
-0.
+Package pdftex.def Info: ./figures/hand-wire-steady1.png  used on input line 81
+2.
 (pdftex.def)             Requested size: 227.62204pt x 112.61415pt.
-<./figures/hand-wire-flex1.png, id=396, 216.81pt x 140.77594pt>
+<./figures/hand-wire-flex1.png, id=414, 216.81pt x 140.77594pt>
 File: ./figures/hand-wire-flex1.png Graphic file (type png)
 <use ./figures/hand-wire-flex1.png>
-Package pdftex.def Info: ./figures/hand-wire-flex1.png  used on input line 804.
+Package pdftex.def Info: ./figures/hand-wire-flex1.png  used on input line 816.
 
 (pdftex.def)             Requested size: 170.71652pt x 110.85303pt.
- [22
+ [23
 
-] [23 <./figures/moore-biomechanic.png> <./figures/glove-wire-pot2.png> <./figu
+] [24 <./figures/moore-biomechanic.png> <./figures/glove-wire-pot2.png> <./figu
 res/hand-wire-steady1.png> <./figures/hand-wire-flex1.png>]
-<./figures/glove-wire-flex2.png, id=417, 236.38312pt x 115.93312pt>
+<./figures/glove-wire-flex2.png, id=436, 236.38312pt x 115.93312pt>
 File: ./figures/glove-wire-flex2.png Graphic file (type png)
 <use ./figures/glove-wire-flex2.png>
-Package pdftex.def Info: ./figures/glove-wire-flex2.png  used on input line 837
+Package pdftex.def Info: ./figures/glove-wire-flex2.png  used on input line 849
 .
 (pdftex.def)             Requested size: 184.9429pt x 90.70695pt.
-<./figures/glove-wire-extend2.png, id=418, 285.31593pt x 126.4725pt>
+<./figures/glove-wire-extend2.png, id=437, 285.31593pt x 126.4725pt>
 File: ./figures/glove-wire-extend2.png Graphic file (type png)
 <use ./figures/glove-wire-extend2.png>
 Package pdftex.def Info: ./figures/glove-wire-extend2.png  used on input line 8
-41.
+53.
 (pdftex.def)             Requested size: 213.39566pt x 94.59167pt.
- [24 <./figures/glove-wire-flex2.png> <./figures/glove-wire-extend2.png>]
+ [25 <./figures/glove-wire-flex2.png> <./figures/glove-wire-extend2.png>]
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
@@ -1361,7 +1370,7 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 892.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 904.
 
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -1371,110 +1380,110 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [25] [26] [27]
-<./figures/glove-control-positions1.png, id=482, 792.71156pt x 226.59656pt>
+ [26] [27] [28]
+<./figures/glove-control-positions1.png, id=500, 792.71156pt x 226.59656pt>
 File: ./figures/glove-control-positions1.png Graphic file (type png)
 <use ./figures/glove-control-positions1.png>
 Package pdftex.def Info: ./figures/glove-control-positions1.png  used on input 
-line 1030.
+line 1042.
 (pdftex.def)             Requested size: 398.33858pt x 113.86504pt.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1036.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1048.
 
- [28 <./figures/glove-control-positions1.png>] [29]
-<./figures/glove-wire-pot1.png, id=512, 389.20406pt x 249.18094pt>
+ [29 <./figures/glove-control-positions1.png>] [30]
+<./figures/glove-wire-pot1.png, id=531, 389.20406pt x 249.18094pt>
 File: ./figures/glove-wire-pot1.png Graphic file (type png)
 <use ./figures/glove-wire-pot1.png>
-Package pdftex.def Info: ./figures/glove-wire-pot1.png  used on input line 1110
+Package pdftex.def Info: ./figures/glove-wire-pot1.png  used on input line 1122
 .
 (pdftex.def)             Requested size: 199.16928pt x 127.51784pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30] [31 <./figures/glove-wire-pot1.png>]
-<./figures/potentiometer3.jpg, id=527, 1010.77625pt x 950.55125pt>
+[31] [32 <./figures/glove-wire-pot1.png>]
+<./figures/potentiometer3.jpg, id=545, 1010.77625pt x 950.55125pt>
 File: ./figures/potentiometer3.jpg Graphic file (type jpg)
 <use ./figures/potentiometer3.jpg>
-Package pdftex.def Info: ./figures/potentiometer3.jpg  used on input line 1141.
+Package pdftex.def Info: ./figures/potentiometer3.jpg  used on input line 1153.
 
 (pdftex.def)             Requested size: 156.49014pt x 147.15987pt.
-<./figures/battery1.jpg, id=528, 2494.31876pt x 1429.34pt>
+<./figures/battery1.jpg, id=546, 2494.31876pt x 1429.34pt>
 File: ./figures/battery1.jpg Graphic file (type jpg)
 <use ./figures/battery1.jpg>
-Package pdftex.def Info: ./figures/battery1.jpg  used on input line 1145.
+Package pdftex.def Info: ./figures/battery1.jpg  used on input line 1157.
 (pdftex.def)             Requested size: 241.84842pt x 138.58038pt.
-<figures/size-glove-module1.png, id=530, 603.25375pt x 515.9275pt>
+<figures/size-glove-module1.png, id=548, 603.25375pt x 515.9275pt>
 File: figures/size-glove-module1.png Graphic file (type png)
 <use figures/size-glove-module1.png>
-Package pdftex.def Info: figures/size-glove-module1.png  used on input line 115
-8.
+Package pdftex.def Info: figures/size-glove-module1.png  used on input line 117
+0.
 (pdftex.def)             Requested size: 199.16928pt x 170.33533pt.
- [32 <./figures/potentiometer3.jpg> <./figures/battery1.jpg> <./figures/size-gl
+ [33 <./figures/potentiometer3.jpg> <./figures/battery1.jpg> <./figures/size-gl
 ove-module1.png>]
-<./figures/schematic-glove-module1.png, id=537, 547.04375pt x 545.03625pt>
+<./figures/schematic-glove-module1.png, id=556, 547.04375pt x 545.03625pt>
 File: ./figures/schematic-glove-module1.png Graphic file (type png)
 <use ./figures/schematic-glove-module1.png>
 Package pdftex.def Info: ./figures/schematic-glove-module1.png  used on input l
-ine 1176.
+ine 1188.
 (pdftex.def)             Requested size: 184.9429pt x 184.26198pt.
-<./figures/PCB-glove-module1.png, id=538, 646.415pt x 533.995pt>
+<./figures/PCB-glove-module1.png, id=557, 646.415pt x 533.995pt>
 File: ./figures/PCB-glove-module1.png Graphic file (type png)
 <use ./figures/PCB-glove-module1.png>
 Package pdftex.def Info: ./figures/PCB-glove-module1.png  used on input line 11
-80.
+92.
 (pdftex.def)             Requested size: 213.39566pt x 176.28407pt.
-<./figures/phenolic-glove-module1.jpg, id=541, 889.3225pt x 754.82pt>
+<./figures/phenolic-glove-module1.jpg, id=560, 889.3225pt x 754.82pt>
 File: ./figures/phenolic-glove-module1.jpg Graphic file (type jpg)
 <use ./figures/phenolic-glove-module1.jpg>
 Package pdftex.def Info: ./figures/phenolic-glove-module1.jpg  used on input li
-ne 1193.
+ne 1205.
 (pdftex.def)             Requested size: 199.16928pt x 169.04398pt.
-<./figures/glove-module-ready1.jpg, id=542, 940.51375pt x 813.0375pt>
+<./figures/glove-module-ready1.jpg, id=561, 940.51375pt x 813.0375pt>
 File: ./figures/glove-module-ready1.jpg Graphic file (type jpg)
 <use ./figures/glove-module-ready1.jpg>
 Package pdftex.def Info: ./figures/glove-module-ready1.jpg  used on input line 
-1197.
+1209.
 (pdftex.def)             Requested size: 199.16928pt x 172.16959pt.
-<figures/glove-ready1.jpg, id=543, 3909.60625pt x 2427.0675pt>
+<figures/glove-ready1.jpg, id=562, 3909.60625pt x 2427.0675pt>
 File: figures/glove-ready1.jpg Graphic file (type jpg)
 <use figures/glove-ready1.jpg>
-Package pdftex.def Info: figures/glove-ready1.jpg  used on input line 1212.
+Package pdftex.def Info: figures/glove-ready1.jpg  used on input line 1224.
 (pdftex.def)             Requested size: 398.33858pt x 247.27615pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33 <./figures/schematic-glove-module1.png> <./figures/PCB-glove-module1.png>]
-[34 <./figures/phenolic-glove-module1.jpg> <./figures/glove-module-ready1.jpg> 
+[34 <./figures/schematic-glove-module1.png> <./figures/PCB-glove-module1.png>]
+[35 <./figures/phenolic-glove-module1.jpg> <./figures/glove-module-ready1.jpg> 
 <./figures/glove-ready1.jpg>]
-<./figures/flex-sensor1.png, id=560, 887.315pt x 663.47874pt>
+<./figures/flex-sensor1.png, id=578, 887.315pt x 663.47874pt>
 File: ./figures/flex-sensor1.png Graphic file (type png)
 <use ./figures/flex-sensor1.png>
-Package pdftex.def Info: ./figures/flex-sensor1.png  used on input line 1244.
+Package pdftex.def Info: ./figures/flex-sensor1.png  used on input line 1256.
 (pdftex.def)             Requested size: 199.16928pt x 148.92194pt.
-<./figures/hand-flexsensor-degrees1.png, id=566, 593.21625pt x 187.45032pt>
+<./figures/hand-flexsensor-degrees1.png, id=584, 593.21625pt x 187.45032pt>
 File: ./figures/hand-flexsensor-degrees1.png Graphic file (type png)
 <use ./figures/hand-flexsensor-degrees1.png>
 Package pdftex.def Info: ./figures/hand-flexsensor-degrees1.png  used on input 
-line 1256.
+line 1268.
 (pdftex.def)             Requested size: 369.88582pt x 116.88441pt.
- [35
+ [36
 
- <./figures/flex-sensor1.png>] [36 <./figures/hand-flexsensor-degrees1.png>] [3
-7] [38] [39] [40] [41
+ <./figures/flex-sensor1.png>] [37 <./figures/hand-flexsensor-degrees1.png>] [3
+8] [39] [40] [41] [42
 
 ] (./lcfs.bbl (./lcfs.brf)
 \tf@brf=\write5
 \openout5 = `lcfs.brf'.
 
- [42]
+ [43]
 bibitemlist
-[43
+[44
 
-] [44]) (./lcfs.ind) 
+] [45]) (./lcfs.ind) 
 AED: lastpage setting LastPage
-[45]
+[46]
 \@syc=\write6
 \openout6 = `lcfs.syc'.
 
@@ -1490,22 +1499,22 @@ AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `lcfs.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1479.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1479.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1491.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1491.
  (./lcfs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1479.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1479.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1491.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1491.
 
 Package rerunfilecheck Info: File `lcfs.brf' has not changed.
-(rerunfilecheck)             Checksum: 7A626D9B5C103D64B8E480766BFC4473;3134.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1479.
+(rerunfilecheck)             Checksum: 58EF2CD0D2D3BEBEFDBC35720F6637C5;3412.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1491.
  ) 
 Here is how much of TeX's memory you used:
- 26728 strings out of 492616
- 448722 string characters out of 6135178
- 864860 words of memory out of 5000000
- 29943 multiletter control sequences out of 15000+600000
- 627310 words of font info for 152 fonts, out of 8000000 for 9000
+ 26771 strings out of 492616
+ 449701 string characters out of 6135178
+ 865678 words of memory out of 5000000
+ 29979 multiletter control sequences out of 15000+600000
+ 627439 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1029b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1523,10 +1532,10 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (46 pages, 4980799 bytes).
+Output written on lcfs.pdf (47 pages, 4985815 bytes).
 PDF statistics:
- 1007 PDF objects out of 1200 (max. 8388607)
- 883 compressed objects within 9 object streams
- 213 named destinations out of 1000 (max. 500000)
+ 1040 PDF objects out of 1200 (max. 8388607)
+ 914 compressed objects within 10 object streams
+ 218 named destinations out of 1000 (max. 500000)
  36894 words of extra memory for PDF output out of 42996 (max. 10000000)
 

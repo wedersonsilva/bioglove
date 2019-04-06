@@ -9,48 +9,48 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{14}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Contextualiza\IeC {\c c}\IeC {\~a}o}{14}{section.1.1}% 
-\contentsline {section}{\numberline {1.2}Estado da arte}{14}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Motiva\IeC {\c c}\IeC {\~a}o}{14}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{15}{section.1.4}% 
+\contentsline {section}{\numberline {1.2}Estado da arte}{15}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Motiva\IeC {\c c}\IeC {\~a}o}{15}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{16}{section.1.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{16}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{16}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{16}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Captura de movimentos}{18}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Potenci\IeC {\^o}metro}{18}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Microcontroladores}{19}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Transmiss\IeC {\~a}o de Sinal}{20}{section.2.6}% 
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{17}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{17}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{17}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Captura de movimentos}{19}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Potenci\IeC {\^o}metro}{19}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Microcontroladores}{20}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Transmiss\IeC {\~a}o de Sinal}{21}{section.2.6}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{22}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{22}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{22}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Transdutor de Flex\IeC {\~a}o}{22}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{23}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{24}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{24}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{25}{subsection.3.3.2}% 
-\contentsline {section}{\numberline {3.4}Ajustes}{26}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{26}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{26}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Remapeamento}{27}{subsection.3.4.3}% 
-\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{27}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{27}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{28}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{28}{subsection.3.5.3}% 
-\contentsline {section}{\numberline {3.6}Montagem do prot\IeC {\'o}tipo}{30}{section.3.6}% 
-\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{30}{subsection.3.6.1}% 
-\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{30}{subsection.3.6.2}% 
-\contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{32}{subsection.3.6.3}% 
-\contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{33}{subsection.3.6.4}% 
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{23}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{23}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Transdutor de Flex\IeC {\~a}o}{23}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{24}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{25}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{25}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{26}{subsection.3.3.2}% 
+\contentsline {section}{\numberline {3.4}Ajustes}{27}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{27}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{27}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Remapeamento}{28}{subsection.3.4.3}% 
+\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{28}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{28}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{29}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{29}{subsection.3.5.3}% 
+\contentsline {section}{\numberline {3.6}Montagem do prot\IeC {\'o}tipo}{31}{section.3.6}% 
+\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{31}{subsection.3.6.1}% 
+\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{31}{subsection.3.6.2}% 
+\contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{33}{subsection.3.6.3}% 
+\contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{34}{subsection.3.6.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{35}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{35}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Sensibilidade}{35}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Bateria}{37}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Alcance}{39}{section.4.4}% 
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{36}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{36}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Sensibilidade}{36}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Bateria}{38}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Alcance}{40}{section.4.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{41}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Trabalhos futuros}{42}{section.5.1}% 
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{42}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Trabalhos futuros}{43}{section.5.1}% 
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{43}{section*.36}% 
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{44}{section*.36}% 
