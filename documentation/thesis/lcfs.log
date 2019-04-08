@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.7)  6 APR 2019 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.7)  7 APR 2019 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1510,11 +1510,11 @@ Package rerunfilecheck Info: File `lcfs.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1491.
  ) 
 Here is how much of TeX's memory you used:
- 26771 strings out of 492616
- 449701 string characters out of 6135178
- 865678 words of memory out of 5000000
- 29979 multiletter control sequences out of 15000+600000
- 627439 words of font info for 153 fonts, out of 8000000 for 9000
+ 26772 strings out of 492616
+ 449716 string characters out of 6135178
+ 865692 words of memory out of 5000000
+ 29978 multiletter control sequences out of 15000+600000
+ 627540 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1029b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1532,7 +1532,7 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (47 pages, 4985805 bytes).
+Output written on lcfs.pdf (47 pages, 4985505 bytes).
 PDF statistics:
  1040 PDF objects out of 1200 (max. 8388607)
  914 compressed objects within 10 object streams

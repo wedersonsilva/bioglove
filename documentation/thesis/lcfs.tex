@@ -201,7 +201,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
  { \ABNTEXchapterfont 
  UNIVERSIDADE FEDERAL DO PARÁ\\
  INSTITUTO DE TECNOLOGIA\\
- FACULDADE DE ENGENHARIA ELÉTRICA E BIOMÉDICA\\}
+ FACULDADE DE ENGENHARIA DA COMPUTAÇÃO E TELECOMUNICAÇÕES\\}
    \vspace*{4.0cm}
  
  { \ABNTEXchapterfont\large
@@ -316,7 +316,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
 		4. EVM.
 		I. \imprimirorientador.
 		II. Universidade Federal do Pará.
-		III. Faculdade de Engenharia Elétrica e Biomédica.
+		III. Faculdade de Engenharia da Computação e Telecomunicações.
 		IV. \imprimirtitulo\\ 		
 	\end{minipage}}
 	\end{center}
@@ -685,7 +685,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		A \textit{Data Glove} usava fibra óptica e fotoresistores para saber as posições de cada dedo. De acordo com a flexão do sensor, o nível de luz que chegava ao fotoresistor variava indicando a posição atual. Já a \textit{Power Glove}, buscou reduzir custos e preferiu trocar essa tecnologia. Passou a usar placas com tintas que variavam suas propriedades condutivas quando torcidas \cite{dana1989powerglove}.
 
-		Neste trabalho, propo\~e-se criar um sistema inspirado na biomecâmica dos dedos. Esse sistema deve mensurar movimentos de flexão e extensão dos dedos usando um transdutor mecânico com funcionamento semelhante ao sistema de tendões que ocorre nas mãos. 
+%		Neste trabalho, propo\~e-se criar um sistema inspirado na biomecâmica dos dedos. Esse sistema deve mensurar movimentos de flexão e extensão dos dedos usando um transdutor mecânico com funcionamento semelhante ao sistema de tendões que ocorre nas mãos. 
 
 
 
@@ -1141,7 +1141,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			Para transmitir e receber o sinal, foi escolhido o par de RF 433$\,MHz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
 
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7.4$\,V$ de tensão nominal e ocupa um espaço de 45$\,mm$ x 12.5$\,mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de 45$\,mm$ x 12,5$\,mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
 
 
 	\begin{figure}[!htb]
@@ -1162,7 +1162,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			\subsection{Posicionamento de componentes}
 
-			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) deveria ser de aproximadamente 72$\,mm$ x 58$\,mm$. Isso para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, que é gratuito para os sistemas Linux, todos os componentes foram organizados dentro da placa baseados em suas dimensões aproximadas. Chegando ao \textit{layout} mostrado na figura \ref{Fig:size-glove-module1}.
+			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) deveria ser de aproximadamente 72$\,mm$ x 58$\,mm$, para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, todos os componentes foram organizados dentro da placa basendo-se nas suas dimensões aproximadas. O \textit{layout} final da placa é apresentado na figura \ref{Fig:size-glove-module1}.
 
 		\begin{figure}[h!]
 			\centering
@@ -1175,7 +1175,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			\subsection{Placa Embarcada}
 
-			Os primeiros experimentos de ligação e testes entre os componentes foram realizados ainda em protoboard. Inicialmente, um programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
+			Os primeiros experimentos de comportamento e ligação entre os componentes foram realizados ainda em protoboard. Inicialmente, um programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
 
 			O passo seguinte foi utilizar o software gratuito Kicad para desenhar o esquemático da placa. Posteriormente, o Kicad ainda possibilita projetar uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada mostrados na figura \ref{Fig:schematic-and-PCB}.
 
