@@ -561,26 +561,33 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Ainda na Grécia antiga, os pássaros com a sua capacidade natural de voar, serviram de base para um dos primeiros projetos bioinspirados de que se tem notícia. Acredita-se que por volta de 400 a.C., Archytas (430 - 360 a.C.) que foi um matemático e astrônomo, inventou uma pomba mecânica que deveria voar \cite{livingstone2014greece}. Leonardo Da Vinci (1452 - 1519 d.C.), provavelmente inspirado pelo projeto de Archytas, criou uma pomba mecânica que deslizava sobre um cabo ao mesmo tempo em que batia suas asas. Tempos depois, por volta do século XIX, um dispositivo muito parecido era vendido como brinquedo \cite{rosheim2006leonardo}.
 
-		Atualmente, Dentre os materiais bioinspirados mais famosos está a tecnologia VELCRO${\textregistered}$ que foi baseada em uma planta chamada Bardana (\textit{Arctium lappa}). Essa planta possui uma série de pequenos ganchos que grudam em alguns tecidos. Por conta desse comportamento, o VELCRO${\textregistered}$ é composto de duas partes, os ganchos e as voltas \cite{velcro2019about}. Especificamente na área da robótica, existe um robô em formato de salamandra que é capaz de se movimentar bem entre a água e a terra, há um pequeno robô inspirado na mosca que, devido ao seu formato, possui excelente decolagem vertical na hora do vôo. Existe ainda um robô que consegue escalar paredes através de um material adesivo que foi inspirado pela lagartixa \cite{pfeifer2007biorobot}. 
+		Atualmente, dentre os materiais bioinspirados mais famosos está a tecnologia VELCRO${\textregistered}$ que foi baseada em uma planta chamada Bardana (\textit{Arctium lappa}). Essa planta possui uma série de pequenos ganchos que grudam em alguns tecidos. Por conta desse comportamento, o VELCRO${\textregistered}$ é composto de duas partes, os ganchos e as voltas \cite{velcro2019about}. Especificamente na área da robótica, existe um robô em formato de salamandra que é capaz de se movimentar bem entre a água e a terra, há um pequeno robô inspirado na mosca que, devido ao seu formato, possui excelente decolagem vertical na hora do vôo. Existe ainda um robô que consegue escalar paredes através de um material adesivo que foi inspirado pela lagartixa \cite{pfeifer2007biorobot}. 
 
 		Contudo, ao longo dos anos, não somente os animais e plantas vem servindo de base para projetos de engenharia. O próprio Leonardo da Vinci, por exemplo, a partir dos seus estudos em corpos humanos dissecados, chegou a construir modelos mecânicos de músculos, juntas, braços, entre outros que foram usados em muitas de suas invenções \cite{rosheim2006leonardo}.
 		
-		Especificamente sobre a mão, sabemos que ela exerce uma importante função na interação do ser humano com diversas ferramentas do dia a dia, desde o uso de instrumentos de trabalho como o martelo, serrote e chave de fenda, até o ato de manipular a comida para se alimentar através do garfo e faca. Na área da tecnologia, muitos periféricos também necessitam da mão para serem controlados, é o caso do teclado do computador, do controle remoto da televisão e dos famosos tablets e smartphones.	Entretando, em aplicações de realidade virtual a imersão se torna ainda melhor quando são usados movimentos naturais do ser humano. Em um jogo de realidade virtual, por exemplo, será muito mais natural para o jogador alcançar um objeto virtual extendendo a sua mão, do que usar um \textit{joystick} para isso. Neste caso especificamente, o uso de uma luva embarcada com diversos sensores pode deixar a interação ainda mais real para o usuário. 
+		Especificamente sobre a mão, sabemos que ela exerce uma importante função na interação do ser humano com diversas ferramentas do dia a dia, desde o uso de instrumentos de trabalho como o martelo, serrote e a chave de fenda, até o ato de manipular a comida usando garfo e faca para se alimentar. Na área da tecnologia, muitos periféricos também necessitam da mão para serem controlados, é o caso do teclado do computador, do controle remoto da televisão e dos famosos tablets e smartphones.	Entretando, em aplicações de realidade virtual a imersão se torna ainda melhor quando são usados movimentos naturais do ser humano. Em um jogo de realidade virtual, por exemplo, será muito mais natural para o jogador alcançar um objeto virtual extendendo a sua mão, do que usar um \textit{joystick} para isso. Neste caso especificamente, o uso de uma luva embarcada com diversos sensores pode deixar a interação ainda mais real para o usuário. 
 	
 
 		\section{Estado da arte}
 
+		
+		Luvas embarcadas com sensores podem captar diversos movimentos das mãos, flexão dos dedos, giro do pulso, ou até mesmo saber a altura da mão em relação ao solo. Com isso é possível realizar o controle de outros equipamentos, estudar movimentos individuais de cada usuário afim de detectar limitações, desenvolver dispositivos que auxiliem em tratamentos dessa região, além de ser capaz de receber e transmitir diversas informações relevantes a cada caso.
 
-		Luvas embarcadas com sensores são utilizadas não só em aplicações de realidade virtual, podem ser usadas para controle de um braço robótico \cite{syed2012armcontroller}, movimentar desenhos tridimencionais em computador \cite{5DT-ultra}, mensurar atividades de pessoas com limitações dos movimentos nos dedos \cite{simone2004lowcost} e até mesmo transcrever gestos em palavras baseado na linguagem americana de sinais \cite{anbarasi2013deafmute}. Existem produtos comerciais \cite{5DT-ultra}, projetos de baixo custo \cite{simone2004lowcost}, usados em pesquisas médicas \cite{michela2013rehab}, entre outros. 
+		Dentre os trabalhos que envolvem luvas sensorizadas, existe um estudo de mapeamento dos movimentos do braço para controle de um braço robótico, onde os movimentos de flexão e extensão de um dos dedos e do pulso são adquiridos através de dois sensores resistivos de flexão comerciais, e um acelerômetro é responsável por mensurar movimentos do cotovelo. Esses dados são processados por um microcontrolador que por sua vez controla 4 servo motores montados em uma estrutura semelhante à de um braço robótico. Tal estrutura busca copiar os movimentos do braço do usuário através de 3 movimentos, ou graus de liberdade, independentes \cite{syed2012armcontroller}. Neste estudo é possível verificar que há uma conversão dos sinais analógicos em sinais digitais de uma forma proporcional, porém limitada. Além disso, o autor sugere que futuramente sejam adicionados protocolos para transmissão sem fio do sinal, o que pode dar uma maior liberdade de aplicações.
+		
+		Para auxiliar na área médica, por exemplo, foi desenvolvido o estudo de uma luva adaptável para medir a flexão dos dedos de indivíduos com limitações nos movimentos da mão e dos dedos \cite{simone2004lowcost}. O trabalho visa ser de baixo custo, limitar minimamente os movimentos naturais dos usuários, ser leve e de fácil aplicação e remoção. Tais requisitos servem para monitorar da melhor forma possível as atividades de pessoas com limitações de movimento em suas atividades diárias. Essa pesquisa também utiliza sensores resistivos de flexão comerciais nos cinco dedos da mão colados através de diferentes materiais. Usando uma espécie de caixa de conexões, um computador é ligado à todos os sensores e realiza a conversão dos sinais analógicos em sinais digitais. Os dados são salvos à uma frequência de 100 vezes por segundo usando o software proprietário LabView. Os testes mostraram que apesar de os sensores responderem aos movimentos, ainda é preciso realizar uma calibração antes do uso, além de que alguns materiais adesivos que grudavam os sensores aos dedos, acabaram soltando após algum período de uso. Por ser uma aplicação que visa ser utilizada durante testes relativamente longos (cerca de 24 horas), a necessidade de ter um computador conectado constantemente aos sensores pode de certa forma atrapalhar nas atividades de cada usuário durante os testes. Talvez o uso de um computador menor, Raspberry Pi por exemplo, poderia melhorar esse aspecto durante os testes.
+
+		A 5DT Data Glove Ultra é uma espécie de luva sensorizada comercial que consegue capturar diversos movimentos da mão. Seus sensores de flexão são baseados em fibra ótica, possui opção para transmissão de dados sem fio através de Bluetooth, além de poder ser integrado à softwares de movimento e animação em 3D conhecidos no mercado. Também possui seu próprio software de diagnóstico, gerenciamento, calibração e gravação de dados \cite{5DT-ultra}. Todas essas características, fazem deste produto uma excelente ferramenta para realizar estudos sobre os movimentos das mãos, ou para o desenvolvimento e controle de outros produtos. Entretanto, seu custo pode chegar na faixa dos 1000 Dólares \cite{5DT-glove2019ebay}, o que pode ser um custo elevado para alguns usuários ou pesquisadores, além do mais, adaptações do hardware ou software que se fizerem necessárias, provavelmente não serão permitidas pelos desenvolvedores que detém os direitos deste produto.
 
 
-		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o músculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}.
+
+%movimentar desenhos tridimencionais em computador \cite{5DT-ultra}, mensurar atividades de pessoas com limitações dos movimentos nos dedos \cite{simone2004lowcost} e até mesmo transcrever gestos em palavras baseado na linguagem americana de sinais \cite{anbarasi2013deafmute}. Existem produtos comerciais \cite{5DT-ultra}, projetos de baixo custo \cite{simone2004lowcost}, usados em pesquisas médicas \cite{michela2013rehab}, entre outros. 
+
+
+%		Para flexionar os dedos das mãos, possuímos tendões que passam por dentro de polias. Quando o músculo atrelado à esses tendões de movimenta, obtém-se a flexão ou extensão dos dedos \cite{drricardocirurgiao}.
 
 		
-
-
-
-		As funções atribuídas à essas luvas são variadas.		
+%		As funções atribuídas à essas luvas são variadas.		
 		
 		
 		\section{Motivação}
@@ -678,8 +685,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 
 
-		Os circuitos eletrônicos trabalham com sinais elétricos, ou seja, com correntes elétricas e tensões. Sendo assim, para medir grandezas físicas que não envolvam eletricidade, será preciso converter tais grandezas em eletricidade. `` Os dispositivos que convertem uma forma de energia em outra são denominados “transdutores”. Como eles são usados para sensoriar determinadas grandezas, eles também são chamados sensores. '' \cite{ncb2012eletronicabasica}
-
+		Os circuitos eletrônicos trabalham com sinais elétricos, ou seja, com correntes e tensões elétricas. Sendo assim, para medir grandezas físicas que não envolvam eletricidade, é preciso o uso de transdutores, que são dispositivos que convertem uma forma de energia em outra. Os transdutores muitas vezes são usados para sensoriar determinadas grandezas, e por conta disso também são conhecidos como sensores \cite{ncb2012eletronicabasica}.
 
 		Muitas pesquisas que buscam mensurar os movimentos de flexão e expansão dos dedos, usam sensores de flexão comerciais semelhantes a \cite{flexsensor}. O trabalho de \cite{anbarasi2013deafmute} traduz gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, há uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão, enquanto que as direções, durante os gestos da mão, são captados por um acelerômetro. Um microcontrolador reconhece os movimentos, gera palavras e as converte em aúdio através de um módulo. 
 
@@ -762,9 +768,9 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			\subsection{Transdutor de Flexão}
 
-		Como foi explicitado previamente, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante, com o intuito de criar um transdutor de flexão de dedos atrelado a um microcontrolador. 
+		Como foi explicitado previamente, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante que visa criar um transdutor de flexão de dedos conectado a um microcontrolador. 
 
-		No sistema biomecânico, resumidamente, uma das extremidades do tendão está presa nas falanges do dedo enquanto sua extensão desliza por dentro de polias até o músculo. No sistema desenvolvido, cada transdutor é composto por uma linha de náilon presa ao dedo da luva, guiada através de pequenos segmentos plásticos até o cursor de um potenciômetro. A figura \ref{Fig:bio-and-system} demonstra um pouco dos dois sistemas.
+		De uma forma resumida, no sistema natural de movimentação dos dedos, a extremidade do tendão está presa na ponda de uma das falanges do dedo. A extensão do tendão enquanto sua extensão desliza por dentro de polias até o músculo. No sistema desenvolvido, cada transdutor é composto por uma linha de náilon presa ao dedo da luva, guiada através de pequenos segmentos plásticos até o cursor de um potenciômetro. A figura \ref{Fig:bio-and-system} demonstra um pouco dos dois sistemas.
 
 
 	\begin{figure}[!htb]
@@ -1135,13 +1141,13 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$\,mm$ x 13$\,mm$, resistência máxima de 5$\,$k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
 
-			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery} (a).
+			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery}.a.
 
 			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$\,mm$ x 17$\,mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
 
 			Para transmitir e receber o sinal, foi escolhido o par de RF 433$\,MHz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
 
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de 45$\,mm$ x 12,5$\,mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery} (b).
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de 45$\,mm$ x 12,5$\,mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery}.b.
 
 
 	\begin{figure}[!htb]
