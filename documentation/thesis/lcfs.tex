@@ -734,12 +734,10 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Por volta da década de 80 surgiram os primeiros microcontroladores, dispositivos com memória RAM (\textit{Ramdon Access Memory}), ROM (\textit{Read Only Memory}), clock interno, E/S (Entrada e Saída), entre outros. Por conta dessas características, os microcontroladores permitiram que projetos de dispositivos inteligentes se tornassem mais simples. Eles eram chamados por muitas vezes de computadores em um único chip \cite{pereiramicrocontroladores}. 
 
-		Em \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, consegue trabalhar na faixa de tensão requerida pelo projeto, consume pouca energia e juntamente ao transceptor MAX 1412 é capaz de diminuir a complexidade de transmissão, além de outras características. Já em \cite{anbarasi2013deafmute}, o microcontrolador ATmega 328 é utilizado para mostrar uma saída de texto em uma pequena tela LCD e juntamente ao chip TTS256 converter esse texto em som.
+		Dentro do microcontrolador ou conectado à ele podem haver conversores analógico-digitais (A/D), que são utilizados justamente para converter sinais analógicos, como uma tensão, para sinais digitais nos quais o microcontrolador poderá ler e processar. Conversores A/D são muito úteis para aplicações de controle e monitoramento, pois muitos sensores (como sensores de temperatura, pressão, força, flexão, etc.) produzem sinais analógicos de tensão. Além disso, no microcontrolador existe uma comunicação serial de entrada e saída (E/S) que permite ao microntrolador se conectar à outro microcontrolador ou a um computador usando um cabo serial. Por conta dessa e outras características, se torna mais fácil desenvolver programas que visam a comunicação com outros componentes, enviando e recebendo dados de qualquer pino E/S do microcontrolador. \cite{ibrahim2011advanced}
 
-		Existem ainda, soluções que buscam facilitar o uso do microcontrolador. o Arduino é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar. As placas Arduino são capazes de ler entradas como o acionamento de um sensor ou pressionamento de um botão. Pode transformar essas entradas em saídas como a ativação de um motor ou a publicação de algo online. Essa placa pode ser programada usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa.\cite{arduinosite} 
-
-		No trabalho proposto, a placa Arduino modelo Nano com o microcontrolador ATmega328 embarcado, é utilizada para receber os sinais dos transdutores, converter os sinais analógicos em digitais, codificar estes sinais e enviá-los. A figura \ref{Fig:arduino-nano1} mostra a placa utilizada no projeto.
-		
+		Existem ainda, soluções que buscam facilitar o uso do microcontrolador. O Arduino, por exemplo, é uma plataforma eletrônica de código aberto que é baseada em \textit{hardware} e \textit{software} fáceis de usar, possuem ampla documentação e diversos projetos disponíveis gratuitamente pela internet. Características que pode facilitar seu uso por qualquer pessoa ao redor do mundo. As placas Arduino são capazes de ler entradas como o acionamento de um sensor ou pressionamento de um botão, podem transformar essas entradas em diversos tipos de saídas como a ativação de um motor ou a publicação de algo online. Essa placa pode ser programada usando sua IDE (\textit{Integrated Development Interface}), que por sua vez, envia as instruções necessárias para o microcontrolador instalado na placa \cite{arduinosite}. A placa vem com o microcontrolador modelo ATmega328 embarcado e está disponível em diversos tamanhos e modelos. Costuma ser utilizada para receber os sinais de transdutores, converter sinais analógicos em digitais, codificar sinais e enviá-los, entre outros. A figura \ref{Fig:arduino-nano1} mostra a placa Arduino modelo Nano, que costuma ser usada em projetos de menor escala por conta do seu tamanho de aproximadamente 43$\,mm$ x 18$\,mm$.
+	
 		\begin{figure}[h!]
 			\centering
 			\caption{Placa Arduino modelo Nano.}
@@ -747,6 +745,11 @@ in many projects, the glove's cost become high because of technology chosen to m
   		\label{Fig:arduino-nano1}
 			\fonte{Produzido pelo autor.}
 		\end{figure}
+
+
+
+%		Em \cite{michela2013rehab} o microcontrolador HC9S08QB8, da fabricante Freescale, consegue trabalhar na faixa de tensão requerida pelo projeto, consume pouca energia e juntamente ao transceptor MAX 1412 é capaz de diminuir a complexidade de transmissão, além de outras características. Já em \cite{anbarasi2013deafmute}, o microcontrolador ATmega 328 é utilizado para mostrar uma saída de texto em uma pequena tela LCD e juntamente ao chip TTS256 converter esse texto em som.
+	
 
 
 		\section{Transmissão de Sinal}
