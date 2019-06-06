@@ -17,9 +17,9 @@
 \contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Movimenta\IeC {\c c}\IeC {\~a}o dos dedos}{21}{section.2.2}% 
 \contentsline {section}{\numberline {2.3}Captura de movimentos}{22}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Potenci\IeC {\^o}metro}{22}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Microcontroladores}{23}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Transmiss\IeC {\~a}o de Sinal}{24}{section.2.6}% 
+\contentsline {section}{\numberline {2.4}Potenci\IeC {\^o}metro}{23}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Microcontroladores}{24}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Transmiss\IeC {\~a}o de Sinal}{25}{section.2.6}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalho Propriamente Dito}}{26}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{26}{section.3.1}% 

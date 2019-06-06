@@ -643,28 +643,33 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		Todos esses sensores e outros não mencionados, além de suas combinações, costumam ser utilizados para capturar movimentos com diversos níveis de precisão. Entretando, o uso exclusivo de sensores não é o suficiente para as aplicações ou produtos, pois ainda é necessário que algum componente traduza e organize os dados enviados pelos transdutores, dessa forma será possível a correta leitura dos movimentos. Uma opção amplamente usada nesse aspecto é o uso de microcontroladores, pois estes podem ser programados para interpretar os valores recebidos de cada sensor para dar respostas compreensíveis dentro do contexto da aplicação. Ao receber os sinais analógicos de cada sensor, o microcontrolador ou algum componente conectado a ele, converte estes sinais para uma forma digital que poderá ser processada. 
 	
-		A decisão do que será feito com os sinais digitalizados que chegam até o microcontrolador dependerá de cada aplicação. Em alguns casos, mostrar estes valores em uma tela de computador será o suficiente, em outras opta-se por transmitir informações que indiquem os movimentos que estão sendo realizados pela mão do usuário. Nesse caso, as formas de transmissão podem ser as mais variadas seja através de fios ou não, e dentre as tecnologias de transmissão de informações sem fio estão Bluetooth, Wi-Fi e outros tipos rádio frequência.
+		A decisão do que será feito com os sinais digitalizados que chegam até o microcontrolador dependerá de cada aplicação. Em alguns casos, mostrar estes valores em uma tela de computador será o suficiente, em outras opta-se por transmitir informações que indiquem os movimentos que estão sendo realizados pela mão do usuário. Nesse caso, as formas de transmissão podem ser as mais variadas seja através de fios ou não, e dentre as tecnologias de transmissão de informações sem fio estão Bluetooth, Wi-Fi e outros tipos de rádio frequência.
 
 		Após a transmissão do sinal, é necessário que algum componente receba e interprete tal sinal. Esse componente receptor, geralmente está ligado diretamente ao objetivo principal da aplicação. Por exemplo, no caso de uma aplicação que controle um atuador através dos movimentos da luva, provavelmente o atuador estaria conectado ao receptor do sinal. Em uma aplicação que vise mostrar os valores recebidos em uma tela de computador, o receptor poderia estar conectado à CPU desse computador. Ou seja, o componente receptor da aplicação, pode ser responsável não só pela interpretação do sinal recebido, como também pode controlar atuadores e enviar mensagens compreensíveis relacionadas aos sensores.
 
-		Nas subseções a seguir estão descritos mais detalhes acerca dos componentes relacionados ao fluxo descrito. Começando por uma breve explicação sobre a biomecânica que possibilita a movimentação dos dedos, passando pelas formas de captura destes movimentos através de diferentes transdutores, logo após haverá uma seção sobre o potenciômetro que é um transdutor chave para este trabalho, a seção seguinte descreverá o microcontrolador e suas funcionalidades, finalmente chegando à seção sobre formas de transmissão de sinal.
+		Nas subseções a seguir serão apresentados mais detalhes acerca dos componentes relacionados ao fluxo descrito. Começando por uma breve explicação sobre a biomecânica que possibilita a movimentação dos dedos, passando pelas formas de captura destes movimentos através de diferentes transdutores, logo após haverá uma seção sobre o potenciômetro que é um transdutor chave para este trabalho, a seção seguinte descreverá o microcontrolador e suas funcionalidades, finalmente chegando à seção sobre formas de transmissão de sinal.
 
-
-
-		
 
 
 %		Entre os demais sistemas que buscam mensurar flexão e extensão dos dedos estão \cite{syed2012armcontroller} e \cite{michela2013rehab}. Estes e outros trabalhos, incluindo o trabalho proposto, nos quais utilizam luvas para auxiliar a captura dos movimentos dos dedos, costumam ter um bloco de funcionamento parecido ao da figura \ref{Fig:flowchart1}.
 
 
-
-
 		\section{Movimentação dos dedos} \label{movimentacaodosdedos}
 
 
-		Na mão, os tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias \cite{drricardocirurgiao}. Semelhante ao esquema demonstrado na figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (a).
+		Para que seja possível realizar diversos movimentos na mão, tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias \cite{drricardocirurgiao}. De forma simplificada, para o dedo indicador, por exemplo, uma das pontas do tendão fica presa no osso (ou falange) localizado na ponta do dedo indicador e onde também há uma polia aproximando o tendão à essa falange. Ao longo das demais falanges também existem polias que aproximam o tendão e permitem seu deslizamento durante seus movimentos. Algo semelhante ao esquema demonstrado na figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (a), onde ao puxar o tendão no sentido indicado na figura, o dedo indicador fará o movimento de flexão também indicado.
 
 
+
+%		\begin{figure}[h!]
+%			\centering
+%  		\caption{Movimento do dedo através do tendão.}
+%  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
+%			\fonte{Adaptado de \cite{drmarksurgery}.}
+%  		\label{Fig:hand-tendon-flex1}
+%		\end{figure}
+
+		Essa biomecânica serve não apenas como fonte de informação mas também é usada como inspiração para pequisas. Em \cite{hyunki2015exoglove}, por exemplo, mostra-se o funcionamento da \textit{Exo-Glove}, que é um tipo de luva responsável por auxiliar os movimentos dos dedos da mão de pessoas que sofreram alguma paralisia na região. O sistema rotea tendões artificiais feitos com uma espécie de cabo de aço que partem e são controlados através de um módulo atuador posicionado na altura do braço, passando por um suporte próximo ao pulso, e ainda por correias de tecido para finalmente chegarem até os dedos. Usando todo esse aparato junto a um sistema de controle, os movimentos de flexão e extensão naturais dos dedos do usuário são auxiliados pelos cabos, que ficam em volta da luva formando uma espécie de exoesqueleto em volta de cada dedo. Dessa forma, é possível apoiar e dar movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
 
 	\begin{figure}[!htb]
 		 \centering
@@ -681,15 +686,9 @@ in many projects, the glove's cost become high because of technology chosen to m
 		 \fonte{(a) Adaptado de \cite{drmarksurgery} e (b) adaptado de \cite{hyunki2015exoglove}.}
 	\end{figure}
 
-%		\begin{figure}[h!]
-%			\centering
-%  		\caption{Movimento do dedo através do tendão.}
-%  		\includegraphics[scale=0.5]{./figures/hand-tendon-flex1.png}
-%			\fonte{Adaptado de \cite{drmarksurgery}.}
-%  		\label{Fig:hand-tendon-flex1}
-%		\end{figure}
 
-		Existem pesquisas inspiradas nessa biomecânica. Em \cite{hyunki2015exoglove}, por exemplo, mostra-se o funcionamento  da \textit{Exo-Glove}, que é uma luva que auxilia o movimento dos dedos da mão de pessoas que sofreram alguma paralisia na região. O sistema rotea tendões artificiais (cabos de aço) vindos de um módulo atuador, passando por um suporte próximo ao pulso, por correias de tecido e chegando até os dedos. Usando esse aparato, os movimentos de flexão e extensão dos dedos são auxiliados pelos cabos, tornando estes movimentos mais firmes ao usuário. A figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (b) demonstra o sistema descrito.
+
+
 
 %		\begin{figure}[h!]
 %			\centering
@@ -705,9 +704,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Os circuitos eletrônicos trabalham com sinais elétricos, ou seja, com correntes e tensões elétricas. Sendo assim, para medir grandezas físicas que não envolvam eletricidade, é preciso o uso de transdutores, que são dispositivos que convertem uma forma de energia em outra. Os transdutores muitas vezes são usados para sensoriar determinadas grandezas, e por conta disso também são conhecidos como sensores \cite{ncb2012eletronicabasica}.
 
-		Muitas pesquisas que buscam mensurar os movimentos de flexão e expansão dos dedos, usam sensores de flexão comerciais semelhantes a \cite{flexsensor}. O trabalho de \cite{anbarasi2013deafmute} traduz gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, há uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão, enquanto que as direções, durante os gestos da mão, são captados por um acelerômetro. Um microcontrolador reconhece os movimentos, gera palavras e as converte em aúdio através de um módulo. 
+		Muitas pesquisas que buscam mensurar movimentos de flexão e expansão, usam sensores de flexão resistivos comerciais semelhantes a \cite{flexsensor}, tal sensor possui uma resistência que é variada quando ele é torcido. Na mão, por exemplo, um sensor desses pode ser utilizado em cada ponto de flexão dos dedos, das juntas ou do pulso. Dessa forma, quando houver flexão em algum desses pontos, o sensor será torcido de acordo com o movimento, logo sua resistência também irá variar fazendo desde um sensor de flexão baseado na variação de resistência. 
+		
+		O trabalho de \cite{anbarasi2013deafmute} usa uma luva sensorizada junto a outros componentes com o objetivo de traduzir gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, espera-se haver uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão resistivos comerciais, enquanto que as direções dos movimentos durante os gestos da mão, são captados por um acelerômetro e existem ainda sensores de toque responsáveis por "sentir" o toque em determinadas áreas. Todos eses sensores estão conectados a um microcontrolador responsável por reconhecer padrões de movimentos, gerar palavras e as converter em aúdio através de um módulo e um alto falante. 
 
-		A \textit{Data Glove} usava fibra óptica e fotoresistores para saber as posições de cada dedo. De acordo com a flexão do sensor, o nível de luz que chegava ao fotoresistor variava indicando a posição atual. Já a \textit{Power Glove}, buscou reduzir custos e preferiu trocar essa tecnologia. Passou a usar placas com tintas que variavam suas propriedades condutivas quando torcidas \cite{dana1989powerglove}.
+		Já a \textit{Data Glove}, mencionada anteriormente, usava fibra óptica e fotoresistores ao invés de sensores resistivos para saber as posições de cada dedo. Esse outro tipo de sensor de flexão é possível porque de acordo com o nível flexão do sensor, a quantidade de luz que chegava ao fotoresistor era variada, indicando portanto a posição atual. Entretanto, a \textit{Power Glove}, buscando reduzir custos, preferiu trocar essa tecnologia baseada fibra óptica e passou a usar placas com tintas que variavam suas propriedades condutivas quando eram torcidas \cite{dana1989powerglove}. 
 
 %		Neste trabalho, propo\~e-se criar um sistema inspirado na biomecâmica dos dedos. Esse sistema deve mensurar movimentos de flexão e extensão dos dedos usando um transdutor mecânico com funcionamento semelhante ao sistema de tendões que ocorre nas mãos. 
 
@@ -726,7 +727,7 @@ in many projects, the glove's cost become high because of technology chosen to m
   		\label{Fig:potentiometer1}
 		\end{figure}
 
-		A figura \ref{Fig:potentiometer1} demonstra resumidamente o funcionamento do potenciômetro linear, a saída dos terminais é variada de acordo com o giro do cursor. Segundo a lei de Ohm ($V = R.I$), dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto. Partindo de um ponto extremo com resistência mínima até o outro no qual a resistência deverá ser a máxima característica do componente.
+		A figura \ref{Fig:potentiometer1} demonstra resumidamente o funcionamento do potenciômetro linear, onde a saída dos terminais é variada de acordo com o giro do cursor. Então, baseado nessa característica do componente e usando a lei de Ohm na qual $V = R.I$, dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto, partindo de um ponto extremo com resistência mínima até o outro no qual a resistência deverá ser a máxima característica do componente. Dessa forma, é possível então fazer do potenciômetro uma espécie de sensor de giro.
 
 
 		\section{Microcontroladores}
