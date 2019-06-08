@@ -786,13 +786,13 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		O capítulo a seguir descreve a construção do protótipo, desde a biomecânica que inspirou o projeto até a montagem completa da luva. Serão apresentados detalhes sobre o funcionamento do sensor de flexão desenvolvido neste trabalho, processamento dos sinais no microcontrolador, desenvolvimento do protocolo de comunicação e chegando até a organização e montagem do sistema completo.
 		
-		Este capítulo está organizado em 5 seções. Na primeira delas explica-se a movimentação mecânica do sistema e como as posições de flexão e extensão dos dedos são obtidas pelo microcontrolador. A segunda aborda a programação do microcontrolador, mais precisamente o tratamento dos dados recebidos a partir dos potenciômetros. A terceira seção explica os ajustes realizados em software. A quarta explica o protocolo criado para controlar um carrinho via rádio frequência. A quinta e última seção explica como o sistema foi montado.
+		Este capítulo está organizado em 5 seções. Na primeira delas explica-se a movimentação mecânica que permite ao transdutor captar movimentos de flexão e extensão dos dedos. A segunda aborda a programação do microcontrolador, mais especificamente o tratamento dos dados recebidos a partir dos potenciômetros. A terceira seção explica os ajustes e adaptações em softare realizados neste trabalho. A quarta explicita o protocolo criado para controlar um carrinho através de transmissão sem fio. A quinta e última seção explica como o sistema foi montado.
 
 
 
-		\section{Mecânica Bioinspirada}
+		\section{Transdutor de Flexão}
 
-			\subsection{Transdutor de Flexão}
+			\subsection{Mecânica Bioinspirada}
 
 		Como foi explicitado previamente na seção \ref{sec:movimentacaodosdedos}, através dos tendões conectados entre as falanges e os músculos, é possível realizar movimentos de flexão nos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico que se comporta de forma semelhante e que objetiva criar um transdutor de flexão de dedos alternativo. 
 
@@ -857,8 +857,6 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		\subsection{Adaptação na Luva}
 
-%			Após examinar o movimento descrito acima, foi decidido embarcar todo o sistema em uma luva. Fios foram presos às extremidades dos dedos da luva, passando por polias plásticas que servem de guias. Na extremidade oposta, os fios são conectados à pequenos potenciômetros que variam de acordo com o sentido do movimento de cada fio. Figura \ref{Fig:glove-and-transmitter1}. Sendo assim, ao final, para os cinco dedos da mão, serão necessários cinco fios e cinco potenciômetros.
-
 
 %		\begin{figure}[h!]
 %			\centering
@@ -871,9 +869,13 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 %		\subsection{Flexão e Extensão dos Dedos}
 
-		Após as polias e o fio de náilon serem devidamente embarcados na luva juntamente ao potenciômetro, com a mão extendida e mantendo o fio de náilon tensionado, ao flexionar o dedo, o fio é puxado pela ponta do dedo e com isso o cursor do potênciometro é variado. Porém, após a flexão do dedo, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais.
-		Para possibilitar que o sistema retorne à sua posição inicial, um pequeno elástico foi instalado junto ao cursor do potenciômetro. Usando o elástico durante o movimento de flexão, o cursor gira e estica o elástico. Estando esticado, o elástico busca retomar sua posição de equilíbro realizando uma força contrária para girar o cursor de volta à sua posição inicial. Figura \ref{Fig:glove-flex-and-extend2} (a).		
-		Quando há o movimento de extensão do dedo, o elástico puxa o cursor do potenciômetro girando-o em sentido inverso ao que ocorreu durante a flexão. Isso acontece enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro. Demonstrado na figura \ref{Fig:glove-flex-and-extend2} (b)
+		Após examinar a movimentação mecânica descrita acima e com o objetivo de criar um sistema embarcado que fosse mais cômodo e estável para ser retirado e colocado na mão durante o uso, foi decidido que todos os componentes do sistema seriam instalados em uma luva de algodão. Durante a instalação do sistema, um fio de náilon foi preso para cada uma das extremidades de cada dedo da luva, além disso, cada um destes fios foi passando por dentro de polias plásticas costuradas previamente na luva. Na extremidade oposta, cada fio foi conectado à um cursor de um pequeno potenciômetro localizado no dorso da luva. Sendo assim, ao final dessa etapa de montagem, para os cinco dedos da luva, foram necessários cinco fios e cinco potenciômetros, além de diversas polias plásticas.
+
+		Sabendo que durante o movimento dos dedos os fios se deslocam em uma distância proporcional à flexão do dedo, decidiu-se usar esse deslocamento para girar o cursor de um potenciômetro. Ou seja, toda vez que um dedo fosse flexionado, o cursor do seu respectivo potenciômetro seria girado proporcionalmente. Dessa forma, o potenciômetro juntamente com o fio funcionariam como um transdutor de flexão para cada dedo. Portanto, o funcionamento do transdutor é semelhante ao experimento demonstrado na figura \ref{Fig:hand-wire-steady-and-flex}. 
+		
+		Entretanto, após a flexão do dedo, ao realizar o movimento inverso (extenção), não há força que movimente o fio de náilon e nem o cursor do potenciômetro de volta às suas posições iniciais e isso faz com que o transdutor funcione apenas uma vez. Então, visando solucionar este problema, um elástico foi instalado no cursor do potenciômetro para manter o fio tensionado e possibilitar que o sistema retorne à sua posição inicial. O sistema funciona da seguinte forma: Usando o elástico durante o movimento de flexão o cursor gira e estica o elástico, que estando esticado busca retomar sua posição de equilíbro realizando constantemente uma força contrária para girar o cursor de volta à sua posição inicial. Por conta de o dedo ter mais força do que o elástico, o sistema se mantém dessa forma enquanto o dedo estiver flexionado. Este momento é demonstrado pela figura \ref{Fig:glove-flex-and-extend2} (a) onde o elástico é representado pela cor azul e o fio de náilon pela cor vermelha.
+
+		A partir do momento que o dedo realiza o movimento de extensão, o elástico puxa o cursor do potenciômetro e o fio de náilon simultaneamente. Com isso, o potenciômetro e o fio se movimentam em sentidos inversos ao que ocorreu durante o movimento de flexão. Tudo isso acontece enquanto o elástico estiver esticado o suficiente para exercer força sobre o cursor do potenciômetro. Dessa forma, o sistema consegue retornar ao seu estado inicial de equilíbrio, algo que é demonstrado na figura \ref{Fig:glove-flex-and-extend2} (b).
 		
 
 	\begin{figure}[!htb]
@@ -895,9 +897,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 	
 		\section{Programação do microcontrolador}
 
+		Na luva, além do sistema transdutor de flexão bioinspirado, existe também um microcontrolador responsável por captar as variações de cada potenciômetro, digitalizar, processar e enviar para o módulo transmissor. Toda a programação é feita no computador através de uma IDE compatível com o microcontrolador escolhido, posteriormente o software programado é enviado diretamente para a placa via cabo USB.  
+		
 		\subsection{Digitalização do sinal}
 
-		Na luva, além do transdutor, há um microcontrolador que capta os movimentos do potenciômetro e os digitaliza. O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores inteiros entre 0 e 1023. 
+				O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores inteiros entre 0 e 1023. 
 
 		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). 
 	 Também foram definidas duas posições principais para analisar o movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Algo semelhante à figura \ref{Fig:glove-flex-and-extend2}.

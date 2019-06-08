@@ -23,23 +23,23 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Desenvolvimento do Prot\IeC {\'o}tipo}}{27}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{27}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nica Bioinspirada}{27}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Transdutor de Flex\IeC {\~a}o}{27}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {3.2}Transdutor de Flex\IeC {\~a}o}{27}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Mec\IeC {\^a}nica Bioinspirada}{27}{subsection.3.2.1}% 
 \contentsline {subsection}{\numberline {3.2.2}Adapta\IeC {\c c}\IeC {\~a}o na Luva}{29}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{29}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{29}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{30}{subsection.3.3.2}% 
-\contentsline {section}{\numberline {3.4}Ajustes}{31}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{31}{subsection.3.4.1}% 
+\contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{30}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{30}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}VirtualWire}{31}{subsection.3.3.2}% 
+\contentsline {section}{\numberline {3.4}Ajustes}{32}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{32}{subsection.3.4.1}% 
 \contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{32}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Remapeamento}{32}{subsection.3.4.3}% 
-\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{33}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{33}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.4.3}Remapeamento}{33}{subsection.3.4.3}% 
+\contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{34}{section.3.5}% 
+\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{34}{subsection.3.5.1}% 
 \contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{34}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{34}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{35}{subsection.3.5.3}% 
 \contentsline {section}{\numberline {3.6}Montagem do prot\IeC {\'o}tipo}{36}{section.3.6}% 
 \contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{36}{subsection.3.6.1}% 
-\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{36}{subsection.3.6.2}% 
+\contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{37}{subsection.3.6.2}% 
 \contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{38}{subsection.3.6.3}% 
 \contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{39}{subsection.3.6.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
