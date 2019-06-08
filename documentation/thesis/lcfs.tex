@@ -855,7 +855,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		Examinando o resultado deste experimento, foi possível validar a hipótese formulada previamente. É válido também observar que se compararmos esse sistema mecânico experimental com o sistema biomecânico natural, podemos verificar que no sistema artificial o dedo do usuário é principal responsável por exercer a força necessária para puxar o fio de náilon durante a flexão, enquanto que no sistema humano, o músculo do braço é o agente responsável por puxar o tendão e fazer com que o dedo flexione. Ou seja, em relação ao dedo, um dos sistemas é ativo e o outro é passivo.
 
 
-		\subsection{Adaptação na Luva}
+		\subsection{Adaptação na Luva} \label{sub:adaptacao-na-luva}
 
 
 %		\begin{figure}[h!]
@@ -897,16 +897,19 @@ in many projects, the glove's cost become high because of technology chosen to m
 	
 		\section{Programação do microcontrolador}
 
-		Na luva, além do sistema transdutor de flexão bioinspirado, existe também um microcontrolador responsável por captar as variações de cada potenciômetro, digitalizar, processar e enviar para o módulo transmissor. Toda a programação é feita no computador através de uma IDE compatível com o microcontrolador escolhido, posteriormente o software programado é enviado diretamente para a placa via cabo USB.  
+		Na luva, além do sistema transdutor de flexão bioinspirado, existe também um microcontrolador responsável por captar as variações de cada potenciômetro, digitalizar, processar e enviar para o módulo transmissor. Toda a programação é feita no computador através de uma IDE compatível com o microcontrolador escolhido e posteriormente o software programado é enviado via cabo USB para a placa.  
 		
 		\subsection{Digitalização do sinal}
 
-				O sinal chega em portas analógicas de um Arduino modelo Nano que converte a variação de tensão do potenciômetro em valores inteiros entre 0 e 1023. 
+		Cada potenciômetro que compõe o transdutor de flexão desenvolvido só é capaz de fornecer um sinal de tensão analógico. Porém, um sinal analógico pode ter um número infinito de valores em um período de tempo \cite{forouzan2009comunicacao}. Por conta desse fato, uma das melhores formas para processar o sinal do potenciômetro é digitalizar cada sinal recebido. A placa Arduíno, que foi a opção para este trabalho, é capaz de digitalizar sinais analógicos através de suas portas analógicas, e o microcontrolador embarcado fica responsável por converter cada variação de tensão do potenciômetro em valores inteiros entre 0 e 1023. 
 
-		Para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro é representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). 
-	 Também foram definidas duas posições principais para analisar o movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Algo semelhante à figura \ref{Fig:glove-flex-and-extend2}.
+		A partir daqui, para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro será representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). Além disso, também serão definidas duas posições principais usadas para auxiliar a análise do movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Estas duas posições estão representadas na figura \ref{Fig:glove-flex-and-extend2} mostrada na subseção \ref{sub:adaptacao-na-luva}.
 
-	 	Para cada posição, o potenciômetro apresenta uma média de valores digitais. Por exemplo, quando o dedo mínimo (1) está extendido (posição A), seu respectivo potenciômetro apresenta valores em torno 191. Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616. %Então para calcular o deslocamente temos:
+		Durante o uso da luva, o potenciômetro não apresenta um valor fixo dada uma mesma posição, ao invés disso, para cada posição detectável surge uma média de valores digitais relativamente estáveis. Então se, por exemplo, o dedo mínimo (1) está totalmente extendido (posição A), seu respectivo potenciômetro apresenta valores em torno de 191 (e não o valor exato de 191). Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616.
+
+		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9.	A partir daí, para criar a mensagem de controle são necessários apenas o número que representa o potenciômetro e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem de cinco dígitos, na qual a posição de cada dígito representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante. Então, por exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar) que está na posição 1.
+		
+		 %Então para calcular o deslocamente temos:
 
 %	\begin{equation}
 %		\begin{split}
@@ -917,11 +920,6 @@ in many projects, the glove's cost become high because of technology chosen to m
 %		\end{split}
 %	\end{equation}
 
-		Porteriormente, para diminuir o tamanho da mensagem a ser enviada, o valor digital apresentado pelo potenciômetro é remapeado para uma faixa de valores inteiros que representam posições inteiras entre 0 e 9. Quando os valores de todos os potenciômetros são remapeados, eles são concatenados em um único número de 5 dígitos, no qual cada dígito representa cada um dos cinco dedos da esquerda para a direita. 
-		
-		Por exemplo, em uma mensagem "69071" o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar) que está na posição 1.
-		
-		
 		\subsection{VirtualWire}
 
 		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 

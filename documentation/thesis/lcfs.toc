@@ -31,26 +31,26 @@
 \contentsline {subsection}{\numberline {3.3.2}VirtualWire}{31}{subsection.3.3.2}% 
 \contentsline {section}{\numberline {3.4}Ajustes}{32}{section.3.4}% 
 \contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{32}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{32}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.2}Deslocamento e n\IeC {\'u}mero de posi\IeC {\c c}\IeC {\~o}es}{33}{subsection.3.4.2}% 
 \contentsline {subsection}{\numberline {3.4.3}Remapeamento}{33}{subsection.3.4.3}% 
 \contentsline {section}{\numberline {3.5}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{34}{section.3.5}% 
 \contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{34}{subsection.3.5.1}% 
 \contentsline {subsection}{\numberline {3.5.2}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{34}{subsection.3.5.2}% 
 \contentsline {subsection}{\numberline {3.5.3}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{35}{subsection.3.5.3}% 
-\contentsline {section}{\numberline {3.6}Montagem do prot\IeC {\'o}tipo}{36}{section.3.6}% 
-\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{36}{subsection.3.6.1}% 
+\contentsline {section}{\numberline {3.6}Montagem do prot\IeC {\'o}tipo}{37}{section.3.6}% 
+\contentsline {subsection}{\numberline {3.6.1}Transdutor de Flex\IeC {\~a}o}{37}{subsection.3.6.1}% 
 \contentsline {subsection}{\numberline {3.6.2}Escolha de componentes}{37}{subsection.3.6.2}% 
 \contentsline {subsection}{\numberline {3.6.3}Posicionamento de componentes}{38}{subsection.3.6.3}% 
 \contentsline {subsection}{\numberline {3.6.4}Placa Embarcada}{39}{subsection.3.6.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{41}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{41}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Sensibilidade}{41}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Bateria}{43}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Alcance}{45}{section.4.4}% 
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{42}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{42}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Sensibilidade}{42}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Bateria}{44}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Alcance}{46}{section.4.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{47}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Trabalhos futuros}{48}{section.5.1}% 
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{48}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Trabalhos futuros}{49}{section.5.1}% 
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{49}{section*.36}% 
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{50}{section*.36}% 
