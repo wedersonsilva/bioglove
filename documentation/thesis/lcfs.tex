@@ -654,7 +654,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 %		Entre os demais sistemas que buscam mensurar flexão e extensão dos dedos estão \cite{syed2012armcontroller} e \cite{michela2013rehab}. Estes e outros trabalhos, incluindo o trabalho proposto, nos quais utilizam luvas para auxiliar a captura dos movimentos dos dedos, costumam ter um bloco de funcionamento parecido ao da figura \ref{Fig:flowchart1}.
 
 
-		\section{Movimentação dos dedos} \label{movimentacaodosdedos}
+		\section{Movimentação dos dedos} \label{sec:movimentacaodosdedos}
 
 
 		Para que seja possível realizar diversos movimentos na mão, tendões funcionam como cordas que conectam os músculos do antebraço aos ossos da mão. Nos dedos, os tendões passam por dentro de uma série de polias, que formam uma espécie de túnel. Isso permite manter os tendões próximos aos ossos da mão, aumentando a força nos dedos e diminuindo o gasto de energia. Ao movimentar o dedo, o músculo se contrai para que o tendão deslize por entre as polias \cite{drricardocirurgiao}. De forma simplificada, para o dedo indicador, por exemplo, uma das pontas do tendão fica presa no osso (ou falange) localizado na ponta do dedo indicador e onde também há uma polia aproximando o tendão à essa falange. Ao longo das demais falanges também existem polias que aproximam o tendão e permitem seu deslizamento durante seus movimentos. Algo semelhante ao esquema demonstrado na figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (a), onde ao puxar o tendão no sentido indicado na figura, o dedo indicador fará o movimento de flexão também indicado.
@@ -780,11 +780,13 @@ in many projects, the glove's cost become high because of technology chosen to m
 %
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	
-	\chapter{Trabalho Propriamente Dito}
+	\chapter{Desenvolvimento do Protótipo}
 
 		\section{Introdução}
 		
-		O capítulo a seguir está organizado em 5 seções. Na primeira delas explica-se a movimentação mecânica do sistema e como as posições de flexão e extensão dos dedos são obtidas pelo microcontrolador. A segunda aborda a programação do microcontrolador, mais precisamente o tratamento dos dados recebidos a partir dos potenciômetros. A terceira seção explica os ajustes realizados em software. A quarta explica o protocolo criado para controlar um carrinho via rádio frequência. A quinta e última seção explica como o sistema foi montado.
+		O capítulo a seguir descreve a construção do protótipo, desde a biomecânica que inspirou o projeto até a montagem completa da luva. Serão apresentados detalhes sobre o funcionamento do sensor de flexão desenvolvido neste trabalho, processamento dos sinais no microcontrolador, desenvolvimento do protocolo de comunicação e chegando até a organização e montagem do sistema completo.
+		
+		Este capítulo está organizado em 5 seções. Na primeira delas explica-se a movimentação mecânica do sistema e como as posições de flexão e extensão dos dedos são obtidas pelo microcontrolador. A segunda aborda a programação do microcontrolador, mais precisamente o tratamento dos dados recebidos a partir dos potenciômetros. A terceira seção explica os ajustes realizados em software. A quarta explica o protocolo criado para controlar um carrinho via rádio frequência. A quinta e última seção explica como o sistema foi montado.
 
 
 
@@ -792,10 +794,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 			\subsection{Transdutor de Flexão}
 
-		Como foi explicitado previamente, através dos tendões, têm-se a movimentação dos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico semelhante que visa criar um transdutor de flexão de dedos conectado a um microcontrolador. 
+		Como foi explicitado previamente na seção \ref{sec:movimentacaodosdedos}, através dos tendões conectados entre as falanges e os músculos, é possível realizar movimentos de flexão nos dedos na mão. Baseado nessa biomecânica, foi desenvolvido um sistema mecânico que se comporta de forma semelhante e que objetiva criar um transdutor de flexão de dedos alternativo. 
 
-		De uma forma resumida, no sistema natural de movimentação dos dedos, a extremidade do tendão está presa na ponda de uma das falanges do dedo. A extensão do tendão enquanto sua extensão desliza por dentro de polias até o músculo. No sistema desenvolvido, cada transdutor é composto por uma linha de náilon presa ao dedo da luva, guiada através de pequenos segmentos plásticos até o cursor de um potenciômetro. A figura \ref{Fig:bio-and-system} demonstra um pouco dos dois sistemas.
-
+		De uma forma resumida, no sistema natural de movimentação dos dedos, a extremidade do tendão está presa na ponda de uma das falanges do dedo, enquanto que sua extensão desliza por dentro de polias até o respectivo músculo do braço. No sistema alternativo desenvolvido, cada transdutor é composto por uma linha de náilon presa a um dos dedos de uma luva, essa linha é guiada através de pequenos segmentos plásticos até chegar no cursor de um potenciômetro. 
+		
+		Através da figura \ref{Fig:bio-and-system} é possível observar semelhanças entre os dois sistemas. Na mão humana (figura \ref{Fig:bio-and-system} (a)) o flexor superficial do dedo conecta as falanges até o músculo flexor superficial, e na luva (figura \ref{Fig:bio-and-system} (b)) o fio de náilon representado em vermelho é o responsável pela conexão entre a ponta de um dos dedos e o potenciômetro. Na luva também é possível verificar que existem algumas polias, representadas por pequenos segmentos da cor azul, algo que não está representado na figura \ref{Fig:bio-and-system} (a), mas que foi demonstrado previamente através da figura \ref{Fig:hand-tendon-flex1-and-exo-glove1} (a).
 
 	\begin{figure}[!htb]
 		 \centering
@@ -812,11 +815,12 @@ in many projects, the glove's cost become high because of technology chosen to m
 		 \fonte{(a) Adaptado de \cite{moore2013clinically} e (b) produzido pelo autor.}
 	\end{figure}
 
-		Logo no inicio do trabalho, foi formulada a hipótese de que poderia haver a movimentação de um fio durante a flexão de um dedo. Portanto foi realizado um experimento para verificar tal hipótese. 
+		No sistema biomecânico, para que haja a flexão dos dedos o músculo flexor se contrai, o tendão desliza por dentro das polias e isso faz com que o dedo realize o movimento de flexão \cite{drricardocirurgiao}, ou seja, o músculo é o responsável por puxar o tendão quando o dedo se move. Após a realização de estudos sobre essa biomecânica, logo no inicio do trabalho foi formulada a hipótese de que durante a flexão de um dedo, poderia ocorrer um deslocamento proporcional de um fio sobre a mão. 
 		
-		Sendo assim, o primeiro passo foi, com a mão inicialmente extendida com o dorso voltado para cima, uma das pontas de um fio foi presa na extremidade de um dos dedos. O local da outra ponta do fio foi marcada no dorso mão. Como é demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (a).
+		Um experimento desenvolvido para verificar tal hipótese. Em um primeiro momento, o primeiro passo do experimento foi prender uma das pontas de um fio na extremidade de um dos dedos da mão. O segundo passo foi deixar a mão inicialmente extendida (relaxada) com o dorso voltado para cima. Logo após, o fio foi posicionado no dorso da mão e o local de sua extremidade foi marcada. Essa configuração inicial do teste é demonstrado através figura \ref{Fig:hand-wire-steady-and-flex} (a).
 
-			Após a flexão dos dedos, verificou-se que o fio se movimentou em uma direção e criou um deslocamento (d) do fio em relação ao ponto marcado, mostrado na figura \ref{Fig:hand-wire-steady-and-flex} (b). Esse experimento validou a hipótese formulada previamente. 
+			Em um segundo momento, foi pedido que fosse realizado o movimento de flexão total dos dedos e verificou-se que o fio se movimentou em uma direção criando um deslocamento (d) do fio em relação ao ponto marcado anteriormente. Este segundo momento do experimento está demonstrado na figura \ref{Fig:hand-wire-steady-and-flex} (b).
+		
 
 %\begin{figure}[H]
 %	\caption{Cabo de pares trançados.}
@@ -847,6 +851,8 @@ in many projects, the glove's cost become high because of technology chosen to m
    \label{Fig:hand-wire-steady-and-flex}
    \fonte{Produzido pelo autor.}
  \end{figure}
+
+		Examinando o resultado deste experimento, foi possível validar a hipótese formulada previamente. É válido também observar que se compararmos esse sistema mecânico experimental com o sistema biomecânico natural, podemos verificar que no sistema artificial o dedo do usuário é principal responsável por exercer a força necessária para puxar o fio de náilon durante a flexão, enquanto que no sistema humano, o músculo do braço é o agente responsável por puxar o tendão e fazer com que o dedo flexione. Ou seja, em relação ao dedo, um dos sistemas é ativo e o outro é passivo.
 
 
 		\subsection{Adaptação na Luva}
