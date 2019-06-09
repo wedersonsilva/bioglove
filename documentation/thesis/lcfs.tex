@@ -905,11 +905,63 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		A partir daqui, para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro será representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). Além disso, também serão definidas duas posições principais usadas para auxiliar a análise do movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Estas duas posições estão representadas na figura \ref{Fig:glove-flex-and-extend2} mostrada na subseção \ref{sub:adaptacao-na-luva}.
 
-		Durante o uso da luva, o potenciômetro não apresenta um valor fixo dada uma mesma posição, ao invés disso, para cada posição detectável surge uma média de valores digitais relativamente estáveis. Então se, por exemplo, o dedo mínimo (1) está totalmente extendido (posição A), seu respectivo potenciômetro apresenta valores em torno de 191 (e não o valor exato de 191). Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616.
+		Durante o uso da luva, o potenciômetro não apresenta um valor fixo dada uma mesma posição, ao invés disso, para cada posição detectável surge uma média de valores digitais relativamente estáveis. Então se, por exemplo, o dedo mínimo (1) está totalmente estendido (posição A), seu respectivo potenciômetro apresenta valores em torno de 191 (e não o valor exato de 191). Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616.
 
-		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9.	A partir daí, para criar um mensagem de controle são necessários apenas o número que representa o potenciômetro e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem de cinco dígitos, na qual a posição de cada dígito representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante. 
+				
+		\subsection{Calibração}
+
+
+		Durante o uso da BioGlove, quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Para a posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 191, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141. Isso ocorre por conta de alguns fatores: Existem pequenas diferenças nos valores de resistência mesmo entre potenciômetros do mesmo modelo (dentro da faixa de tolerância do fabricante; há diferença entre o tamanho dos dedos; as tensões aplicadas no fio de náilon não são iguais para todos os dedos; entre outras. Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou enquanto outros apresentam deslocmentos negativos para um mesmo movimento.
 		
-		A figura \ref{Fig:glove-create-msg1} exemplifica uma mensagem gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar) que está na posição 1. Este exemplo está demonstrtado na figura 
+		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B, que são os graus máximos de extensão e flexão da BioGlove. Além disso, também era preciso saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B, com isso seria possível saber a resolução do sistema para cada dedo.
+
+		\subsubsection{Deslocamento e número de posições}
+
+		Para descobrir os valores de deslocamento, inicialmente cada potenciômetro teve seu valor digital médio anotado tanto para a posição A quanto para B, posteriormente para cada um dos dedos os valores foram utilizados na equação \ref{Eq:Desloca1}:
+
+	\begin{equation}
+			\Delta Pos 	= Pos B 	- 	Pos A
+		\label{Eq:Desloca1}
+	\end{equation}
+
+		Sendo $\Delta Pos$ o valor de deslocamento de A para B, com o módulo de $\Delta Pos$ é possível calcular o número de posições detectáveis (resolução) de cada dedo partindo da Posição A até a Posição B, através da equação \ref{Eq:NPos1}:
+
+	\begin{equation}
+			NPos = |\Delta Pos| + 1
+		\label{Eq:NPos1}
+	\end{equation}
+
+		A tabela \ref{Tab:deltapos} mostra os valores obtidos e calculados para cada um dos cinco dedos (ou potenciômetros) no deslocamento da posição A para a posição B.
+
+
+	\begin{table}[H]
+  	\centering
+		\caption{Valores de A para B}
+    \begin{tabular}{c|cccc}
+      \midrule
+			Dedo	& PosA	& PosB	& $\Delta$Pos	& NPos	\\
+      \midrule
+			1 		& 191 	& 616 	& 		+425 		&	426		\\
+			2 		& 140 	& 609 	& 		+469 		&	470		\\
+			3 		& 774 	& 360 	& 		-414 		&	415		\\
+			4 		& 728 	& 475 	& 		-253 		&	254		\\
+			5 		& 670 	& 367 	& 		-303 		&	304		\\      
+      \midrule
+    \end{tabular}
+    \label{Tab:deltapos}
+    \fonte{Produzido pelo autor}
+	\end{table}
+		
+		Quanto maior for o valor de NPos na tabela \ref{Tab:deltapos}, maior será a resolução e portanto mais preciso será o sensoriamento do dedo. Sendo assim, o anelar (2) é o dedo com maior potencial de sensoriamento, enquanto que o indicador (4) possui menor potencial. Observe ainda que os dedos 3, 4 e 5 apresentam deslocamentos ($\Delta$Pos) negativos, e isso acontece porque os valores de PosA são maiores do que PosB nesse grupo de potenciômetros.
+
+
+			\subsubsection{Remapeamento}
+
+		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9 (10 níveis).	Dessa forma, em uma mensagem numérica, seria preciso apenas 1 dígito para indicar o valor de uma posição. 
+		
+		A partir desse remapeamento, para criar um mensagem de controle são necessárias apenas duas informações: O número que indica o potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo. 
+		
+		A figura \ref{Fig:glove-create-msg1} exemplifica uma mensagem gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) possui valor o 6, o dedo 2 (anelar) possui valor 9 e assim sucessivamente até o dedo 5 (polegar) que possui o valor 1.
 
 
 		\begin{figure}[h!]
@@ -920,7 +972,45 @@ in many projects, the glove's cost become high because of technology chosen to m
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 		
-		 %Então para calcular o deslocamente temos:
+
+		Além de encurtar a resolução de cada potenciômetro, também foi necessário eliminar os deslocamentos negativos. Isso foi realizado com o intuito de criar um protocolo de comunicação mais simples e que funcionasse da mesma maneira para qualquer um dos dedos.
+
+	 A chave para se adequar aos requisitos de calibração descritos até aqui foi a utilização da função ``map'' no código embarcado, isso porque esta função permite remapear uma faixa de valores em outra menor. Usando tal função, a faixa de entrada que inicialmente poderia variar entre 0 e 1023, foi remapeada para variar somente entre valores inteiros de 0 a 9. Além do mais, a função map também permite inverter sua saída de uma forma que os valores de entrada que variam de 1023 a 0 (decrescente) passam a variar de 0 a 9 (crescente). Com isso é possível eliminar os deslocamentos negativos.
+
+	 Após remapear os valores digitais recebidos e eliminar os deslocamentos negativos, para fins de comparação, os novos valores também foram utilizados nas equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, e os seus resultados foram adicionados à tabela \ref{Tab:deltapos}, criando a tabela \ref{Tab:deltaremap}:
+
+
+	\begin{table}[H]
+  	\centering
+		\caption{Valores de A para B e remapeados (R).}
+    \begin{tabular}{c|cc|cc|cc|cc}
+      \midrule
+			Dedo	&\multicolumn{2}{c}{PosA	(RA)} 	&\multicolumn{2}{c}{PosB (RB)}	&\multicolumn{2}{c}{$\Delta$Pos	($\Delta$R)}	&\multicolumn{2}{c}{NPos	(NR)}	\\
+      \midrule
+			1 		& 191 & (1)		& 616 & (5)		& 		+425 & (+4)		&			425	& (5)		\\
+			2 		& 140 & (1)		& 609 & (5)		& 		+469 & (+4)		&			469 &	(5)		\\
+			3 		& 774 & (3)		& 360 & (6)		& 		-414 & (+3)		&			414	& (4)		\\
+			4 		& 728 & (3)		& 475 & (5)		& 		-253 & (+2)		&			253	& (3)		\\
+			5 		& 670 & (4)		& 367 & (6)		& 		-303 & (+2)		&			303 &	(3)		\\      
+      \midrule
+    \end{tabular}
+    \label{Tab:deltaremap}
+    \fonte{Produzido pelo autor}
+	\end{table}
+	
+		Através da tabela \ref{Tab:deltaremap} é possível observar a correspondência de valores antes e depois de remapeados. Por exemplo, o valor do potenciômetro apresentado no dedo 4 para PosA é de ``728'', entretanto o valor correspondente que será enviado na mensagem de controle será ``3''. Outro ponto a ser observado é a menor resolução dos valores remapeados (NR) quando comparado com a resolução anterior (NPos). Além disso, entre os valores de posição remapeados (RA e RB) não existem valores representados por mais de 1 dígito, o que era um dos requisitos para uma mensagem de transmissão mais simples. E por fim, nota-se que não existem deslocamentos negativos dentre os valores remapeados ($\Delta$R), outro objetivo da aplicação.
+
+
+
+
+%===================================================================================
+
+		%	ATE AQUI OK
+
+%===================================================================================
+
+
+				 %Então para calcular o deslocamente temos:
 
 %	\begin{equation}
 %		\begin{split}
@@ -993,76 +1083,6 @@ in many projects, the glove's cost become high because of technology chosen to m
 		Quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Quando a luva está em posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 192, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141.	
 		
 		Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou negativos para um mesmo movimento. 
-	
-		\subsection{Deslocamento e número de posições}
-
-		Para descobrir os valores de deslocamento, cada potenciômetro teve seu valor digital anotado para as posições A e B, que posteriormente foram usados na equação \ref{Eq:Desloca1}:
-
-	\begin{equation}
-			\Delta Pos 	= Pos B 	- 	Pos A
-		\label{Eq:Desloca1}
-	\end{equation}
-
-		Usando o módulo de $\Delta Pos$ é possível calcular o número de posições detectáveis partindo da Posição A até a Posição B, através da equação \ref{Eq:NPos1}:
-
-	\begin{equation}
-			NPos = |\Delta Pos| + 1
-		\label{Eq:NPos1}
-	\end{equation}
-
-		A tabela \ref{Tab:deltapos} mostra os valores obtidos e calculados para cada um dos cinco potenciômetro no deslocamento da posição A para a posição B.
-
-
-	\begin{table}[H]
-  	\centering
-		\caption{Valores de A para B}
-    \begin{tabular}{c|cccc}
-      \midrule
-			Dedo	& PosA	& PosB	& $\Delta$Pos	& NPos	\\
-      \midrule
-			1 		& 191 	& 616 	& 		+425 		&	426		\\
-			2 		& 140 	& 609 	& 		+469 		&	470		\\
-			3 		& 774 	& 360 	& 		-414 		&	415		\\
-			4 		& 728 	& 475 	& 		-253 		&	254		\\
-			5 		& 670 	& 367 	& 		-303 		&	304		\\      
-      \midrule
-    \end{tabular}
-    \label{Tab:deltapos}
-    \fonte{Produzido pelo autor}
-	\end{table}
-		
-		Quanto maior for o valor de NPos na tabela \ref{Tab:deltapos}, mais preciso será o sensoriamento do dedo. Sendo assim, o anelar (2) é o dedo com maior potencial de sensoriamento, enquanto que o indicador (4) possui menor potencial.
-
-	\subsection{Remapeamento}
-
-	 Com o intuito de diminur o tamanho da mensagem a ser enviada pelo transmissor de rádio frequência, foi definido que cada potenciômetro teria apenas 10 níveis de deslocamento representados durante a transmissão. Dessa forma, em uma mensagem numérica, bastaria 1 dígito para representar a posição atual do dedo.
-
-	 Junto a isso, para diminuir a complexidade do protocolo de comando, foi decidido que não haveriam deslocamentos negativos. Algo que acontece nos dedos 3, 4 e 5 durante o deslocamente de A para B.
-
-	 Para se adequar aos requisitos descritos, no código embarcado foi usada a função "map", que permite remapear uma faixa de valores em outra menor. Usando tal função, a faixa de entrada que inicialmente poderia variar entre 0 e 1023, foi remapeada para variar entre 0 e 9 valores inteiros. 
-	 
-	 Além do mais, a função map também permite inverter a saída, de uma forma que os valores de entrada que variam de 1023 a 0 (decrescente) passarão a variar de 0 a 9 (crescente). Este último requisito, permite eliminar os deslocamentos negativos.
-
-	 Usando as equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, os valores digitais remapeados (R) foram adicionados à tabela \ref{Tab:deltapos}, criando a tabela \ref{Tab:deltaremap}:
-
-
-	\begin{table}[H]
-  	\centering
-		\caption{Valores de A para B e remapeados (R).}
-    \begin{tabular}{c|cc|cc|cc|cc}
-      \midrule
-			Dedo	&\multicolumn{2}{c}{PosA	(RA)} 	&\multicolumn{2}{c}{PosB (RB)}	&\multicolumn{2}{c}{$\Delta$Pos	($\Delta$R)}	&\multicolumn{2}{c}{NPos	(NR)}	\\
-      \midrule
-			1 		& 191 & (1)		& 616 & (5)		& 		+425 & (+4)		&			425	& (5)		\\
-			2 		& 140 & (1)		& 609 & (5)		& 		+469 & (+4)		&			469 &	(5)		\\
-			3 		& 774 & (3)		& 360 & (6)		& 		-414 & (+3)		&			414	& (4)		\\
-			4 		& 728 & (3)		& 475 & (5)		& 		-253 & (+2)		&			253	& (3)		\\
-			5 		& 670 & (4)		& 367 & (6)		& 		-303 & (+2)		&			303 &	(3)		\\      
-      \midrule
-    \end{tabular}
-    \label{Tab:deltaremap}
-    \fonte{Produzido pelo autor}
-	\end{table}
 	
 
 		
