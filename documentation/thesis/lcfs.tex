@@ -907,7 +907,18 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Durante o uso da luva, o potenciômetro não apresenta um valor fixo dada uma mesma posição, ao invés disso, para cada posição detectável surge uma média de valores digitais relativamente estáveis. Então se, por exemplo, o dedo mínimo (1) está totalmente extendido (posição A), seu respectivo potenciômetro apresenta valores em torno de 191 (e não o valor exato de 191). Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616.
 
-		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9.	A partir daí, para criar a mensagem de controle são necessários apenas o número que representa o potenciômetro e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem de cinco dígitos, na qual a posição de cada dígito representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante. Então, por exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar) que está na posição 1.
+		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9.	A partir daí, para criar um mensagem de controle são necessários apenas o número que representa o potenciômetro e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem de cinco dígitos, na qual a posição de cada dígito representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante. 
+		
+		A figura \ref{Fig:glove-create-msg1} exemplifica uma mensagem gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) está na posição 6, o dedo 2 (anelar) está na posição 9 e assim sucessivamente até o dedo 5 (polegar) que está na posição 1. Este exemplo está demonstrtado na figura 
+
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Posicionamento dos dedos e sua respectiva mensagem}
+  		\includegraphics[width=12cm]{./figures/glove-create-msg1.png}
+  		\label{Fig:glove-create-msg1}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
 		
 		 %Então para calcular o deslocamente temos:
 

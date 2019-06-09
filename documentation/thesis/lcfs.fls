@@ -292,6 +292,9 @@ INPUT ./figures/glove-wire-flex2.png
 INPUT ./figures/glove-wire-extend2.png
 INPUT ./figures/glove-wire-extend2.png
 INPUT ./figures/glove-wire-extend2.png
+INPUT ./figures/glove-create-msg1.png
+INPUT ./figures/glove-create-msg1.png
+INPUT ./figures/glove-create-msg1.png
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
