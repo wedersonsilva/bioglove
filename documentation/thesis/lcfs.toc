@@ -29,19 +29,18 @@
 \contentsline {section}{\numberline {3.3}Programa\IeC {\c c}\IeC {\~a}o do microcontrolador}{30}{section.3.3}% 
 \contentsline {subsection}{\numberline {3.3.1}Digitaliza\IeC {\c c}\IeC {\~a}o do sinal}{30}{subsection.3.3.1}% 
 \contentsline {subsection}{\numberline {3.3.2}Calibra\IeC {\c c}\IeC {\~a}o}{31}{subsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.2.1}Deslocamento e resolu\IeC {\c c}\IeC {\~a}o}{31}{subsubsection.3.3.2.1}% 
-\contentsline {subsubsection}{\numberline {3.3.2.2}Remapeamento}{32}{subsubsection.3.3.2.2}% 
-\contentsline {section}{\numberline {3.4}Transmiss\IeC {\~a}o, recep\IeC {\c c}\IeC {\~a}o e controle}{34}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.3.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{32}{subsection.3.3.3}% 
+\contentsline {section}{\numberline {3.4}Transmiss\IeC {\~a}o, controle e recep\IeC {\c c}\IeC {\~a}o}{34}{section.3.4}% 
 \contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{34}{subsection.3.4.1}% 
 \contentsline {subsection}{\numberline {3.4.2}VirtualWire}{35}{subsection.3.4.2}% 
 \contentsline {subsection}{\numberline {3.4.3}Transmiss\IeC {\~a}o}{36}{subsection.3.4.3}% 
-\contentsline {subsection}{\numberline {3.4.4}Introdu\IeC {\c c}\IeC {\~a}o}{36}{subsection.3.4.4}% 
-\contentsline {subsection}{\numberline {3.4.5}Posi\IeC {\c c}\IeC {\~o}es e movimentos}{37}{subsection.3.4.5}% 
-\contentsline {subsection}{\numberline {3.4.6}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{37}{subsection.3.4.6}% 
+\contentsline {subsection}{\numberline {3.4.4}Protocolo de controle}{37}{subsection.3.4.4}% 
+\contentsline {subsection}{\numberline {3.4.5}Introdu\IeC {\c c}\IeC {\~a}o}{37}{subsection.3.4.5}% 
+\contentsline {subsection}{\numberline {3.4.6}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{38}{subsection.3.4.6}% 
 \contentsline {section}{\numberline {3.5}Montagem do prot\IeC {\'o}tipo}{39}{section.3.5}% 
 \contentsline {subsection}{\numberline {3.5.1}Transdutor de Flex\IeC {\~a}o}{39}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Escolha de componentes}{39}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}Posicionamento de componentes}{40}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.2}Escolha de componentes}{40}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}Posicionamento de componentes}{41}{subsection.3.5.3}% 
 \contentsline {subsection}{\numberline {3.5.4}Placa Embarcada}{41}{subsection.3.5.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{44}{chapter.4}% 

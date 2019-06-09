@@ -911,10 +911,9 @@ in many projects, the glove's cost become high because of technology chosen to m
 		\subsection{Calibração}
 
 
-		Durante o uso da BioGlove, quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Para a posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 191, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141. Isso ocorre por conta de alguns fatores: Existem pequenas diferenças nos valores de resistência mesmo entre potenciômetros do mesmo modelo (dentro da faixa de tolerância do fabricante; há diferença entre o tamanho dos dedos; as tensões aplicadas no fio de náilon não são iguais para todos os dedos; entre outras. Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou enquanto outros apresentam deslocmentos negativos para um mesmo movimento.
+		Durante o uso da BioGlove, quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Para a posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 191, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141. Isso ocorre por conta de alguns fatores: Existem pequenas diferenças nos valores de resistência mesmo entre potenciômetros do mesmo modelo (dentro da faixa de tolerância do fabricante; há diferença entre o tamanho dos dedos; as tensões aplicadas no fio de náilon não são iguais para todos os dedos; entre outras. Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou enquanto outros apresentam deslocamentos negativos para um mesmo movimento.
 		
-
-		\subsubsection{Deslocamento e resolução}
+	%	\subsubsection{Deslocamento e resolução}
 
 		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B, que são os graus máximos de extensão e flexão da BioGlove. Além disso, também era preciso saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B, com isso seria possível saber a resolução do sistema em cada dedo.
 
@@ -953,21 +952,21 @@ in many projects, the glove's cost become high because of technology chosen to m
     \fonte{Produzido pelo autor}
 	\end{table}
 		
-		Quanto maior for o valor de NPos na tabela \ref{Tab:deltapos}, maior será a resolução e portanto mais preciso será o sensoriamento do dedo. Sendo assim, o anelar (2) é o dedo com maior potencial de sensoriamento, enquanto que o indicador (4) possui menor potencial. Observe ainda que os dedos 3, 4 e 5 apresentam deslocamentos ($\Delta$Pos) negativos, e isso acontece porque os valores de PosA são maiores do que PosB nesse grupo de potenciômetros.
+		Quanto maior for o valor de NPos na tabela \ref{Tab:deltapos}, maior será a resolução e portanto mais preciso será o sensoriamento do dedo. Sendo assim, o anelar (2) é o dedo com maior potencial de sensoriamento, enquanto que o indicador (4) possui menor potencial. Observe ainda que os dedos 3, 4 e 5 apresentam deslocamentos ($\Delta$Pos) negativos, e isso acontece porque os valores de PosA são maiores do que PosB nesse grupo de potenciômetros. Entretanto, o tratamento dos deslocamentos negativos só se fará necessário durante a implementação do protocolo de comunicação a ser exposto a seguir.
 
 
-			\subsubsection{Remapeamento}
+			\subsection{Protocolo de comunicação}
 
 		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9 (10 níveis).	Dessa forma, em uma mensagem numérica, seria preciso apenas 1 dígito para indicar o valor de uma posição. 
 		
-		A partir desse remapeamento, para criar um mensagem de controle são necessárias apenas duas informações: O número que indica o potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo. 
+		A partir do remapeamento, de acordo com o protocolo de comunicação, para criar uma mensagem são necessárias apenas duas informações: O número do potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo. 
 		
-		A figura \ref{Fig:glove-create-msg1} exemplifica uma mensagem gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) possui valor o 6, o dedo 2 (anelar) possui valor 9 e assim sucessivamente até o dedo 5 (polegar) que possui o valor 1.
+		A figura \ref{Fig:glove-create-msg1} exemplifica o protocolo de comunicação desenvolvido onde uma mensagem é gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) possui valor o 6, o dedo 2 (anelar) possui valor 9 e assim sucessivamente até o dedo 5 (polegar) que possui o valor 1.
 
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Posicionamento dos dedos e sua respectiva mensagem}
+			\caption{Funcionamento do protocolo de comunicação}
   		\includegraphics[width=12cm]{./figures/glove-create-msg1.png}
   		\label{Fig:glove-create-msg1}
 			\fonte{Produzido pelo autor.}
@@ -1002,7 +1001,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		Através da tabela \ref{Tab:deltaremap} é possível observar a correspondência de valores antes e depois de remapeados. Por exemplo, o valor do potenciômetro apresentado no dedo 4 para PosA é de ``728'', entretanto o valor correspondente que será enviado na mensagem de controle é ``3''. Outro ponto a ser observado é a menor resolução dos valores remapeados (NR) quando comparado com a resolução anterior (NPos). Além disso, entre os valores de posição remapeados (RA e RB) não existem valores representados por mais de 1 dígito, o que era um dos requisitos para uma mensagem de transmissão mais simples. E por fim, nota-se que não existem deslocamentos negativos dentre os valores remapeados ($\Delta$R), outro objetivo da aplicação.
 
 	
-		\section{Transmissão, recepção e controle}
+		\section{Transmissão, controle e recepção}
 
 		\subsection{Introdução}
 
@@ -1018,7 +1017,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 
-		Nas subseções a seguir expoem-se mais detalhes sobre a programação dos microcontroladores embarcados na luva e no carrinho para que a transmissão do sinal e o controle sejam possíveis. A primeira seção é dedicada à biblioteca VirtualWire, que está presente tanto no código de transmissão quanto no de recepção. Na segunda apresentam-se o protocolo de comunicação e o pseudocódigo do software de transmissão embarcado na luva. A última seção destina-se ao software de recepção e suas funções de movimento que estão embarcados no microcontrolador do carrinho.
+		Nas subseções a seguir expoem-se mais detalhes sobre a programação dos microcontroladores embarcados na luva e no carrinho para que a transmissão do sinal e o controle sejam possíveis. A primeira seção é dedicada à biblioteca VirtualWire, que está presente tanto no código de transmissão quanto no de recepção. Na segunda apresenta-se o código de transmissão que junta os valores dos potenciometros e os envia ordenadamente. Na terceira seção explica-se como funciona o protocolo que foi criado para controlar o carrinho. A última seção destina-se ao software de recepção e suas funções de controle de movimento que estão embarcadas no microcontrolador do carrinho.
 
 
 		\subsection{VirtualWire}
@@ -1026,23 +1025,26 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita a comunicação entre vários Arduinos usando transmissores e receptores de rádio frequência de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
 
-		O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados necessários para a comunicação tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens entre os módulos compatíveis, basta seguir os padrões de entrada e saída das funcões descritas na documentação da biblioteca disponível gratuitamente na internet.
+		O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados necessários para a comunicação tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens entre os módulos compatíveis, basta seguir os padrões de entrada e saída das funções descritas na documentação da biblioteca disponível gratuitamente na internet.
 
-		Para o código embarcado no microcontrolador da BioGlove foi necessário definir segundo os parâmetros da biblioteca, o pino de conexão do transmissor com o microcontrolador, a taxa de transmissão a ser utilizada, além do tamanho da mensagem que seria enviada. Porém, antes de efetivamente enviar a mensagem sempre é necessário converter a mensagem numérica em um dado do string, logo em seguida esta string será transformada em um vetor de char, que é o formato de dado aceito pela função de envio da VirtualWire.
+		Para o código embarcado no microcontrolador da BioGlove foi necessário definir segundo os parâmetros da biblioteca, o pino de conexão do transmissor com o microcontrolador, a taxa de transmissão a ser utilizada, além do tamanho da mensagem que seria enviada. Porém, antes de efetivamente enviar a mensagem sempre é necessário converter a mensagem numérica em um dado do tipo string, logo em seguida esta string será transformada em um vetor de char, que é o formato de dado aceito pela função de envio da VirtualWire.
 
 		No código embarcado no carrinho, a biblioteca é usada para receber as mensagens adequadamente definindo-se alguns parâmetros como, o tamanho da mensagem esperada, o pino de conexão do receptor com o microcontrolador e a taxa de transmissão, que deve ser a mesma definida previamente no software embarcado na luva. Além disso, é necessário usar uma função que indica a chegada de uma mensagem, e quando isso acontece a mensagem recebida deve guardada em variáveis do tamanho correto, pois as mensagens são recebidas \textit{byte} a \textit{byte}. A partir desse ponto já é possivel usar a mensagem recebida da maneira definida pela aplicação.
 
+		Uma vez que já existe um conhecimento básico a cerca do funcionamento das funções e dos parâmetros da biblioteca necessários para cada aplicação, basta incluir a biblioteca em uma chamada logo no início do código de transmissão e do código de recepção.
 
 
-%===================================================================================
 
-		%	ATE AQUI OK
-
-%===================================================================================
 		\subsection{Transmissão}
 
-		Uma das formas de converter valores inteiros em string é concatenar o valor inteiro com uma string \cite{arduinostringadd}. Por isso, no código desenvolvido, uma string vazia é somada aos valores inteiros remapeados dos potenciômetros. Com isso, os valores serão concatenados e transformados em uma string ao mesmo tempo. Essa string então é transformada em um vetor de char usando a função "toCharArray" antes de ser enviada. Este processo está descrito resumidamente no pseudocódigo abaixo.		
+		Inicialmente o software embarcado no microcontrolador instalado na BioGlove tem como função a captura dos valores apresentados pelos potenciômetros e o remapeamento desses valores para uma faixa menor de valores. Esse período inicial do software não será abordado nesta subseção, que é dedica-se apenas aos trechos de código que caracterizam a forma de transmissão escolhida para esse trabalho.
 
+		Como foi explicitado previamente a estratégia de transmissão escolhida foi a de enviar uma mensagem de apenas 5 dígitos da luva para o carrinho, sendo que o valor de cada dígito representa o valor de cada potenciômetro (e consequentemente de cada dedo) naquele instante de tempo. Para que isso seja possível é necessário que o valores inteiros dos potenciômetros sejam concatenados lado a lado em uma ordem correta para formar uma única mensagem. Além disso, por conta de uma exigência da biblioteca VirtualWire, ainda é necessário transformar esta mensagem numérica em um dado do tipo string e posteriormente esta string será dividida em um vetor de dados do tipo char.	
+		
+		Uma das formas de converter valores inteiros em string é concatenar o(s) valor(es) inteiro(s) com uma string \cite{arduinostringadd}. Por isso, no código de transmissão, uma string vazia é somada aos valores inteiros (que já foram remapeados) dos potenciômetros. Através deste método todos os valores serão concatenados e transformados em uma string através de uma linha de código. Logo após, esta string é transformada em um vetor de char usando a função nativa da linguagem chamada ``toCharArray''. A partir desse momento já é possível enviar a mensagem ao módulo transmissor usando a função ``vw\_send( )'' da VirtualWire. O processo descrito até aqui está representado no pseudocódigo abaixo.		
+%	// Inicia variaveis
+%	string vazia = ""
+%	string mensagem = ""
 \lstset{language=C++,
 %                basicstyle=\ttfamily,
                 keywordstyle=\color{blue}\ttfamily,
@@ -1051,11 +1053,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 								basicstyle=\footnotesize,
                 morecomment=[l][\color{magenta}]{\#}
 }
-\begin{lstlisting}
-	// Inicia variaveis
-	string vazia = ""
-	string mensagem = ""
-	
+\begin{lstlisting}	
 	// Recebe as posicoes de cada dedo
 	int dedo1 = posicao_dedo1;
 	int dedo2 = posicao_dedo2;
@@ -1063,46 +1061,24 @@ in many projects, the glove's cost become high because of technology chosen to m
 	int dedo4 = posicao_dedo4;
 	int dedo5 = posicao_dedo5;
 
-	// Concatena os inteiros e os transforma em string
-	mensagem = vazia + dedo1 + dedo2 + dedo3 + dedo4 + dedo5;
+	// Concatena string + inteiros para obter uma unica string
+	mensagem = string + dedo1 + dedo2 + dedo3 + dedo4 + dedo5;
 
 	// Converte a string em um vetor de char
 	mensagem = mensagem.toCharArray;
 
 	// Envia o vetor de char
 	vw_send(mensagem);
-
 \end{lstlisting}
 
 				
-%		Um resumo do processo de digitalização e envio é demonstrado na figura \ref{Fig:get-and-send}.
+		\subsection{Protocolo de controle}
 
+		O primeiro passo para a criação do protocolo de controle foi definir quais comandos seriam enviados para o carrinho. Somente para fins de demonstração, cinco comandos de movimento foram criados para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar.
 
-%		\begin{figure}[h!]
-%			\centering
-%			\caption{Digitalização e envio do sinal}
-%  		\includegraphics[width=12cm]{./figures/get-and-send.png}
-% 		\label{Fig:get-and-send}
-%			\fonte{Produzido pelo autor.}
-%		\end{figure}
-		
-	
+		O segundo passo, foi definir quais gestos, ou combinações de gestos, realizados pelos dedos iriam servir para acionar algum desses movimentos do carrinho. Após a realização de alguns testes, foram definidas seguintes gestos para controle: flexionar os dedos 2 e 3 simultanemanete, flexionar somente o dedo 4, flexionar somente o dedo 5, flexionar apenas o dedo 1 e não flexionar nenhum dedo.
 
-		\subsection{Introdução}
-
-		Através de um transmissor de rádio frequência, a o sistema embarcado na luva envia constantemente mensagens de 5 dígitos que indicam a posição de cada um dos cinco dedos. Para receber esse sinal, é preciso usar um módulo receptor de rádio frequência compatível com o transmissor. 
-		
-		Um sistema receptor foi embarcado em um carrinho usando um segundo microcontrolador Arduino modelo Nano e um módulo receptor RF. Esse carrinho funciona com motores DC (\textit{Direct Current}) e todo o sistema é alimentado por uma bateria LiPo. 
-
-		Para possibilitar o controle, conjuntos pré-definidos das posições dos dedos correspondem a movimentos que devem ser executados pelo carrinho.
-		
-		\subsection{Posições e movimentos}
-
-		Como foi explicitado anteriormente, a mensagem transmitida pela luva consiste em um conjunto de 5 dígitos no qual cada dígito indica a posição de um respectivo dedo. Na mensagem, o primeiro dígito da esquerda indica a posição do dedo 1, que é o dedo mínimo. O segundo dígito indica a posição do dedo 2, ou seja, o dedo anelar. Essa lógica segue até o quinto dígito que representa a posição do dedo polegar.
-
-		Cinco comandos foram definidos para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar. Com o intuito de controlar o carrinho através de combinações de flexões e extensões de dedos, 5 conjuntos de posições também foram definidas. São eles: flexionar os dedos 2 e 3 simultanemanete, flexionar somente o dedo 4, flexionar somente o dedo 5, flexionar apenas o dedo 1 e não flexionar nenhum dedo.
-
-		A figura \ref{Fig:glove-control-positions1} mostra a correspondência entre cada combinação de flexão dos dedos e seu respectivo comando para o carrinho. Apenas os dedos indicados em vermelho devem ser flexionados para validar o comando. Qualquer outra combinação faz o carrinho parar.
+		A relação entre os gestos e movimentos está representada na figura \ref{Fig:glove-control-positions1} que mostra a correspondência entre cada combinação de flexão dos dedos e seu respectivo comando para o carrinho. Apenas os dedos indicados em vermelho devem ser flexionados para validar o comando, e qualquer outra combinação realizada pelo usuário faz o carrinho parar.
 
 
 		\begin{figure}[h!]
@@ -1113,6 +1089,23 @@ in many projects, the glove's cost become high because of technology chosen to m
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 
+		Detalhamentos sobre como o software embarcado no carrinho consegue interpretar e reconher quais gestos foram efetuados pelo usuário da BioGlove serão explicitados na subseção a seguir que trata do software de recepção.
+
+%===================================================================================
+
+		%	ATE AQUI OK
+
+%===================================================================================	
+	
+
+		\subsection{Introdução}
+
+		Através de um transmissor de rádio frequência, a o sistema embarcado na luva envia constantemente mensagens de 5 dígitos que indicam a posição de cada um dos cinco dedos. Para receber esse sinal, é preciso usar um módulo receptor de rádio frequência compatível com o transmissor. 
+		
+		Um sistema receptor foi embarcado em um carrinho usando um segundo microcontrolador Arduino modelo Nano e um módulo receptor RF. Esse carrinho funciona com motores DC (\textit{Direct Current}) e todo o sistema é alimentado por uma bateria LiPo. 
+
+		Para possibilitar o controle, conjuntos pré-definidos das posições dos dedos correspondem a movimentos que devem ser executados pelo carrinho.
+		
 		
 		\subsection{\textit{Software} de recepção}
 
