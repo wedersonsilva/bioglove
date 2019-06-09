@@ -913,11 +913,12 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Durante o uso da BioGlove, quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Para a posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 191, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141. Isso ocorre por conta de alguns fatores: Existem pequenas diferenças nos valores de resistência mesmo entre potenciômetros do mesmo modelo (dentro da faixa de tolerância do fabricante; há diferença entre o tamanho dos dedos; as tensões aplicadas no fio de náilon não são iguais para todos os dedos; entre outras. Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou enquanto outros apresentam deslocmentos negativos para um mesmo movimento.
 		
-		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B, que são os graus máximos de extensão e flexão da BioGlove. Além disso, também era preciso saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B, com isso seria possível saber a resolução do sistema para cada dedo.
 
-		\subsubsection{Deslocamento e número de posições}
+		\subsubsection{Deslocamento e resolução}
 
-		Para descobrir os valores de deslocamento, inicialmente cada potenciômetro teve seu valor digital médio anotado tanto para a posição A quanto para B, posteriormente para cada um dos dedos os valores foram utilizados na equação \ref{Eq:Desloca1}:
+		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B, que são os graus máximos de extensão e flexão da BioGlove. Além disso, também era preciso saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B, com isso seria possível saber a resolução do sistema em cada dedo.
+
+		Para descobrir os valores de deslocamento, inicialmente cada potenciômetro teve seu valor digital médio anotado tanto para a posição A quanto para B, e posteriormente os valores de cada um dos dedos foram utilizados na equação \ref{Eq:Desloca1}:
 
 	\begin{equation}
 			\Delta Pos 	= Pos B 	- 	Pos A
@@ -998,8 +999,38 @@ in many projects, the glove's cost become high because of technology chosen to m
     \fonte{Produzido pelo autor}
 	\end{table}
 	
-		Através da tabela \ref{Tab:deltaremap} é possível observar a correspondência de valores antes e depois de remapeados. Por exemplo, o valor do potenciômetro apresentado no dedo 4 para PosA é de ``728'', entretanto o valor correspondente que será enviado na mensagem de controle será ``3''. Outro ponto a ser observado é a menor resolução dos valores remapeados (NR) quando comparado com a resolução anterior (NPos). Além disso, entre os valores de posição remapeados (RA e RB) não existem valores representados por mais de 1 dígito, o que era um dos requisitos para uma mensagem de transmissão mais simples. E por fim, nota-se que não existem deslocamentos negativos dentre os valores remapeados ($\Delta$R), outro objetivo da aplicação.
+		Através da tabela \ref{Tab:deltaremap} é possível observar a correspondência de valores antes e depois de remapeados. Por exemplo, o valor do potenciômetro apresentado no dedo 4 para PosA é de ``728'', entretanto o valor correspondente que será enviado na mensagem de controle é ``3''. Outro ponto a ser observado é a menor resolução dos valores remapeados (NR) quando comparado com a resolução anterior (NPos). Além disso, entre os valores de posição remapeados (RA e RB) não existem valores representados por mais de 1 dígito, o que era um dos requisitos para uma mensagem de transmissão mais simples. E por fim, nota-se que não existem deslocamentos negativos dentre os valores remapeados ($\Delta$R), outro objetivo da aplicação.
 
+	
+		\section{Transmissão, recepção e controle}
+
+		\subsection{Introdução}
+
+		Além de detectar diversos níveis de flexão dos dedos a partir do transdutor bioinspirado desenvolvido, a BioGlove também objetiva processar o sinal obtido e transmiti-lo sem fio para a aplicação alvo. Neste trabalho, a aplicação escolhida para ser controlada a partir da BioGlove é um pequeno carrinho elétrico, no qual ele deverá se movimentar de acordo com um conjunto de posições pré-determinadas dos dedos, ou seja, as direções de movimento do carrinho serão controlado através dos movimentos dos dedos.
+
+		Para enviar o sinal até a aplicação o sistema está embarcado com um módulo transmissor embarcado na BioGlove e um módulo receptor instalado no carrinho, que se comunicam sem fio através de sinais de rádio frequência. Entretanto, antes de enviar a mensagem é necessário que o microcontrolador organize as informações de uma forma que o módulo transmissor consiga ``falar'', para isso uma biblioteca específica é usada durante a programação do microcontrolador embarcado na luva. Além disso, o microcontrolador embarcado no carrinho também precisa dessa biblioteca para ``entender'' o sinal que chega até o seu módulo receptor. Ou seja, a biblioteca permite que ambos os módulos se comuniquem entre si ``no mesmo idioma''. Uma vez que os módulos já consigam se comunicar adequadamente, ainda é necessário criar o conteúdo em si da mensagem que será enviada e o seu significado. Para isso neste trabalho foi desenvolvido um protocolo de comunicação específico para controlar o carrinho através dos gestos dos dedos. A figura \ref{Fig:tx-rx-scheme1} demonstra esse processo de tradução, transmissão, recepção e recuperação da mensagem original através do uso dos módulos.
+
+		\begin{figure}[h!]
+			\centering
+			\caption{Transmissão e recepção do sinal pelos módulos}
+  		\includegraphics[width=14cm]{./figures/tx-rx-scheme1.png}
+  		\label{Fig:tx-rx-scheme1}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
+
+		Nas subseções a seguir expoem-se mais detalhes sobre a programação dos microcontroladores embarcados na luva e no carrinho para que a transmissão do sinal e o controle sejam possíveis. A primeira seção é dedicada à biblioteca VirtualWire, que está presente tanto no código de transmissão quanto no de recepção. Na segunda apresentam-se o protocolo de comunicação e o pseudocódigo do software de transmissão embarcado na luva. A última seção destina-se ao software de recepção e suas funções de movimento que estão embarcados no microcontrolador do carrinho.
+
+
+		\subsection{VirtualWire}
+
+
+		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita a comunicação entre vários Arduinos usando transmissores e receptores de rádio frequência de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
+
+		O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados necessários para a comunicação tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens entre os módulos compatíveis, basta seguir os padrões de entrada e saída das funcões descritas na documentação da biblioteca disponível gratuitamente na internet.
+
+		Para o código embarcado no microcontrolador da BioGlove foi necessário definir segundo os parâmetros da biblioteca, o pino de conexão do transmissor com o microcontrolador, a taxa de transmissão a ser utilizada, além do tamanho da mensagem que seria enviada. Porém, antes de efetivamente enviar a mensagem sempre é necessário converter a mensagem numérica em um dado do string, logo em seguida esta string será transformada em um vetor de char, que é o formato de dado aceito pela função de envio da VirtualWire.
+
+		No código embarcado no carrinho, a biblioteca é usada para receber as mensagens adequadamente definindo-se alguns parâmetros como, o tamanho da mensagem esperada, o pino de conexão do receptor com o microcontrolador e a taxa de transmissão, que deve ser a mesma definida previamente no software embarcado na luva. Além disso, é necessário usar uma função que indica a chegada de uma mensagem, e quando isso acontece a mensagem recebida deve guardada em variáveis do tamanho correto, pois as mensagens são recebidas \textit{byte} a \textit{byte}. A partir desse ponto já é possivel usar a mensagem recebida da maneira definida pela aplicação.
 
 
 
@@ -1008,26 +1039,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		%	ATE AQUI OK
 
 %===================================================================================
-
-
-				 %Então para calcular o deslocamente temos:
-
-%	\begin{equation}
-%		\begin{split}
-%			\Delta Pos 	& = Pos 2 	- 	Pos 1 	\\
-%									& = 558 		- 	157			\\
-%						 			& = +383
-%		\label{Eq:Desloca1}
-%		\end{split}
-%	\end{equation}
-
-		\subsection{VirtualWire}
-
-		VirtualWire é uma biblioteca de comunicação para Arduino que possibilita vários Arduinos se comunicarem usando transmissores e receptores RF de baixo custo. Essa biblioteca permite o envio de mensagens curtas, sem endereçamento, retransmissão ou confirmação, como se fosse uma espécie de protocolo UDP (\textit{User Datagram Protocol}), usando modulação ASK (\textit{Amplitude Shift Keying}) \cite{virtualwiremanual}. 
-
-		O uso dessa biblioteca nos códigos da IDE do Arduino, permite abstrair tratamentos de envio e recebimento de dados tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens, basta seguir os padrões de entrada e saída das funcões descritas na biblioteca.
-
-		No código embarcado no microcontrolador da luva foram definidos, segundo os parâmetros da biblioteca, o pino do transmissor RF, a taxa de transmissão e o tamanho da mensagem a ser enviada. Porém, antes de efetivamente enviar a mensagem é preciso convertê-la em uma string que logo em seguida será transformada em um vetor de char, que é o formato de dado aceito pela função de envio.
+		\subsection{Transmissão}
 
 		Uma das formas de converter valores inteiros em string é concatenar o valor inteiro com uma string \cite{arduinostringadd}. Por isso, no código desenvolvido, uma string vazia é somada aos valores inteiros remapeados dos potenciômetros. Com isso, os valores serão concatenados e transformados em uma string ao mesmo tempo. Essa string então é transformada em um vetor de char usando a função "toCharArray" antes de ser enviada. Este processo está descrito resumidamente no pseudocódigo abaixo.		
 
@@ -1073,20 +1085,8 @@ in many projects, the glove's cost become high because of technology chosen to m
 % 		\label{Fig:get-and-send}
 %			\fonte{Produzido pelo autor.}
 %		\end{figure}
-
-
-
-		\section{Ajustes}
 		
-		\subsection{Introdução}
-
-		Quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Quando a luva está em posição A (extendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 192, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141.	
-		
-		Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potênciômetros apresentam deslocamentos positivos ou negativos para um mesmo movimento. 
 	
-
-		
-		\section{Protocolo de comunicação}
 
 		\subsection{Introdução}
 
@@ -1116,9 +1116,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		\subsection{\textit{Software} de recepção}
 
-		A biblioteca VirtualWire também deve estar presente no código do microcontrolador embarcado no carrinho. Para receber as mensagens adequadamente, é necessário definir o pino do receptor RF e indicar a taxa de transmissão do transmissor RF. Também deve-se criar variáveis para guardar a mensagem recebida e o seu tamanho, pois as mensagens são recebidas \textit{byte} a \textit{byte}.
-
-		Uma função nativa da biblioteca verifica se chegou alguma mensagem e indica \textit{true} quando isso acontece. Então, ao receber uma mensagem, para lê-la, é necessário criar um \textit{for} que recebe como parâmetro o tamanho da mensagem recebida. Dentro da função a mensagem será lida \textit{byte} a \textit{byte} enquanto a função \textit{for} for verdadeira.
+ Então, ao receber uma mensagem, para lê-la, é necessário criar um \textit{for} que recebe como parâmetro o tamanho da mensagem recebida. Dentro da função a mensagem será lida \textit{byte} a \textit{byte} enquanto a função \textit{for} for verdadeira.
 
 		O pseudocódigo abaixo demonstra o fluxo descrito:
 
