@@ -1155,15 +1155,22 @@ if(chegou_mensagem){
 
 		\section{Montagem do protótipo}
 
+		
+				\subsection{Introdução}	
+				
+
+		O design do protótipo foi baseado em testes realizados inicialmente com materiais descartáveis, visando apenas construir uma idéia a cerca das dimensões mínimas necessárias para embarcar sensores, microcontrolador e bateria em cima do dorso da mão. Sendo que o foco da construção desde os primeiros protótipos em ordem de importância foi: acomodar da melhor forma possível os transdutores de flexão; encaixar uma placa de tamanho reduzido para processar os dados dos sensores; inserir o módulo transmissor de sinal; e por último inserir a bateria. Todo esse grupo de componentes, exceto os fios e as polias que compõe o sensor bioinspirado, deveria caber no dorso da mão e ficar relativamente estável durante a realização de movimentos e comandos inerentes ao uso da BioGlove.
+
+		Nas subseções a seguir estão descritos os procedimentos realizados para a montagem do protótipo mais recente. Inicialmente apresentam-se os materiais que compõem os transdutores de flexão e a luva que é a base da BioGlove, em seguida são expostos detalhes a cerca dos outros componentes embarcados na luva e a motivação para a sua escolha, logo após mostra-se o que levou o posicionamento dos componentes na parte superior da placa embarcada, e concluindo com a subseção onde apresenta-se o esquemático e o design da placa de circuito impresso, além da BioGlove em si completamente montada.
+
 		\subsection{Transdutor de Flexão}
 
-		A escolha de materiais foi baseada no menor custo e maior disponibilidade local. Prevendo a possibilidade de costuras no projeto, um par de luvas de algodão foi escolhida. O sistema foi embarcado na luva direita, enquanto que a esquerda poderia ser usada em caso de dano da primeira.
+		Durante a construção dos transdutores de flexão bioinspirados não se mostrou viável ou prático prender os fios diretamente em cada dedo do usuário, posi os fios de náilon machucavam a pela do usuário durante a flexão dos desos, além do mais isso trouxe mais algum impecilhos como dificuldade durante a montagem e estabilidade do sistema durante o uso. Por disso, foi decidido embarcar todo o sistema em uma luva de algodão, porque o uso dessa luva protege contato direto entre o fio de náilon e a pele do usuário, ademais permite a costura do fio, das polias plásticas e da placa de controle, sendo que o fato de todo o sistema estar embardo em uma luva fácilita o ato de vestir e retirar a BioGlove da mão.
 		
-		As polias plásticas são feitas a partir de pequenos pedaços de hastes flexíveis com algodão nas pontas. Sendo que apenas a parte plástica foi aproveitada enquanto que o algodão foi descartado.
+		A escolha de materiais que compõem os transdutores foi baseada no menor custo e maior disponibilidade local, sendo as polias plásticas feitas a partir de pequenos pedaços cortados de hastes flexíveis com algodão nas pontas, onde apenas a parte plástica foi aproveitada e todo o algodão foi descartado. O material da linha que movimenta os cursores dos potenciômetro é náilon, e foi escolhido por sua boa resistência, durabilidade e disponibilidade, e por apresentar pouca elasticidade quando é tensionado.
 
-		O material da linha que movimenta os cursores dos potenciômetro é náilon por sua boa resistência e durabilidade, além de aparentar ter pouca ou nenhuma elasticidade para a aplicação.
 
-		Utilizando a luva escolhida com o dorso voltado para cima, as polias plásticas foram costuradas ao longo dos dedos. Uma das extremidades de cada fio de náilon foi presa na ponta de cada um dos dedos, enquanto que o restante do fio passava por dentro das polias plásticas. A outra extremidade do fio de náilon seria amarrada ao cursor do potenciômetro quando a PCB fosse incluída na luva. A figura \ref{Fig:glove-wire-pot1} demostra o resultado esperado para um dos dedos da luva.
+		Após um estudo realizado com os materiais em mão, foram definidas as posições da luva onde seriam costurados os fios de náilon e as polias plásticas que servem de guia para o trajeto do fio, o próximo passo foi realizar a costura de cada componente para deixá-los devidamente presos na luva. Posicionando a luva com o dorso voltado para cima, cada polia plástica foi sendo costurada uma a uma ao longo dos dedos, posteriormente de cada fio de náilon foi preso na ponta de cada um dos dedos, o passo seguinte foi atravessar o comprimeto de cada fio por dentro das polias plásticas, deixando a outra extremidade do fio de náilon livre pois mais tarde essa ponta seria amarrada ao cursor de um potenciômetro. Este procedimento foi repetido para cada um dos cinco dedos da luva, e a figura \ref{Fig:glove-wire-pot1} demonstra o resultado esperado após a costura realizada em um dos dedos da luva.
 
 
 		\begin{figure}[h!]
@@ -1177,7 +1184,7 @@ if(chegou_mensagem){
 			
 			\subsection{Escolha de componentes}	
 
-			O sistema de processamento e transmissão de sinal embarcado na luva, foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à soluções com sensores flex tradicionais. O sistema deve ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
+			O sistema de processamento e transmissão de sinal da BioGlove foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à outras soluções embarcadas com sensores flex. O sistema deve ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
 
 			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
 

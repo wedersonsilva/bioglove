@@ -37,19 +37,20 @@
 \contentsline {subsection}{\numberline {3.4.4}Protocolo de controle}{37}{subsection.3.4.4}% 
 \contentsline {subsection}{\numberline {3.4.5}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{37}{subsection.3.4.5}% 
 \contentsline {section}{\numberline {3.5}Montagem do prot\IeC {\'o}tipo}{40}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Transdutor de Flex\IeC {\~a}o}{40}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Escolha de componentes}{40}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}Posicionamento de componentes}{41}{subsection.3.5.3}% 
-\contentsline {subsection}{\numberline {3.5.4}Placa Embarcada}{42}{subsection.3.5.4}% 
+\contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{40}{subsection.3.5.1}% 
+\contentsline {subsection}{\numberline {3.5.2}Transdutor de Flex\IeC {\~a}o}{40}{subsection.3.5.2}% 
+\contentsline {subsection}{\numberline {3.5.3}Escolha de componentes}{41}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.4}Posicionamento de componentes}{42}{subsection.3.5.4}% 
+\contentsline {subsection}{\numberline {3.5.5}Placa Embarcada}{43}{subsection.3.5.5}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{45}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{45}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Sensibilidade}{45}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Bateria}{47}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Alcance}{49}{section.4.4}% 
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{46}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{46}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Sensibilidade}{46}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Bateria}{48}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Alcance}{50}{section.4.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{51}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Trabalhos futuros}{52}{section.5.1}% 
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{52}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Trabalhos futuros}{53}{section.5.1}% 
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{53}{section*.38}% 
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{54}{section*.38}% 
