@@ -959,7 +959,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Posteriormente, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se encurtar ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9 (10 níveis).	Dessa forma, em uma mensagem numérica, seria preciso apenas 1 dígito para indicar o valor de uma posição. 
 		
-		A partir do remapeamento, de acordo com o protocolo de comunicação, para criar uma mensagem são necessárias apenas duas informações: O número do potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo. 
+		A partir do remapeamento, de acordo com o protocolo de comunicação, para criar uma mensagem são necessárias apenas duas informações: O número do potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo.  
 		
 		A figura \ref{Fig:glove-create-msg1} exemplifica o protocolo de comunicação desenvolvido onde uma mensagem é gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) possui valor o 6, o dedo 2 (anelar) possui valor 9 e assim sucessivamente até o dedo 5 (polegar) que possui o valor 1.
 
@@ -973,9 +973,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 		\end{figure}
 		
 
-		Além de encurtar a resolução de cada potenciômetro, também foi necessário eliminar os deslocamentos negativos. Isso foi realizado com o intuito de criar um protocolo de comunicação mais simples e que funcionasse da mesma maneira para qualquer um dos dedos.
+		O protocolo de comunicação descrito repete o envio de mensagens constantemente com intervalos de tempo de microsegundos entre uma mensagem e outra, por mais que a mensagem atual seja a mesma enviada anteriormente.   
+		
+		Além de encurtar a resolução de cada potenciômetro para se adequar ao protocolo de comunicação, também foi necessário eliminar os deslocamentos negativos. Isso foi realizado com o intuito de criar um protocolo de controle mais simples e que funcionasse da mesma maneira para qualquer um dos dedos.
 
-	 A chave para se adequar aos requisitos de calibração descritos até aqui foi a utilização da função ``map'' no código embarcado, isso porque esta função permite remapear uma faixa de valores em outra menor. Usando tal função, a faixa de entrada que inicialmente poderia variar entre 0 e 1023, foi remapeada para variar somente entre valores inteiros de 0 a 9. Além do mais, a função map também permite inverter sua saída de uma forma que os valores de entrada que variam de 1023 a 0 (decrescente) passam a variar de 0 a 9 (crescente). Com isso é possível eliminar os deslocamentos negativos.
+	 A chave para se adequar aos requisitos descritos até aqui foi a utilização da função ``map'' no código embarcado, isso porque esta função permite remapear uma faixa de valores em outra menor. Usando tal função, a faixa de entrada que inicialmente poderia variar entre 0 e 1023, foi remapeada para variar somente entre valores inteiros de 0 a 9. Além do mais, a função map também permite inverter sua saída de uma forma que os valores de entrada que variam de 1023 a 0 (decrescente) passam a variar de 0 a 9 (crescente). Com isso é possível eliminar os deslocamentos negativos.
 
 	 Após remapear os valores digitais recebidos e eliminar os deslocamentos negativos, para fins de comparação, os novos valores também foram utilizados nas equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, e os seus resultados foram adicionados à tabela \ref{Tab:deltapos}, criando a tabela \ref{Tab:deltaremap}:
 
@@ -1035,7 +1037,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 
 
-		\subsection{Transmissão}
+		\subsection{\textit{Software} de transmissão}
 
 		Inicialmente o software embarcado no microcontrolador instalado na BioGlove tem como função a captura dos valores apresentados pelos potenciômetros e o remapeamento desses valores para uma faixa menor de valores. Esse período inicial do software não será abordado nesta subseção, que é dedica-se apenas aos trechos de código que caracterizam a forma de transmissão escolhida para esse trabalho.
 
@@ -1072,7 +1074,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 \end{lstlisting}
 
 				
-		\subsection{Protocolo de controle}
+		\subsection{Protocolo de controle} \label{sub:protocolo-de-controle}
 
 		O primeiro passo para a criação do protocolo de controle foi definir quais comandos seriam enviados para o carrinho. Somente para fins de demonstração, cinco comandos de movimento foram criados para o carrinho, ir para frente, ir para trás, girar para a esquerda, girar para a direita e parar.
 
@@ -1098,51 +1100,40 @@ in many projects, the glove's cost become high because of technology chosen to m
 %===================================================================================	
 	
 
-		\subsection{Introdução}
-
-		Através de um transmissor de rádio frequência, a o sistema embarcado na luva envia constantemente mensagens de 5 dígitos que indicam a posição de cada um dos cinco dedos. Para receber esse sinal, é preciso usar um módulo receptor de rádio frequência compatível com o transmissor. 
-		
-		Um sistema receptor foi embarcado em um carrinho usando um segundo microcontrolador Arduino modelo Nano e um módulo receptor RF. Esse carrinho funciona com motores DC (\textit{Direct Current}) e todo o sistema é alimentado por uma bateria LiPo. 
-
-		Para possibilitar o controle, conjuntos pré-definidos das posições dos dedos correspondem a movimentos que devem ser executados pelo carrinho.
-		
 		
 		\subsection{\textit{Software} de recepção}
 
- Então, ao receber uma mensagem, para lê-la, é necessário criar um \textit{for} que recebe como parâmetro o tamanho da mensagem recebida. Dentro da função a mensagem será lida \textit{byte} a \textit{byte} enquanto a função \textit{for} for verdadeira.
 
-		O pseudocódigo abaixo demonstra o fluxo descrito:
+		Embarcado em um microcontrolador instalado no carrinho elétrico está o software de recepção. Este segundo software é o responsável por capturar mensagens enviadas constantemente pela BioGlove, separar cada dígito da mensagem, interpretar cada valor e enviar o comando que vai fazer o carrinho se movimentar ou não. A forma como o código consegue realizar todas essas tarefas será discutida mais detalhadamente a partir daqui.
+		
+		Inicialmente, só para receber o sinal é preciso conectar diretamente com o microcontrolador um módulo receptor de rádio frequência compatível com o módulo transmissor que está enviando o sinal, em seguida deve-se incluir a biblioteca VirtualWire que contém funções para interpretar o sinal recebido. 
 
-
+		De forma resumida, primeiro o software verifica se chegou alguma mensagem através da função ``vw\_wait\_rx( )'' nativa da VirtualWire, em caso positivo, a mensagem em si é guardada em uma variável e o tamanho da mensagem é guadado em outra variável. Além disso, no momento em que a mensagem chega, uma condição controlada por um \textit{if} é acionada e se inicia um laço \textit{for} que recebe o tamanho da mensagem como parâmetro. Este laço é responsável por ler a mensagem \textit{byte} a \textit{byte} enquanto durar o tamanho da mensagem, e cada \textit{byte} lido é salvo em uma posição de um vetor. O pseudocódigo abaixo demonstra o fluxo descrito até aqui.
 \begin{lstlisting}
-	// Define as variaveis
-	int pino_receptor = 8;
-	int taxa_transmissao = 2000;
-	
-	// Recebe a mensagem e o seu tamanho
-	byte msg = get_mensagem;
-	byte tamanho_msg = get_tamanho_msg;
-	
-	// Aguarda receber alguma mensagem
-	chegou_mensagem = vw_wait_rx();
+// Aguarda receber alguma mensagem
+chegou_mensagem = vw_wait_rx();
 
-	// Verifica se ha mensagem, inicia o for para ler cada byte
-	if(chegou_mensagem){
-		for (int i = 0; enquanto i < tamanho_msg; i++)
-			byte_recebido[i] = msg[i];		
-	}
+// Recebe a mensagem e o seu tamanho
+byte msg = get_mensagem;
+byte tamanho_msg = get_tamanho_msg;
+	
+// Verifica se ha mensagem, inicia o for para ler cada byte
+if(chegou_mensagem){
+	for (int i = 0; enquanto i < tamanho_msg; i++)
+		byte_recebido[i] = msg[i];		
+}
 \end{lstlisting}
 
-		Usando o pseudocódigo apresentado e sabendo que na mensagem recebida o primeiro dígito indica a posição atual do dedo 1, percebe-se que a função \textit{for} irá rodar pelo menos 5 vezes, armazenando em cada posição do vetor \texttt{byte\_recebido[]} as informações de cada dedo. Dessa maneira, a posição recebida do dedo 1 estará em \texttt{byte\_recebido[0]}, enquanto que a do dedo 2 está em \texttt{byte\_recebido[1]}. Continuando assim até o dedo 5 que estará em \texttt{byte\_recebido[4]}.
+%		Um sistema receptor foi embarcado em um carrinho usando um segundo microcontrolador Arduino modelo Nano e um módulo receptor RF. Esse carrinho funciona com motores DC (\textit{Direct Current}) e todo o sistema é alimentado por uma bateria LiPo. 
+		Usando o pseudocódigo apresentado e sabendo que a mensagem recebida contém 5 dígitos, percebe-se que a função \textit{for} irá rodar pelo menos 5 vezes, armazenando em cada interação o valor de um dígito em uma posição diferente do vetor \texttt{byte\_recebido[ ]}. Ou seja, após o fim do loop o vetor \texttt{byte\_recebido[ ]} terá os cinco dígitos da mensagem e seu respectivo valor. Seguindo essa lógica é possível concluir que o valor do dedo 1 estará em contido em \texttt{byte\_recebido[0]}, do dedo 2 está em \texttt{byte\_recebido[1]}, continuando assim até o valor do dedo 5 que estará em \texttt{byte\_recebido[4]}.
 		
-		Após o armazenamento das posições dos dedos, cinco funções foram criadas para comandar a ponte H e dessa forma movimentar os motores do carrinho. São elas: FRENTE( ), TRAS( ), ESQUERDA( ), DIREITA( ) e PARA( ). Ao chamar qualquer uma dessas funções, o carrinho passa a se movimentar na direção e sentido definidas.
-		Para chamar a função correta baseada na mensagem recebida, foram criadas cadeias de \textit{Ifs} e \textit{Elses} nas quais, quando satisfeitas certas condições, a respectiva função é chamada. 
+		Após recuperar o conteúdo da mensagem será necessário interpretar esse conteúdo de acordo com o protocolo de controle definido na subseção \ref{sub:protocolo-de-controle}. O primeiro passo foi criar e testadas as 5 funções de movimentação do carrinho definidas previamente que são \texttt{FRENTE( )}, \texttt{TRAS( )}, \texttt{ESQUERDA( )}, \texttt{DIREITA( )} e \texttt{PARA( )}. Ao chamar qualquer uma dessas funções, o carrinho passa a se movimentar na direção e sentido definidas. O segundo passo, para garantir a chamada da função correta baseada na mensagem recebida, foi criar cadeias de \textit{Ifs} e \textit{Elses} nas quais, quando satisfeitas as condições certas, a respectiva função é chamada fazendo com que o carrinho se movimente da maneira esperada. 
 		
-		A tabela \ref{Tab:dedos-e-comandos1} mostra quais são os conjuntos de valores esperados para todos os dedos simultaneamente em cada comando. Ou seja, para saber qual a combinação de valores para movimentar o carrinho para frente, é só observar a coluna "Frente" da tabela. Qualquer outra combinação além das especificadas na tabela, fará o carrinho ficar parado. Os dedos flexionados estão destacados em vermelho.
+		A captura dos valores dos potenciômetros para alimentar corretamente as condições das cadeias de \textit{Ifs} e \textit{Elses} foi efetuada durante o desenvolvimento do software através da anotação dos valores de todos os potenciômetros a cada grupo de gestos que compunha um comando da BioGlove. Com isso criou-se a tabela \ref{Tab:dedos-e-comandos1} que mostra quais são os conjuntos de valores esperados para todos os dedos simultaneamente em cada comando e destaca os dedos flexionados em vermelho. Ou seja, usando esta tabela, para saber qual a combinação de valores que satifaz as condições e movimenta o carrinho para frente, é só observar a coluna ``Frente'' da tabela. 
 
 		\begin{table}[H]
      \centering
-     \caption{Valores recebidos dos dedos e comandos de movimento}
+     \caption{Conjunto de condições para validar comandos}
      \begin{tabular}{c|ccccc}
 			 \midrule
 			 Dedo &       Frente			 & 				Tras				& 		Esquerda			 & 		Direita					& Para	\\
@@ -1158,9 +1149,8 @@ in many projects, the glove's cost become high because of technology chosen to m
      \fonte{Produzido pelo autor}
    \end{table}
 
+		Se a tabela \ref{Tab:dedos-e-comandos1} for comparada com a figura \ref{Fig:glove-control-positions1}, será observado que são compatíveis entre si, porque tanto na tabela quando na figura os mesmos dedos flexionados estão destacados em vermelho representando os gestos necessários para efetuar cada comando. Além disso, qualquer outra combinação além das especificadas na tabela, fará o carrinho ficar parado. Isto conclui o protocolo de controle do carrinho.
 
-
-%		Para poder controlar o carrinho, foi necessário criar um protocolo de comunicação que traduzisse os movimentos de flexão dos dedos em comandos e direções para o carrinho que receberia o sinal.
 
 
 		\section{Montagem do protótipo}

@@ -1,18 +1,18 @@
 # Fdb version 3
-["bibtex lcfs"] 1560122276 "lcfs.aux" "lcfs.bbl" "lcfs" 1560122508
+["bibtex lcfs"] 1560141086 "lcfs.aux" "lcfs.bbl" "lcfs" 1560141110
   "/usr/share/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1550406587 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1550406587 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "lcfs.aux" 1560122403 37329 5383ee6aaf84d9ccd52130160bb0400f ""
+  "lcfs.aux" 1560141089 37280 7e6801c0e349f7b03ac50f6a8b460fc7 ""
   "referencias.bib" 1560003918 33789 ded83fab817d791af0d33ad8d01bbe51 ""
   (generated)
   "lcfs.blg"
   "lcfs.bbl"
-["makeindex lcfs.idx"] 1544841685 "lcfs.idx" "lcfs.ind" "lcfs" 1560122508
-  "lcfs.idx" 1560122400 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex lcfs.idx"] 1544841685 "lcfs.idx" "lcfs.ind" "lcfs" 1560141110
+  "lcfs.idx" 1560141087 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "lcfs.ilg"
   "lcfs.ind"
-["pdflatex"] 1560122400 "lcfs.tex" "lcfs.pdf" "lcfs" 1560122508
+  "lcfs.ilg"
+["pdflatex"] 1560141086 "lcfs.tex" "lcfs.pdf" "lcfs" 1560141110
   "/dev/null" 1560113862 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1550406775 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1550406775 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -195,22 +195,22 @@
   "figures/tx-rx-scheme1.png" 1560091465 92754 e047d39b9c3ca27a5eb93e4abdb710f2 ""
   "figures/tx-rx1.jpg" 1544879974 429264 8e308c3517ac68a42cac4711b6f01b8a ""
   "figures/ufpa_logo.jpg" 1544879974 91720 abcb7195ae194deb0445909745c2b7b7 ""
-  "lcfs.aux" 1560122403 37329 5383ee6aaf84d9ccd52130160bb0400f ""
-  "lcfs.bbl" 1560122276 12111 26c56a24bc49200951773feeddce8070 "bibtex lcfs"
-  "lcfs.brf" 1560122403 3169 2695d6fbed60d95cda7d43d89c64704f ""
+  "lcfs.aux" 1560141089 37280 7e6801c0e349f7b03ac50f6a8b460fc7 ""
+  "lcfs.bbl" 1560141086 12111 26c56a24bc49200951773feeddce8070 "bibtex lcfs"
+  "lcfs.brf" 1560141090 3169 0f5a48dbe706153bc6689ad5166292b1 ""
   "lcfs.ind" 1544879974 0 d41d8cd98f00b204e9800998ecf8427e "makeindex lcfs.idx"
-  "lcfs.lof" 1560122403 4017 c675a3099e670a62b224f4444dda7c9e ""
-  "lcfs.lot" 1560122403 836 80062e52957e285de4a779f6a236527f ""
-  "lcfs.tex" 1560122507 115624 a2e5800556036db82f20acaae5652018 ""
-  "lcfs.toc" 1560122403 5041 4ca27dc761b0b40ad1dbab0d6fb243b8 ""
+  "lcfs.lof" 1560141090 4017 ca2dc1f6ca9723a57850f0c093d28344 ""
+  "lcfs.lot" 1560141090 847 48a3b1cc840497990271745adb199dea ""
+  "lcfs.tex" 1560141078 117419 bc995e64b88162fb1f382872590403a7 ""
+  "lcfs.toc" 1560141090 4962 5aa59ebba759779caf0dccc22a10f760 ""
   (generated)
-  "lcfs.pdf"
+  "lcfs.suc"
+  "lcfs.lot"
+  "lcfs.syc"
+  "lcfs.lof"
+  "lcfs.brf"
+  "lcfs.idx"
+  "lcfs.toc"
   "lcfs.log"
   "lcfs.aux"
-  "lcfs.lof"
-  "lcfs.toc"
-  "lcfs.suc"
-  "lcfs.idx"
-  "lcfs.syc"
-  "lcfs.brf"
-  "lcfs.lot"
+  "lcfs.pdf"

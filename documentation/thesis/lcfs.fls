@@ -298,6 +298,7 @@ INPUT ./figures/glove-create-msg1.png
 INPUT ./figures/tx-rx-scheme1.png
 INPUT ./figures/tx-rx-scheme1.png
 INPUT ./figures/tx-rx-scheme1.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmsso12.tfm
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -310,7 +311,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./figures/glove-control-positions1.png
 INPUT ./figures/glove-control-positions1.png
 INPUT ./figures/glove-control-positions1.png
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmsso12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./figures/glove-wire-pot1.png
 INPUT ./figures/glove-wire-pot1.png
