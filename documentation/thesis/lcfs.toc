@@ -39,8 +39,8 @@
 \contentsline {section}{\numberline {3.5}Montagem do prot\IeC {\'o}tipo}{40}{section.3.5}% 
 \contentsline {subsection}{\numberline {3.5.1}Introdu\IeC {\c c}\IeC {\~a}o}{40}{subsection.3.5.1}% 
 \contentsline {subsection}{\numberline {3.5.2}Transdutor de Flex\IeC {\~a}o}{40}{subsection.3.5.2}% 
-\contentsline {subsection}{\numberline {3.5.3}Escolha de componentes}{41}{subsection.3.5.3}% 
-\contentsline {subsection}{\numberline {3.5.4}Posicionamento de componentes}{42}{subsection.3.5.4}% 
+\contentsline {subsection}{\numberline {3.5.3}Componentes eletr\IeC {\^o}nicos}{41}{subsection.3.5.3}% 
+\contentsline {subsection}{\numberline {3.5.4}Posicionamento de componentes}{43}{subsection.3.5.4}% 
 \contentsline {subsection}{\numberline {3.5.5}Placa Embarcada}{43}{subsection.3.5.5}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados e an\IeC {\'a}lises}}{46}{chapter.4}% 
@@ -53,4 +53,4 @@
 \contentsline {section}{\numberline {5.1}Trabalhos futuros}{53}{section.5.1}% 
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{54}{section*.38}% 
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{54}{section*.39}% 

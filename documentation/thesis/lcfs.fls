@@ -315,6 +315,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./figures/glove-wire-pot1.png
 INPUT ./figures/glove-wire-pot1.png
 INPUT ./figures/glove-wire-pot1.png
+INPUT ./figures/pot-comparison.png
+INPUT ./figures/pot-comparison.png
+INPUT ./figures/pot-comparison.png
 INPUT ./figures/potentiometer3.jpg
 INPUT ./figures/potentiometer3.jpg
 INPUT ./figures/potentiometer3.jpg

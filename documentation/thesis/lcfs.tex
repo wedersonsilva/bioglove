@@ -1182,23 +1182,31 @@ if(chegou_mensagem){
 		\end{figure}
 
 			
-			\subsection{Escolha de componentes}	
+			\subsection{Componentes eletrônicos}	
 
-			O sistema de processamento e transmissão de sinal da BioGlove foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à outras soluções embarcadas com sensores flex. O sistema deve ser de fácil reprodução e o mais adaptável possível à outras formas de transmissão além da rádio frequência, caso estas sejam necessárias futuramente.
+			O sistema de processamento e transmissão de sinal da BioGlove foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à outras soluções embarcadas com sensores flex. O sistema visa ainda ser de fácil reprodução e permitir adaptações e melhorias por parte de qualquer pessoas com conhecimentos e ferramentas básicas de eletrônica. Por conta dessa motivação, o hardware e software deste projeto estarão disponíveis gratuitamente na internet. A partir dos objetivos citados, especificamente na parte eletrônica, o primeiro desafio dessa etapa do projeto foi escolher dentre os componentes de fácil acesso no momento, quais deles seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
+			
+			Sendo o potenciômetro o principal componente do transdutor de flexão e o que estaria em maior número na placa (5 no total), este foi o primeiro componente a ser definido. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes, além de que o seu cursor deveria ser de fácil giro para ser acionado com o mínimo de movimento, sendo que a rotação completa característica do cursor deveria ser mínima, para assim obter a maior variação possível de resistência dado um mesmo grau de giro, isso facilita a percepção da variação do potenciômetro pelo microcontrolador. 
+			
+			Através da figura \ref{Fig:pot-comparison} busca-se deixar esse conceito mais claro. Nesta figura são comparados dois potenciômetros de mesma resistência nominal (8k$\Omega$), isto é ambos os potenciômetros devem apresentar um valor de resistência de 8k$\Omega$ quando seus cursores forem totalmente girados. Entretando o ângulo máximo de giro dos dois potenciômetros da figura são diferentes entre si, sendo do potenciômetro A = 45º e B = 90º, por conta desse fato é possível notar que no instante ``1'' da figura, onde ambos estão com 0º de giro, os dois apresentam seu valor de resistência igual a 0$\Omega$. Mas no instante ``2'', quando ambos estão com 45º de giro, o potenciômetro A possui resistência de 8k$\Omega$ (pois atingiu seu grau máximo), enquanto que o potenciômetro B tem resistência de 4k$\Omega$, porque atingiu apenas metade do seu grau de giro máximo característico. Portanto, neste exemplo, o melhor potenciômetro para a BioGlove seria o A, porque possui maior variação de resistência por ângulo.
 
-			O primeiro desafio foi escolher, dentre os componentes disponíveis, quais seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
+		\begin{figure}[h!]
+			\centering
+			\caption{Comparação de resistência baseada em ângulo}
+  		\includegraphics[width=7cm]{./figures/pot-comparison.png}
+  		\label{Fig:pot-comparison}
+			\fonte{Produzido pelo autor.}
+		\end{figure}
+			
+			O modelo de potenciômetro que mais se aproximou das especificações desejadas foi retirado de servomotores modelo MG996R da marca TowerPro, este potenciômetro possui dimensão aproximada de 13$\,mm$ x 13$\,mm$ em sua base, resistência máxima de 5$\,$k$\Omega$, giro máximo de $200^{o}$ (aproximado) e seu cursor desliza com facilidade durante o giro. 
 
-			O potenciômetro foi o primeiro componente a ser definido. Isso porque, este seria o componente  em maior número na placa. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes. Seu cursor deveria ser de fácil giro, para que pudesse ser acionado apenas pelo deslocamento do fio. Seu ângulo de giro total precisava ser mínimo, para que o menor grau de giro correspondesse à maior variação de resistência possível, facilitando assim a percepção pelo microcontrolador.
+			Para facilitar a instalação do fio de náilon e do elástico no potenciômetro, um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado no cursor do potenciômetro, esta adaptação também facilitou o giro do cursor durante o uso da luva. O resultado da adaptação pode ser visto na figura \ref{Fig:potentiometer-and-battery}.a.
 
-			O modelo de potenciômetro que mais se aproximou das especificações acima foi retirado de servomotores modelo MG996R da marca TowerPro. O potenciômetro encontrado possui dimensão aproximada de 13$\,mm$ x 13$\,mm$, resistência máxima de 5$\,$k$\Omega$, giro máximo de $200^{o}$ (aproximado) e oferece pouca resistência para girar seu cursor. 
+			Para processar os dados recebidos de cada potenciômetro foi escolhida a placa Arduíno modelo Nano. Isso porque esta placa é leve, ocupa uma área de apenas 45$\,mm$ x 17$\,mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
 
-			Um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado ao cursor do potenciômetro para facilitar o seu giro, amarrar uma das extremidades do fio de náilon e para prender um elástico. Essa adaptação pode ser vista na figura \ref{Fig:potentiometer-and-battery}.a.
+			Para transmitir e receber o sinal, foi escolhido um modelo genérico de um par composto de transmissor e receptor de rádio frequência 433$\,Mhz$. Este \textit{hardware} é leve, amplamente disponível no mercado e ainda tem baixo custo se comparado à outras soluções de transmissão de dados sem fio.
 
-			O microcontrolador escolhido para processar os dados recebidos de cada potenciômetro foi o Arduíno modelo Nano. Isso porque ele é leve, ocupa uma área de apenas 45$\,mm$ x 17$\,mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
-
-			Para transmitir e receber o sinal, foi escolhido o par de RF 433$\,MHz$, que é leve e de baixo custo comparado à outras soluções de transmissão de dados.
-
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de 45$\,mm$ x 12,5$\,mm$. Esse modelo é mostrado na figura \ref{Fig:potentiometer-and-battery}.b.
+			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de apenas 45$\,mm$ x 12,5$\,mm$. Esse modelo de bateria é mostrado na figura \ref{Fig:potentiometer-and-battery}.b.
 
 
 	\begin{figure}[!htb]
