@@ -1299,21 +1299,22 @@ if(chegou_mensagem){
 	% --------------------------------------------------
 
 
-
-
 \chapter{Resultados e análises}
 
 		\section{Introdução}
+		
+		Após a conclusão da montagem da Bioglove o software de transmissão foi enviado para o microcontrolador embarcado nela enquanto que o software de recepção de sinal foi carregado no Arduíno Nano instalado no carrinho. Logo nos primeiros testes de controle do carrinho, ele correspondeu aos comandos de movimentação programados na maioria das vezes em que foi testado, porém em alguns momentos haviam atrasos anormais entre o gesto efetuado na luva e o tempo de resposta do carrinho ao comando, estes atrasos se tornavam cada vez mais frequentes a medida que o carrinho se aproximava do limite da área de alcance do transmissor, até o momento em que o carrinho parava totalmente de responder.
 
-		O capítulo a seguir realiza diferentes testes com o sistema bioinspirado desenvolvido e os compara com outros trabalhos semelhantes. As três frentes a serem analisadas são: a sensibilidade do sensor de flexão, a duração do sistema alimentado por bateria e o alcance de transmissão do sinal.
+		Além do teste de controle do carrinho em si, outras pesquisas mais aprofundadas a respeito do desempenho da BioGlove foram realizadas. Tais estudos buscaram mensurar alguns dos principais componentes da luva proposta e comparar estes resultados com outros trabalhos envolvendo luvas sensorizadas. As três frentes a serem analisadas são: a sensibilidade do sensor de flexão desenvolvido, a duração do sistema móvel alimentado por bateria e o alcance da transmissão do sinal.
 		
 
 		\section{Sensibilidade}
 
-		O primeiro teste a ser realizado foi o teste de sensibilidade do sistema. Sendo este um sensor de flexão, faz-se necessário mensurar a quantidade máxima de posições capturadas em um movimento. Diversos trabalhos utilizam sensores flex comerciais para realizar a captura de movimentos. O desempenho de um desses trabalhos foi utilizado como referência.
-%		\section{Sensor Flex}
+		Sendo o sensor de flexão bioinspirado o principal componente da BioGlove, este teve o seu desempenho mensurado além do controle do carrinho. Como já foi dito, o valor recebido a partir de cada potenciômetro que compõe o sensor flex é digitalizado pelo microcontrolador para uma faixa de 1024 valores possíveis (0 a 1023), sendo assim, em seu melhor desempenho só seria possível obter no máximo 1024 valores de resolução em cada potenciômetro. Porém, durante o uso da BioGlove entre a posição A (dedos totalmente estendidos) e a posição B (dedos totalmente flexionados) não acontece o giro completo do potenciômetro, sendo assim apenas uma parte dos 1024 valores possíveis é utilizada para detectar os movimentos dos dedos.
+		
+		O primeiro teste a ser realizado foi o teste de sensibilidade do sistema de detecção de flexão. Sendo este um sensor de flexão, faz-se necessário mensurar a quantidade máxima de posições capturadas em um movimento. Diversos trabalhos utilizam sensores flex resistivos comerciais para realizar a captura de movimentos em suas luvas sensorizadas. O desempenho de um desses trabalhos foi utilizado como referência para os testes descritos nesta seção.
 
-		Os sensores de flexão comerciais, mais conhecidos como sensores flex, são resistores analógicos. Dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor \cite{solanki2013sign}. A figura \ref{Fig:flex-sensor1} mostra um sensor flex da fabricante Spectra Symbol.
+		Os sensores de flexão resistivos comerciais, mais conhecidos apenas como sensores flex, são resistores analógicos, e dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor \cite{solanki2013sign}. A figura \ref{Fig:flex-sensor1} mostra um sensor flex da fabricante Spectra Symbol.
 
 	\begin{figure}[!h]
 		\centering
@@ -1324,7 +1325,7 @@ if(chegou_mensagem){
 	\end{figure}
 
 
-		A figura \ref{Fig:hand-flexsensor-degrees1} demonstra uso do sensor flex comercial em um dos pontos de flexão do dedo. A figura também mostra o que seriam os graus de torção do sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
+		Para demontrar como seria o uso de um sensor flex em um projeto com luva sensorizada, a figura \ref{Fig:hand-flexsensor-degrees1} apresenta um possível uso do sensor flex comercial posicionado em um dos pontos de flexão do dedo indicador. Além disso, a figura mostra o que seriam os graus de torção deste sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
 
 
 	\begin{figure}[!h]
@@ -1336,15 +1337,25 @@ if(chegou_mensagem){
 	\end{figure}
 
 	
-		O trabalho de \cite{anbarasi2013deafmute}, que será utilizado como referência, utiliza sensores flex comerciais de 2,5 e 4,5 polegadas instalados em uma luva, com o propósito de criar um interpretador da linguagem americana de sinais. Os gestos traduzidos são transformados em palavras que são exibidas em uma pequena tela de LCD.
+		O trabalho de \cite{anbarasi2013deafmute}, que será utilizado como referência, utiliza sensores flex resistivos comerciais de 2,5 e 4,5 polegadas instalados em uma luva sensorizada. A pesquisa tem o propósito de criar um interpretador para a linguagem americana de sinais, onde os gestos da mão usando a luva são traduzidos e transformados em palavras que são posteriormente exibidas em uma pequena tela de LCD.
 
-		O autor cita que durante os testes, os sensores flex de 2,5 polegadas foram instalados nos dedos mínimo e polegar, enquanto que os sensores de 4,5 polegadas foram instalados nos dedos indicador, médio e anelar. Ele apresenta uma tabela de valores obtidos por cada sensor nas posições de flexão de 0 graus e 90 graus.
-
-%		No sensor de flexão bioinspirado desenvolvido, para comparar com o trabalho de \cite{anbarasi2013deafmute}, com a luva vestida, foram obtidos os valores digitais captados nas duas posições da mão demostradas na figura \ref{Fig:hand-flexsensor-degrees1}.
+		Sobre o desempenho do sensor flex resistivo comercial em sua aplicação, o autor cita que durante os testes, os sensores flex de 2,5 polegadas foram instalados nos dedos mínimo e polegar, enquanto que os sensores de 4,5 polegadas foram instalados nos dedos indicador, médio e anelar. Em sua publicação, através de uma tabela ele apresenta valores obtidos por cada sensor nas posições de flexão de 0 graus e 90 graus. Para efeitos de comparação, através da BioGlove também foram realizados movimentos relativos às flexões de 0 e 90 graus. 
 		
-		Os valores digitais obtidos nas posições de flexão de 0 grau e 90 graus, de ambos os trabalhos, foram utilizados para calcular, de acordo com as equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, o número de posições possíveis captadas entre 0 e 90 graus. Sendo que, para este cálculo, PosB recebe o valor digital em 90 graus e PosA recebe o valor digital recebido em 0 grau.
+		Seguidamente, as equações \ref{Eq:Desloca1} e \ref{Eq:NPos1} serviram de referência para calcular a resolução (ou sensibilidade) de cada sistema. Sendo que, para os cálculos deste teste PosB recebe o valor digital em 90 graus e PosA recebe o valor digital em 0 grau. Portanto os valores digitais relativos às mesmas posições em ambos os trabalhos foram utilizados como entrada das equações abaixo. 
+		
+	\begin{equation}
+			\Delta Pos 	= Pos 90 	- 	Pos 0
+		\label{Eq:Desloca2}
+	\end{equation}
 
-		A tabela \ref{Tab:NPos0-90} mostra os valores obtidos em 0 grau (Pos0), 90 graus (Pos90) e o número de posições possíveis (NPos) calculados. As duas colunas da esquerda são referentes ao sensor flex comercial e as demais são referentes aos dedos do sensor bioinspirado. O dedo polegar não está presente na tabela porque ele não é flexionado durante o movimento realizado neste teste.
+
+	\begin{equation}
+			NPos = |\Delta Pos| + 1
+		\label{Eq:NPos2}
+	\end{equation}
+
+
+		A tabela \ref{Tab:NPos0-90} reúne os valores obtidos em 0 grau (Pos0), 90 graus (Pos90) e o número de posições possíveis (NPos) ou sensibilidade calculados através das equações \ref{Eq:Desloca2} e \ref{Eq:NPos2}. Na tabela abaixo, as duas colunas da esquerda são referentes ao sensor flex resistivo comercial (destacados em vermelho) e as demais colunas são referentes aos dedos do sensor flex bioinspirado que compõe a BioGlove. O dedo polegar não está presente na tabela porque ele não é flexionado durante o movimento realizado neste teste.
 		
 		\begin{table}[H]
   	\centering
@@ -1362,13 +1373,9 @@ if(chegou_mensagem){
     \fonte{Adaptado de \cite{anbarasi2013deafmute} e produzido pelo autor.}
 		\end{table}
 
-		Através da tabela \ref{Tab:NPos0-90} é possível notar que o maior número de posições detectáveis neste teste é do dedo anelar do sensor bioinspirado, já o menor é do dedo mínimo. O sensor flex comercial de 4,5 polegadas apresenta desempenho superior aos dedos indicador e mínimo do sensor bioinspirado, já o modelo comercial de 2,5 polegadas, apresenta baixo desempenho, sendo superior apenas ao dedo mínimo.
+		Através da tabela \ref{Tab:NPos0-90} é possível notar que no quesito alvo deste teste (sensibilidade), o maior número de posições detectáveis (NPos) foi apresentado pelo dedo anelar da BioGlove, já a menor sensibilidade ficou por conta do dedo mínimo também da BioGlove. Os demais resultados mostram que o sensor flex comercial de 4,5 polegadas apresenta desempenho superior aos dedos indicador e mínimo da BioGlove, enquanto que o modelo comercial de 2,5 polegadas apresenta baixo desempenho em quase todos os casos, exceto quando comparado ao dedo mínimo da BioGlove.
 
-		No desempenho geral, vemos que usando o sensor bioinspirado produzido, conseguimos captar um número superior de posições de flexão nos dedos anelar e médio, em comparação ao sensor flex de 4,5 polegadas. Em comparação com modelo de 2,5 polegadas, o sensor bioinspirado se sai melhor em 3 dos 4 dedos.
-
-		Dessa forma é possível afirmar que, neste teste, o sensor bioinspirado conseguiu desempenho equiparado a um sensor comercial. Sendo que um sensor flex comercial possui um custo relativamente superior.
-
-
+		Com base no desempenho geral apresentado pela tabela \ref{Tab:NPos0-90}, verifica-se que usando o sensor bioinspirado que compõe a BioGlove, os sensores dos dedos anelar e médio apresentaram os melhores desempenhos mesmo quando comparados ao sensor flex comercial de 4,5 polegadas. Além do mais, 3 dos 4 sensores da BioGlove possuíram desempenho superior se comparados apenas ao sensor flex comercial de 2,5 polegadas. Dessa forma é possível afirmar, baseado neste teste, que os sensores bioinspirados da BioGLove conseguiram desempenho equiparado ao de um sensor comercial. Sendo que um sensor flex comercial possui um custo relativamente superior.
 
 
 			\section{Bateria}
