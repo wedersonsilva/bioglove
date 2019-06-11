@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.8)  10 JUN 2019 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.8)  11 JUN 2019 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1427,74 +1427,74 @@ Package pdftex.def Info: ./figures/battery1.jpg  used on input line 1222.
 File: figures/size-glove-module1.png Graphic file (type png)
 <use figures/size-glove-module1.png>
 Package pdftex.def Info: figures/size-glove-module1.png  used on input line 123
-5.
+7.
 (pdftex.def)             Requested size: 199.16928pt x 170.33533pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[43 <./figures/potentiometer3.jpg> <./figures/battery1.jpg>]
-<./figures/schematic-glove-module1.png, id=606, 547.04375pt x 545.03625pt>
+ [43 <./figures/potentiometer3.jpg> <./figures/battery1.jpg>]
+<./figures/schematic-glove-module1.png, id=609, 547.04375pt x 545.03625pt>
 File: ./figures/schematic-glove-module1.png Graphic file (type png)
 <use ./figures/schematic-glove-module1.png>
 Package pdftex.def Info: ./figures/schematic-glove-module1.png  used on input l
-ine 1253.
+ine 1259.
 (pdftex.def)             Requested size: 184.9429pt x 184.26198pt.
-<./figures/PCB-glove-module1.png, id=607, 646.415pt x 533.995pt>
+<./figures/PCB-glove-module1.png, id=610, 646.415pt x 533.995pt>
 File: ./figures/PCB-glove-module1.png Graphic file (type png)
 <use ./figures/PCB-glove-module1.png>
 Package pdftex.def Info: ./figures/PCB-glove-module1.png  used on input line 12
-57.
+63.
 (pdftex.def)             Requested size: 213.39566pt x 176.28407pt.
-<./figures/phenolic-glove-module1.jpg, id=610, 889.3225pt x 754.82pt>
+ [44 <./figures/size-glove-module1.png>]
+<./figures/phenolic-glove-module1.jpg, id=617, 889.3225pt x 754.82pt>
 File: ./figures/phenolic-glove-module1.jpg Graphic file (type jpg)
 <use ./figures/phenolic-glove-module1.jpg>
 Package pdftex.def Info: ./figures/phenolic-glove-module1.jpg  used on input li
-ne 1270.
+ne 1275.
 (pdftex.def)             Requested size: 199.16928pt x 169.04398pt.
-<./figures/glove-module-ready1.jpg, id=611, 940.51375pt x 813.0375pt>
+<./figures/glove-module-ready1.jpg, id=618, 940.51375pt x 813.0375pt>
 File: ./figures/glove-module-ready1.jpg Graphic file (type jpg)
 <use ./figures/glove-module-ready1.jpg>
 Package pdftex.def Info: ./figures/glove-module-ready1.jpg  used on input line 
-1274.
+1279.
 (pdftex.def)             Requested size: 199.16928pt x 172.16959pt.
- [44 <./figures/size-glove-module1.png> <./figures/schematic-glove-module1.png>
- <./figures/PCB-glove-module1.png>]
 <figures/glove-ready1.jpg, id=619, 3909.60625pt x 2427.0675pt>
 File: figures/glove-ready1.jpg Graphic file (type jpg)
 <use figures/glove-ready1.jpg>
 Package pdftex.def Info: figures/glove-ready1.jpg  used on input line 1289.
 (pdftex.def)             Requested size: 398.33858pt x 247.27615pt.
- [45 <./figures/phenolic-glove-module1.jpg> <./figures/glove-module-ready1.jpg>
- <./figures/glove-ready1.jpg>]
-<./figures/flex-sensor1.png, id=628, 887.315pt x 663.47874pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[45 <./figures/schematic-glove-module1.png> <./figures/PCB-glove-module1.png> <
+./figures/phenolic-glove-module1.jpg> <./figures/glove-module-ready1.jpg>]
+[46 <./figures/glove-ready1.jpg>]
+<./figures/flex-sensor1.png, id=633, 887.315pt x 663.47874pt>
 File: ./figures/flex-sensor1.png Graphic file (type png)
 <use ./figures/flex-sensor1.png>
 Package pdftex.def Info: ./figures/flex-sensor1.png  used on input line 1321.
 (pdftex.def)             Requested size: 199.16928pt x 148.92194pt.
-<./figures/hand-flexsensor-degrees1.png, id=634, 593.21625pt x 187.45032pt>
+<./figures/hand-flexsensor-degrees1.png, id=639, 593.21625pt x 187.45032pt>
 File: ./figures/hand-flexsensor-degrees1.png Graphic file (type png)
 <use ./figures/hand-flexsensor-degrees1.png>
 Package pdftex.def Info: ./figures/hand-flexsensor-degrees1.png  used on input 
 line 1333.
 (pdftex.def)             Requested size: 369.88582pt x 116.88441pt.
- [46
+ [47
 
- <./figures/flex-sensor1.png>] [47 <./figures/hand-flexsensor-degrees1.png>] [4
-8] [49] [50] [51] [52
+ <./figures/flex-sensor1.png>] [48 <./figures/hand-flexsensor-degrees1.png>] [4
+9] [50] [51] [52] [53
 
-]
-(./lcfs.bbl (./lcfs.brf)
+] (./lcfs.bbl
+(./lcfs.brf)
 \tf@brf=\write5
 \openout5 = `lcfs.brf'.
 
- [53]
+ [54]
 bibitemlist
-[54
+[55
 
-] [55] [56]) (./lcfs.ind) 
+] [56] [57]) (./lcfs.ind) 
 AED: lastpage setting LastPage
-[57]
+[58]
 \@syc=\write6
 \openout6 = `lcfs.syc'.
 
@@ -1517,15 +1517,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1556.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1556.
 
 Package rerunfilecheck Info: File `lcfs.brf' has not changed.
-(rerunfilecheck)             Checksum: 586BA06783D1BF0A0FB59D3DDF3B938E;3169.
+(rerunfilecheck)             Checksum: A008BEC11E2DC154E05750F8AC19A5AD;3169.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1556.
  ) 
 Here is how much of TeX's memory you used:
- 26835 strings out of 492616
- 451261 string characters out of 6135178
- 866035 words of memory out of 5000000
+ 26840 strings out of 492616
+ 451312 string characters out of 6135178
+ 866070 words of memory out of 5000000
  30020 multiletter control sequences out of 15000+600000
- 627972 words of font info for 158 fonts, out of 8000000 for 9000
+ 628146 words of font info for 160 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1917b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1543,10 +1543,10 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (58 pages, 5361834 bytes).
+Output written on lcfs.pdf (59 pages, 5363525 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
- 957 compressed objects within 10 object streams
- 228 named destinations out of 1000 (max. 500000)
+ 1106 PDF objects out of 1200 (max. 8388607)
+ 962 compressed objects within 10 object streams
+ 229 named destinations out of 1000 (max. 500000)
  36909 words of extra memory for PDF output out of 42996 (max. 10000000)
 

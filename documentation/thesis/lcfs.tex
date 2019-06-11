@@ -1186,9 +1186,9 @@ if(chegou_mensagem){
 
 			O sistema de processamento e transmissão de sinal da BioGlove foi projetado para ser móvel, leve, alimentado por uma bateria, caber no dorso da mão e ter custo relativamente menor em relação à outras soluções embarcadas com sensores flex. O sistema visa ainda ser de fácil reprodução e permitir adaptações e melhorias por parte de qualquer pessoas com conhecimentos e ferramentas básicas de eletrônica. Por conta dessa motivação, o hardware e software deste projeto estarão disponíveis gratuitamente na internet. A partir dos objetivos citados, especificamente na parte eletrônica, o primeiro desafio dessa etapa do projeto foi escolher dentre os componentes de fácil acesso no momento, quais deles seriam utilizados para compor a eletrônica presente na placa de circuito impresso que estaria embarcada na luva.
 			
-			Sendo o potenciômetro o principal componente do transdutor de flexão e o que estaria em maior número na placa (5 no total), este foi o primeiro componente a ser definido. O modelo escolhido deveria ser pequeno suficiente para manter uma distância adequada para outros potenciômetros e componentes, além de que o seu cursor deveria ser de fácil giro para ser acionado com o mínimo de movimento, sendo que a rotação completa característica do cursor deveria ser mínima, para assim obter a maior variação possível de resistência dado um mesmo grau de giro, isso facilita a percepção da variação do potenciômetro pelo microcontrolador. 
+			Sendo o potenciômetro o principal componente do transdutor de flexão e o que estaria em maior número na placa (5 no total), este foi o primeiro componente a ser definido. O modelo escolhido deveria ter algumas características para se adequar ao projeto como ser pequeno o suficiente para manter uma distância adequada para outros potenciômetros e componentes, o cursor deveria ser de fácil giro e assim ser acionado com o mínimo de movimento e o grau rotação total do cursor deveria ser mínimo, porque assim seria possível obter uma maior variação de resistência dado um mesmo grau de giro, visando facilitar a percepção da variação do potenciômetro pelo microcontrolador. 
 			
-			Através da figura \ref{Fig:pot-comparison} busca-se deixar esse conceito mais claro. Nesta figura são comparados dois potenciômetros de mesma resistência nominal (8k$\Omega$), isto é ambos os potenciômetros devem apresentar um valor de resistência de 8k$\Omega$ quando seus cursores forem totalmente girados. Entretando o ângulo máximo de giro dos dois potenciômetros da figura são diferentes entre si, sendo do potenciômetro A = 45º e B = 90º, por conta desse fato é possível notar que no instante ``1'' da figura, onde ambos estão com 0º de giro, os dois apresentam seu valor de resistência igual a 0$\Omega$. Mas no instante ``2'', quando ambos estão com 45º de giro, o potenciômetro A possui resistência de 8k$\Omega$ (pois atingiu seu grau máximo), enquanto que o potenciômetro B tem resistência de 4k$\Omega$, porque atingiu apenas metade do seu grau de giro máximo característico. Portanto, neste exemplo, o melhor potenciômetro para a BioGlove seria o A, porque possui maior variação de resistência por ângulo.
+			Através da figura \ref{Fig:pot-comparison} busca-se deixar este último conceito um pouco mais claro. Nesta figura são comparados dois potenciômetros de mesma resistência nominal (8$\,$k$\Omega$), isto é ambos os potenciômetros devem apresentar um valor de resistência de 8$\,$k$\Omega$ quando seus cursores forem totalmente girados. Entretando o ângulo máximo de giro dos dois potenciômetros da figura são diferentes entre si, sendo do potenciômetro A = 45º e B = 90º, por conta desse fato é possível notar que no instante ``1'' da figura, onde ambos estão com 0º de giro, os dois apresentam seu valor de resistência igual a 0$\,\Omega$. Mas no instante ``2'', quando ambos estão com 45º de giro, o potenciômetro A possui resistência de 8$\,$k$\Omega$ (pois atingiu seu grau máximo), enquanto que o potenciômetro B tem resistência de 4$\,$k$\Omega$, porque atingiu apenas metade do seu grau de giro máximo característico. Portanto, neste exemplo, o melhor potenciômetro para a BioGlove seria o A, porque possui maior variação de resistência por ângulo.
 
 		\begin{figure}[h!]
 			\centering
@@ -1200,13 +1200,13 @@ if(chegou_mensagem){
 			
 			O modelo de potenciômetro que mais se aproximou das especificações desejadas foi retirado de servomotores modelo MG996R da marca TowerPro, este potenciômetro possui dimensão aproximada de 13$\,mm$ x 13$\,mm$ em sua base, resistência máxima de 5$\,$k$\Omega$, giro máximo de $200^{o}$ (aproximado) e seu cursor desliza com facilidade durante o giro. 
 
-			Para facilitar a instalação do fio de náilon e do elástico no potenciômetro, um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado no cursor do potenciômetro, esta adaptação também facilitou o giro do cursor durante o uso da luva. O resultado da adaptação pode ser visto na figura \ref{Fig:potentiometer-and-battery}.a.
+			Seguindo adiante com a montagem, para facilitar a instalação do fio de náilon e do elástico no potenciômetro, um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado no cursor do potenciômetro objetivando facilitar o giro do cursor durante o uso da luva. O resultado desta adaptação pode ser visto na figura \ref{Fig:potentiometer-and-battery}.a.
 
-			Para processar os dados recebidos de cada potenciômetro foi escolhida a placa Arduíno modelo Nano. Isso porque esta placa é leve, ocupa uma área de apenas 45$\,mm$ x 17$\,mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
+			O componente escolhido para processar os dados recebidos de cada potenciômetro foi a placa Arduíno modelo Nano. Isso porque esta placa é leve, ocupa uma área de apenas 45$\,mm$ x 17$\,mm$, possui vasta documentação e disponibilidade no mercado, além de ser compatível com diversos módulos externos e possuir custo menor do que outros modelos da família Arduino.
 
-			Para transmitir e receber o sinal, foi escolhido um modelo genérico de um par composto de transmissor e receptor de rádio frequência 433$\,Mhz$. Este \textit{hardware} é leve, amplamente disponível no mercado e ainda tem baixo custo se comparado à outras soluções de transmissão de dados sem fio.
+			Para enviar e receber o sinal de controle da BioGlove, foi escolhido um modelo genérico de um par composto de transmissor e receptor de rádio frequência 433$\,Mhz$. Este \textit{hardware} é leve, amplamente disponível no mercado e ainda tem baixo custo se comparado à outras soluções de transmissão de dados sem fio.
 
-			Finalmente, para alimentar esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de apenas 45$\,mm$ x 12,5$\,mm$. Esse modelo de bateria é mostrado na figura \ref{Fig:potentiometer-and-battery}.b.
+			Finalmente, para alimentar todo esse aparato eletrônico, foi escolhida uma pequena bateria LiPo (\textit{Lithium-ion Polymer}) que possui capacidade de 300$\,mAh$, 7,4$\,V$ de tensão nominal e ocupa um espaço de apenas 45$\,mm$ x 12,5$\,mm$ na placa. Este modelo de bateria é mostrado na figura \ref{Fig:potentiometer-and-battery}.b.
 
 
 	\begin{figure}[!htb]
@@ -1227,22 +1227,28 @@ if(chegou_mensagem){
 
 			\subsection{Posicionamento de componentes}
 
-			Após medições realizadas na luva que serviu de modelo para o projeto, foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) deveria ser de aproximadamente 72$\,mm$ x 58$\,mm$, para que a placa não ficasse muito maior do que o dorso da luva. Sendo assim, usando o software QCAD, todos os componentes foram organizados dentro da placa basendo-se nas suas dimensões aproximadas. O \textit{layout} final da placa é apresentado na figura \ref{Fig:size-glove-module1}.
+			Após definir os componentes que iriam integrar a BioGLove, foram realizadas medições na luva que serviu de modelo para o projeto, e baseado nisso foi decidido que a dimensão máxima da PCI (Placa de Circuito Impresso) que ficaria no dorso da mão deveria ser de aproximadamente 72$\,mm$ x 58$\,mm$, dessa forma a placa não ficaria muito maior do que o dorso da luva. 
+			
+			A partir das dimensões da placa e dos componentes, foi utilizado o software QCAD para fazer estimativas a cerca do posicionamento dos componentes na placa, onde todos os potenciômetros deveriam ficar na borda da placa instalada no dorso da mão, alocados o mais próximo possível dos dedos. O microcontrolador deveria estar logo atrás do grupo de potenciômetros por conta das conexões elétricas entre eles, já o módulo transmissor e a bateria não possuiam recomendações específicas sobre o local de instalação, eles deveriam apenas caber dentro da dimensão máxima da placa. O \textit{layout} estimado desenhado no QCAD pode ser conferido através da figura \ref{Fig:size-glove-module1}.
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Dimensões aproximadas da PCI e seus componentes.}
+			\caption{Estimativa de alocação dos componentes na PCI.}
   		\includegraphics[width=7cm]{figures/size-glove-module1.png}
   		\label{Fig:size-glove-module1}
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 
 
-			\subsection{Placa Embarcada}
+			\subsection{Placa de circuito impresso - PCI}
 
-			Os primeiros experimentos de comportamento e ligação entre os componentes foram realizados ainda em protoboard. Inicialmente, um programa lia a variação de um resistor e mostrava na tela do computador. Este e outros programas foram usados para verificar como deveriam ser as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno.
+			Os primeiros experimentos que definiram o comportamento e as ligação elétricas entre os componentes foram realizados ainda em protoboard. Um dos primeiros programas criados lia a variação de um resistor conectado na protoboard e mostrava os resultados na tela do computador, este programa inicial foi evoluindo e com isso mais componentes foram sendo adicionados aos testes de protoboard, até o momento em que o software foi capaz de controlar todos os componentes do projeto simultaneamente. A partir daí, foi estimado  qual seria a melhor forma de realizar as conexões entre os pinos, potenciômetros, bateria, módulo transmissor e o microcontrolador Arduíno em uma PCI de uma camada.
 
-			O passo seguinte foi utilizar o software gratuito Kicad para desenhar o esquemático da placa. Posteriormente, o Kicad ainda possibilita projetar uma placa de circuito impresso baseada no esquemático desenhado anteriormente. Através desse software foram criados os desenhos do esquemático e da PCI embarcada mostrados na figura \ref{Fig:schematic-and-PCB}.
+			Para desenvolver a PCI baseada nas ligações da protoboard, primeiramente foi dado início ao desenho do esquemático no \textit{software} Kicad, onde foi possível visualizar de forma mais clara todas as conexões elétricas do projeto. Posteriormente, usando o esquemático criado e ainda dentro do Kicad foi possível projetar uma placa de circuito impresso de uma camada posicionando todos os componentes de acordo com as estimativas do QCAD apresentadas na figura \ref{Fig:size-glove-module1}. Os projetos do esquemático e da PCI realizados através do Kicad estão na figura \ref{Fig:schematic-and-PCB}.
+
+			Após a conclusão do desenho da placa de circuito impresso, foram efetuados os procedimentos necessários para a transfererência deste desenho para uma placa de fenolite cobreada, e logo depois foi realizida soldagem de todos os pinos e componentes. A figura \ref{Fig:phenolic-and-ready} mostra os resultados após o procedimento descrito. 
+		
+		Com a PCI concluída em mãos, o passo final para a montagem foi conectar os fios de náilon e os elásticos aos cursores dos potenciômetros e costurar a PCI no dorso da luva. A figura \ref{Fig:glove-ready1} mostra a montagem completa da BioGlove.
 
 	\begin{figure}[!htb]
 		 \centering
@@ -1259,8 +1265,7 @@ if(chegou_mensagem){
 		 \fonte{Produzido pelo autor.}
 	\end{figure}
 
-			Após a conclusão do desenho da placa, foram efetuados os procedimentos necessários para a confecção desta PCI em uma placa de fenolite cobreada, além da posterior soldagem de pinos e componentes. A figura \ref{Fig:phenolic-and-ready} mostra os resultados após o procedimento descrito. Já a figura \ref{Fig:glove-ready1} mostra o resultado final após juntar a luva de algodão e a placa de circuito impresso recém concluída.
-
+	
 	\begin{figure}[!htb]
 		 \centering
 		 \caption{(a) Placa de fenolite cobreada e (b) com os componentes soldados.} 
@@ -1276,16 +1281,11 @@ if(chegou_mensagem){
 		 \fonte{Produzido pelo autor.}
 	\end{figure}
 
-%		\section{Montagem}
-
-%		Utilizando uma luva de algodão, em seu dorso foi costurado uma das metades de um pedaço de velcro (gancho) de dimensões semelhantes à PCI contruída anteriormente. Ao longo dos dedos da luva foram costurados pequenos segmentos de plástico que serviriam como guias para os fios.	Na parte inferior da PCI foi costurada a outra metade do velcro (argola) que poderia ser fixada, sempre que fosse preciso, à outra parte do velcro costurada na luva.
-
-%		Fios de náilon foram fixados nos segmentos de plástico (guias) localizados nas pontas dos dedos da luva. Os fios passavam por dentro das guias até serem amarrados em pequenos pedaços de PCV expandido que estavam conectados dos cursores dos potenciômetros. Por fim, pequenos pedaços de elástico, levemente esticados, também foram amarrados nos pedaços de PCV expandido.
-		
+	
 
 		\begin{figure}[h!]
 			\centering
-			\caption{Luva montada.}
+			\caption{BioGlove completamente montada}
   		\includegraphics[width=14cm,keepaspectratio=true]{figures/glove-ready1.jpg}
   		\label{Fig:glove-ready1}
 			\fonte{Produzido pelo autor.}
