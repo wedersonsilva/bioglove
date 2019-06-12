@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.8)  11 JUN 2019 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.8)  12 JUN 2019 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1481,20 +1481,20 @@ Package pdftex.def Info: ./figures/hand-flexsensor-degrees1.png  used on input
 line 1334.
 (pdftex.def)             Requested size: 369.88582pt x 116.88441pt.
  [48 <./figures/flex-sensor1.png> <./figures/hand-flexsensor-degrees1.png>] [49
-] [50] [51] [52] [53] [54
+] [50] [51] [52] [53] [54] [55
 
-] (./lcfs.bbl
-(./lcfs.brf)
+]
+(./lcfs.bbl (./lcfs.brf)
 \tf@brf=\write5
 \openout5 = `lcfs.brf'.
 
- [55]
+ [56]
 bibitemlist
-[56
+[57
 
-] [57] [58]) (./lcfs.ind) 
+] [58] [59]) (./lcfs.ind) 
 AED: lastpage setting LastPage
-[59]
+[60]
 \@syc=\write6
 \openout6 = `lcfs.syc'.
 
@@ -1510,22 +1510,22 @@ AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `lcfs.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1565.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1565.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1517.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1517.
  (./lcfs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1565.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1565.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1517.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1517.
 
 Package rerunfilecheck Info: File `lcfs.brf' has not changed.
-(rerunfilecheck)             Checksum: 3568C6B59F6D5EBAACA69F92DE3511BA;3169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1565.
+(rerunfilecheck)             Checksum: AF77E1FE4083B1A827E3F087B6B0CED0;3169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1517.
  ) 
 Here is how much of TeX's memory you used:
- 26845 strings out of 492616
- 451370 string characters out of 6135178
+ 26852 strings out of 492616
+ 451447 string characters out of 6135178
  866158 words of memory out of 5000000
  30022 multiletter control sequences out of 15000+600000
- 628146 words of font info for 160 fonts, out of 8000000 for 9000
+ 628533 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1917b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1543,10 +1543,10 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (60 pages, 5366248 bytes).
+Output written on lcfs.pdf (61 pages, 5369727 bytes).
 PDF statistics:
- 1116 PDF objects out of 1200 (max. 8388607)
- 971 compressed objects within 10 object streams
- 232 named destinations out of 1000 (max. 500000)
+ 1124 PDF objects out of 1200 (max. 8388607)
+ 978 compressed objects within 10 object streams
+ 233 named destinations out of 1000 (max. 500000)
  36909 words of extra memory for PDF output out of 42996 (max. 10000000)
 
