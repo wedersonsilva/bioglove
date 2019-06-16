@@ -353,7 +353,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 18 de março de 2019:
+   Trabalho aprovado. \imprimirlocal, 11 de julho de 2019:
 
    Conceito: .
    
@@ -381,7 +381,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
    \vspace*{\fill}
    \centering
    \noindent
-   \textit{ Este trabalho é dedicado...} \vspace*{\fill}
+   \textit{ Dedico este trabalho à minha mãe Eunice Pereira da Silva Conceição, mais conhecida como dona Zizi, que me criou desde muito pequeno superando dificuldades, com muito amor, fé, incentivo e com muita certeza em minha vitória. Além disso também dedico este trabalho à minha Tia Elissandra Maria que foi a principal pessoa a acreditar e a dar todo tipo de suporte na construção do meu futuro acadêmico e profissional em Belém, mesmo nos momentos em que eu mesmo duvidei. } \vspace*{\fill}
 \end{dedicatoria}
 % ---
 
@@ -389,7 +389,17 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-Agradeço ao Professor Dr. ...
+Agradeço à Deus por abençoar constantemente meus passos nesse caminho que chamamos de vida, sempre me agraciando com saúde, oportunidades, conhecimento, pessoas excelentes, além de me permir evoluir a todo momento pessoal e profissionalmente.
+
+Agradeço à minha família, minhas mães Eunice e Conceição, minhas tias Elissandra, Djanice, Ednice, Rosa e Hildete, meu Tio Denismar, meu Pai José Edson e minhas primas-irmã Ana Caroline e Jéssica Menezes, pelo apoio nas mais diversas formas e momentos, permitindo que eu esteja realizando o sonho da graduação. 
+
+Agradeço ao meu orientador Prof. Dr. Roberto Menezes Rodrigues, ao meu coorientador Prof. Dr. João Crisóstomo Weyl A. Costa, além do Prof. Dr. Marco José de Sousa, pela paciência, orientação, credibilidade e conhecimento repassados a mim nos últimos anos.
+
+Aos meus amigos Paulo Alexandre, Luan Assis, Celson Nakamura, Itamar Aguiar, Ítalo Cássio, Emanuel Araújo, André Lucas, Marx Miguel, José Vitor, Moisés Felipe e Waldeir Brito. Ademais minhas amigas Elizabeth Sousa, Aline Ayako, Damares Resende e Kárytha Nascimento, que foram pessoas-chave em algum ou em diversos momentos da minha graduação, sempre confiando em mim, dando conselhos, dicas ou apoio de diversas formas e com isso me trazendo o suporte e a confiança necessárias para superar os desafios que surgiram.
+
+	Também agradeço aos amigos e colegas do Laboratório de Eletromagnetismo Aplicado (LEA) e do Laboratório de Prototipagem, Robótica e Otimização (LabPRO) que me ajudaram de forma direta ou indiretamente enquanto realizei minhas pesquisas nestes locais.
+
+
 \end{agradecimentos}
 % ---
 % ---
@@ -590,7 +600,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		\section{Estado da arte}
 
-		Como foi dito previamente, muitas pesquisas observam e se baseiam em sistemas da natureza para criar modelos a serem estudados. Inpirado pela forma humana, foi desenvolvido um robô bípede autônomo que procura imitar a marcha humana durante seu deslocamento, com o intuito de testar teorias de locomoção e eficiência de movimento. Tal robô, possui pernas e braços muito maiores do que o seu torso, se comparado ao corpo humano, mas seu movimento é semelhante ao nosso. Durante a caminhada do robô quando, por exemplo, a perna direita está à frente da perna esquerda, o braço esquerdo fica à frente do braço direito e vice-versa. Durante os testes, o robô conseguiu se locomover à uma velocidade de até 0.44$\,$m/s (1.58$\,$km/h), com marcha relativamente estável. Dados mostraram que essa técnica mostrou uma eficiência de energia mecânica semelhante à de um ser humano, e com isso se estima que esse método ajudará a construir robôs caminhantes mais simples, eficientes, fáceis de controlar e mais práticos. Entretanto, seu custo ficou estimado em torno de 10 mil Dólares, a estrutura não se mostrou estável por longos períodos e a caminhada acontecia como esperado em 30\% do tempo \cite{collins2005walkrobot}.
+		Como foi dito previamente, muitas pesquisas observam e se baseiam em sistemas da natureza para criar modelos a serem estudados. Inpirado pela forma humana, foi desenvolvido um robô bípede autônomo que procura imitar a marcha humana durante seu deslocamento, com o intuito de testar teorias de locomoção e eficiência de movimento. Tal robô, possui pernas e braços muito maiores do que o seu torso, se comparado ao corpo humano, mas seu movimento é semelhante ao nosso. Durante a caminhada do robô quando, por exemplo, a perna direita está à frente da perna esquerda, o braço esquerdo fica à frente do braço direito e vice-versa. Durante os testes, o robô conseguiu se locomover à uma velocidade de até 0,44$\,m/s$ (1.58$\,km/h$), com marcha relativamente estável. Dados mostraram que essa técnica mostrou uma eficiência de energia mecânica semelhante à de um ser humano, e com isso se estima que esse método ajudará a construir robôs caminhantes mais simples, eficientes, fáceis de controlar e mais práticos. Entretanto, seu custo ficou estimado em torno de 10 mil Dólares, a estrutura não se mostrou estável por longos períodos e a caminhada acontecia como esperado em 30\% do tempo \cite{collins2005walkrobot}.
 
 		Baseado em nossa biomecânica, existe um estudo de mapeamento dos movimentos do braço humano para controle de um braço robótico, onde os movimentos de flexão e extensão de um dos dedos e do pulso são adquiridos através de dois sensores resistivos de flexão comerciais, e um acelerômetro é responsável por mensurar movimentos do cotovelo. Esses dados são processados por um microcontrolador que por sua vez controla 4 servo motores montados em uma estrutura semelhante à de um braço robótico. Tal estrutura busca copiar os movimentos do braço do usuário através de 3 movimentos, ou graus de liberdade, independentes \cite{syed2012armcontroller}. Neste estudo é possível verificar que há uma conversão dos sinais analógicos em sinais digitais de uma forma proporcional, porém limitada. Além disso, o autor sugere que futuramente sejam adicionados protocolos para transmissão sem fio do sinal, o que pode dar uma maior liberdade de aplicações.
 		
@@ -1208,7 +1218,7 @@ if(chegou_mensagem){
 			
 			Sendo o potenciômetro o principal componente do transdutor de flexão e o que estaria em maior número na placa (5 no total), este foi o primeiro componente a ser definido. O modelo escolhido deveria ter algumas características para se adequar ao projeto como ser pequeno o suficiente para manter uma distância adequada para outros potenciômetros e componentes, o cursor deveria ser de fácil giro e assim ser acionado com o mínimo de movimento e o grau rotação total do cursor deveria ser mínimo, porque assim seria possível obter uma maior variação de resistência dado um mesmo grau de giro, visando facilitar a percepção da variação do potenciômetro pelo microcontrolador. 
 			
-			Através da figura \ref{Fig:pot-comparison} busca-se deixar este último conceito um pouco mais claro. Nesta figura são comparados dois potenciômetros de mesma resistência nominal (8$\,$k$\Omega$), isto é ambos os potenciômetros devem apresentar um valor de resistência de 8$\,$k$\Omega$ quando seus cursores forem totalmente girados. Entretando o ângulo máximo de giro dos dois potenciômetros da figura são diferentes entre si, sendo do potenciômetro A = 45º e B = 90º, por conta desse fato é possível notar que no instante ``1'' da figura, onde ambos estão com 0º de giro, os dois apresentam seu valor de resistência igual a 0$\,\Omega$. Mas no instante ``2'', quando ambos estão com 45º de giro, o potenciômetro A possui resistência de 8$\,$k$\Omega$ (pois atingiu seu grau máximo), enquanto que o potenciômetro B tem resistência de 4$\,$k$\Omega$, porque atingiu apenas metade do seu grau de giro máximo característico. Portanto, neste exemplo, o melhor potenciômetro para a BioGlove seria o A, porque possui maior variação de resistência por ângulo.
+			Através da figura \ref{Fig:pot-comparison} busca-se deixar este último conceito um pouco mais claro. Nesta figura são comparados dois potenciômetros de mesma resistência nominal (8$\,k\Omega$), isto é ambos os potenciômetros devem apresentar um valor de resistência de 8$\,k\Omega$ quando seus cursores forem totalmente girados. Entretando o ângulo máximo de giro dos dois potenciômetros da figura são diferentes entre si, sendo do potenciômetro A = 45º e B = 90º, por conta desse fato é possível notar que no instante ``1'' da figura, onde ambos estão com 0º de giro, os dois apresentam seu valor de resistência igual a 0$\,\Omega$. Mas no instante ``2'', quando ambos estão com 45º de giro, o potenciômetro A possui resistência de 8$\,k\Omega$ (pois atingiu seu grau máximo), enquanto que o potenciômetro B tem resistência de 4$\,k\Omega$, porque atingiu apenas metade do seu grau de giro máximo característico. Portanto, neste exemplo, o melhor potenciômetro para a BioGlove seria o A, porque possui maior variação de resistência por ângulo.
 
 		\begin{figure}[h!]
 			\centering
@@ -1218,7 +1228,7 @@ if(chegou_mensagem){
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 			
-			O modelo de potenciômetro que mais se aproximou das especificações desejadas foi retirado de servomotores modelo MG996R da marca TowerPro, este potenciômetro possui dimensão aproximada de 13$\,mm$ x 13$\,mm$ em sua base, resistência máxima de 5$\,$k$\Omega$, giro máximo de $200^{o}$ (aproximado) e seu cursor desliza com facilidade durante o giro. 
+			O modelo de potenciômetro que mais se aproximou das especificações desejadas foi retirado de servomotores modelo MG996R da marca TowerPro, este potenciômetro possui dimensão aproximada de 13$\,mm$ x 13$\,mm$ em sua base, resistência máxima de 5$\,k\Omega$, giro máximo de $200^{o}$ (aproximado) e seu cursor desliza com facilidade durante o giro. 
 
 			Seguindo adiante com a montagem, para facilitar a instalação do fio de náilon e do elástico no potenciômetro, um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado no cursor do potenciômetro objetivando facilitar o giro do cursor durante o uso da luva. O resultado desta adaptação pode ser visto na figura \ref{Fig:potentiometer-and-battery}.a.
 
@@ -1402,17 +1412,17 @@ if(chegou_mensagem){
 
 			Mobilidade é um dos requisitos do projeto da BioGlove, por conta desse fato foi decidido que a alimentação dos componentes eletrônicos da luva seria feita através de uma pequena bateria LiPo disponível no laboratório de pesquisa. Outros sistemas envolvendo luvas sensorizadas móveis também costumam usam baterias ou até mesmo pilhas, sendo que o desempenho de cada projeto neste quesito pode variar de acordo com o \textit{hardware} implementado e a capacidade da fonte de alimentação escolhida. Nesta seção, apresentan-se testes de desempenho da bateria da Bioglove que foram comparados com outros três trabalhos relacionados com luvas sensorizadas, sendo um deles um produto comercial.
 
-			O \textit{hardware} da Bioglove está equipado com cinco potenciômetros, um microcontrolador Arduino modelo Nano, um módulo transmissor de rádio frequência 433$\,$MHz e uma bateria LiPo recarregável de tensão nominal de 7,4$\,$V e capacidade de 300$\,$mAh segundo o fabricante. Esta bateria apesar de possuir tensão nominal de 7,4$\,$V, consegue alcançar níveis de tensão de até 8,4$\,$V quando está totalmente carregada \cite{buchmann2016batteries}.
+			O \textit{hardware} da Bioglove está equipado com cinco potenciômetros, um microcontrolador Arduino modelo Nano, um módulo transmissor de rádio frequência 433$\,MHz$ e uma bateria LiPo recarregável de tensão nominal de 7,4$\,V$ e capacidade de 300$\,mAh$ segundo o fabricante. Esta bateria apesar de possuir tensão nominal de 7,4$\,V$, consegue alcançar níveis de tensão de até 8,4$\,V$ quando está totalmente carregada \cite{buchmann2016batteries}.
 
-			Esse modelo de bateria foi escolhido por conta de sua disponibilidade, peso e por ser compatível com as recomendação para alimentar o Arduino Nano, que deve estar com tensões entre 7$\,$V e 12$\,$V segundo \cite{arduinopowerrange}. Por conta desse fato, a BioGlove funciona normalmente com a bateria carregada até o momento em que a tensão da bateria descarrega no limite de 7$\,$V, e caso a bateria não seja substituída e continue a ser usada na BioGlove, a partir desse ponto de tensão o microcontrolador passa a reiniciar constantemente impossibilitando o uso da BioGlove até que a bateria seja recarregada ou substituída.
+			Esse modelo de bateria foi escolhido por conta de sua disponibilidade, peso e por ser compatível com as recomendação para alimentar o Arduino Nano, que deve estar com tensões entre 7$\,V$ e 12$\,V$ segundo \cite{arduinopowerrange}. Por conta desse fato, a BioGlove funciona normalmente com a bateria carregada até o momento em que a tensão da bateria descarrega no limite de 7$\,V$, e caso a bateria não seja substituída e continue a ser usada na BioGlove, a partir desse ponto de tensão o microcontrolador passa a reiniciar constantemente impossibilitando o uso da BioGlove até que a bateria seja recarregada ou substituída.
 
-			Para realizar os testes de desempenho da bateria da BioGlove, um módulo receptor compatível com o transmissor da luva foi conectado a um Arduino programado para receber os sinais transmitidos pela luva, este Arduino foi conectado a um computador que mostrava em sua tela as mensagens recebidas da BioGlove. Além disso, uma bateria recém carregada completamente, foi conectada à luva e o momento inicial da ligação do sistema foi marcado. Durante o teste, o módulo transmissor da luva ficou ligado constantemente enviando mensagens a todo momento. E a cada período de tempo regular, a tensão da bateria foi sendo monitorada. Este teste foi realizado quatro vezes no total usando duas baterias de mesmo modelo, duas vezes para cada bateria. Com isso, obteve-se um período de duração de aproximadamente 10 horas onde em média a tensão da bateria chegava ao limite definido de 7$\,$V e a partir daí os testes realizados na BioGlove foram encerrados.
+			Para realizar os testes de desempenho da bateria da BioGlove, um módulo receptor compatível com o transmissor da luva foi conectado a um Arduino programado para receber os sinais transmitidos pela luva, este Arduino foi conectado a um computador que mostrava em sua tela as mensagens recebidas da BioGlove. Além disso, uma bateria recém carregada completamente, foi conectada à luva e o momento inicial da ligação do sistema foi marcado. Durante o teste, o módulo transmissor da luva ficou ligado constantemente enviando mensagens a todo momento. E a cada período de tempo regular, a tensão da bateria foi sendo monitorada. Este teste foi realizado quatro vezes no total usando duas baterias de mesmo modelo, duas vezes para cada bateria. Com isso, obteve-se um período de duração de aproximadamente 10 horas onde em média a tensão da bateria chegava ao limite definido de 7$\,V$ e a partir daí os testes realizados na BioGlove foram encerrados.
 
 			Dentre as aplicações que foram comparadas à BioGlove está a luva comercial chamada Data Glove 5 Ultra da fabricante 5DT Inc., que foi desenvolvida, entre outras funcionalidades, para ser utilizada em modelagem 3D e animação através de programas de computador compatíveis com ela. De acordo com o seu datasheet, a Data Glove 5 Ultra possui em seu \textit{hardware} sensores de flexão baseados em fibra óptica, utiliza tecnologia de comunição sem fio Bluetooth, além afirmar que o desempenho de sua bateria recarregável pode chegar a 8 horas de duração \cite{5DT-ultra}. Entretanto, por ser um produto comercial fechado, não foi possível obter informações sobre a tecnologia de sua bateria.
 
-			Outro trabalho que foi comparado à BioGlove é a pesquisa de \cite{michela2013rehab} que busca através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. O \textit{hardware} desta luva é embarcado com sensores flex resistivos comerciais, um microcontrolador e um transmissor de rádio frequência. Sendo que toda a eletrônica do projeto é alimentada por uma bateria em formato de botão que possui tensão nominal de 3$\,$V e capacidade de 1000$\,$mAh. De acordo com o artigo publicado, sua luva sensorizada alimentada pela bateria em formato de botão obteve um desempenho de duração aproximado de uma semana.
+			Outro trabalho que foi comparado à BioGlove é a pesquisa de \cite{michela2013rehab} que busca através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. O \textit{hardware} desta luva é embarcado com sensores flex resistivos comerciais, um microcontrolador e um transmissor de rádio frequência. Sendo que toda a eletrônica do projeto é alimentada por uma bateria em formato de botão que possui tensão nominal de 3$\,V$ e capacidade de 1000$\,mAh$. De acordo com o artigo publicado, sua luva sensorizada alimentada pela bateria em formato de botão obteve um desempenho de duração aproximado de uma semana.
 			
-			O último trabalho a ser comparado é o de uma luva de baixo custo foi desenvolvida na pesquisa de \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. De acordo com o autor o \textit{hardware} dessa luva é composto por sensores de flexão resistivos comerciais e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4 além de pilhas AA alcalinas. Segundo a publicação deste estudo, usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas. Entretanto, infelizmente a capacidade destas pilhas não foi definida no trabalho publicado, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870$\,$mAh cada.
+			O último trabalho a ser comparado é o de uma luva de baixo custo foi desenvolvida na pesquisa de \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. De acordo com o autor o \textit{hardware} dessa luva é composto por sensores de flexão resistivos comerciais e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4 além de pilhas AA alcalinas. Segundo a publicação deste estudo, usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas. Entretanto, infelizmente a capacidade destas pilhas não foi definida no trabalho publicado, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870$\,mAh$ cada.
 			
 
 			De forma geral e focado apenas nas características das fontes de alimentação apresentadas até o momento, a tabela \ref{Tab:battery-range} resume o desempenho dos trabalhos discutidos nesta seção.
@@ -1425,9 +1435,9 @@ if(chegou_mensagem){
 			Luva 								& Alimentação			&	Capacidade	& Duração	\\
       \midrule                                            					
 			Data Glove 5				& Não definida		& Não definida& 8 horas \\
-			Luva sensorizada 		& 1 bateria-botão	& 1000$\,$mAh		& 1 semana\\
-			Luva de baixo custo & 2 pilhas AA			& 5740$\,$mAh		& 60 horas\\
-			BioGlove						& 1 LiPo 7,4$\,$V			& 300$\,$mAh			&	10 horas\\	
+			Luva sensorizada 		& 1 bateria-botão	& 1000$\,mAh$		& 1 semana\\
+			Luva de baixo custo & 2 pilhas AA			& 5740$\,mAh$		& 60 horas\\
+			BioGlove						& 1 LiPo 7,4$\,V$			& 300$\,mAh$			&	10 horas\\	
       \midrule
     \end{tabular}
 		\label{Tab:battery-range}
@@ -1447,13 +1457,13 @@ if(chegou_mensagem){
 		Dentre as diversas opções para se implementar comunicação sem fio, existem projetos que utilizam transmissão via bluetooth, que viabiliza a interação com computadores, smartphones ou qualquer outro dispositivo compatível que esteja próximo. Outros projetos chegam a usar a tecnologia de rede Wi-Fi e com isso são capazes de enviar comandos através da internet, podendo interagir com qualquer dispositivo conectado à grande rede mundial. Na seção a seguir, o alcance de dois projetos relacionados à luvas sensorizadas e que utilizam a tecnologia Bluetooth serão comparados ao método de transmissão via rádio de baixa frequência utilizado na BioGlove.
 
 
-		A BioGlove está equipada com um par de módulos genéricos para transmissão e recepção de rádio frequência que trabalham na faixa de 433$\,$MHz. De acordo com o manual da biblioteca VirtualWire que auxilia o uso desses dispositivos, ao instalar uma antena de cerca de 17$\,$cm em ambos os módulos o alcance de transmissão pode ser de até 150 metros em campo aberto \cite{virtualwiremanual}. Entretanto, neste trabalho, por conta da fragilidade de um dos módulos, só foi possível soldar uma antena no transmissorde rádio, deixando o receptor sem a sua antena o que pode vir a comprometer o desempenho.
+		A BioGlove está equipada com um par de módulos genéricos para transmissão e recepção de rádio frequência que trabalham na faixa de 433$\,MHz$. De acordo com o manual da biblioteca VirtualWire que auxilia o uso desses dispositivos, ao instalar uma antena de cerca de 17$\,cm$ em ambos os módulos o alcance de transmissão pode ser de até 150 metros em campo aberto \cite{virtualwiremanual}. Entretanto, neste trabalho, por conta da fragilidade de um dos módulos, só foi possível soldar uma antena no transmissorde rádio, deixando o receptor sem a sua antena o que pode vir a comprometer o desempenho.
 
 		Durante a realização dos testes para verificar o alcance de transmissão, um módulo receptor foi conectado a uma placa Arduino que por sua vez foi conectada a um computador, sendo assim o equipamento responsável por receber o sinal ficou fixo em um local. Na tela do computador eram exibidas as mensagens enviadas pela BioGlove. Partindo de uma distância igual a zero, o transmissor embarcado na luva foi sendo distanciado aos poucos em campo aberto do receptor, enquanto isso a mensagens capturadas pelo receptor foram constantemente verificadas na tela do computador. Ao se distanciar por volta de 7,5 metros o sinal da BioGlove começou a falhar e o teste foi encerrado nesta marca. 
 
-			O próximo sistema que foi verificado para efeitos de comparação foi a Data Glove 5 Ultra, que em seu datasheet oferece informações sobre sua tecnologia de transmissão sem fio. Nele está especificado que atrelado à essa luva comercial existe um kit de transmissão sem fio, no qual foi projetado para suportar até duas luvas simultaneamente. A tecnologia de transmissão utilizada é a Bluetooth, que trabalha na faixa de 2,4$\,$GHz e segundo a sua documentação consegue um alcance de até 20 metros \cite{5DT-ultra}.
+			O próximo sistema que foi verificado para efeitos de comparação foi a Data Glove 5 Ultra, que em seu datasheet oferece informações sobre sua tecnologia de transmissão sem fio. Nele está especificado que atrelado à essa luva comercial existe um kit de transmissão sem fio, no qual foi projetado para suportar até duas luvas simultaneamente. A tecnologia de transmissão utilizada é a Bluetooth, que trabalha na faixa de 2,4$\,GHz$ e segundo a sua documentação consegue um alcance de até 20 metros \cite{5DT-ultra}.
 
-			E por fim, foi analisada a PERCRO Dataglove que é uma luva baseada no funcionamento de goniômetros, que são instrumentos responsáveis por medir o deslocamento angular relativo. Esta luva sensorizada foi desenvolvida no trabalho de \cite{rodriguez2007goniometric}, e possui dois sensores para cada dedo, um microcontrolador embarcado e um módulo Bluetooth 2,4$\,$GHz que segundo a publicação chega a alcançar uma comunicação satisfatória a uma distância de até 10 metros.
+			E por fim, foi analisada a PERCRO Dataglove que é uma luva baseada no funcionamento de goniômetros, que são instrumentos responsáveis por medir o deslocamento angular relativo. Esta luva sensorizada foi desenvolvida no trabalho de \cite{rodriguez2007goniometric}, e possui dois sensores para cada dedo, um microcontrolador embarcado e um módulo Bluetooth 2,4$\,GHz$ que segundo a publicação chega a alcançar uma comunicação satisfatória a uma distância de até 10 metros.
 
 
 			A tabela \ref{Tab:wifi-range} abaixo resume o desempenho de alcance apresentado pelas três luvas descritas.
@@ -1465,9 +1475,9 @@ if(chegou_mensagem){
       \midrule
 			Luva 						& Tecnologia			&	Faixa		& Alcance		\\
       \midrule                                            					
-			Data Glove 5		& Bluetooth				& 2,4$\,$GHz	& 20 metros	\\
-			PERCRO Dataglove& Bluetooth				& 2,4$\,$GHz	& 10 metros	\\
-			BioGlove				& Rádio Frequência& 433$\,$MHz	&	7,5 metros\\	
+			Data Glove 5		& Bluetooth				& 2,4$\,GHz$	& 20 metros	\\
+			PERCRO Dataglove& Bluetooth				& 2,4$\,GHz$	& 10 metros	\\
+			BioGlove				& Rádio Frequência& 433$\,MHz$	&	7,5 metros\\	
       \midrule
     \end{tabular}
 		\label{Tab:wifi-range}
@@ -1501,7 +1511,7 @@ if(chegou_mensagem){
 
 		Apesar de no geral o projeto desenvolvido se mostrar viável para ser uma luva de aferição de movimentos e transmissão de dados, este possui natureza diferente de outros produtos semelhantes. Enquanto que o uso de sensores flex resistivos comerciais pode trazer uma mecânica relativamente estável durante os movimentos, a BioGlove é dependente de uma rede de fios e polias que não apresentou muita estabilidade mecânica em uma luva de algodão. A troca do material da luva por um  mais rígido, poderia favorecer a estabilidade durante os movimentos.
 
-		Com tudo, a BioGlove, mesmo apresentando limitações, se mostra capaz de fomentar projetos de baixo custo que necessitem desse tipo de equipamento. O uso de componentes de baixo custo, como potenciômetros e o par de comunicação em rádio frequência de 433$\,$MHz, além da amplamente conhecida e documentada placa Arduino, permite com os devidos ajustes, que diversos módulos compatíveis sejam adicionados ao projeto futuramente. Com isso há a possibilidade de, por exemplo, desenvolver soluções mais complexas como a tradução da Linguagem Brasileira de Sinais (LIBRAS) de gestos para palavras ou até mesmo possibilitar a interação da luva com \textit{softwares} de realidade virtual.
+		Com tudo, a BioGlove, mesmo apresentando limitações, se mostra capaz de fomentar projetos de baixo custo que necessitem desse tipo de equipamento. O uso de componentes de baixo custo, como potenciômetros e o par de comunicação em rádio frequência de 433$\,MHz$, além da amplamente conhecida e documentada placa Arduino, permite com os devidos ajustes, que diversos módulos compatíveis sejam adicionados ao projeto futuramente. Com isso há a possibilidade de, por exemplo, desenvolver soluções mais complexas como a tradução da Linguagem Brasileira de Sinais (LIBRAS) de gestos para palavras ou até mesmo possibilitar a interação da luva com \textit{softwares} de realidade virtual.
 
 			\section{Trabalhos futuros}		
 
