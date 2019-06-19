@@ -46,6 +46,14 @@
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
+
+% ---
+% CONFIGURACAO DO ABNTEX2
+% ---
+
+\setlength{\ABNTEXsignwidth}{9cm} % Tamanho da linha de assinatura
+
+
 % ---
 % Pacotes básicos 
 % ---
@@ -69,8 +77,11 @@
 
 
 %pacote da tabela
-\usepackage{multirow}
+\usepackage{booktabs,multirow,tabularx}
+\newcommand{\makecell}[2][@{}c@{}]{\begin{tabular}{#1}#2\end{tabular}}
 % ---
+
+
 %	
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
@@ -356,11 +367,11 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
    Trabalho aprovado. \imprimirlocal, 11 de julho de 2019:
 
    Conceito: .
-   
+  
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{\imprimircoorientador} \\ Coorientador}
-   \assinatura{\textbf{Prof. Dra. Josiane do Couto Rodrigues} \\ Convidado 1}
-  % \assinatura{\textbf{Prof. Dr. Somebody else} \\ Convidado 2}
+	 \assinatura{\textbf{\imprimircoorientador} \\ Coorientador}
+	 \assinatura{\textbf{Prof. Dra. Josiane do Couto Rodrigues} \\ Convidado 1}
+   %\assinatura{\textbf{Prof. Dr. Somebody else} \\ Convidado 2}
    %\assinatura{\textbf{Professor} \\ Convidado 3}
       
    \begin{center}
@@ -391,7 +402,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
 \begin{agradecimentos}
 Agradeço à Deus por abençoar constantemente meus passos nesse caminho que chamamos de vida, sempre me agraciando com saúde, oportunidades, conhecimento, pessoas excelentes, além de me permir evoluir a todo momento pessoal e profissionalmente.
 
-Agradeço à minha família, minhas mães Eunice e Conceição, minhas tias Elissandra, Djanice, Ednice, Rosa e Hildete, meu Tio Denismar, meu Pai José Edson e minhas primas-irmã Ana Caroline e Jéssica Menezes, pelo apoio nas mais diversas formas e momentos, permitindo que eu esteja realizando o sonho da graduação. 
+Agradeço à minha família, minhas mães Eunice e Conceição, minhas tias Elissandra, Djanice, Ednice, Rosa e Hildete, meu Tio Denismar, meu Pai José Edson e minhas primas Ana Caroline e Jéssica Menezes, pelo apoio nas mais diversas formas e momentos, permitindo que eu esteja realizando o sonho da graduação. 
 
 Agradeço ao meu orientador Prof. Dr. Roberto Menezes Rodrigues, ao meu coorientador Prof. Dr. João Crisóstomo Weyl A. Costa, além do Prof. Dr. Marco José de Sousa, pela paciência, orientação, credibilidade e conhecimento repassados a mim nos últimos anos.
 
@@ -425,7 +436,7 @@ Aos meus amigos Paulo Alexandre, Luan Assis, Celson Nakamura, Itamar Aguiar, Ít
 %\setlength{\parindent}{1.5cm}
 %\indent
 %\hangindent=3.7cm
-	\hspace{1.5cm}Luvas embarcadas com sensores, também conhecidas como \textit{data gloves}, permitem diversas interações com realidade virtual, robótica, controle, internet das coisas, dentre outras. Dentro da luva, para que seja possível medir a flexão dos dedos, existem soluções baseadas em fibra óptica, tinta condutiva, potenciômetros e os mais conhecidos sensores flex. Entretanto, em muitos projetos, o custo da luva se torna elevado por conta da tecnologia escolhida para mensurar os graus de flexão em cada um dos dedos. Com o propósito de diminuir custos de projetos que necessitam de uma \textit{data glove}, foi desenvolvida a BioGlove, que é uma luva embarcada com sensores de flexão de baixo custo, placa microcontroladora que possui larga documentação e disponibilidade, além de um protocolo de comunicação simplificado. Além do mais, dentro do trabalho é proposto a avaliação de um sensor de flexão bioinspirado na mecânica dos dedos.
+	\hspace{1.5cm}Luvas embarcadas com sensores, também conhecidas como \textit{data gloves}, permitem interações com realidade virtual, robótica, controle, internet das coisas, telemedicina, entre outras. Dentro da luva, para que seja possível medir a flexão dos dedos, existem soluções baseadas em fibra óptica, tinta condutiva, potenciômetros e os mais conhecidos sensores de flexão resistivos. Entretanto, em muitos projetos, o custo da luva se torna elevado por conta da tecnologia escolhida para mensurar os graus de flexão em cada um dos dedos. Com o propósito de diminuir custos de projetos que necessitam de uma \textit{data glove}, foi desenvolvida a BioGlove, que é uma luva de propósito genérico embarcada com sensores de flexão de baixo custo inspirados na biomecânica dos dedos, placa microcontroladora que possui larga documentação e disponibilidade, além de um protocolo de comunicação e controle simplificado. Neste trabalho descreve-se o desenvolvimento do protótipo, avalia-se o controle sem fio de um carrinho, e ainda compara-se o desempenho do sensor bioinspirado, o alcance de transmissão e a duração da bateria do sistema com outros trabalhos relacionados. Onde, em alguns pontos, a Bioglove apresenta desempenho equiparado à outras pesquisas.
 
 
  \textbf{Palavras-chaves}: Data glove. sensor de flexão. sistema bioinspirado.
@@ -434,8 +445,7 @@ Aos meus amigos Paulo Alexandre, Luan Assis, Celson Nakamura, Itamar Aguiar, Ít
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
-\hspace{1.5cm}Gloves embedded with sensors, also known as data gloves, allow various interactions with virtual reality, robotics, control, internet of things, and so on. Inside the glove, to be possible to measure finger flexion, there are solutions based on fiber optics, conductive ink, potentiometers and the well known flex sensors. However,
-in many projects, the glove's cost become high because of technology chosen to measure fingers' degrees flexion. With the purpose of decrease costs of projects that need a data glove, was developed the BioGlove, that is a glove embedded with low cost flex sensors, microcontroller board with extensive documentation and availability, as well as a simplified communication protocol. Furthermore, in the work is proposed the avaliation of a flex sensor bioinspired by finger mechanics.
+\hspace{1.5cm}Gloves embedded with sensors, also known as data gloves, allow interactions with virtual reality, robotics, control, internet of things, telemedicine, and so on. Inside the glove, to be possible to measure finger flexion, there are solutions based on fiber optics, conductive ink, potentiometers and the well known resistive flex sensors. However, in many projects, the glove's cost becomes high because of technology chosen to measure fingers' degrees flexion. With the purpose of decrease costs of projects that need a data glove, was developed the BioGlove, that is a generic purpose glove embedded with low cost flex sensors inspired on fingers' biomechanics, microcontroller board with extensive documentation and availability, as well as a simplified communication and control protocol. In this work is decribed the prototype development, the avaliation of a wireless little car control, moreover the comparison among the bioinspired flex sensor performance, the transmission range and the durantion of system's battery against related works. Where, in some points, the BioGlove presented similar performance to other researches.
 
 
 
@@ -480,7 +490,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 	\item[d.C]Depois de Cristo
 	\item[E/S]Entrada e Saída
 	\item[$GHz$]Gigahertz
-	\item[I]Corrente elétrica
+	\item[$I$]Corrente elétrica
 	\item[IDE]\textit{Integrated Development Interface}
 	\item[$km/h$]Quilômetro por hora
 	\item[$k\Omega$]\textit{Quiloohm}
@@ -595,7 +605,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		Especificamente na área da robótica, existe um robô em formato de salamandra que é capaz de se movimentar bem entre a água e a terra, há um pequeno robô inspirado na mosca que, devido ao seu formato, possui excelente decolagem vertical na hora do vôo. Existe ainda um robô que consegue escalar paredes através de um material adesivo que foi inspirado pela lagartixa \cite{pfeifer2007biorobot}. 
 
-		Contudo, ao longo dos anos, não somente os animais e plantas vem servindo de base para projetos de engenharia. O próprio Leonardo da Vinci, por exemplo, a partir dos seus estudos em corpos humanos dissecados, chegou a construir modelos mecânicos de músculos, juntas, braços, entre outros que foram usados em muitas de suas invenções \cite{rosheim2006leonardo}. Com relação à mão, sabemos que ela exerce uma importante função na interação do ser humano com diversas ferramentas do dia a dia - desde o uso de instrumentos de trabalho como o martelo, serrote e a chave de fenda, até o ato de manipular a comida usando garfo e faca para se alimentar. Na área da tecnologia, muitos periféricos também necessitam da mão para serem controlados, é o caso do teclado do computador, do controle remoto da televisão e dos famosos tablets e smartphones.	Entretando, em aplicações de realidade virtual a imersão se torna ainda maior quando a interação é provida através de movimentos naturais do ser humano. Em um jogo de realidade virtual, por exemplo, será muito mais natural para o jogador alcançar um objeto virtual extendendo a sua mão, do que usar um \textit{joystick} para isso. Neste caso especificamente, o uso de uma luva com diversos sensores embarcados pode deixar a interação ainda mais real para o usuário. 
+		Contudo, ao longo dos anos, não somente os animais e plantas vem servindo de base para projetos de engenharia. O próprio Leonardo da Vinci, por exemplo, a partir dos seus estudos em corpos humanos dissecados, chegou a construir modelos mecânicos de músculos, juntas, braços, entre outros que foram usados em muitas de suas invenções \cite{rosheim2006leonardo}. Com relação à mão, sabemos que ela exerce uma importante função na interação do ser humano com diversas ferramentas do dia a dia --- desde o uso de instrumentos de trabalho como o martelo, serrote e a chave de fenda, até o ato de manipular a comida usando garfo e faca para se alimentar. Na área da tecnologia, muitos periféricos também necessitam da mão para serem controlados, é o caso do teclado do computador, do controle remoto da televisão e dos famosos tablets e smartphones.	Entretando, em aplicações de realidade virtual a imersão se torna ainda maior quando a interação é provida através de movimentos naturais do ser humano. Em um jogo de realidade virtual, por exemplo, será muito mais natural para o jogador alcançar um objeto virtual extendendo a sua mão, do que usar um \textit{joystick} para isso. Neste caso especificamente, o uso de uma luva com diversos sensores embarcados pode deixar a interação ainda mais real para o usuário. 
 	
 
 		\section{Estado da arte}
@@ -622,13 +632,12 @@ in many projects, the glove's cost become high because of technology chosen to m
 		
 		\section{Motivação e objetivos}
 
-		Apesar da gama de possibilidades com o uso de luvas sensorizadas, o custo de montagem ou a obtenção de produtos comerciais de plataforma fechada possui custo relativamente elevado. Muitos projetos utilizam pelo menos 1 sensor de flexão resistivo comercial em cada dedo, sendo que a compra de cada unidade desse sensor pode custar, em lojas online especializadas, em torno de 130 Reais \cite{multilogicaflexsensor}. Além disso, produtos comerciais costumam ter um \textit{hardware} imutável e de difícil manutenção, pois somente equipes especializadas possuem o conhecimento técnico ou a autorização legal para efetuar modificações.
+		Apesar da gama de possibilidades com o uso de luvas sensorizadas, o custo de montagem ou a obtenção de produtos comerciais de plataforma fechada possui custo relativamente elevado. Muitos projetos utilizam pelo menos um sensor de flexão resistivo comercial em cada dedo, sendo que a compra de cada unidade desse sensor pode custar, em lojas online especializadas, em torno de 130 Reais \cite{multilogicaflexsensor}. Além disso, produtos comerciais costumam ter um \textit{hardware} imutável e de difícil manutenção, pois somente equipes especializadas possuem o conhecimento técnico ou a autorização legal para efetuar modificações.
 
-		Este trabalho propõe criar um protótipo de uma luva com sensores de flexão bioinspirados embarcados, microcontrolador e transmissor de dados. O sistema deve possuir um conjunto de \textit{software} e \textit{hardware} de código aberto, que seja mais flexível em relação à outros produtos, permitindo que o usuário tenha liberdade de realizar modificações que se adaptem às suas necessidades. 
+		Este trabalho propõe criar um protótipo de uma luva com sensores de flexão bioinspirados embarcados, microcontrolador e transmissor de dados. O sistema deve possuir um conjunto de \textit{software} e \textit{hardware} de código aberto, que seja mais flexível em relação à outros produtos, permitindo que o usuário tenha liberdade de realizar modificações que se adaptem às suas necessidades. O sistema criado é de propósito genérico, mas para testar suas funcionalidades, uma aplicação para controle de um carrinho através dos gestos dos dedos foi desenvolvida.
 
-		Um dos componentes em maior número e de maior custo em projetos de luvas como essa, são os sensores de flexão. Portanto, esse trabalho também propõe avaliar a viabilidade de um sistema transdutor de flexão inspirado no movimento dos músculos e tendões da mão. Esse sensor será composto de materiais de baixo custo e de fácil acesso.
-
-		
+		Sendo o sensor de flexão um dos componentes em maior número e de maior custo em projetos de luvas sensorizadas. Esse trabalho também propõe avaliar a viabilidade de um sistema transdutor de flexão inspirado no movimento dos músculos e tendões da mão. Onde esse sensor será composto de materiais de baixo custo e de fácil acesso e será o único modelo de sensor de flexão a compor a luva desenvolvida.	
+	
 		\section{Organização do trabalho}
 
 		O restante deste trabalho está organizado da seguinte forma:
@@ -677,7 +686,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Após a transmissão do sinal, é necessário que algum componente receba e interprete tal sinal. Esse componente geralmente está ligado diretamente ao objetivo principal da aplicação. Por exemplo, no caso de uma aplicação que controle um atuador através dos movimentos da luva, provavelmente o atuador estaria conectado ao receptor do sinal. Em uma aplicação que vise mostrar os valores recebidos em uma tela de computador, o receptor poderia estar conectado à CPU (\textit{Central Processing Unit}) desse computador. Ou seja, o receptor da aplicação pode ser responsável não só pela interpretação do sinal recebido, como também pode controlar atuadores e enviar mensagens compreensíveis relacionadas aos sensores.
 
-		Nas subseções a seguir serão apresentados mais detalhes acerca dos componentes relacionados a cadeia descrita acima. Começando por uma breve explicação sobre a biomecânica que possibilita a movimentação dos dedos, passando pelas formas de captura destes movimentos através de diferentes transdutores. Logo após haverá uma seção sobre o potenciômetro que é um transdutor chave para este trabalho, a seção seguinte descreverá o microcontrolador e suas funcionalidades, finalmente chegando à seção sobre formas de transmissão de sinal.
+		Nas subseções a seguir serão apresentados mais detalhes acerca dos componentes relacionados a cadeia descrita acima. Começando por uma breve explicação sobre a biomecânica que possibilita a movimentação dos dedos, passando pelas formas de captura destes movimentos através de diferentes transdutores. Logo após haverá uma seção que descreverá o microcontrolador e suas funcionalidades, finalmente chegando à seção sobre formas de transmissão de sinal.
 
 
 
@@ -721,19 +730,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Muitas pesquisas que buscam mensurar movimentos de flexão e expansão, usam sensores de flexão resistivos comerciais semelhantes a \cite{flexsensor}. Tal sensor possui uma resistência que é variada quando ele é torcido. Na mão, por exemplo, um sensor desses pode ser utilizado em cada ponto de flexão dos dedos, das juntas ou do pulso. Dessa forma, quando houver flexão em algum desses pontos, o sensor será torcido de acordo com o movimento, logo sua resistência também irá variar fazendo deste um sensor de flexão baseado na variação de resistência. 
 		
-		O trabalho de \cite{anbarasi2013deafmute} usa uma luva sensorizada junto a outros componentes com o objetivo de traduzir gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, espera-se haver uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão resistivos comerciais, enquanto que as direções dos movimentos durante os gestos da mão, são captados por um acelerômetro e existem ainda sensores de toque responsáveis por ``sentir'' o toque em determinadas áreas. Todos eses sensores estão conectados a um microcontrolador responsável por reconhecer padrões de movimentos, gerar palavras e as converter em aúdio através de um módulo e um alto falante. 
-
-		Já a \textit{Data Glove}, mencionada anteriormente, usava fibra óptica e fotoresistores ao invés de sensores resistivos para saber as posições de cada dedo. Esse outro tipo de sensor de flexão é possível porque de acordo com o nível flexão do sensor, a quantidade de luz que chegava ao fotoresistor era variada, indicando portanto a posição atual. Entretanto, a \textit{Power Glove}, buscando reduzir custos, preferiu trocar essa tecnologia baseada fibra óptica e passou a usar placas com tintas que variavam suas propriedades condutivas quando eram torcidas \cite{dana1989powerglove}. 
-
-%		Neste trabalho, propo\~e-se criar um sistema inspirado na biomecâmica dos dedos. Esse sistema deve mensurar movimentos de flexão e extensão dos dedos usando um transdutor mecânico com funcionamento semelhante ao sistema de tendões que ocorre nas mãos. 
-
-
-
-
-		\section{Potenciômetro}
 		O potenciômetro é um componente eletrônico que permite, através do giro do seu eixo, a variação da resistência entre seus terminais. Eles são constituídos por um elemento de resistência, que pode ser de carbono ou fio de nicromo, sobre o qual corre uma lingueta, denominada cursor. Dentre as características do potenciômetro estão o valor máximo de sua resistência, seu número de voltas, seu grau máximo de giro (aproximado) e se ele é do tipo linear ou logarítmico \cite{ncb2012eletronicabasica}.
-
-
 
 		A Figura \ref{Fig:potentiometer1} demonstra resumidamente o funcionamento do potenciômetro linear, onde a saída dos terminais é variada de acordo com o giro do cursor. Então, baseado nessa característica do componente e usando a lei de Ohm na qual $V = R.I$, dada uma corrente constante, ao variar a resistência teremos uma variação da tensão. Sendo assim, ao girar o eixo do potenciômetro, dependendo do sentido do giro, perceberemos um aumento ou diminuição da tensão naquele ponto, partindo de um ponto extremo com resistência mínima até o outro no qual a resistência deverá ser a máxima característica do componente. Dessa forma, é possível então fazer do potenciômetro uma espécie de sensor de giro.
 
@@ -744,6 +741,17 @@ in many projects, the glove's cost become high because of technology chosen to m
 			\fonte{Modificado de~\cite{ncb2012eletronicabasica}.}
   		\label{Fig:potentiometer1}
 		\end{figure}
+
+		O trabalho de \cite{anbarasi2013deafmute} usa uma luva sensorizada junto a outros componentes com o objetivo de traduzir gestos definidos na linguagem americana de sinais em texto e áudio. Dessa forma, espera-se haver uma melhor comunicação de pessoas surdas ou mudas com outras pessoas que não são familiarizadas com a linguagem de sinais. A captura de flexões e extensões dos dedos são realizadas por sensores de flexão resistivos comerciais, enquanto que as direções dos movimentos durante os gestos da mão, são captados por um acelerômetro e existem ainda sensores de toque responsáveis por ``sentir'' o toque em determinadas áreas. Todos eses sensores estão conectados a um microcontrolador responsável por reconhecer padrões de movimentos, gerar palavras e as converter em aúdio através de um módulo e um alto falante. 
+
+		Já a \textit{Data Glove}, mencionada anteriormente, usava fibra óptica e fotoresistores ao invés de sensores resistivos para saber as posições de cada dedo. Esse outro tipo de sensor de flexão é possível porque de acordo com o nível flexão do sensor, a quantidade de luz que chegava ao fotoresistor era variada, indicando portanto a posição atual. Entretanto, a \textit{Power Glove}, buscando reduzir custos, preferiu trocar essa tecnologia baseada fibra óptica e passou a usar placas com tintas que variavam suas propriedades condutivas quando eram torcidas \cite{dana1989powerglove}. 
+
+%		Neste trabalho, propo\~e-se criar um sistema inspirado na biomecâmica dos dedos. Esse sistema deve mensurar movimentos de flexão e extensão dos dedos usando um transdutor mecânico com funcionamento semelhante ao sistema de tendões que ocorre nas mãos. 
+
+
+
+
+%		\section{Potenciômetro}
 
 		\section{Microcontroladores}
 
@@ -930,14 +938,14 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B, que são os graus máximos de extensão e flexão da BioGlove. Além disso, também era preciso saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B, com isso seria possível saber a resolução do sistema em cada dedo.
 
-		Para descobrir os valores de deslocamento, inicialmente cada potenciômetro teve seu valor digital médio anotado tanto para a posição A quanto para B, e posteriormente os valores de cada um dos dedos foram utilizados na equação \ref{Eq:Desloca1}:
+		Para descobrir os valores de deslocamento, inicialmente cada potenciômetro teve seu valor digital médio anotado tanto para a posição A quanto para B, e posteriormente os valores de cada um dos dedos foram utilizados em (\ref{Eq:Desloca1}):
 
 	\begin{equation}
 			\Delta Pos 	= Pos B 	- 	Pos A
 		\label{Eq:Desloca1}
 	\end{equation}
 
-		Sendo $\Delta Pos$ o valor de deslocamento de A para B, com o módulo de $\Delta Pos$ é possível calcular o número de posições detectáveis (resolução) de cada dedo partindo da Posição A até a Posição B, através da equação \ref{Eq:NPos1}:
+		Sendo $\Delta Pos$ o valor de deslocamento de A para B, com o módulo de $\Delta Pos$ é possível calcular o número de posições detectáveis (resolução) de cada dedo partindo da posição A até a posição B, através da equação (\ref{Eq:NPos1}):
 
 	\begin{equation}
 			NPos = |\Delta Pos| + 1
@@ -988,11 +996,11 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		O protocolo de comunicação descrito repete o envio de mensagens constantemente com intervalos de tempo de microsegundos entre uma mensagem e outra, por mais que a mensagem atual seja a mesma enviada anteriormente.   
 		
-		Além de encurtar a resolução de cada potenciômetro para se adequar ao protocolo de comunicação, também foi necessário eliminar os deslocamentos negativos. Isso foi realizado com o intuito de criar um protocolo de controle mais simples e que funcionasse da mesma maneira para qualquer um dos dedos.
+		Além de reduzir a resolução de cada potenciômetro para se adequar ao protocolo de comunicação, também foi necessário eliminar os deslocamentos negativos. Isso foi realizado com o intuito de criar um protocolo de controle mais simples e que funcionasse da mesma maneira para qualquer um dos dedos.
 
 	 A chave para se adequar aos requisitos descritos até aqui foi a utilização da função ``map'' no código embarcado, isso porque esta função permite remapear uma faixa de valores em outra menor. Usando tal função, a faixa de entrada que inicialmente poderia variar entre 0 e 1023, foi remapeada para variar somente entre valores inteiros de 0 a 9. Além do mais, a função map também permite inverter sua saída de uma forma que os valores de entrada que variam de 1023 a 0 (decrescente) passam a variar de 0 a 9 (crescente). Com isso é possível eliminar os deslocamentos negativos.
 
-	 Após remapear os valores digitais recebidos e eliminar os deslocamentos negativos, para fins de comparação, os novos valores também foram utilizados nas equações \ref{Eq:Desloca1} e \ref{Eq:NPos1}, e os seus resultados foram adicionados à Tabela \ref{Tab:deltapos}, criando a Tabela \ref{Tab:deltaremap}:
+	 Após remapear os valores digitais recebidos e eliminar os deslocamentos negativos, para fins de comparação, os novos valores também foram utilizados nas equações (\ref{Eq:Desloca1}) e (\ref{Eq:NPos1}), e os seus resultados foram adicionados à Tabela \ref{Tab:deltapos}, criando a Tabela \ref{Tab:deltaremap}:
 
 
 	\begin{table}[H]
@@ -1042,7 +1050,7 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		O uso dessa biblioteca nos códigos da IDE do Arduino permite abstrair tratamentos de envio e recebimento de dados necessários para a comunicação tais como, sincronização de padrões, balanceamento de bits 0 e 1, e checagem de erros \cite{virtualwirepjrc}. Dessa forma, para enviar e receber mensagens entre os módulos compatíveis, basta seguir os padrões de entrada e saída das funções descritas na documentação da biblioteca disponível gratuitamente na internet.
 
-		Para o código embarcado no microcontrolador da BioGlove foi necessário definir segundo os parâmetros da biblioteca, o pino de conexão do transmissor com o microcontrolador, a taxa de transmissão a ser utilizada, além do tamanho da mensagem que seria enviada. Porém, antes de efetivamente enviar a mensagem sempre é necessário converter a mensagem numérica em um dado do tipo string, logo em seguida esta\textit{string} será transformada em um vetor de char, que é o formato de dado aceito pela função de envio da VirtualWire.
+		Para o código embarcado no microcontrolador da BioGlove foi necessário definir segundo os parâmetros da biblioteca, o pino de conexão do transmissor com o microcontrolador, a taxa de transmissão a ser utilizada, além do tamanho da mensagem que seria enviada. Porém, antes de efetivamente enviar a mensagem sempre é necessário converter a mensagem numérica em um dado do tipo \textit{string}, logo em seguida esta \textit{string} será transformada em um vetor de \textit{char}, que é o formato de dado aceito pela função de envio da VirtualWire.
 
 		No código embarcado no carrinho, a biblioteca é usada para receber as mensagens adequadamente, definindo-se alguns parâmetros como o tamanho da mensagem esperada, o pino de conexão do receptor com o microcontrolador e a taxa de transmissão, que deve ser a mesma definida previamente no \textit{software} embarcado na luva. Além disso, é necessário usar uma função que indica a chegada de uma mensagem, e quando isso acontece a mensagem recebida deve ser guardada em variáveis do tamanho correto, pois as mensagens são recebidas \textit{byte} a \textit{byte}. A partir desse ponto já é possivel usar a mensagem recebida da maneira definida pela aplicação.
 
@@ -1054,9 +1062,9 @@ in many projects, the glove's cost become high because of technology chosen to m
 
 		Inicialmente o \textit{software} embarcado no microcontrolador instalado na BioGlove tem como função a captura dos valores apresentados pelos potenciômetros e o remapeamento desses valores para uma faixa menor de valores. Esse período inicial do \textit{software} não será abordado nesta subseção, que é dedicada apenas aos trechos de código que caracterizam a forma de transmissão escolhida para esse trabalho.
 
-		Como foi explicitado previamente, a estratégia de transmissão escolhida foi a de enviar uma mensagem de apenas 5 dígitos da luva para o carrinho, sendo que o valor de cada dígito representa o valor de cada potenciômetro (e consequentemente de cada dedo) naquele instante de tempo. Para que isso seja possível é necessário que o valores inteiros dos potenciômetros sejam concatenados lado a lado em uma ordem correta para formar uma única mensagem. Além disso, por conta de uma exigência da biblioteca VirtualWire, ainda é necessário transformar esta mensagem numérica em um dado do tipo\textit{string} e posteriormente esta\textit{string} será dividida em um vetor de dados do tipo char.	
+		Como foi explicitado previamente, a estratégia de transmissão escolhida foi a de enviar uma mensagem de apenas 5 dígitos da luva para o carrinho, sendo que o valor de cada dígito representa o valor de cada potenciômetro (e consequentemente de cada dedo) naquele instante de tempo. Para que isso seja possível é necessário que o valores inteiros dos potenciômetros sejam concatenados lado a lado em uma ordem correta para formar uma única mensagem. Além disso, por conta de uma exigência da biblioteca VirtualWire, ainda é necessário transformar esta mensagem numérica em um dado do tipo \textit{string} e posteriormente esta \textit{string} será dividida em um vetor de dados do tipo \textit{char}.	
 		
-		Uma das formas de converter valores inteiros em\textit{string} é concatenar o(s) valor(es) inteiro(s) com uma\textit{string} \cite{arduinostringadd}. Por isso, no código de transmissão, uma\textit{string} vazia é somada aos valores inteiros (que já foram remapeados) dos potenciômetros. Através deste método todos os valores serão concatenados e transformados em uma\textit{string} através de uma linha de código. Logo após, esta\textit{string} é transformada em um vetor de\textit{char} usando a função nativa da linguagem chamada ``toCharArray''. A partir desse momento já é possível enviar a mensagem ao módulo transmissor usando a função ``vw\_send( )'' da VirtualWire. O processo descrito até aqui está representado no pseudocódigo abaixo.		
+		Uma das formas de converter valores inteiros em \textit{string} é concatenar o(s) valor(es) inteiro(s) com uma \textit{string} \cite{arduinostringadd}. Por isso, no código de transmissão, uma \textit{string} vazia é somada aos valores inteiros (que já foram remapeados) dos potenciômetros. Através deste método todos os valores serão concatenados e transformados em uma \textit{string} através de uma linha de código. Logo após, esta \textit{string} é transformada em um vetor de \textit{char} usando a função nativa da linguagem chamada ``toCharArray''. A partir desse momento já é possível enviar a mensagem ao módulo transmissor usando a função ``vw\_send( )'' da VirtualWire. O processo descrito até aqui está representado no pseudocódigo abaixo.		
 %	// Inicia variaveis
 %	string vazia = ""
 %	string mensagem = ""
@@ -1076,10 +1084,10 @@ in many projects, the glove's cost become high because of technology chosen to m
 	int dedo4 = posicao_dedo4;
 	int dedo5 = posicao_dedo5;
 
-	// Concatena\textit{string} + inteiros para obter uma unica string
-	mensagem =\textit{string} + dedo1 + dedo2 + dedo3 + dedo4 + dedo5;
+	// Concatena string + inteiros para obter uma unica string
+	mensagem = string + dedo1 + dedo2 + dedo3 + dedo4 + dedo5;
 
-	// Converte a\textit{string} em um vetor de char
+	// Converte a string em um vetor de char
 	mensagem = mensagem.toCharArray;
 
 	// Envia o vetor de char
@@ -1183,7 +1191,7 @@ if(chegou_mensagem){
 		A escolha de materiais que compõem os transdutores foi baseada no menor custo e maior disponibilidade local, sendo as polias plásticas feitas a partir de pequenos pedaços cortados de hastes flexíveis com algodão nas pontas. O material da linha que movimenta os cursores dos potenciômetro é náilon, e foi escolhido por sua boa resistência, durabilidade e disponibilidade, e por apresentar pouca elasticidade quando é tensionado.
 
 
-		Após um estudo realizado com os materiais disponíveis, foram definidas as posições da luva onde seriam costurados os fios de náilon e as polias plásticas que servem de guia para o trajeto do fio. O próximo passo foi realizar a costura de cada componente para deixá-los devidamente presos na luva. Posicionando a luva com o dorso voltado para cima, cada polia plástica foi sendo costurada uma a uma ao longo dos dedos, posteriormente de cada fio de náilon foi preso na ponta de cada um dos dedos, o passo seguinte foi atravessar o comprimeto de cada fio por dentro das polias plásticas, deixando a outra extremidade do fio de náilon livre pois mais tarde essa ponta seria amarrada ao cursor de um potenciômetro. Este procedimento foi repetido para cada um dos cinco dedos da luva, e a Figura \ref{Fig:glove-wire-pot1} demonstra o resultado esperado após a costura realizada em um dos dedos da luva.
+		Após um estudo realizado com os materiais disponíveis, foram definidas as posições da luva onde seriam costurados os fios de náilon e as polias plásticas que servem de guia para o trajeto do fio. O próximo passo foi realizar a costura de cada componente para deixá-los devidamente presos na luva. Para cada um dos dedos da luva o procedimento se iniciava posicionando a luva com o dorso voltado para cima, daí cada polia plástica foi sendo costurada uma a uma ao longo do dedo, em seguida um fio de náilon passava por dentro das polias e era amarrado na ponta do dedo da luva, posteriormente a outra extremidade do fio de náilon seria presa no cursor de um potenciômetro. Este procedimento foi repetido para cada um dos cinco dedos da luva, e a Figura \ref{Fig:glove-wire-pot1} demonstra o resultado esperado após a costura realizada em um dos dedos da luva.
 
 
 		\begin{figure}[h!]
@@ -1212,7 +1220,7 @@ if(chegou_mensagem){
 			\fonte{Produzido pelo autor.}
 		\end{figure}
 			
-			O modelo de potenciômetro que mais se aproximou das especificações desejadas foi retirado de servomotores modelo MG996R da marca TowerPro. este potenciômetro possui dimensão aproximada de 13$\,mm$ x 13$\,mm$ em sua base, resistência máxima de 5$\,k\Omega$, giro máximo de $200^{o}$ (aproximado) e seu cursor desliza com facilidade durante o giro. 
+			O modelo de potenciômetro que mais se aproximou das especificações desejadas foi retirado de servomotores modelo MG996R da marca TowerPro. Este potenciômetro possui dimensão aproximada de 13$\,mm$ x 13$\,mm$ em sua base, resistência máxima de 5$\,k\Omega$, giro máximo de $200^{o}$ (aproximado) e seu cursor desliza com facilidade durante o giro. 
 
 			Seguindo adiante com a montagem, para facilitar a instalação do fio de náilon e do elástico no potenciômetro, um pequeno pedaço de PVC (\textit{Polyvinyl Chloride}) expandido foi adaptado no cursor do potenciômetro, objetivando facilitar o giro do cursor durante o uso da luva. O resultado desta adaptação pode ser visto na Figura \ref{Fig:potentiometer-and-battery}(a).
 
@@ -1317,18 +1325,16 @@ if(chegou_mensagem){
 
 		\section{Introdução}
 		
-		Após a conclusão da montagem da Bioglove o \textit{software} de transmissão foi carregado para o microcontrolador embarcado nela enquanto que o \textit{software} de recepção de sinal foi carregado no Arduino Nano instalado no carrinho. Logo nos primeiros testes de controle do carrinho, ele correspondeu aos comandos de movimentação programados na maioria das vezes em que foi testado, porém em alguns momentos haviam atrasos anormais entre o gesto efetuado na luva e o tempo de resposta do carrinho ao comando, estes atrasos se tornavam cada vez mais frequentes a medida que o carrinho se aproximava do limite da área de alcance do transmissor, até o momento em que o carrinho parava totalmente de responder.
-
-		Além do teste de controle do carrinho em si, outras pesquisas mais aprofundadas a respeito do desempenho da BioGlove foram realizadas. Tais estudos buscaram mensurar alguns dos principais componentes da luva proposta e comparar estes resultados com outros trabalhos envolvendo luvas sensorizadas. As três frentes a serem analisadas são: a sensibilidade do sensor de flexão desenvolvido, a duração do sistema móvel alimentado por bateria e o alcance da transmissão do sinal.
+		Após a conclusão da montagem da Bioglove o \textit{software} de transmissão foi carregado para o microcontrolador embarcado nela enquanto que o \textit{software} de recepção de sinal foi carregado no Arduino Nano instalado no carrinho. Além do teste de controle do carrinho em si, outras pesquisas mais aprofundadas a respeito do desempenho da BioGlove foram realizadas. Tais estudos buscaram mensurar alguns dos principais componentes da luva proposta e comparar estes resultados com outros trabalhos envolvendo luvas sensorizadas. As três frentes a serem analisadas são: a sensibilidade do sensor de flexão desenvolvido, a duração do sistema móvel alimentado por bateria e o alcance da transmissão do sinal.
 		
 
 		\section{Sensibilidade do sensor de flexão}
 
-		Sendo o sensor de flexão bioinspirado o principal componente da BioGlove, este teve o seu desempenho mensurado além do controle do carrinho. Como já foi dito, o valor recebido a partir de cada potenciômetro que compõe o sensor flex é digitalizado pelo microcontrolador para uma faixa de 1024 valores possíveis (0 a 1023). Sendo assim, em seu melhor desempenho só seria possível obter no máximo 1024 valores de resolução em cada potenciômetro. Porém, durante o uso da BioGlove entre a posição A (dedos totalmente estendidos) e a posição B (dedos totalmente flexionados) não acontece o giro completo do potenciômetro, sendo assim apenas uma parte dos 1024 valores possíveis é utilizada para detectar os movimentos dos dedos.
+		Sendo o sensor de flexão bioinspirado o principal componente da BioGlove, este teve o seu desempenho mensurado além do controle do carrinho. Como já foi dito, o valor recebido a partir de cada potenciômetro que compõe o sensor de flexão resistivo é digitalizado pelo microcontrolador para uma faixa de 1024 valores possíveis (0 a 1023). Sendo assim, em seu melhor desempenho só seria possível obter no máximo 1024 valores de resolução em cada potenciômetro. Porém, durante o uso da BioGlove entre a posição A (dedos totalmente estendidos) e a posição B (dedos totalmente flexionados) não acontece o giro completo do potenciômetro, sendo assim apenas uma parte dos 1024 valores possíveis é utilizada para detectar os movimentos dos dedos.
 		
-		O primeiro teste a ser realizado foi o teste de sensibilidade do sistema de detecção de flexão. Sendo este um sensor de flexão, faz-se necessário mensurar a quantidade máxima de posições capturadas em um movimento. Diversos trabalhos utilizam sensores flex resistivos comerciais para realizar a captura de movimentos em suas luvas sensorizadas. O desempenho de um desses trabalhos foi utilizado como referência para os testes descritos nesta seção.
+		O primeiro teste a ser realizado foi o teste de sensibilidade do sistema de detecção de flexão. Sendo este um sensor de flexão, faz-se necessário mensurar a quantidade máxima de posições capturadas em um movimento. Diversos trabalhos utilizam sensores de flexão resistivos comerciais para realizar a captura de movimentos em suas luvas sensorizadas. O desempenho de um desses trabalhos foi utilizado como referência para os testes descritos nesta seção.
 
-		Os sensores de flexão resistivos comerciais, mais conhecidos apenas como sensores flex, são resistores analógicos, e dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor \cite{solanki2013sign}. A Figura \ref{Fig:flex-sensor1} mostra um sensor flex da fabricante Spectra Symbol.
+		Os sensores de flexão resistivos comerciais, mais conhecidos apenas como sensores flex, são resistores analógicos, e dentro desses sensores existem elementos resistivos de carbono junto a um fino substrato flexível. Quando o substrato é torcido o sensor produz uma resistência relativa ao raio da torção. Quanto maior o raio de torção maior será a resistência apresentada pelo sensor \cite{solanki2013sign}. A Figura \ref{Fig:flex-sensor1} mostra um sensor de flexão resistivo da fabricante Spectra Symbol.
 
 	\begin{figure}[!h]
 		\centering
@@ -1339,23 +1345,21 @@ if(chegou_mensagem){
 	\end{figure}
 
 
-		Para demontrar como seria o uso de um sensor flex em um projeto com luva sensorizada, a Figura \ref{Fig:hand-flexsensor-degrees1} apresenta um possível uso do sensor flex comercial posicionado em um dos pontos de flexão do dedo indicador. Além disso, a figura mostra o que seriam os graus de torção deste sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
+		Para demontrar como seria o uso de um sensor de flexão resistivo em um projeto com luva sensorizada, a Figura \ref{Fig:hand-flexsensor-degrees1} apresenta um possível uso do sensor de flexão resistivo comercial posicionado em um dos pontos de flexão do dedo indicador. Além disso, a figura mostra o que seriam os graus de torção deste sensor. À esquerda estão a mão e o sensor (em azul), em posição inicial, ambos com ângulo de flexão de aproximadamente 0 (zero) grau. À direita está o resultado de um movimento de flexão de aproximadamente 90 graus em relação à posição anterior.
 
 
 	\begin{figure}[!h]
 		\centering
-		\caption{Sensor flex comercial na mão durante a flexão.}
+		\caption{Sensor de flexão resistivo comercial na mão durante a flexão.}
 		\includegraphics[width=13cm,keepaspectratio=true]{./figures/hand-flexsensor-degrees1.png}
 		\fonte{Produzido pelo autor.}
 		\label{Fig:hand-flexsensor-degrees1}
 	\end{figure}
 
 	
-		O trabalho de \cite{anbarasi2013deafmute}, que será utilizado como referência, utiliza sensores flex resistivos comerciais de 2,5 e 4,5 polegadas, instalados em uma luva sensorizada. A pesquisa tem o propósito de criar um interpretador para a linguagem americana de sinais, onde os gestos da mão usando a luva são traduzidos e transformados em palavras que são posteriormente exibidas em uma pequena tela de LCD.
-
-		Sobre o desempenho do sensor flex resistivo comercial em sua aplicação, o autor cita que durante os testes, os sensores flex de 2,5 polegadas foram instalados nos dedos mínimo e polegar, enquanto que os sensores de 4,5 polegadas foram instalados nos dedos indicador, médio e anelar. Em sua publicação, ele apresenta valores obtidos por cada sensor nas posições de flexão de 0 graus e 90 graus. Para efeitos de comparação, através da BioGlove também foram realizados movimentos relativos às flexões de 0 e 90 graus. 
+		O trabalho de \cite{anbarasi2013deafmute}, que será utilizado como referência, utiliza sensores de flexão resistivos comerciais de 2,5 e 4,5 polegadas. Sobre o desempenho do dos sensores de flexão resistivos de sua aplicação, o autor cita que durante os testes, os sensores de flexão resistivos de 2,5 polegadas foram instalados nos dedos mínimo e polegar, enquanto que os sensores de 4,5 polegadas foram instalados nos dedos indicador, médio e anelar. Em sua publicação, ele apresenta valores obtidos por cada sensor nas posições de flexão de 0 graus e 90 graus. Para efeitos de comparação, através da BioGlove também foram realizados movimentos relativos às flexões de 0 e 90 graus. 
 		
-		Seguidamente, as equações \ref{Eq:Desloca1} e \ref{Eq:NPos1} serviram de referência para calcular a resolução (ou sensibilidade) de cada sistema. Sendo que, para os cálculos deste teste PosB recebe o valor digital em 90 graus e PosA recebe o valor digital em 0 grau. Portanto, os valores digitais relativos às mesmas posições em ambos os trabalhos foram utilizados como entrada das equações: 
+		Seguidamente, as equações (\ref{Eq:Desloca1}) e (\ref{Eq:NPos1}) serviram de referência para calcular a resolução (ou sensibilidade) de cada sistema. Sendo que, para os cálculos deste teste PosB recebe o valor digital em 90 graus e PosA recebe o valor digital em 0 grau. Portanto, os valores digitais relativos às mesmas posições em ambos os trabalhos foram utilizados como entrada das equações: 
 		
 	\begin{equation}
 			\Delta Pos 	= Pos 90 	- 	Pos 0
@@ -1369,32 +1373,50 @@ if(chegou_mensagem){
 	\end{equation}
 
 
-		A Tabela \ref{Tab:NPos0-90} reúne os valores obtidos em 0 grau (Pos0), 90 graus (Pos90) e o número de posições possíveis (NPos) ou sensibilidade calculados através das equações \ref{Eq:Desloca2} e \ref{Eq:NPos2}. Na tabela \ref{Tab:NPos0-90}, as duas colunas da esquerda são referentes ao sensor flex resistivo comercial (destacados em vermelho) e as demais colunas são referentes aos dedos do sensor flex bioinspirado que compõe a BioGlove. O dedo polegar não está presente na tabela porque ele não é flexionado durante o movimento realizado neste teste.
+		A Tabela \ref{Tab:NPos0-90} reúne os valores obtidos em 0 grau (Pos0), 90 graus (Pos90) e o número de posições possíveis (NPos) ou sensibilidade calculados através das equações (\ref{Eq:Desloca2}) e (\ref{Eq:NPos2}) referentes aos sensores de flexão comercial e aos sensores bioinspirados da BioGlove. O dedo polegar não está presente na tabela porque ele não é flexionado durante o movimento realizado neste teste.
 		
-		\begin{table}[H]
-  	\centering
-		\caption{Valores obtidos e número de posições entre 0 e 90 graus dos sensores de flexão.}
-    \begin{tabular}{l|ccccccc}
-      \midrule
-			Posições&\textcolor{red}{2,5''}	&\textcolor{red}{4,5''}	& Minimo	& Anelar	& Médio	&	Indicador	\\
-      \midrule
-			Pos0 		& 748 									& 350 									& 206 		&	142			&	771		&	746				\\
-			Pos90 	& 875 									& 568 									& 309 		&	396			&	527		&	607				\\
-			NPos 		& 128 									& 219 									& 104 		&	255			&	245		&	140				\\
-      \midrule
-    \end{tabular}
-		\label{Tab:NPos0-90}
-    \fonte{Adaptado de \cite{anbarasi2013deafmute} e produzido pelo autor.}
-		\end{table}
+%		\begin{table}[H]
+%  	\centering
+%		\caption{Valores obtidos e número de posições entre 0 e 90 graus dos sensores de flexão.}
+%    \begin{tabular}{l|ccccccc}
+%      \midrule
+%			Posições&\textcolor{red}{2,5''}	&\textcolor{red}{4,5''}	& Minimo	& Anelar	& Médio	&	Indicador	\\
+%      \midrule
+%			Pos0 		& 748 									& 350 									& 206 		&	142			&	771		&	746				\\
+%			Pos90 	& 875 									& 568 									& 309 		&	396			&	527		&	607				\\
+%			NPos 		& 128 									& 219 									& 104 		&	255			&	245		&	140				\\
+%      \midrule
+%    \end{tabular}
+%		\label{Tab:NPos0-90}
+%    \fonte{Adaptado de \cite{anbarasi2013deafmute} e produzido pelo autor.}
+%		\end{table}
 
-		Através da Tabela \ref{Tab:NPos0-90} é possível notar que no quesito sensibilidade, o maior número de posições detectáveis (NPos) foi apresentado pelo dedo anelar da BioGlove, já a menor sensibilidade ficou por conta do dedo mínimo também da BioGlove. Os demais resultados mostram que o sensor flex comercial de 4,5 polegadas apresenta desempenho superior aos dedos indicador e mínimo da BioGlove, enquanto que o modelo comercial de 2,5 polegadas apresenta baixo desempenho em quase todos os casos, exceto quando comparado ao dedo mínimo da BioGlove.
 
-		Com base no desempenho geral apresentado pela Tabela \ref{Tab:NPos0-90}, verifica-se que usando o sensor bioinspirado que compõe a BioGlove, os sensores dos dedos anelar e médio apresentaram os melhores desempenhos mesmo quando comparados ao sensor flex comercial de 4,5 polegadas. Além do mais, 3 dos 4 sensores da BioGlove possuíram desempenho superior se comparados apenas ao sensor flex comercial de 2,5 polegadas. Dessa forma é possível afirmar que os sensores bioinspirados da BioGlove conseguiram desempenho equiparado ao de um sensor comercial. Sendo que um sensor flex comercial possui um custo relativamente superior.
+\begin{table}[H]
+	\centering	
+	\caption{Valores obtidos e número de posições entre 0 e 90 graus dos sensores de flexão.}
+		\begin{tabular}{c|cc|cccc} 
+			\midrule
+\multirow{2}{*}{Posições} & \multicolumn{2}{c|}{\textbf{Comercial}} & \multicolumn{4}{c}{\textbf{Bioinspirado - BioGlove}}\\
+			    		& 2,5'' 	& 4,5'' 	& Mínimo 	& Anelar 	& Médio & Indicador \\
+		  \midrule
+			Pos0 		& 748 		& 350 		& 206 		&	142			&	771		&	746				\\
+			Pos90 	& 875 		& 568 		& 309 		&	396			&	527		&	607				\\
+			NPos 		& 128 		& 219 		& 104 		&	255			&	245		&	140				\\
+		  \midrule
+		\end{tabular}
+	\label{Tab:NPos0-90}	
+  \fonte{Adaptado de \cite{anbarasi2013deafmute} e produzido pelo autor.}
+\end{table}
+
+		Através da Tabela \ref{Tab:NPos0-90} é possível notar que no quesito sensibilidade, o maior número de posições detectáveis (NPos) foi apresentado pelo dedo anelar da BioGlove, já a menor sensibilidade ficou por conta do dedo mínimo também da BioGlove. Os demais resultados mostram que o sensor de flexão resistivo comercial de 4,5 polegadas apresenta desempenho superior aos dedos indicador e mínimo da BioGlove, enquanto que o modelo comercial de 2,5 polegadas apresenta baixo desempenho em quase todos os casos, exceto quando comparado ao dedo mínimo da BioGlove.
+
+		Com base no desempenho geral apresentado pela Tabela \ref{Tab:NPos0-90}, verifica-se que usando o sensor bioinspirado que compõe a BioGlove, os sensores dos dedos anelar e médio apresentaram os melhores desempenhos mesmo quando comparados ao sensor de flexão resistivo comercial de 4,5 polegadas. Além do mais, 3 dos 4 sensores da BioGlove possuíram desempenho superior se comparados apenas ao sensor de flexão resistivo comercial de 2,5 polegadas. Dessa forma é possível afirmar que os sensores bioinspirados da BioGlove conseguiram desempenho equiparado ao de um sensor comercial. Sendo que um sensor de flexão resistivo comercial possui um custo relativamente superior.
 
 
 			\section{Bateria}
 
-			Mobilidade é um dos requisitos do projeto da BioGlove. Por conta desse fato, foi decidido que a alimentação dos componentes eletrônicos da luva seria feita através de uma pequena bateria LiPo. Outros sistemas envolvendo luvas sensorizadas móveis também costumam usam baterias ou até mesmo pilhas, sendo que o desempenho de cada projeto neste quesito pode variar de acordo com o \textit{hardware} implementado e a capacidade da fonte de alimentação escolhida. Nesta seção, apresentan-se testes de desempenho da bateria da Bioglove que foram comparados com outros três trabalhos relacionados com luvas sensorizadas, sendo um deles um produto comercial.
+			Mobilidade é um dos requisitos do projeto da BioGlove. Por conta desse fato, foi decidido que a alimentação dos componentes eletrônicos da luva seria feita através de uma pequena bateria LiPo. Outros sistemas envolvendo luvas sensorizadas móveis também costumam usam baterias ou até mesmo pilhas, sendo que o desempenho de cada projeto neste quesito pode variar de acordo com o \textit{hardware} implementado e a capacidade da fonte de alimentação escolhida. Nesta seção, apresentan-se testes de desempenho da bateria da Bioglove que foram comparados com outros dois trabalhos relacionados com luvas sensorizadas.
 
 			O \textit{hardware} da Bioglove está equipado com cinco potenciômetros, um microcontrolador Arduino modelo Nano, um módulo transmissor de rádio frequência 433$\,MHz$ e uma bateria LiPo recarregável de tensão nominal de 7,4$\,V$ e capacidade de 300$\,mAh$, segundo o fabricante. Esta bateria apesar de possuir tensão nominal de 7,4$\,V$, consegue alcançar níveis de tensão de até 8,4$\,V$ quando está totalmente carregada \cite{buchmann2016batteries}.
 
@@ -1402,11 +1424,11 @@ if(chegou_mensagem){
 
 			Para realizar os testes de desempenho da bateria da BioGlove, um módulo receptor compatível com o transmissor da luva foi conectado a um Arduino programado para receber os sinais transmitidos pela luva. Este Arduino foi conectado a um computador que mostrava em sua tela as mensagens recebidas da BioGlove. Além disso, uma bateria recém carregada completamente foi conectada à luva e o momento inicial da ligação do sistema foi marcado. Durante o teste, o módulo transmissor da luva ficou ligado constantemente, enviando mensagens a todo momento. E a cada período de tempo regular, a tensão da bateria foi sendo monitorada. Este teste foi realizado quatro vezes no total, usando duas baterias de mesmo modelo, duas vezes para cada bateria. Com isso, obteve-se um período de duração de aproximadamente 10 horas onde, em média, a tensão da bateria chegava ao limite definido de 7$\,V$.
 
-			Dentre as aplicações que foram comparadas à BioGlove está a luva comercial chamada Data Glove 5 Ultra da fabricante 5DT Inc., que foi desenvolvida, entre outras funcionalidades, para ser utilizada em modelagem 3D e animação através de programas de computador compatíveis com ela. De acordo com o seu \textit{datasheet}, a Data Glove 5 Ultra possui em seu \textit{hardware} sensores de flexão baseados em fibra óptica, utiliza tecnologia de comunição sem fio Bluetooth, além afirmar que o desempenho de sua bateria recarregável pode chegar a 8 horas de duração \cite{5DT-ultra}. Entretanto, por ser um produto comercial fechado, não foi possível obter informações sobre a tecnologia de sua bateria.
+%			Dentre as aplicações que foram comparadas à BioGlove está a luva comercial chamada Data Glove 5 Ultra da fabricante 5DT Inc., que foi desenvolvida, entre outras funcionalidades, para ser utilizada em modelagem 3D e animação através de programas de computador compatíveis com ela. De acordo com o seu \textit{datasheet}, a Data Glove 5 Ultra possui em seu \textit{hardware} sensores de flexão baseados em fibra óptica, utiliza tecnologia de comunição sem fio Bluetooth, além afirmar que o desempenho de sua bateria recarregável pode chegar a 8 horas de duração \cite{5DT-ultra}. Entretanto, por ser um produto comercial fechado, não foi possível obter informações sobre a tecnologia de sua bateria.
 
-			Outro trabalho que foi comparado à BioGlove é a pesquisa de \cite{michela2013rehab} que busca através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. O \textit{hardware} desta luva é embarcado com sensores flex resistivos comerciais, um microcontrolador e um transmissor de rádio frequência. Sendo que toda a eletrônica do projeto é alimentada por uma bateria em formato de botão que possui tensão nominal de 3$\,V$ e capacidade de 1000$\,mAh$. De acordo com o artigo publicado, sua luva sensorizada obteve uma duração aproximada de uma semana.
+			Uma das aplicações comparadas à BioGlove foi a pesquisa de \cite{michela2013rehab} que busca através de uma luva sensorizada, mensurar a flexão dos dedos para estudos de reabilitação. O \textit{hardware} desta luva é embarcado com sensores de flexão resistivos comerciais, um microcontrolador e um transmissor de rádio frequência. Sendo que toda a eletrônica do projeto é alimentada por uma bateria em formato de botão que possui tensão nominal de 3$\,V$ e capacidade de 1000$\,mAh$. De acordo com o artigo publicado, sua luva sensorizada obteve uma duração aproximada de uma semana.
 			
-			O último trabalho a ser comparado é o de uma luva de baixo custo foi desenvolvida na pesquisa de \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. De acordo com o autor, o \textit{hardware} dessa luva é composto por sensores de flexão resistivos comerciais e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4, além de pilhas AA alcalinas. Segundo a publicação deste estudo, usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas. Infelizmente a capacidade destas pilhas não foi definida no trabalho publicado, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870$\,mAh$ cada.
+			O último trabalho a ser comparado é o de uma luva de baixo custo que foi desenvolvida na pesquisa de \cite{simone2007lowcost} com o propósito de monitorar a flexão dos dedos de pessoas com disfunções na mão. De acordo com o autor, o \textit{hardware} dessa luva é composto por sensores de flexão resistivos comerciais e uma placa embarcada com um microprocessador, uma memória RAM externa, um transmissor de sinal padrão IEEE 802.15.4, além de pilhas AA alcalinas. Segundo a publicação deste estudo, usando duas pilhas novas durante os testes, o sistema conseguiu ser alimentado por quase 60 horas. Infelizmente a capacidade destas pilhas não foi definida no trabalho publicado, porém \cite{buchmann2016batteries} cita que esse tipo de pilha possui capacidade de até 2870$\,mAh$ e tensão de 1,5$\,V$ cada.
 			
 
 			De forma geral e focado apenas nas características das fontes de alimentação apresentadas até o momento, a Tabela \ref{Tab:battery-range} resume o desempenho dos trabalhos discutidos nesta seção.
@@ -1416,34 +1438,34 @@ if(chegou_mensagem){
 		\caption{Desempenho de alimentação das luvas}
     \begin{tabular}{c|c|c|c}
       \midrule
-			Luva 								& Alimentação			&	Capacidade	& Duração	\\
+			Luva 								& Alimentação							&	Capacidade	& Duração	\\
       \midrule                                            					
-			Data Glove 5				& Não definida		& Não definida& 8 horas \\
-			Luva sensorizada 		& 1 bateria-botão	& 1000$\,mAh$		& 1 semana\\
-			Luva de baixo custo & 2 pilhas AA			& 5740$\,mAh$		& 60 horas\\
-			BioGlove						& 1 LiPo 7,4$\,V$			& 300$\,mAh$			&	10 horas\\	
+			Luva sensorizada 		& 1 bateria-botão	3$\,V$	& 1000$\,mAh$		& 1 semana\\
+			Luva de baixo custo & 2 pilhas AA 3$\,V$			& 5740$\,mAh$		& 60 horas\\
+			BioGlove						& 1 LiPo 7,4$\,V$					& 300$\,mAh$			&	10 horas\\	
       \midrule
     \end{tabular}
 		\label{Tab:battery-range}
     \fonte{Produzido pelo autor.}
 		\end{table}
 
-		Analisando a Tabela \ref{Tab:battery-range} percebe-se que a luva sensorizada alimentada por bateria-botão possui o melhor desempenho dentre todos os analisados, pois 1 semana de duração é quase três vezes a duração do segundo colocado, isso pode ser atribuído principalmente ao \textit{hardware} de baixo consumo de energia embarcado e ao número reduzido de componentes que compõe o projeto de \cite{michela2013rehab}. A luva de baixo custo desenvolvida em \cite{simone2007lowcost} também apresenta um desempenho excepcional, seis maior do que a BioGlove, e que pode ser atribuído pela alta capacidade fornecida através das 2 pilhas alcalinas que alimentam o sistema.
+		Analisando a Tabela \ref{Tab:battery-range}, percebe-se que a luva sensorizada alimentada por bateria-botão possui o melhor desempenho dentre todos os analisados, pois 1 semana de duração é quase três vezes a duração do segundo colocado, isso pode ser atribuído principalmente ao \textit{hardware} de baixo consumo de energia embarcado e ao número reduzido de componentes que compõe o projeto de \cite{michela2013rehab}. A luva de baixo custo desenvolvida em \cite{simone2007lowcost} também apresenta um desempenho excepcional, seis vezes maior do que a BioGlove, e que pode ser atribuído pela alta capacidade fornecida através das 2 pilhas alcalinas que alimentam o sistema.
 
-		A luva Data Glove 5, apesar de ser um produto comercial, possui o pior desempenho dentre todos os analisados, além disso o \textit{hardware} fechado dificulta a análise para além da duração de sua bateria. Porém, deve-se notar que esta luva oferece diversos recursos ao usuário como calibração, compatibilidade com diversos sistemas operacionais e \textit{softwares} \cite{5DT-ultra}. Portanto, seu elevado consumo de energia  pode ser caracterizado pela provável complexidade e quantidade de \textit{hardware} inclusos neste produto.
+%		A luva Data Glove 5, apesar de ser um produto comercial, possui o pior desempenho dentre todos os analisados, além disso o \textit{hardware} fechado dificulta a análise para além da duração de sua bateria. Porém, deve-se notar que esta luva oferece diversos recursos ao usuário como calibração, compatibilidade com diversos sistemas operacionais e \textit{softwares} \cite{5DT-ultra}. Portanto, seu elevado consumo de energia  pode ser caracterizado pela provável complexidade e quantidade de \textit{hardware} inclusos neste produto.
 
 		A BioGlove acabou tendo o segundo pior desempenho comparando com as outras luvas. Sua alimentação de baixa capacidade, o uso de uma placa comercial pronta recheada de componentes e o envio constante de mensagens através de seu módulo transmissor podem ser as principais causas desse curto período de duração apresentado. Entretanto, pelo fato de a placa embarcada usar um Arduino, esta placa também pode ser alimentada via cabo USB, o que viabilizaria projetos que não tem a mobilidade como foco princiapal, e nesse caso a BioGlove poderia ser usada sem preocupações quanto a duração de sua bateria pois estaria conectada constantemente a fonte de energia do cabo USB.
 
 			\section{Alcance}
 
-		Em projeto móveis relacionados com luvas sensorizadas e que usam transmissão de dados sem fio, o alcance da comunicação entre o emissor e o receptor é limitado pela tecnologia empregada nesses equipamentos. \textit{Hardwares} com maior potência alcançam maiores distâncias, entretanto costumam ter um custo mais elevado. Porém, existem tecnologias de transmissão de baixo custo e de menor potência como a que foi empregada na BioGlove, entretanto com alcance menor de transmissão. 
+		Em projetos móveis relacionados com luvas sensorizadas e que usam transmissão de dados sem fio, o alcance da comunicação entre o emissor e o receptor é limitado pela tecnologia empregada nesses equipamentos. \textit{Hardwares} com maior potência alcançam maiores distâncias, mas costumam ter um custo mais elevado. Porém, existem tecnologias de transmissão de baixo custo e de menor potência como a que foi empregada na BioGlove. 
 			
 		Dentre as diversas opções para se implementar comunicação sem fio, existem projetos que utilizam transmissão via bluetooth, que viabiliza a interação com computadores, smartphones ou qualquer outro dispositivo compatível que esteja próximo. Outros projetos chegam a usar a tecnologia de rede Wi-Fi e com isso são capazes de enviar comandos através da internet, podendo interagir com qualquer dispositivo conectado à grande rede mundial. Na seção a seguir, o alcance de dois projetos relacionados à luvas sensorizadas e que utilizam a tecnologia Bluetooth serão comparados ao método de transmissão via rádio de baixa frequência utilizado na BioGlove.
 
-
 		A BioGlove está equipada com um par de módulos genéricos para transmissão e recepção de rádio frequência que trabalham na faixa de 433$\,MHz$. De acordo com o manual da biblioteca VirtualWire que auxilia o uso desses dispositivos, ao instalar uma antena de cerca de 17$\,cm$ em ambos os módulos o alcance de transmissão pode ser de até 150 metros em campo aberto \cite{virtualwiremanual}. Entretanto, neste trabalho, por conta da fragilidade de um dos módulos, só foi possível soldar uma antena no transmissorde rádio, deixando o receptor sem a sua antena o que pode vir a comprometer o desempenho.
 
-		Durante a realização dos testes para verificar o alcance de transmissão, um módulo receptor foi conectado a uma placa Arduino que por sua vez foi conectada a um computador, sendo assim o equipamento responsável por receber o sinal ficou fixo em um local. Na tela do computador eram exibidas as mensagens enviadas pela BioGlove. Partindo de uma distância igual a zero, o transmissor embarcado na luva foi sendo distanciado aos poucos em campo aberto do receptor, enquanto isso a mensagens capturadas pelo receptor foram constantemente verificadas na tela do computador. Ao se distanciar por volta de 7,5 metros o sinal da BioGlove começou a falhar e o teste foi encerrado nesta marca. 
+		O primeiro teste de alcance foi realizado diretamente com o carrinho e serviu apenas para verificar se o carrinho obedecia aos comandos da luva. Logo nos primeiros testes de controle do carrinho, ele correspondeu aos comandos de movimentação programados na maioria das vezes em que foi testado, porém em alguns momentos haviam atrasos anormais entre o gesto efetuado na luva e o tempo de resposta do carrinho ao comando, estes atrasos se tornavam cada vez mais frequentes a medida que o carrinho se aproximava do limite da área de alcance do transmissor, até o momento em que o carrinho parava totalmente de responder.
+
+		Para realizar o segundo teste de alcance, um módulo receptor foi conectado a uma placa Arduino que por sua vez foi conectada a um computador, sendo assim o equipamento responsável por receber o sinal ficou fixo em um local. Na tela do computador eram exibidas as mensagens enviadas pela BioGlove. Partindo de uma distância igual a zero, o transmissor embarcado na luva foi sendo distanciado aos poucos em campo aberto do receptor, enquanto isso a mensagens capturadas pelo receptor foram constantemente verificadas na tela do computador. Ao se distanciar por volta de 7,5 metros o sinal da BioGlove começou a falhar e o teste foi encerrado nesta marca. 
 
 			O próximo sistema que foi verificado para efeitos de comparação foi a Data Glove 5 Ultra, que em seu datasheet oferece informações sobre sua tecnologia de transmissão sem fio. Nele está especificado que atrelado à essa luva comercial existe um kit de transmissão sem fio, no qual foi projetado para suportar até duas luvas simultaneamente. A tecnologia de transmissão utilizada é a Bluetooth, que trabalha na faixa de 2,4$\,GHz$ e segundo a sua documentação consegue um alcance de até 20 metros \cite{5DT-ultra}.
 
@@ -1481,36 +1503,34 @@ if(chegou_mensagem){
 
 		\chapter{Conclusão}
 		
-		Baseado nos resultados apresentados, no geral este trabalho se mostrou viável em comparação à outras soluções semelhantes, mesmo frente à um produto comercial. Em 2 dos 3 aspectos pesquisados nos testes, a BioGlove conseguiu se equiparar à outros projetos. Além de que o principal foco da pesquisa da luva, o sensoriamento de flexão, em alguns momentos chegou até mesmo a ser superior ao sensor flex resistivo comercial que é um produto amplamente utilizado em diversos projetos.
+		Baseado nos resultados apresentados, este trabalho se mostrou viável em comparação à outras soluções semelhantes, mesmo frente à um produto comercial. Em 2 dos 3 aspectos pesquisados nos testes, a BioGlove conseguiu se equiparar à outros projetos. Além de que o principal foco da pesquisa da luva, o sensoriamento de flexão, em alguns momentos chegou até mesmo a ser superior ao sensor de flexão resistivo comercial que é um produto amplamente utilizado em diversos projetos.
 
-		A bateria LiPo recarregável utilizada na BioGlove apresentou um desempenho relativamente curto durante o uso ininterrupto, porém, quando comparado à um produto comercial completo e fechado, conseguiu durar ligeiramente por mais tempo. No final, o alcance de transmissão da BioGlove foi o aspecto com pior desempenho, frente à tecnologia Bluetooth utilizada em outras luvas.
+		A bateria LiPo recarregável utilizada na BioGlove apresentou um desempenho relativamente curto durante o uso ininterrupto, porém, quando comparado à um produto comercial, conseguiu durar ligeiramente por mais tempo. No final, o alcance de transmissão da BioGlove foi o aspecto com pior desempenho, frente à tecnologia Bluetooth utilizada em outras luvas.
 
-		Após a análise dos resultados que se apresentaram menos animadores, é possível perceber que pequenas mudanças podem influenciar na melhoria do desempenho em futuros testes. A vida útil da luva pode ser melhorado pelo uso de uma bateria mais potente e pelo aperfeiçoamento da frequência da transmissão de mensagens, enviar apenas quando for necessário, e não a todo momento como acontece atualmente. A inclusão de antenas melhores em ambos os módulos de rádio frequencia ou a troca da tecnologia de transmissão, por Bluetooth por exemplo, pode garantir uma melhoria no alcance de transmissão.
+		Após a análise dos resultados que se apresentaram menos animadores, é possível perceber que pequenas mudanças podem influenciar na melhoria do desempenho em futuros testes. A vida útil da luva pode ser melhorado pelo uso de uma bateria mais potente e pelo aperfeiçoamento da frequência da transmissão de mensagens, enviar apenas quando for necessário, e não a todo momento como acontece atualmente. A inclusão de antenas melhores em ambos os módulos de rádio frequência ou a troca da tecnologia de transmissão, por Bluetooth por exemplo, pode garantir uma melhoria no alcance de transmissão.
 
 		Os maiores desafios se apresentaram durante a escolha de componentes e montagem da luva. Não havendo muitas referências de trabalhos com mecânica semelhante, durante a montagem, os problemas inesperados foram sendo resolvidos com uso de componentes e ferramentas disponíveis no momento, mesmo que esses não fossem os ideais. Portanto, a troca de componentes por outros mais precisos, menores e que consumam menos energia, podem garantir maior estabilidade à luva.
 
-		O protocolo de comunicação criado, mesmo sendo simples, conseguiu chegar satisfatoriamente ao seu objetivo inicial de controlar os movimentos do carrinho dentro dentro do raio de alcance do transmissor. Dessa o mesmo protocolo ou outro semelhente tem a possibilidade de ser aproveitado para outras aplicações de controle. Entretanto, para aplicações que exijam uma demanda maior transmissão de dados, ao invpés de apenas 5 \textit{bytes} por mensagem, será necessária uma melhoria no protocolo de comunicação ou até mesmo a substituição do mesmo.
+		O protocolo de comunicação criado, mesmo sendo simples, alcançou satisfatoriamente ao seu objetivo inicial de controlar os movimentos do carrinho dentro do raio de alcance do transmissor. Dessa o mesmo protocolo ou outro semelhente tem a possibilidade de ser aproveitado para outras aplicações de controle. Entretanto, para aplicações que exijam uma demanda maior transmissão de dados, ao invpés de apenas 5 \textit{bytes} por mensagem, será necessária uma melhoria no protocolo de comunicação ou até mesmo a substituição do mesmo.
 
-		Este protótipo foi desenvolvido, usado e testado por apenas uma pessoa, o uso da luva por outras pessoas pode apresentar resultados diferentes e necessitar de ajustes. Cada pessoa possui características diferentes em suas mãos, dedos maiores ou menores, mão mais larga ou mais fina, diferentes graus de flexão dos dedos, entre outros. Portanto, a inclusão de uma função de calibração automática no \textit{software} de transmissão se faz necessária e pode diminuir maiores contratempos quando a BioGlove for utilizada por outros indivíduos.
+		Este protótipo foi desenvolvido, usado e testado por apenas uma pessoa. O uso da luva por outras pessoas pode apresentar resultados diferentes e necessitar de ajustes. Cada pessoa possui características diferentes em suas mãos, dedos maiores ou menores, mão mais larga ou mais fina, diferentes graus de flexão dos dedos, entre outros. Portanto, a inclusão de uma função de calibração automática no \textit{software} de transmissão se faz necessária e pode diminuir maiores contratempos quando a BioGlove for utilizada por outros indivíduos.
 
-		Apesar de no geral o projeto desenvolvido se mostrar viável para ser uma luva de aferição de movimentos e transmissão de dados, este possui natureza diferente de outros produtos semelhantes. Enquanto que o uso de sensores flex resistivos comerciais pode trazer uma mecânica relativamente estável durante os movimentos, a BioGlove é dependente de uma rede de fios e polias que não apresentou muita estabilidade mecânica em uma luva de algodão. A troca do material da luva por um  mais rígido, poderia favorecer a estabilidade durante os movimentos.
 
-		Com tudo, a BioGlove, mesmo apresentando limitações, se mostra capaz de fomentar projetos de baixo custo que necessitem desse tipo de equipamento. O uso de componentes de baixo custo, como potenciômetros e o par de comunicação em rádio frequência de 433$\,MHz$, além da amplamente conhecida e documentada placa Arduino, permite com os devidos ajustes, que diversos módulos compatíveis sejam adicionados ao projeto futuramente. Com isso há a possibilidade de, por exemplo, desenvolver soluções mais complexas como a tradução da Linguagem Brasileira de Sinais (LIBRAS) de gestos para palavras ou até mesmo possibilitar a interação da luva com \textit{softwares} de realidade virtual.
+		Apesar de no geral o projeto desenvolvido se mostrar viável para ser uma luva de aferição de movimentos e transmissão de dados, este possui natureza diferente de outros produtos semelhantes. Enquanto que o uso de sensores de flexão resistivos comerciais pode trazer uma mecânica relativamente estável durante os movimentos, a BioGlove é dependente de uma rede de fios e polias que não apresentou muita estabilidade mecânica em uma luva de algodão. A troca do material da luva por um  mais rígido, poderia favorecer a estabilidade durante os movimentos.
+
+		A BioGlove, mesmo apresentando limitações, se mostra capaz de fomentar projetos de baixo custo que necessitem desse tipo de equipamento. O uso de componentes de baixo custo, como potenciômetros e o par de comunicação em rádio frequência de 433$\,MHz$, além da conhecida placa Arduino, permite com os devidos ajustes, que diversos módulos compatíveis sejam adicionados ao projeto futuramente. Com isso, há a possibilidade de, por exemplo, desenvolver soluções mais complexas como a tradução da Linguagem Brasileira de Sinais (LIBRAS) de gestos para palavras ou até mesmo possibilitar a interação da luva com \textit{softwares} de realidade virtual.
 
 			\section{Trabalhos futuros}		
 
 		Dentre os possíveis trabalhos futuros relacionados à esse projeto estão:
 
 		\begin{itemize}
-			\item Investigar o uso de luvas compostas por outros materiais.
-			\item Realizar pesquisas baseadas em métricas na mecânica do sensor bioinspirado.
-			\item Buscar melhorias na qualidade e no alcance da transmissão.
-			\item Esmiuçar técnicas para a melhoria no consumo de energia.
-			\item Projetar uma PCI menor, mais robusta e estável com menores componentes.
-			\item Substituir a placa Arduino pelo uso de outros microcontroladores.
+			\item Investigar o uso de luvas compostas por outros materiais visando análise de atrito da mão com a luva.
+			\item Realizar pesquisas baseadas em métricas para melhorar o desempenho mecânico do sensor bioinspirado.
+			\item Buscar melhorias no desempenho energético através de novas fontes de alimentação, substituição de componentes e softawes mais otimizados.
 			\item Desenvolver funções para calibração automática da luva.
-			\item Incrementar o volume de dados a ser transmitido.
-			\item Acrescentar diferentes transdutores para criar novos controles.				
+			\item Incrementar o volume de informação a ser transmitida visando o uso em aplicações mais complexas
+			\item Acrescentar diferentes tipos transdutores para criar novas funcionalidades.				
 		\end{itemize}
 
 		
