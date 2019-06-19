@@ -926,17 +926,19 @@ Aos meus amigos Paulo Alexandre, Luan Assis, Celson Nakamura, Itamar Aguiar, Ít
 
 		A partir daqui, para facilitar a abordagem do trabalho, cada dedo da luva e seu respectivo potenciômetro será representado por um número de 1 a 5, começando pelo dedo mínimo (1) até o polegar (5). Além disso, também serão definidas duas posições principais usadas para auxiliar a análise do movimento dos dedos. Posição A: Quando todos os dedos estiverem estendidos. Posição B: Quando todos os dedos estiverem flexionados. Estas duas posições estão representadas na Figura \ref{Fig:glove-flex-and-extend2} mostrada na subseção \ref{sub:adaptacao-na-luva}.
 
-		Durante o uso da luva, o potenciômetro não apresenta um valor fixo dada uma mesma posição. Ao invés disso, para cada posição detectável surge uma média de valores digitais relativamente estáveis. Então se, por exemplo, o dedo mínimo (1) está totalmente estendido (posição A), seu respectivo potenciômetro apresenta valores em torno de 191 (e não o valor exato de 191). Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616.
-
 				
 		\subsection{Calibração}
 
+		Apesar de o microcontrolador ser capaz de digitalizar valores dos potenciômetros que variam de 0 a 1023, por conta da estrutura da luva, são utilizados apenas uma parcela desses valores, porque quando os dedos vem de uma posição extrema na qual todos os dedos estão extendidos (posição A), até a outra posição extrema na qual todos os dedos estão flexionados (posição B), ocorre apenas um giro parcial do cursor do potenciômetro e portanto apenas uma parte dos valores digitalizados é aproveitada.
 
-		Durante o uso da BioGlove, quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes. Para a posição A (estendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 191, enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141. Isso ocorre por conta de alguns fatores: Existem pequenas diferenças nos valores de resistência mesmo entre potenciômetros do mesmo modelo (dentro da faixa de tolerância do fabricante); há diferença entre o tamanho dos dedos; as tensões aplicadas no fio de náilon não são iguais para todos os dedos; entre outras. Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potenciômetros apresentam deslocamentos positivos enquanto outros apresentam deslocamentos negativos para um mesmo movimento.
+		Com isso, durante o uso da BioGlove, mesmo quando os dedos estão em um mesmo grau de flexão, na grande maioria das vezes, os valores detectados para cada dedo são diferentes, e além disso existe uma certa instabilidade na leitura do potenciômetro mesmo que o dedos do usuário se mantenham estáveis. Portanto, para a posição A (estendida), por exemplo, o valor detectado no dedo mínimo (1) fica em torno de 191 (e não exatamente 191), enquanto que o anelar (2) apresenta, ao mesmo tempo, um valor em torno de 141. Isso ocorre por conta de alguns fatores: Existem pequenas diferenças nos valores de resistência mesmo entre potenciômetros do mesmo modelo (dentro da faixa de tolerância do fabricante); há diferença entre o tamanho dos dedos; as tensões aplicadas no fio de náilon não são iguais para todos os dedos; entre outras. Além do mais, devido à posição em que cada potenciômetro foi soldado na placa embarcada, alguns potenciômetros apresentam deslocamentos positivos enquanto outros apresentam deslocamentos negativos para um mesmo movimento.
+
+		%	Durante o uso da luva, o potenciômetro não apresenta um valor fixo dada uma mesma posição. Ao invés disso, para cada posição detectável surge uma média de valores digitais relativamente estáveis. Então se, por exemplo, o dedo mínimo (1) está totalmente estendido (posição A), seu respectivo potenciômetro apresenta valores em torno de 191 (e não o valor exato de 191). Quando esse dedo é totalmente flexionado (posição B) seus valores ficam em torno de 616.
+
 		
 	%	\subsubsection{Deslocamento e resolução}
 
-		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B, que são os graus máximos de extensão e flexão da BioGlove. Além disso, também era preciso saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B, com isso seria possível saber a resolução do sistema em cada dedo.
+		Tendo em vista os problemas apresentados, o primeiro passo para calibrar o sistema foi conhecer quais seriam os valores apresentados para as posições A e B em cada um dos dedos, porque estes que são os graus máximos de extensão e flexão da BioGlove. Além disso, com o objetivo de se obter a resolução de cada dedo, foi necessário saber qual o número máximo de posições detectáveis durante o deslocamento entre as posições A e B.
 
 		Para descobrir os valores de deslocamento, inicialmente cada potenciômetro teve seu valor digital médio anotado tanto para a posição A quanto para B, e posteriormente os valores de cada um dos dedos foram utilizados em (\ref{Eq:Desloca1}):
 
@@ -978,9 +980,12 @@ Aos meus amigos Paulo Alexandre, Luan Assis, Celson Nakamura, Itamar Aguiar, Ít
 
 			\subsection{Protocolo de comunicação}
 
-		Objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se reduzir ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). Os valores de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9 (10 níveis).	Dessa forma, em uma mensagem numérica, seria preciso apenas 1 dígito para indicar o valor de uma posição. 
+
+		A resolução dos sensores bioinspirados apresentada até aqui é a máxima característica da BioGlove no momento, então qualquer aplicação pode se aproveitar desta capacidade para efetuar o sensoriamento de cada dedo e aplicar em sua pesquisa. Entretanto, visando exclusivamente a aplicação de controle do carrinho criada neste trabalho, esta resolução será diminuída porque o controle necessita apenas de algumas posições distintas em cada dedo. Além disso, objetivando diminuir o tamanho e a complexidade da mensagem de controle, decidiu-se reduzir ainda mais a faixa de valores possíveis que representam cada dedo (ou potenciômetro). 
 		
-		A partir do remapeamento, de acordo com o protocolo de comunicação, para criar uma mensagem são necessárias apenas duas informações: O número do potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo.  
+		Como foi dito, para cada potenciômetro os valores máximos digitalizados são de 0 a 1023, sendo que a BioGlove aproveita apenas uma parte desses valores. Mas ainda assim, essa resolução continua desnecessariamente alta para a transmissão de sinal e controle do carrinho. Portanto, todos os valores possíveis de 0 a 1023 foram remapeados para valores inteiros entre 0 e 9 (10 níveis). Dessa forma, em uma mensagem numérica, seria preciso apenas 1 dígito para indicar o valor de flexão de um dedo. 
+		
+		A partir do remapeamento, seguindo o protocolo de comunicação, para criar uma mensagem são necessárias apenas duas informações: O número do potenciômetro; e o seu respectivo valor. Esse conjunto de valores é então concatenado em uma única mensagem ordenada de cinco dígitos, na qual a posição de cada dígito na mensagem representa cada um dos cinco dedos (vindo da esquerda para a direita) e o valor de cada dígito representa o valor do dedo naquele instante de tempo.  
 		
 		A Figura \ref{Fig:glove-create-msg1} exemplifica o protocolo de comunicação desenvolvido onde uma mensagem é gerada a partir do posicionamente dos dedos na BioGlove. Neste exemplo, a mensagem ``69071'' indica que o dedo 1 (mínimo) possui valor o 6, o dedo 2 (anelar) possui valor 9 e assim sucessivamente até o dedo 5 (polegar) que possui o valor 1.
 
@@ -1150,27 +1155,31 @@ if(chegou_mensagem){
 		
 		Após recuperar o conteúdo da mensagem, será necessário interpretar esse conteúdo de acordo com o protocolo de controle definido na subseção \ref{sub:protocolo-de-controle}. O primeiro passo foi criar e testar as 5 funções de movimentação do carrinho definidas previamente: \texttt{FRENTE( )}, \texttt{TRAS( )}, \texttt{ESQUERDA( )}, \texttt{DIREITA( )} e \texttt{PARA( )}. Ao chamar qualquer uma dessas funções, o carrinho passa a se movimentar na direção e sentido definidos. O segundo passo, para garantir a chamada da função correta baseada na mensagem recebida, foi criar cadeias de \textit{ifs} e \textit{elses} nas quais, quando satisfeitas as condições certas, a respectiva função é chamada fazendo com que o carrinho se movimente da maneira esperada. 
 		
-		A captura dos valores dos potenciômetros para alimentar corretamente as condições das cadeias de \textit{ifs} e \textit{elses} foi efetuada durante o desenvolvimento do \textit{software} através da anotação dos valores de todos os potenciômetros a cada grupo de gestos que compunha um comando da BioGlove. Com isso, criou-se a Tabela \ref{Tab:dedos-e-comandos1}, que mostra quais são os conjuntos de valores esperados para todos os dedos simultaneamente em cada comando, destacando os dedos flexionados (em vermelho). Ou seja, usando esta tabela, para saber qual a combinação de valores que satifaz as condições e movimenta o carrinho para frente, é só observar a coluna ``Frente'' da tabela. 
+		A captura dos valores dos potenciômetros para alimentar corretamente as condições das cadeias de \textit{ifs} e \textit{elses} foi efetuada durante o desenvolvimento do \textit{software} através da anotação dos valores de todos os potenciômetros a cada grupo de gestos que compunha um comando da BioGlove. Com isso, criou-se a Tabela \ref{Tab:dedos-e-comandos1}, que mostra quais são os conjuntos de valores esperados para todos os dedos simultaneamente em cada comando, destacando os dedos flexionados (em vermelho). 
+		
+\begin{table}[H]
+	\centering
+  \caption{Conjunto de condições para validar comandos}
+  \begin{tabular}{r|ccccc}
+		\midrule
+\multicolumn{1}{c|}{Dedo} 					&       Frente			 & 				Tras				& 		Esquerda			 & 		Direita					& Para	\\
+			 \midrule
+			 Mínimo - 1    		& < 2   						 & < 2   							& < 2    						 &\textcolor{red}{> 1}&	-			\\
+			 Anelar - 2    		&\textcolor{red}{> 1}& < 2   							& < 2  	 						 & < 2   							&	-			\\
+			 Médio - 3    		&\textcolor{red}{> 3}& < 4   							& < 4   						 & < 4   							&	-			\\
+			 Indicador - 4    & < 4   						 &\textcolor{red}{> 3}& < 4 							 & < 4   							&	-			\\
+			 Polegar - 5    	& < 5   						 & < 5   							&\textcolor{red}{> 4}& < 5   							&	-			\\
+		 \midrule
+	\end{tabular}
+  \label{Tab:dedos-e-comandos1}
+  \fonte{Produzido pelo autor}
+  \end{table}
 
-		\begin{table}[H]
-     \centering
-     \caption{Conjunto de condições para validar comandos}
-     \begin{tabular}{c|ccccc}
-			 \midrule
-			 Dedo &       Frente			 & 				Tras				& 		Esquerda			 & 		Direita					& Para	\\
-			 \midrule
-			 1    & < 2   						 & < 2   							& < 2    						 &\textcolor{red}{> 1}&	-			\\
-			 2    &\textcolor{red}{> 1}& < 2   							& < 2  	 						 & < 2   							&	-			\\
-			 3    &\textcolor{red}{> 3}& < 4   							& < 4   						 & < 4   							&	-			\\
-			 4    & < 4   						 &\textcolor{red}{> 3}& < 4 							 & < 4   							&	-			\\
-			 5    & < 5   						 & < 5   							&\textcolor{red}{> 4}& < 5   							&	-			\\
-			 \midrule
-     \end{tabular}
-     \label{Tab:dedos-e-comandos1}
-     \fonte{Produzido pelo autor}
-   \end{table}
+		A Tabela \ref{Tab:dedos-e-comandos1} é utilizada para saber qual a combinação de valores simultâneos em cada um dos dedos que satifaz as condições corretas e movimenta o carrinho na direção desejada. Sendo assim, para saber quais combinações de valores fariam o carrinho se movimentar para frente, é só observar a coluna ``Frente'' da tabela. Nesse caso, uma mensagem ``13422'' faria o carrinho seguir em frente porque a combinação de todos os dígitos respeita todos os valores da coluna ``Frente'' da tabela. Porém, uma mensagem ``11422'' não faria o carrinho ir para frente porque o segundo dígito desta mensagem não é maior que ($>$) 1.
 
-		Se a Tabela \ref{Tab:dedos-e-comandos1} for comparada com a Figura \ref{Fig:glove-control-positions1}, será observado que são compatíveis entre si, porque tanto na tabela quando na figura os mesmos dedos flexionados estão destacados em vermelho representando os gestos necessários para efetuar cada comando. Além disso, qualquer outra combinação além das especificadas na tabela, fará o carrinho ficar parado. Isto conclui o protocolo de controle do carrinho.
+		Outro ponto a ser observado na Tabela \ref{Tab:dedos-e-comandos1}, é o destaque em vermelhor dos dedos que são flexionados durante um determinado comando. Observe que a coluna ``Direita'', que corresponde a combinação necessária para movimentar o carrinho para a direita, destaca o dedo 1 (mínimo) que é justamente o único dedo que deve ser flexionado para fazer o carrinho ir para a direita. Ademais, em todas as colunas em que aparecem destaques em vermelho o simbolo de comparação é o maior que ($>$), isso foi feito para destacar nas linhas de código do \textit{software} quais são os dedos flexionado que são esperados para aquele comando, dessa forma é mais fácil criar ou alterar comandos baseados na flexão dos dedos.
+
+		Um último ponto sobre a Tabela \ref{Tab:dedos-e-comandos1} é que se ela for comparada com a Figura \ref{Fig:glove-control-positions1}, será observado que são compatíveis entre si, porque tanto na Tabela \ref{Tab:dedos-e-comandos1} quando na Figura \ref{Fig:glove-control-positions1} os mesmos dedos flexionados estão destacados em vermelho representando os gestos necessários para efetuar cada comando. Além disso, qualquer outra combinação além das especificadas na tabela, fará o carrinho ficar parado. E isto conclui o protocolo de controle do carrinho.
 
 
 
@@ -1503,18 +1512,17 @@ if(chegou_mensagem){
 
 		\chapter{Conclusão}
 		
-		Baseado nos resultados apresentados, este trabalho se mostrou viável em comparação à outras soluções semelhantes, mesmo frente à um produto comercial. Em 2 dos 3 aspectos pesquisados nos testes, a BioGlove conseguiu se equiparar à outros projetos. Além de que o principal foco da pesquisa da luva, o sensoriamento de flexão, em alguns momentos chegou até mesmo a ser superior ao sensor de flexão resistivo comercial que é um produto amplamente utilizado em diversos projetos.
+		Baseado nos resultados apresentados, este trabalho se mostrou viável em comparação à outras soluções semelhantes, mesmo frente à um produto comercial. Em alguns aspectos pesquisados nos testes, a BioGlove conseguiu se equiparar à outros projetos. Além de que o principal foco da pesquisa da luva, o sensoriamento de flexão, em alguns momentos chegou até mesmo a ser superior ao sensor de flexão resistivo comercial que é um produto amplamente utilizado em diversos projetos.
 
-		A bateria LiPo recarregável utilizada na BioGlove possui a menor capacidade e apresentou um desempenho relativamente curto durante o uso ininterrupto frente à outros sistemas. Além disso, o alcance de transmissão da BioGlove, que utilizou módulos de comunicação 433$Mhz$, também apresentou o pior desempenho quando foi comparado às outras soluções que usam a technologia Bluetooth. Sendo a comparação feita entre technologias diferentes fica o questionamento se a BioGlove usando módulos Bluetooth iria obter desempenho semelhante às outras luvas.
+		A bateria LiPo recarregável utilizada na BioGlove possui a menor capacidade e apresentou um desempenho relativamente curto durante o uso ininterrupto frente à outros sistemas. Entretanto, o uso de uma fonte de energia com capacidade semelhante às das luvas comparadas com certeza elevaria o desempenho energético da BioGlove. Além disso, o alcance de transmissão da BioGlove, que utilizou módulos de comunicação 433$Mhz$, também apresentou o pior desempenho quando foi comparado às outras soluções que usam a technologia Bluetooth. Mas, pelo fato de que a comparação foi feita entre technologias diferentes, fica o questionamento se a BioGlove conseguiria desempenho semelhante às outras luvas caso também usasse módulos Bluetooth.
 
 		Após a análise dos resultados que se apresentaram menos animadores, é possível perceber que pequenas mudanças podem influenciar na melhoria do desempenho em futuros testes. A vida útil da luva pode ser melhorado pelo uso de uma bateria mais potente e pelo aperfeiçoamento da frequência da transmissão de mensagens, enviar apenas quando for necessário, e não a todo momento como acontece atualmente. A inclusão de antenas melhores em ambos os módulos de rádio frequência ou a troca da tecnologia de transmissão, por Bluetooth por exemplo, pode garantir uma melhoria no alcance de transmissão.
 
-		Os maiores desafios se apresentaram durante a escolha de componentes e montagem da luva. Não havendo muitas referências de trabalhos com mecânica semelhante, durante a montagem, os problemas inesperados foram sendo resolvidos com uso de componentes e ferramentas disponíveis no momento, mesmo que esses não fossem os ideais. Portanto, a troca de componentes por outros mais precisos, menores e que consumam menos energia, podem garantir maior estabilidade à luva.
+		Neste trabalho, os maiores desafios se apresentaram durante a escolha de componentes e montagem da luva. Por ainda não haver muitas referências de trabalhos com mecânica semelhante, durante a construção, os problemas inesperados foram sendo resolvidos com uso de componentes e ferramentas disponíveis no momento, mesmo que esses não fossem os ideais. Portanto, a troca de componentes por outros mais precisos, menores e que consumam menos energia, podem garantir ainda melhorias na estabilidade da luva.
 
-		O protocolo de comunicação criado, mesmo sendo simples, alcançou satisfatoriamente ao seu objetivo inicial de controlar os movimentos do carrinho dentro do raio de alcance do transmissor. Dessa forma o mesmo protocolo ou outro semelhente tem a possibilidade de ser aproveitado para outras aplicações de controle. Entretanto, para aplicações que exijam uma demanda maior transmissão de dados, ao invpés de apenas 5 \textit{bytes} por mensagem, será necessária uma melhoria no protocolo de comunicação ou até mesmo a substituição do mesmo.
+		Os protocolos de comunicação e controle criados, mesmo sendo simples, alcançaram satisfatoriamente ao seu objetivo inicial de controlar os movimentos do carrinho dentro do raio de alcance do transmissor. Dessa forma os mesmos protocolos ou outros semelhentes tem a possibilidade de serem aproveitados em outras aplicações de transmissão e controle. Entretanto, para aplicações mais complexas ou que exijam uma demanda maior dados durante a transmissão, ao invés de apenas 5 \textit{bytes} por mensagem, será necessária uma melhoria no protocolo de comunicação ou até mesmo a substituição do mesmo.
 
 		Este protótipo foi desenvolvido, usado e testado por apenas uma pessoa. O uso da luva por outras pessoas pode apresentar resultados diferentes e necessitar de ajustes. Cada pessoa possui características diferentes em suas mãos, dedos maiores ou menores, mão mais larga ou mais fina, diferentes graus de flexão dos dedos, entre outros. Portanto, a inclusão de uma função de calibração automática no \textit{software} de transmissão se faz necessária e pode diminuir maiores contratempos quando a BioGlove for utilizada por outros indivíduos.
-
 
 		Apesar de no geral o projeto desenvolvido se mostrar viável para ser uma luva de aferição de movimentos e transmissão de dados, este possui natureza diferente de outros produtos semelhantes. Enquanto que o uso de sensores de flexão resistivos comerciais pode trazer uma mecânica relativamente estável durante os movimentos, a BioGlove é dependente de uma rede de fios e polias que não apresentou muita estabilidade mecânica em uma luva de algodão. A troca do material da luva por um  mais rígido, poderia favorecer a estabilidade durante os movimentos.
 
