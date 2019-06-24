@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {1.1}Contextualiza\IeC {\c c}\IeC {\~a}o}{15}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Estado da arte}{16}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Motiva\IeC {\c c}\IeC {\~a}o e objetivos}{18}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{19}{section.1.4}% 
+\contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{18}{section.1.4}% 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Referencial Te\IeC {\'o}rico}}{20}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Introdu\IeC {\c c}\IeC {\~a}o}{20}{section.2.1}% 
