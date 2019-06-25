@@ -1,4 +1,4 @@
-PWD /home/wederson/Documents/lcfs/documentation/thesis
+PWD /files/Dropbox/UFPA/TCC/lcfs/documentation/thesis
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT lcfs.tex
