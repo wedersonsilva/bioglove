@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Protocolo de comunica\IeC {\c c}\IeC {\~a}o}{32}{subsection.3.3.3}% 
 \contentsline {section}{\numberline {3.4}Transmiss\IeC {\~a}o, controle e recep\IeC {\c c}\IeC {\~a}o}{34}{section.3.4}% 
 \contentsline {subsection}{\numberline {3.4.1}Introdu\IeC {\c c}\IeC {\~a}o}{34}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}VirtualWire}{35}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.2}\textit {VirtualWire}}{35}{subsection.3.4.2}% 
 \contentsline {subsection}{\numberline {3.4.3}\textit {Software} de transmiss\IeC {\~a}o}{36}{subsection.3.4.3}% 
 \contentsline {subsection}{\numberline {3.4.4}Protocolo de controle}{37}{subsection.3.4.4}% 
 \contentsline {subsection}{\numberline {3.4.5}\textit {Software} de recep\IeC {\c c}\IeC {\~a}o}{38}{subsection.3.4.5}% 

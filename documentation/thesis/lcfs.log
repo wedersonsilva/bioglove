@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.8)  24 JUN 2019 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.2)  25 JUL 2019 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,10 +370,6 @@ Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
@@ -481,16 +477,16 @@ File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 \BKM@id=\count150
 ))
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/11/13 3.27 The Babel package
+Package: babel 2019/04/03 3.29 The Babel package
 
 (/usr/share/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/11/13 3.27 Babel switching mechanism
+File: switch.def 2019/04/03 3.29 Babel switching mechanism
 )
 (/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/11/13 3.27 Babel common definitions
+File: babel.def 2019/04/03 3.29 Babel common definitions
 \babel@savecnt=\count151
 \U@D=\dimen151
 
@@ -644,25 +640,25 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \Gin@req@width=\dimen156
 )
 (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks26
 \MT@count=\count166
-LaTeX Info: Redefining \textls on input line 793.
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen157
-LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
 \MT@listname@count=\count167
 
 (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip257
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 ))
 (/usr/share/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -797,15 +793,15 @@ LaTeX Info: Redefining \] on input line 2845.
 \lst@maxwidth=\dimen178
 
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 \c@lstnumber=\count194
 \lst@skipnumbers=\count266
 \lst@framebox=\box38
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2018/09/02 1.7 listings configuration
+File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package: listings 2018/09/02 1.7 (Carsten Heinz)
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
@@ -816,21 +812,22 @@ Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 )
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-02-15 L3 programming layer (loader) 
+Package: expl3 2019-04-06 L3 programming layer (loader) 
 
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-02-15 L3 programming layer (code)
+Package: expl3 2019-04-06 L3 programming layer (code)
 \c_max_int=\count268
 \l_tmpa_int=\count269
 \l_tmpb_int=\count270
 \g_tmpa_int=\count271
 \g_tmpb_int=\count272
 \g__kernel_prg_map_int=\count273
-\c_log_iow=\count274
-\l_iow_line_count_int=\count275
-\l__iow_line_target_int=\count276
-\l__iow_one_indent_int=\count277
-\l__iow_indent_int=\count278
+\c__ior_term_ior=\count274
+\c_log_iow=\count275
+\l_iow_line_count_int=\count276
+\l__iow_line_target_int=\count277
+\l__iow_one_indent_int=\count278
+\l__iow_indent_int=\count279
 \c_zero_dim=\dimen180
 \c_max_dim=\dimen181
 \l_tmpa_dim=\dimen182
@@ -849,78 +846,78 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count279
-\l__intarray_loop_int=\count280
+\l_keys_choice_int=\count280
+\l__intarray_loop_int=\count281
 \c__intarray_sp_dim=\dimen186
-\g__intarray_font_int=\count281
-\c__fp_leading_shift_int=\count282
-\c__fp_middle_shift_int=\count283
-\c__fp_trailing_shift_int=\count284
-\c__fp_big_leading_shift_int=\count285
-\c__fp_big_middle_shift_int=\count286
-\c__fp_big_trailing_shift_int=\count287
-\c__fp_Bigg_leading_shift_int=\count288
-\c__fp_Bigg_middle_shift_int=\count289
-\c__fp_Bigg_trailing_shift_int=\count290
-\c__kernel_randint_max_int=\count291
-\g__fp_array_int=\count292
-\l__fp_array_loop_int=\count293
-\l__sort_length_int=\count294
-\l__sort_min_int=\count295
-\l__sort_top_int=\count296
-\l__sort_max_int=\count297
-\l__sort_true_max_int=\count298
-\l__sort_block_int=\count299
-\l__sort_begin_int=\count300
-\l__sort_end_int=\count301
-\l__sort_A_int=\count302
-\l__sort_B_int=\count303
-\l__sort_C_int=\count304
-\l__tl_analysis_normal_int=\count305
-\l__tl_analysis_index_int=\count306
-\l__tl_analysis_nesting_int=\count307
-\l__tl_analysis_type_int=\count308
-\l__regex_internal_a_int=\count309
-\l__regex_internal_b_int=\count310
-\l__regex_internal_c_int=\count311
-\l__regex_balance_int=\count312
-\l__regex_group_level_int=\count313
-\l__regex_mode_int=\count314
-\c__regex_cs_in_class_mode_int=\count315
-\c__regex_cs_mode_int=\count316
-\l__regex_catcodes_int=\count317
-\l__regex_default_catcodes_int=\count318
-\c__regex_catcode_D_int=\count319
-\c__regex_catcode_S_int=\count320
-\c__regex_catcode_L_int=\count321
-\c__regex_catcode_O_int=\count322
-\c__regex_catcode_A_int=\count323
-\c__regex_all_catcodes_int=\count324
-\l__regex_show_lines_int=\count325
-\l__regex_min_state_int=\count326
-\l__regex_max_state_int=\count327
-\l__regex_left_state_int=\count328
-\l__regex_right_state_int=\count329
-\l__regex_capturing_group_int=\count330
-\l__regex_min_pos_int=\count331
-\l__regex_max_pos_int=\count332
-\l__regex_curr_pos_int=\count333
-\l__regex_start_pos_int=\count334
-\l__regex_success_pos_int=\count335
-\l__regex_curr_char_int=\count336
-\l__regex_curr_catcode_int=\count337
-\l__regex_last_char_int=\count338
-\l__regex_case_changed_char_int=\count339
-\l__regex_curr_state_int=\count340
-\l__regex_step_int=\count341
-\l__regex_min_active_int=\count342
-\l__regex_max_active_int=\count343
-\l__regex_replacement_csnames_int=\count344
-\l__regex_match_count_int=\count345
-\l__regex_min_submatch_int=\count346
-\l__regex_submatch_int=\count347
-\l__regex_zeroth_submatch_int=\count348
-\g__regex_trace_regex_int=\count349
+\g__intarray_font_int=\count282
+\c__fp_leading_shift_int=\count283
+\c__fp_middle_shift_int=\count284
+\c__fp_trailing_shift_int=\count285
+\c__fp_big_leading_shift_int=\count286
+\c__fp_big_middle_shift_int=\count287
+\c__fp_big_trailing_shift_int=\count288
+\c__fp_Bigg_leading_shift_int=\count289
+\c__fp_Bigg_middle_shift_int=\count290
+\c__fp_Bigg_trailing_shift_int=\count291
+\c__kernel_randint_max_int=\count292
+\g__fp_array_int=\count293
+\l__fp_array_loop_int=\count294
+\l__sort_length_int=\count295
+\l__sort_min_int=\count296
+\l__sort_top_int=\count297
+\l__sort_max_int=\count298
+\l__sort_true_max_int=\count299
+\l__sort_block_int=\count300
+\l__sort_begin_int=\count301
+\l__sort_end_int=\count302
+\l__sort_A_int=\count303
+\l__sort_B_int=\count304
+\l__sort_C_int=\count305
+\l__tl_analysis_normal_int=\count306
+\l__tl_analysis_index_int=\count307
+\l__tl_analysis_nesting_int=\count308
+\l__tl_analysis_type_int=\count309
+\l__regex_internal_a_int=\count310
+\l__regex_internal_b_int=\count311
+\l__regex_internal_c_int=\count312
+\l__regex_balance_int=\count313
+\l__regex_group_level_int=\count314
+\l__regex_mode_int=\count315
+\c__regex_cs_in_class_mode_int=\count316
+\c__regex_cs_mode_int=\count317
+\l__regex_catcodes_int=\count318
+\l__regex_default_catcodes_int=\count319
+\c__regex_catcode_D_int=\count320
+\c__regex_catcode_S_int=\count321
+\c__regex_catcode_L_int=\count322
+\c__regex_catcode_O_int=\count323
+\c__regex_catcode_A_int=\count324
+\c__regex_all_catcodes_int=\count325
+\l__regex_show_lines_int=\count326
+\l__regex_min_state_int=\count327
+\l__regex_max_state_int=\count328
+\l__regex_left_state_int=\count329
+\l__regex_right_state_int=\count330
+\l__regex_capturing_group_int=\count331
+\l__regex_min_pos_int=\count332
+\l__regex_max_pos_int=\count333
+\l__regex_curr_pos_int=\count334
+\l__regex_start_pos_int=\count335
+\l__regex_success_pos_int=\count336
+\l__regex_curr_char_int=\count337
+\l__regex_curr_catcode_int=\count338
+\l__regex_last_char_int=\count339
+\l__regex_case_changed_char_int=\count340
+\l__regex_curr_state_int=\count341
+\l__regex_step_int=\count342
+\l__regex_min_active_int=\count343
+\l__regex_max_active_int=\count344
+\l__regex_replacement_csnames_int=\count345
+\l__regex_match_count_int=\count346
+\l__regex_min_submatch_int=\count347
+\l__regex_submatch_int=\count348
+\l__regex_zeroth_submatch_int=\count349
+\g__regex_trace_regex_int=\count350
 \c_empty_box=\box39
 \l_tmpa_box=\box40
 \l_tmpb_box=\box41
@@ -950,35 +947,35 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l_tmpb_coffin=\box50
 \g_tmpa_coffin=\box51
 \g_tmpb_coffin=\box52
+\l__coffin_bounding_shift_dim=\dimen263
+\l__coffin_left_corner_dim=\dimen264
+\l__coffin_right_corner_dim=\dimen265
+\l__coffin_bottom_corner_dim=\dimen266
+\l__coffin_top_corner_dim=\dimen267
+\l__coffin_scaled_total_height_dim=\dimen268
+\l__coffin_scaled_width_dim=\dimen269
 \c__coffin_empty_coffin=\box53
 \l__coffin_display_coffin=\box54
 \l__coffin_display_coord_coffin=\box55
 \l__coffin_display_pole_coffin=\box56
-\l__coffin_display_offset_dim=\dimen263
-\l__coffin_display_x_dim=\dimen264
-\l__coffin_display_y_dim=\dimen265
+\l__coffin_display_offset_dim=\dimen270
+\l__coffin_display_x_dim=\dimen271
+\l__coffin_display_y_dim=\dimen272
 \g__file_internal_ior=\read2
-\l__coffin_bounding_shift_dim=\dimen266
-\l__coffin_left_corner_dim=\dimen267
-\l__coffin_right_corner_dim=\dimen268
-\l__coffin_bottom_corner_dim=\dimen269
-\l__coffin_top_corner_dim=\dimen270
-\l__coffin_scaled_total_height_dim=\dimen271
-\l__coffin_scaled_width_dim=\dimen272
-\l__seq_internal_a_int=\count350
-\l__seq_internal_b_int=\count351
+\l__seq_internal_a_int=\count351
+\l__seq_internal_b_int=\count352
+\c__deprecation_minus_one=\count353
 )
 (/usr/share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2019-02-15 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count352
+File: l3pdfmode.def 2019-04-06 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count354
 ))
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2018-10-17 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count353
-\g__xparse_grabber_int=\count354
-\l__xparse_m_args_int=\count355
-\l__xparse_mandatory_args_int=\count356
-\l__xparse_v_nesting_int=\count357
+Package: xparse 2019-03-05 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count355
+\g__xparse_grabber_int=\count356
+\l__xparse_m_args_int=\count357
+\l__xparse_v_nesting_int=\count358
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -994,8 +991,8 @@ Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
 (/usr/share/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip279
 \ABCIauxlen=\skip280
-\c@ABCIaux=\count358
-\c@ABCImax=\count359
+\c@ABCIaux=\count359
+\c@ABCImax=\count360
 
 (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -1042,7 +1039,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count360
+\c@section@level=\count361
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1057,16 +1054,16 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             ! on input line 189.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count361
+\scratchcounter=\count362
 \scratchdimen=\dimen273
 \scratchbox=\box59
-\nofMPsegments=\count362
-\nofMParguments=\count363
+\nofMPsegments=\count363
+\nofMParguments=\count364
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count364
+\MPscratchCnt=\count365
 \MPscratchDim=\dimen274
-\MPnumerator=\count365
-\makeMPintoPDFobject=\count366
+\MPnumerator=\count366
+\makeMPintoPDFobject=\count367
 \everyMPtoPDFconversion=\toks37
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1105,7 +1102,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count367
+\c@lstlisting=\count368
 <figures/ufpa_logo.jpg, id=4, 136.1085pt x 172.0026pt>
 File: figures/ufpa_logo.jpg Graphic file (type jpg)
 <use figures/ufpa_logo.jpg>
@@ -1227,7 +1224,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] [12]
 (./lcfs.toc
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 35.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 34.
  [13
 
 ]) [14]
@@ -1261,11 +1258,11 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 600.
 
 
 ] [16] [17] [18] [19]
-<./figures/flowchart1.png, id=304, 581.92406pt x 356.0803pt>
+<./figures/flowchart1.png, id=304, 665.48625pt x 407.27156pt>
 File: ./figures/flowchart1.png Graphic file (type png)
 <use ./figures/flowchart1.png>
 Package pdftex.def Info: ./figures/flowchart1.png  used on input line 674.
-(pdftex.def)             Requested size: 256.0748pt x 156.69211pt.
+(pdftex.def)             Requested size: 256.0748pt x 156.71613pt.
  [20
 
  <./figures/flowchart1.png>] [21]
@@ -1302,7 +1299,7 @@ Package pdftex.def Info: ./figures/arduino-nano1.jpg  used on input line 763.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24 <./figures/potentiometer1.png>] [25 <./figures/arduino-nano1.jpg>]
-<./figures/tx-rx1.jpg, id=393, 2568.59625pt x 1186.4325pt>
+<./figures/tx-rx1.jpg, id=394, 2568.59625pt x 1186.4325pt>
 File: ./figures/tx-rx1.jpg Graphic file (type jpg)
 <use ./figures/tx-rx1.jpg>
 Package pdftex.def Info: ./figures/tx-rx1.jpg  used on input line 790.
@@ -1310,25 +1307,25 @@ Package pdftex.def Info: ./figures/tx-rx1.jpg  used on input line 790.
  [26 <./figures/tx-rx1.jpg>] [27
 
 ]
-<./figures/moore-biomechanic.png, id=410, 530.73282pt x 731.73375pt>
+<./figures/moore-biomechanic.png, id=411, 530.73282pt x 731.73375pt>
 File: ./figures/moore-biomechanic.png Graphic file (type png)
 <use ./figures/moore-biomechanic.png>
 Package pdftex.def Info: ./figures/moore-biomechanic.png  used on input line 82
 8.
 (pdftex.def)             Requested size: 142.26378pt x 196.14159pt.
-<./figures/glove-wire-pot2.png, id=411, 423.08063pt x 657.2053pt>
+<./figures/glove-wire-pot2.png, id=412, 423.08063pt x 657.2053pt>
 File: ./figures/glove-wire-pot2.png Graphic file (type png)
 <use ./figures/glove-wire-pot2.png>
 Package pdftex.def Info: ./figures/glove-wire-pot2.png  used on input line 832.
 
 (pdftex.def)             Requested size: 113.81102pt x 176.78593pt.
-<./figures/hand-wire-steady1.png, id=420, 286.06876pt x 141.52875pt>
+<./figures/hand-wire-steady1.png, id=421, 286.06876pt x 141.52875pt>
 File: ./figures/hand-wire-steady1.png Graphic file (type png)
 <use ./figures/hand-wire-steady1.png>
 Package pdftex.def Info: ./figures/hand-wire-steady1.png  used on input line 86
 3.
 (pdftex.def)             Requested size: 227.62204pt x 112.61415pt.
-<./figures/hand-wire-flex1.png, id=421, 216.81pt x 140.77594pt>
+<./figures/hand-wire-flex1.png, id=422, 216.81pt x 140.77594pt>
 File: ./figures/hand-wire-flex1.png Graphic file (type png)
 <use ./figures/hand-wire-flex1.png>
 Package pdftex.def Info: ./figures/hand-wire-flex1.png  used on input line 867.
@@ -1336,13 +1333,13 @@ Package pdftex.def Info: ./figures/hand-wire-flex1.png  used on input line 867.
 (pdftex.def)             Requested size: 170.71652pt x 110.85303pt.
  [28 <./figures/moore-biomechanic.png> <./figures/glove-wire-pot2.png>] [29 <./
 figures/hand-wire-steady1.png> <./figures/hand-wire-flex1.png>]
-<./figures/glove-wire-flex2.png, id=441, 236.38312pt x 115.93312pt>
+<./figures/glove-wire-flex2.png, id=442, 236.38312pt x 115.93312pt>
 File: ./figures/glove-wire-flex2.png Graphic file (type png)
 <use ./figures/glove-wire-flex2.png>
 Package pdftex.def Info: ./figures/glove-wire-flex2.png  used on input line 904
 .
 (pdftex.def)             Requested size: 184.9429pt x 90.70695pt.
-<./figures/glove-wire-extend2.png, id=442, 285.31593pt x 126.4725pt>
+<./figures/glove-wire-extend2.png, id=443, 285.31593pt x 126.4725pt>
 File: ./figures/glove-wire-extend2.png Graphic file (type png)
 <use ./figures/glove-wire-extend2.png>
 Package pdftex.def Info: ./figures/glove-wire-extend2.png  used on input line 9
@@ -1350,30 +1347,30 @@ Package pdftex.def Info: ./figures/glove-wire-extend2.png  used on input line 9
 (pdftex.def)             Requested size: 213.39566pt x 94.59167pt.
  [30 <./figures/glove-wire-flex2.png> <./figures/glove-wire-extend2.png>] [31] 
 [32]
-<./figures/glove-create-msg1.png, id=473, 894.34125pt x 395.22656pt>
+<./figures/glove-create-msg1.png, id=474, 894.34125pt x 395.22656pt>
 File: ./figures/glove-create-msg1.png Graphic file (type png)
 <use ./figures/glove-create-msg1.png>
 Package pdftex.def Info: ./figures/glove-create-msg1.png  used on input line 98
 9.
 (pdftex.def)             Requested size: 341.43306pt x 150.8872pt.
  [33 <./figures/glove-create-msg1.png>] [34]
-<./figures/tx-rx-scheme1.png, id=489, 1285.05093pt x 322.95656pt>
+<./figures/tx-rx-scheme1.png, id=490, 1285.05093pt x 322.95656pt>
 File: ./figures/tx-rx-scheme1.png Graphic file (type png)
 <use ./figures/tx-rx-scheme1.png>
 Package pdftex.def Info: ./figures/tx-rx-scheme1.png  used on input line 1036.
 (pdftex.def)             Requested size: 398.33858pt x 100.11057pt.
- [35 <./figures/tx-rx-scheme1.png>]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1059.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1044.
 
- (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2018/09/02 1.7 listings language file
+ [35 <./figures/tx-rx-scheme1.png>] (/usr/share/texmf-dist/tex/latex/listings/l
+stlang1.sty
+File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2018/09/02 1.7 listings language file
+File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 ) [36]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 1078
 .
@@ -1385,7 +1382,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./figures/glove-control-positions1.png, id=510, 792.71156pt x 226.59656pt>
+<./figures/glove-control-positions1.png, id=511, 792.71156pt x 226.59656pt>
 File: ./figures/glove-control-positions1.png Graphic file (type png)
 <use ./figures/glove-control-positions1.png>
 Package pdftex.def Info: ./figures/glove-control-positions1.png  used on input 
@@ -1396,14 +1393,14 @@ line 1108.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [37] [38 <./figures/glove-control-positions1.png>] [39] [40]
-<./figures/glove-wire-pot1.png, id=569, 389.20406pt x 249.18094pt>
+<./figures/glove-wire-pot1.png, id=570, 389.20406pt x 249.18094pt>
 File: ./figures/glove-wire-pot1.png Graphic file (type png)
 <use ./figures/glove-wire-pot1.png>
 Package pdftex.def Info: ./figures/glove-wire-pot1.png  used on input line 1195
 .
 (pdftex.def)             Requested size: 199.16928pt x 127.51784pt.
  [41 <./figures/glove-wire-pot1.png>]
-<./figures/pot-comparison.png, id=576, 450.9347pt x 434.37282pt>
+<./figures/pot-comparison.png, id=577, 450.9347pt x 434.37282pt>
 File: ./figures/pot-comparison.png Graphic file (type png)
 <use ./figures/pot-comparison.png>
 Package pdftex.def Info: ./figures/pot-comparison.png  used on input line 1213.
@@ -1414,19 +1411,19 @@ Package pdftex.def Info: ./figures/pot-comparison.png  used on input line 1213.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [42]
-<./figures/potentiometer3.jpg, id=585, 1010.77625pt x 950.55125pt>
+<./figures/potentiometer3.jpg, id=586, 1010.77625pt x 950.55125pt>
 File: ./figures/potentiometer3.jpg Graphic file (type jpg)
 <use ./figures/potentiometer3.jpg>
 Package pdftex.def Info: ./figures/potentiometer3.jpg  used on input line 1235.
 
 (pdftex.def)             Requested size: 156.49014pt x 147.15987pt.
-<./figures/battery1.jpg, id=586, 2494.31876pt x 1429.34pt>
+<./figures/battery1.jpg, id=587, 2494.31876pt x 1429.34pt>
 File: ./figures/battery1.jpg Graphic file (type jpg)
 <use ./figures/battery1.jpg>
 Package pdftex.def Info: ./figures/battery1.jpg  used on input line 1239.
 (pdftex.def)             Requested size: 241.84842pt x 138.58038pt.
  [43 <./figures/pot-comparison.png>]
-<figures/size-glove-module1.png, id=594, 603.25375pt x 515.9275pt>
+<figures/size-glove-module1.png, id=595, 603.25375pt x 515.9275pt>
 File: figures/size-glove-module1.png Graphic file (type png)
 <use figures/size-glove-module1.png>
 Package pdftex.def Info: figures/size-glove-module1.png  used on input line 125
@@ -1434,31 +1431,31 @@ Package pdftex.def Info: figures/size-glove-module1.png  used on input line 125
 (pdftex.def)             Requested size: 199.16928pt x 170.33533pt.
  [44 <./figures/potentiometer3.jpg> <./figures/battery1.jpg> <./figures/size-gl
 ove-module1.png>]
-<./figures/schematic-glove-module1.png, id=604, 547.04375pt x 545.03625pt>
+<./figures/schematic-glove-module1.png, id=605, 547.04375pt x 545.03625pt>
 File: ./figures/schematic-glove-module1.png Graphic file (type png)
 <use ./figures/schematic-glove-module1.png>
 Package pdftex.def Info: ./figures/schematic-glove-module1.png  used on input l
 ine 1276.
 (pdftex.def)             Requested size: 184.9429pt x 184.26198pt.
-<./figures/PCB-glove-module1.png, id=605, 646.415pt x 533.995pt>
+<./figures/PCB-glove-module1.png, id=606, 646.415pt x 533.995pt>
 File: ./figures/PCB-glove-module1.png Graphic file (type png)
 <use ./figures/PCB-glove-module1.png>
 Package pdftex.def Info: ./figures/PCB-glove-module1.png  used on input line 12
 80.
 (pdftex.def)             Requested size: 213.39566pt x 176.28407pt.
-<./figures/phenolic-glove-module1.jpg, id=606, 889.3225pt x 754.82pt>
+<./figures/phenolic-glove-module1.jpg, id=607, 889.3225pt x 754.82pt>
 File: ./figures/phenolic-glove-module1.jpg Graphic file (type jpg)
 <use ./figures/phenolic-glove-module1.jpg>
 Package pdftex.def Info: ./figures/phenolic-glove-module1.jpg  used on input li
 ne 1292.
 (pdftex.def)             Requested size: 199.16928pt x 169.04398pt.
-<./figures/glove-module-ready1.jpg, id=607, 940.51375pt x 813.0375pt>
+<./figures/glove-module-ready1.jpg, id=608, 940.51375pt x 813.0375pt>
 File: ./figures/glove-module-ready1.jpg Graphic file (type jpg)
 <use ./figures/glove-module-ready1.jpg>
 Package pdftex.def Info: ./figures/glove-module-ready1.jpg  used on input line 
 1296.
 (pdftex.def)             Requested size: 199.16928pt x 172.16959pt.
-<figures/glove-ready1.jpg, id=608, 3909.60625pt x 2427.0675pt>
+<figures/glove-ready1.jpg, id=609, 3909.60625pt x 2427.0675pt>
 File: figures/glove-ready1.jpg Graphic file (type jpg)
 <use figures/glove-ready1.jpg>
 Package pdftex.def Info: figures/glove-ready1.jpg  used on input line 1306.
@@ -1470,7 +1467,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [45 <./figures/schematic-glove-module1.png> <./figures/PCB-glove-module1.png>]
 [46 <./figures/phenolic-glove-module1.jpg> <./figures/glove-module-ready1.jpg> 
 <./figures/glove-ready1.jpg>]
-<./figures/flex-sensor1.png, id=624, 887.315pt x 663.47874pt>
+<./figures/flex-sensor1.png, id=625, 887.315pt x 663.47874pt>
 File: ./figures/flex-sensor1.png Graphic file (type png)
 <use ./figures/flex-sensor1.png>
 Package pdftex.def Info: ./figures/flex-sensor1.png  used on input line 1337.
@@ -1482,7 +1479,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [47
 
 ]
-<./figures/hand-flexsensor-degrees1.png, id=634, 593.21625pt x 187.45032pt>
+<./figures/hand-flexsensor-degrees1.png, id=635, 593.21625pt x 187.45032pt>
 File: ./figures/hand-flexsensor-degrees1.png Graphic file (type png)
 <use ./figures/hand-flexsensor-degrees1.png>
 Package pdftex.def Info: ./figures/hand-flexsensor-degrees1.png  used on input 
@@ -1528,11 +1525,11 @@ Package rerunfilecheck Info: File `lcfs.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1547.
  ) 
 Here is how much of TeX's memory you used:
- 26841 strings out of 492616
- 451193 string characters out of 6135178
- 866463 words of memory out of 5000000
- 30009 multiletter control sequences out of 15000+600000
- 628962 words of font info for 166 fonts, out of 8000000 for 9000
+ 26932 strings out of 492623
+ 453096 string characters out of 6135670
+ 863186 words of memory out of 5000000
+ 30093 multiletter control sequences out of 15000+600000
+ 629520 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1623b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1550,10 +1547,10 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (60 pages, 5374531 bytes).
+Output written on lcfs.pdf (60 pages, 5382648 bytes).
 PDF statistics:
- 1093 PDF objects out of 1200 (max. 8388607)
- 948 compressed objects within 10 object streams
+ 1094 PDF objects out of 1200 (max. 8388607)
+ 949 compressed objects within 10 object streams
  229 named destinations out of 1000 (max. 500000)
  36901 words of extra memory for PDF output out of 42996 (max. 10000000)
 
