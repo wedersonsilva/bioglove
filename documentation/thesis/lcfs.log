@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.2)  25 JUL 2019 23:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.2)  31 JUL 2019 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1289,11 +1289,11 @@ Package pdftex.def Info: ./figures/potentiometer1.png  used on input line 738.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23]
-<./figures/arduino-nano1.jpg, id=367, 2568.59625pt x 1099.10625pt>
+<./figures/arduino-nano1.jpg, id=367, 1240.635pt x 428.60126pt>
 File: ./figures/arduino-nano1.jpg Graphic file (type jpg)
 <use ./figures/arduino-nano1.jpg>
 Package pdftex.def Info: ./figures/arduino-nano1.jpg  used on input line 763.
-(pdftex.def)             Requested size: 341.43306pt x 146.09209pt.
+(pdftex.def)             Requested size: 341.43306pt x 117.954pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1525,11 +1525,11 @@ Package rerunfilecheck Info: File `lcfs.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1547.
  ) 
 Here is how much of TeX's memory you used:
- 26932 strings out of 492623
- 453096 string characters out of 6135670
- 863186 words of memory out of 5000000
+ 26930 strings out of 492623
+ 453072 string characters out of 6135670
+ 863183 words of memory out of 5000000
  30093 multiletter control sequences out of 15000+600000
- 629520 words of font info for 170 fonts, out of 8000000 for 9000
+ 629391 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1623b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1547,7 +1547,7 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (60 pages, 5382648 bytes).
+Output written on lcfs.pdf (60 pages, 5342096 bytes).
 PDF statistics:
  1094 PDF objects out of 1200 (max. 8388607)
  949 compressed objects within 10 object streams
