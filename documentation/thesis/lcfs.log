@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.2)  31 JUL 2019 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.2)  31 JUL 2019 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1514,22 +1514,22 @@ AED: lastpage setting LastPage
 \tf@toc=\write10
 \openout10 = `lcfs.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1547.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1547.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1549.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1549.
  (./lcfs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1547.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1547.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1549.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1549.
 
 Package rerunfilecheck Info: File `lcfs.brf' has not changed.
 (rerunfilecheck)             Checksum: 451076A619DBB9619A673BB986F98F5C;2807.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1547.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1549.
  ) 
 Here is how much of TeX's memory you used:
- 26930 strings out of 492623
- 453072 string characters out of 6135670
- 863183 words of memory out of 5000000
+ 26928 strings out of 492623
+ 453048 string characters out of 6135670
+ 863169 words of memory out of 5000000
  30093 multiletter control sequences out of 15000+600000
- 629391 words of font info for 169 fonts, out of 8000000 for 9000
+ 629262 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,63p,1623b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
@@ -1547,7 +1547,7 @@ c/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></us
 r/share/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on lcfs.pdf (60 pages, 5342096 bytes).
+Output written on lcfs.pdf (60 pages, 5342448 bytes).
 PDF statistics:
  1094 PDF objects out of 1200 (max. 8388607)
  949 compressed objects within 10 object streams
