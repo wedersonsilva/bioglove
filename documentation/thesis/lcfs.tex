@@ -69,6 +69,8 @@
 \usepackage{float}
 \usepackage{listofsymbols}
 
+\usepackage{pdfpages} 			% Inclusão de pdfs (ficha catalográfica e folha de aprovação)
+
 \usepackage{amsmath}
 \usepackage{listings}
 %\usepackage{xcolor}
@@ -294,9 +296,9 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
 % com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
 % o conteúdo de implementação deste arquivo pelo comando abaixo:
 %
-% \begin{fichacatalografica}
-%     \includepdf{ficha_catalografica.pdf}
-% \end{fichacatalografica}
+ \begin{fichacatalografica}
+     \includepdf{ficha_catalografica.pdf}
+ \end{fichacatalografica}
 
 %\begin{fichacatalografica}
 %	\sffamily
@@ -344,7 +346,7 @@ título de Bacharel em Engenharia da Computação. Instituto de Tecnologia. Facu
 % do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
 % imagem da página assinada pela banca com o comando abaixo:
 %
-% \includepdf{folhadeaprovacao.pdf}
+\includepdf{folhadeaprovacao.pdf}
 %
 
 %\begin{folhadeaprovacao}
