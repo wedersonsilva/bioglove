@@ -1,15 +1,18 @@
-/*  Low Cost Flex Sensor (Sensor Flex de Baixo Custo)
+/*  Bioglove: Protótipo de um transdutor de flexão bioinspirado
 
     Esse programa lê valores de cinco sensores conectados a
   cada um dos dedos de uma luva. O movimento de cada dedo é 
   captado individualmente.
-    As leituras são exibidas no Serial Monitor e enviadas à 
-  um receptor RF conectado à outro Arduino. Cada dedo é 
-  representado por um número de 1 a 5, começando pelo dedo 
-  mínimo (1) até o polegar (5).  
+    
+    As leituras são exibidas no Serial Monitor e enviadas 
+  através de transmissor RF 433Mhz à um receptor RF conectado 
+  à outro Arduino. 
+  
+  Cada dedo da luva é representado por um número de 1 a 5, 
+  começando pelo dedo mínimo (1) até o polegar (5).  
 
   Autor: Wederson Silva
-  https://github.com/wedersonsilva/lcfs
+  https://github.com/wedersonsilva/bioglove
 
   v0.1.22 Envia e recebe 10 níveis de flexão */
 
@@ -51,7 +54,7 @@ void setup() {
 
 /* INÍCIO DAS FUNÇÕES */
 
-/* Leitura de cada sensor */
+/* Leitura analógica de cada sensor */
 void LER_SENSORES(){  
   dedo1 = analogRead(A1);
   dedo2 = analogRead(A2);
@@ -60,7 +63,7 @@ void LER_SENSORES(){
   dedo5 = analogRead(A5);
 }
 
-/* Remapeamento dos valores em até 9 posições*/
+/* Remapeamento dos valores de 1024 posições para apenas 10 posições*/
 void POSICIONAR(){
   posicao1 = map(dedo1, 0, 1023, 0, 9);
   posicao2 = map(dedo2, 0, 1023, 0, 9);
@@ -116,3 +119,9 @@ void loop() {
   ENVIAR();
   EXIBIR();         
 }
+
+
+/* FIM DO PROGRAM */
+
+/*  P.S.: Este projeto já foi conhecido por 
+    Low Cost Flex Sensor (Sensor Flex de Baixo Custo)	*/
